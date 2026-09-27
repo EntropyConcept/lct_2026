@@ -1,0 +1,62 @@
+name: dispatch
+
+services:
+  app:
+    image: ${IMAGE_PREFIX:-ghcr.io/entropyconcept/lct_2026}/dispatch-sat:${IMAGE_TAG:-main}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    init: true
+    restart: unless-stopped
+    ports:
+      - "${DISPATCH_LISTEN_ADDRESS:-127.0.0.1}:${DISPATCH_PORT:-8080}:8080"
+    environment:
+      DISPATCH_BIND: 0.0.0.0
+      DISPATCH_PUBLIC_ORIGIN: ${DISPATCH_PUBLIC_ORIGIN:-http://localhost:8080}
+      DISPATCH_ROUTING_CACHE: /var/lib/dispatch/routing-cache
+      DISPATCH_ROAD_BACKEND: ${DISPATCH_ROAD_BACKEND:-motis}
+      DISPATCH_MOTIS_URL: ${DISPATCH_MOTIS_URL:-http://motis:8081}
+      DISPATCH_VALHALLA_URL: ${DISPATCH_VALHALLA_URL:-https://valhalla1.openstreetmap.de}
+      DISPATCH_NOMINATIM_URL: ${DISPATCH_NOMINATIM_URL:-https://nominatim.openstreetmap.org}
+      DISPATCH_TRANSIT_WORKERS: ${DISPATCH_TRANSIT_WORKERS:-4}
+    volumes:
+      - routing-cache:/var/lib/dispatch/routing-cache
+
+  motis:
+    profiles: [routing]
+    image: ${IMAGE_PREFIX:-ghcr.io/entropyconcept/lct_2026}/motis:${IMAGE_TAG:-main}
+    build:
+      context: .
+      dockerfile: docker/motis.Dockerfile
+      args:
+        MOTIS_BUILD_JOBS: ${MOTIS_BUILD_JOBS:-2}
+    init: true
+    restart: unless-stopped
+    volumes:
+      - motis-data:/data
+
+  motis-import:
+    profiles: [tools]
+    image: ${IMAGE_PREFIX:-ghcr.io/entropyconcept/lct_2026}/motis:${IMAGE_TAG:-main}
+    build:
+      context: .
+      dockerfile: docker/motis.Dockerfile
+      args:
+        MOTIS_BUILD_JOBS: ${MOTIS_BUILD_JOBS:-2}
+    command: [import, --config, /inputs/config.yml, --data, /data]
+    init: true
+    restart: "no"
+    healthcheck:
+      disable: true
+    volumes:
+      - motis-data:/data
+      - type: bind
+        source: ${MOTIS_INPUT_DIR:-./.transit/docker-inputs}
+        target: /inputs
+        read_only: true
+        bind:
+          create_host_path: false
+
+volumes:
+  routing-cache:
+  motis-data:

@@ -41,7 +41,150 @@ small native application; CaDiCaL does the intensive search in optimized C++.
 The first build downloads Cargo dependencies and compiles the bundled solver.
 Subsequent runs require no solver installation.
 
-CLI:
+## Docker and Compose
+
+Docker Engine/Desktop with Compose v2 or newer is sufficient; Rust, C++, Python
+and Node are not required on the deployment host. The dispatcher image includes
+the UI, service norms and three synthetic example datasets. Both runtime images
+run as UID 10001. Large map inputs, generated indexes, local credentials and
+reports are excluded from the build context.
+
+Build and start the dispatcher demo from source:
+
+```sh
+cp .env.example .env
+docker compose build app
+docker compose up -d --no-build --pull never app
+# Open http://localhost:8080
+docker compose logs -f app
+```
+
+The offline demo works immediately. Real route preparation requires the local
+MOTIS service below or an explicitly configured external router. The `routing`
+profile adds MOTIS; it does not download or invent map/timetable data.
+
+To deploy images published by CI instead of compiling locally:
+
+```sh
+# Run from a checkout, or a directory containing compose.yaml and .env.
+docker compose pull app
+docker compose up -d --no-build app
+```
+
+Images are `ghcr.io/entropyconcept/lct_2026/dispatch-sat` and
+`ghcr.io/entropyconcept/lct_2026/motis`, published for Linux AMD64 and ARM64.
+`IMAGE_PREFIX` changes the registry/repository prefix (use lowercase);
+`IMAGE_TAG=main` follows main, `sha-<full-commit-sha>` pins a build, and
+`pr-<number>` selects a same-repository PR preview. Images become available after
+the corresponding workflow succeeds. If packages are private, authenticate with
+`docker login ghcr.io` using a token with package read access; package visibility
+is managed in GitHub Packages settings.
+
+### Local street and public-transport router
+
+The MOTIS image builds the same pinned 2.11.3 source and strict OSR patch as the
+local macOS launcher. It serves the routing API; the dispatcher's embedded UI is
+the web frontend. Its first source build downloads the upstream cross toolchain
+and C++ dependencies and can take a long time. `MOTIS_BUILD_JOBS` defaults to 2 to
+limit memory pressure. Using the published image avoids compiling the router.
+On ARM hosts, source builds need AMD64 emulation for the upstream compiler stage;
+the published ARM64 runtime image runs natively.
+
+1. Put a suitable OSM PBF and licensed GTFS ZIP in `.transit/docker-inputs/`, named
+   `moscow.osm.pbf` and `moscow.gtfs.zip`. See the Moscow data sources and coverage
+   caveats below. Set `MOTIS_INPUT_DIR` to use another directory.
+2. Copy `docker/motis-config.example.yml` to that directory as `config.yml`.
+   Set `timetable.first_day` and `num_days` to the service dates covered by your
+   feed. Keep `extend_calendar: false`. For street-only routing, remove the
+   `timetable` section and set `osr_footpath: false`; no GTFS is then needed.
+3. Build (or pull), import, then start:
+
+```sh
+docker compose --profile routing build app motis
+# For prebuilt images, replace the build command with:
+# docker compose --profile routing pull app motis
+
+docker compose --profile tools run --rm --no-deps motis-import
+docker compose --profile routing up -d --no-build --pull never --wait --wait-timeout 300
+```
+
+Import reads `/inputs/config.yml` and writes indexes plus the effective server
+configuration into the `motis-data` named volume. The server needs only that
+volume; source inputs are mounted read-only in the import container. MOTIS listens
+on the Compose network at `http://motis:8081`; its API port is not published on the
+host. The app can start independently; wait for MOTIS's health check before
+preparing roads or public transport.
+
+To change map data or dates, stop MOTIS, update the inputs/config, repeat import,
+and start it again:
+
+```sh
+docker compose --profile routing stop motis
+docker compose --profile tools run --rm --no-deps motis-import
+docker compose --profile routing up -d --no-build --pull never --wait --wait-timeout 300
+```
+
+Do not run import concurrently with a server using the same data volume. Exported
+city scenarios depend on snapshots in the separate `routing-cache` volume; back
+up both volumes as appropriate. `docker compose --profile routing down` preserves
+them; adding `--volumes` deletes them. Existing native `.routing-cache/` and
+`.transit/moscow/data/` are not automatically migrated.
+
+### Ports, proxy deployment and configuration
+
+Compose publishes the app on host loopback by default. To use another port, set
+both `DISPATCH_PORT=9090` and `DISPATCH_PUBLIC_ORIGIN=http://localhost:9090` in
+`.env`. `DISPATCH_PUBLIC_ORIGIN` is the browser-facing HTTP(S) origin, with no
+path or query. A TLS reverse proxy should preserve the original `Host` header;
+set the origin to e.g. `https://dispatch.example.com`. The application has no
+authentication: put access control at the proxy before exposing it publicly.
+`DISPATCH_LISTEN_ADDRESS` controls the host-side published interface.
+
+`DISPATCH_BIND` controls the binary's listening interface: native runs default to
+`127.0.0.1`, images use `0.0.0.0`. Configured origins and local health checks are
+allowed; unrelated Host/Origin headers are rejected. Forwarded headers do not
+implicitly authorize new origins.
+
+For an external MOTIS instance set `DISPATCH_MOTIS_URL` and omit the `routing`
+profile. For Valhalla set `DISPATCH_ROAD_BACKEND=valhalla` and
+`DISPATCH_VALHALLA_URL`. A router on the Docker host is not container localhost;
+use a reachable address (e.g. `host.docker.internal` on Docker Desktop).
+The remaining routing settings are listed below and exposed in `compose.yaml`.
+Custom norms can be mounted read-only with a Compose override and selected via
+`DISPATCH_NORMS=/path/in/container/custom.xlsx` (or `.json`).
+
+The same image provides the CLI:
+
+```sh
+docker compose run --rm --no-deps app solve demo 1 > plan.json
+docker compose run --rm --no-deps -v "$PWD:/inputs:ro" app solve /inputs/demo.json 1
+```
+
+### Image CI and GitHub Packages
+
+[`.github/workflows/images.yml`](.github/workflows/images.yml) runs on every push
+to `main`, every PR targeting `main`, and manual dispatch. It validates Compose,
+runs the Rust test suite, builds both images, and smoke-tests the app's UI/API,
+origin checks, CLI and persistent-volume permissions, plus MOTIS's executable.
+BuildKit caches are separate for each image. Main pushes publish `main` and
+`sha-...` tags; same-repository PRs publish `pr-...` and `sha-...` tags. Fork and
+Dependabot PRs build/test without publishing. Manual runs publish only from main.
+No `pull_request_target` workflow executes PR code.
+
+Publishing uses the repository's `GITHUB_TOKEN` with `packages: write`; no Docker
+Hub credentials are needed. Enable Actions/package publishing in repository or
+organization settings if restricted. Existing packages must grant this repository
+write access. This follows GitHub's
+[container publishing workflow](https://docs.github.com/en/actions/tutorials/publish-packages/publish-docker-images).
+CI publishes packages; deployment on a host is done with the Compose commands
+above. To reproduce the application checks locally:
+
+```sh
+docker build --target test -t dispatch-sat:test .
+python3 scripts/container-smoke.py http://localhost:8080
+```
+
+## CLI
 
 ```sh
 # Built-in demo, 1-second search budget, machine-readable output
