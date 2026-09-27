@@ -1,0 +1,46 @@
+dataset,method,budget_s,urgent_unassigned,unassigned,engineers,distance_m,elapsed_ms,wall_ms,staff_proven,global_optimal,scope,status,incumbent_origin,validated,snapshot
+east,greedy-append,,4,27,10,215644,2,6,False,False,heuristic,validated greedy plan,greedy,True,6fbd5eaa3404cb7e
+east,greedy-insertion,,0,0,9,265409,2,6,False,False,heuristic,validated greedy plan,greedy,True,6fbd5eaa3404cb7e
+east,sat-fast,1,0,0,8,206524,26,30,False,False,candidate_routes,"Fast search stopped at its effort/time limit; best validated plan returned, no global proof",sat_pipeline,True,6fbd5eaa3404cb7e
+east,sat-exact,1,0,0,7,186712,900,907,False,False,global,"Time budget reached; best validated plan returned, optimality not proven",sat_pipeline,True,6fbd5eaa3404cb7e
+east,sat-exact,5,0,0,6,238403,4909,4956,True,False,global,"Time budget reached; best validated plan returned, optimality not proven",sat_pipeline,True,6fbd5eaa3404cb7e
+east,sat-exact,30,0,0,6,240686,29913,29938,True,False,global,"Time budget reached; best validated plan returned, optimality not proven",sat_pipeline,True,6fbd5eaa3404cb7e
+east,sat-exact,120,0,0,6,238403,119903,119930,True,False,global,"Time budget reached; best validated plan returned, optimality not proven",sat_pipeline,True,6fbd5eaa3404cb7e
+east,routing-gls,1,0,0,7,161261,1001,1662,False,False,heuristic,ROUTING_1,solver,True,6fbd5eaa3404cb7e
+east,routing-gls,5,0,0,7,139586,5001,5413,False,False,heuristic,ROUTING_1,solver,True,6fbd5eaa3404cb7e
+east,routing-gls,30,0,0,7,121892,30001,30426,False,False,heuristic,ROUTING_1,solver,True,6fbd5eaa3404cb7e
+east,routing-gls,120,0,0,7,121892,120000,120482,False,False,heuristic,ROUTING_1,solver,True,6fbd5eaa3404cb7e
+east,cp-sat,1,0,0,9,265409,1003,1481,False,False,global,UNKNOWN,greedy_seed,True,6fbd5eaa3404cb7e
+east,cp-sat,5,0,0,9,265409,5010,5406,False,False,global,FEASIBLE,greedy_seed,True,6fbd5eaa3404cb7e
+east,cp-sat,30,0,0,9,258228,30023,30418,False,False,global,FEASIBLE,solver,True,6fbd5eaa3404cb7e
+east,cp-sat,120,0,0,9,203721,120028,120441,False,False,global,FEASIBLE,solver,True,6fbd5eaa3404cb7e
+southeast,greedy-append,,0,31,10,985582,3,7,False,False,heuristic,validated greedy plan,greedy,True,3d3954bdabb1befa
+southeast,greedy-insertion,,0,6,10,1139084,3,7,False,False,heuristic,validated greedy plan,greedy,True,3d3954bdabb1befa
+southeast,sat-fast,1,0,4,9,1049707,30,35,False,False,candidate_routes,"Fast search stopped at its effort/time limit; best validated plan returned, no global proof",sat_pipeline,True,3d3954bdabb1befa
+southeast,sat-exact,1,0,0,9,1000966,936,950,False,False,global,"Time budget reached; best validated plan returned, optimality not proven",sat_pipeline,True,3d3954bdabb1befa
+southeast,sat-exact,5,0,0,8,888377,4908,4925,False,False,global,"Time budget reached; best validated plan returned, optimality not proven",sat_pipeline,True,3d3954bdabb1befa
+southeast,sat-exact,30,0,0,8,905636,30023,30037,False,False,global,"Time budget reached; best validated plan returned, optimality not proven",sat_pipeline,True,3d3954bdabb1befa
+southeast,sat-exact,120,0,0,8,888377,119908,119925,False,False,global,"Time budget reached; best validated plan returned, optimality not proven",sat_pipeline,True,3d3954bdabb1befa
+southeast,routing-gls,1,0,0,9,533611,1000,1650,False,False,heuristic,ROUTING_1,solver,True,3d3954bdabb1befa
+southeast,routing-gls,5,0,0,9,531974,5001,5393,False,False,heuristic,ROUTING_1,solver,True,3d3954bdabb1befa
+southeast,routing-gls,30,0,0,9,521603,30002,30395,False,False,heuristic,ROUTING_1,solver,True,3d3954bdabb1befa
+southeast,routing-gls,120,0,0,9,521603,120001,120400,False,False,heuristic,ROUTING_1,solver,True,3d3954bdabb1befa
+southeast,cp-sat,1,0,6,10,1139084,1034,1512,False,False,global,UNKNOWN,greedy_seed,True,3d3954bdabb1befa
+southeast,cp-sat,5,0,6,10,1139084,5031,5428,False,False,global,FEASIBLE,greedy_seed,True,3d3954bdabb1befa
+southeast,cp-sat,30,0,6,10,936487,30080,30482,False,False,global,FEASIBLE,solver,True,3d3954bdabb1befa
+southeast,cp-sat,120,0,6,10,936266,120033,120438,False,False,global,FEASIBLE,solver,True,3d3954bdabb1befa
+southcentre,greedy-append,,0,14,10,265371,1,5,False,False,heuristic,validated greedy plan,greedy,True,3954d54dc0806876
+southcentre,greedy-insertion,,0,0,7,233368,1,5,False,False,heuristic,validated greedy plan,greedy,True,3954d54dc0806876
+southcentre,sat-fast,1,0,0,6,204462,29,33,False,False,candidate_routes,"Fast search stopped at its effort/time limit; best validated plan returned, no global proof",sat_pipeline,True,3954d54dc0806876
+southcentre,sat-exact,1,0,0,5,253621,900,907,False,False,global,"Time budget reached; best validated plan returned, optimality not proven",sat_pipeline,True,3954d54dc0806876
+southcentre,sat-exact,5,0,0,5,253621,4900,4908,False,False,global,"Time budget reached; best validated plan returned, optimality not proven",sat_pipeline,True,3954d54dc0806876
+southcentre,sat-exact,30,0,0,5,253621,29900,29910,False,False,global,"Time budget reached; best validated plan returned, optimality not proven",sat_pipeline,True,3954d54dc0806876
+southcentre,sat-exact,120,0,0,5,253621,119917,119925,False,False,global,"Time budget reached; best validated plan returned, optimality not proven",sat_pipeline,True,3954d54dc0806876
+southcentre,routing-gls,1,0,0,6,151735,1001,1465,False,False,heuristic,ROUTING_1,solver,True,3954d54dc0806876
+southcentre,routing-gls,5,0,0,5,160253,5001,5394,False,False,heuristic,ROUTING_1,solver,True,3954d54dc0806876
+southcentre,routing-gls,30,0,0,5,159368,30001,30398,False,False,heuristic,ROUTING_1,solver,True,3954d54dc0806876
+southcentre,routing-gls,120,0,0,5,159221,120002,120410,False,False,heuristic,ROUTING_1,solver,True,3954d54dc0806876
+southcentre,cp-sat,1,0,0,7,233368,798,1302,False,False,global,UNKNOWN,greedy_seed,True,3954d54dc0806876
+southcentre,cp-sat,5,0,0,7,232146,5019,5418,False,False,global,FEASIBLE,solver,True,3954d54dc0806876
+southcentre,cp-sat,30,0,0,7,189940,30018,30415,False,False,global,FEASIBLE,solver,True,3954d54dc0806876
+southcentre,cp-sat,120,0,0,6,210830,120018,120424,False,False,global,FEASIBLE,solver,True,3954d54dc0806876

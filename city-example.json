@@ -1,0 +1,98 @@
+{
+  "name": "Москва / контроль дорожных профилей",
+  "jobs": [
+    {
+      "id": "J01",
+      "address": "Контрольная точка / car (координаты, не адрес клиента)",
+      "point": {
+        "lat": 55.752,
+        "lon": 37.62
+      },
+      "duration": 30,
+      "window_start": 540,
+      "window_end": 1080,
+      "skill": "local",
+      "transport": "car",
+      "urgent": false,
+      "work_type": "local"
+    },
+    {
+      "id": "J02",
+      "address": "Контрольная точка / walk (координаты, не адрес клиента)",
+      "point": {
+        "lat": 55.748,
+        "lon": 37.612
+      },
+      "duration": 30,
+      "window_start": 540,
+      "window_end": 1080,
+      "skill": "local",
+      "transport": "walk",
+      "urgent": false,
+      "work_type": "local"
+    },
+    {
+      "id": "J03",
+      "address": "Контрольная точка / bicycle (координаты, не адрес клиента)",
+      "point": {
+        "lat": 55.758,
+        "lon": 37.63
+      },
+      "duration": 30,
+      "window_start": 540,
+      "window_end": 1080,
+      "skill": "local",
+      "transport": "bicycle",
+      "urgent": false,
+      "work_type": "local"
+    }
+  ],
+  "engineers": [
+    {
+      "id": "E1",
+      "name": "Автомобиль / демо",
+      "start": {
+        "lat": 55.751,
+        "lon": 37.617
+      },
+      "shift_start": 540,
+      "shift_end": 1200,
+      "skills": [
+        "local"
+      ],
+      "transport": "car"
+    },
+    {
+      "id": "E2",
+      "name": "Пешеход / демо",
+      "start": {
+        "lat": 55.751,
+        "lon": 37.617
+      },
+      "shift_start": 540,
+      "shift_end": 1200,
+      "skills": [
+        "local"
+      ],
+      "transport": "walk"
+    },
+    {
+      "id": "E3",
+      "name": "Велосипед / демо",
+      "start": {
+        "lat": 55.756,
+        "lon": 37.632
+      },
+      "shift_start": 540,
+      "shift_end": 1200,
+      "skills": [
+        "local"
+      ],
+      "transport": "bicycle"
+    }
+  ],
+  "notes": [
+    "Три вымышленных инженера и три контрольные точки Москвы — проверка дорожной геометрии, не реальные клиенты. Подтвердите координаты и подготовьте городской снимок; автоматического обращения к маршрутизатору нет.",
+    "На месте: 30 минут по локальному нормативу norms.xlsx. Переезды будут получены из уличного графа OpenStreetMap настроенным маршрутизатором, а не добавлены из нормативных 20 минут."
+  ]
+}

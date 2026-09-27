@@ -1,0 +1,127 @@
+{
+  "dataset": "southeast",
+  "jobs": 83,
+  "method": "cp-sat",
+  "budget_s": 1,
+  "metrics": {
+    "urgent_unassigned": 0,
+    "unassigned": 6,
+    "engineers": 10,
+    "distance_m": 1139084
+  },
+  "wall_ms": 1512,
+  "elapsed_ms": 1034,
+  "global_optimal": false,
+  "staff_proven": false,
+  "incumbent_origin": "greedy_seed",
+  "scope": "global",
+  "status": "UNKNOWN",
+  "stages": [],
+  "validated": true,
+  "orders": [
+    [
+      49,
+      78,
+      75,
+      74,
+      77,
+      73,
+      76,
+      71,
+      72
+    ],
+    [
+      6,
+      58,
+      17,
+      54,
+      29,
+      55,
+      7,
+      51,
+      13,
+      42,
+      37,
+      48
+    ],
+    [
+      20,
+      18,
+      5,
+      12,
+      8,
+      19
+    ],
+    [
+      52,
+      67,
+      41
+    ],
+    [
+      82,
+      81,
+      79,
+      80
+    ],
+    [
+      21,
+      26,
+      27,
+      22,
+      9,
+      38
+    ],
+    [
+      66,
+      70,
+      61,
+      65,
+      60,
+      69,
+      59,
+      57,
+      64,
+      44
+    ],
+    [
+      28,
+      63,
+      31,
+      47,
+      11,
+      39,
+      33,
+      40,
+      56,
+      53,
+      36,
+      46,
+      45,
+      43
+    ],
+    [
+      16,
+      4,
+      50,
+      14,
+      15,
+      0
+    ],
+    [
+      24,
+      10,
+      25,
+      23,
+      2,
+      3,
+      1
+    ]
+  ],
+  "snapshot": "3d3954bdabb1befa",
+  "scenario_sha256": "2d3423ffb61fb6733172a1f3ea06d30f4ef35150c8d967cda9bac3480a8af51e",
+  "fingerprint": {
+    "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+    "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+    "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "dataset": "southcentre",
+  "jobs": 56,
+  "method": "sat-fast",
+  "budget_s": 1,
+  "metrics": {
+    "urgent_unassigned": 0,
+    "unassigned": 0,
+    "engineers": 6,
+    "distance_m": 204462
+  },
+  "wall_ms": 33,
+  "elapsed_ms": 29,
+  "global_optimal": false,
+  "staff_proven": false,
+  "incumbent_origin": "sat_pipeline",
+  "scope": "candidate_routes",
+  "status": "Fast search stopped at its effort/time limit; best validated plan returned, no global proof",
+  "stages": [
+    {
+      "criterion": "urgent_unassigned",
+      "lower": 0,
+      "upper": 0,
+      "proven": true
+    },
+    {
+      "criterion": "unassigned",
+      "lower": 0,
+      "upper": 0,
+      "proven": true
+    },
+    {
+      "criterion": "engineers",
+      "lower": 0,
+      "upper": 6,
+      "proven": false
+    }
+  ],
+  "validated": true,
+  "orders": [
+    [],
+    [
+      35,
+      52,
+      39,
+      17,
+      38,
+      16,
+      37,
+      9,
+      32,
+      34,
+      50,
+      10,
+      33,
+      40
+    ],
+    [],
+    [
+      44,
+      36,
+      43,
+      41,
+      51,
+      48,
+      30,
+      42
+    ],
+    [
+      47,
+      19,
+      22,
+      12,
+      49,
+      13,
+      45,
+      2,
+      18,
+      31,
+      4
+    ],
+    [],
+    [],
+    [
+      5,
+      23,
+      54,
+      11,
+      8,
+      20
+    ],
+    [
+      24,
+      15,
+      25,
+      53,
+      46,
+      1,
+      0
+    ],
+    [
+      27,
+      14,
+      26,
+      55,
+      7,
+      21,
+      6,
+      28,
+      3,
+      29
+    ]
+  ],
+  "snapshot": "3954d54dc0806876",
+  "scenario_sha256": "e5920ea183513522c61f0afeaeb544eb71376ac791bba8133f42116b2994cc92",
+  "fingerprint": {
+    "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+    "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+    "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+  }
+}

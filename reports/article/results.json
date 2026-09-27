@@ -1,0 +1,5645 @@
+{
+  "date": "17.09.2026",
+  "environment": {
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "python": "3.13.3 (main, Apr  9 2025, 03:47:57) [Clang 20.1.0 ]",
+    "ortools": "9.15.6755",
+    "cpu": "Apple M2",
+    "seed": 1,
+    "workers": 1,
+    "repetitions": 1,
+    "fast_budget_s": 1,
+    "timing": "Budget covers matrices/seed/model/search. Wall includes process startup, serialization and teardown; validation excluded.",
+    "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+    "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+    "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+  },
+  "python_short": "3.13.3",
+  "runs": [
+    {
+      "dataset": "east",
+      "jobs": 66,
+      "method": "greedy-append",
+      "budget_s": null,
+      "metrics": {
+        "urgent_unassigned": 4,
+        "unassigned": 27,
+        "engineers": 10,
+        "distance_m": 215644
+      },
+      "wall_ms": 6,
+      "elapsed_ms": 2,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "greedy",
+      "scope": "heuristic",
+      "status": "validated greedy plan",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2,
+          6,
+          32
+        ],
+        [
+          4,
+          5,
+          62,
+          65
+        ],
+        [
+          37,
+          38
+        ],
+        [
+          7,
+          10,
+          31,
+          39,
+          42
+        ],
+        [
+          8,
+          9,
+          11,
+          12,
+          13,
+          35
+        ],
+        [
+          40,
+          41,
+          43
+        ],
+        [
+          14,
+          17,
+          53,
+          55
+        ],
+        [
+          15,
+          20,
+          34
+        ],
+        [
+          16,
+          18,
+          19,
+          23,
+          58,
+          59
+        ]
+      ],
+      "snapshot": "6fbd5eaa3404cb7e",
+      "scenario_sha256": "ef79023831030ac9f0dccc176125a9f04191732a0a2eb759c6c40cd62d72bf21",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "east",
+      "jobs": 66,
+      "method": "greedy-insertion",
+      "budget_s": null,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 9,
+        "distance_m": 265409
+      },
+      "wall_ms": 6,
+      "elapsed_ms": 2,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "greedy",
+      "scope": "heuristic",
+      "status": "validated greedy plan",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          33,
+          22,
+          27,
+          47,
+          11,
+          42
+        ],
+        [
+          50,
+          49,
+          36,
+          51,
+          15,
+          19,
+          57,
+          14,
+          10,
+          2,
+          39,
+          5,
+          3
+        ],
+        [
+          25,
+          20,
+          29,
+          13,
+          6,
+          32
+        ],
+        [
+          56,
+          45,
+          44,
+          55,
+          37,
+          41
+        ],
+        [
+          16,
+          61,
+          26,
+          46,
+          58,
+          59,
+          31,
+          43,
+          65,
+          62
+        ],
+        [
+          30,
+          28,
+          23,
+          12
+        ],
+        [
+          54,
+          48,
+          52,
+          53,
+          38
+        ],
+        [],
+        [
+          24,
+          18,
+          21,
+          17,
+          7,
+          40,
+          4,
+          0
+        ],
+        [
+          63,
+          8,
+          9,
+          60,
+          34,
+          64,
+          35,
+          1
+        ]
+      ],
+      "snapshot": "6fbd5eaa3404cb7e",
+      "scenario_sha256": "ef79023831030ac9f0dccc176125a9f04191732a0a2eb759c6c40cd62d72bf21",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "east",
+      "jobs": 66,
+      "method": "sat-fast",
+      "budget_s": 1,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 8,
+        "distance_m": 206524
+      },
+      "wall_ms": 30,
+      "elapsed_ms": 26,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "sat_pipeline",
+      "scope": "candidate_routes",
+      "status": "Fast search stopped at its effort/time limit; best validated plan returned, no global proof",
+      "stages": [
+        {
+          "criterion": "urgent_unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "engineers",
+          "lower": 0,
+          "upper": 8,
+          "proven": false
+        }
+      ],
+      "validated": true,
+      "orders": [
+        [
+          22,
+          51,
+          48,
+          9,
+          26,
+          57,
+          23,
+          10,
+          2,
+          39,
+          3,
+          32
+        ],
+        [
+          28,
+          25,
+          17,
+          7,
+          0,
+          6
+        ],
+        [
+          18,
+          36,
+          8,
+          19,
+          29,
+          14,
+          13
+        ],
+        [
+          49,
+          50,
+          44,
+          54,
+          52,
+          53,
+          37,
+          55,
+          41,
+          38
+        ],
+        [
+          24,
+          61,
+          47,
+          21,
+          46,
+          58,
+          59,
+          31,
+          43,
+          65,
+          62
+        ],
+        [
+          33,
+          20,
+          11
+        ],
+        [],
+        [],
+        [
+          27,
+          56,
+          45,
+          30,
+          12,
+          5,
+          40,
+          4,
+          42
+        ],
+        [
+          63,
+          16,
+          15,
+          34,
+          60,
+          64,
+          35,
+          1
+        ]
+      ],
+      "snapshot": "6fbd5eaa3404cb7e",
+      "scenario_sha256": "ef79023831030ac9f0dccc176125a9f04191732a0a2eb759c6c40cd62d72bf21",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "east",
+      "jobs": 66,
+      "method": "sat-exact",
+      "budget_s": 1,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 7,
+        "distance_m": 186712
+      },
+      "wall_ms": 907,
+      "elapsed_ms": 900,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "sat_pipeline",
+      "scope": "global",
+      "status": "Time budget reached; best validated plan returned, optimality not proven",
+      "stages": [
+        {
+          "criterion": "urgent_unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "engineers",
+          "lower": 6,
+          "upper": 7,
+          "proven": false
+        }
+      ],
+      "validated": true,
+      "orders": [
+        [
+          24,
+          8,
+          54,
+          19,
+          29,
+          17,
+          7,
+          65,
+          62
+        ],
+        [
+          18,
+          56,
+          47,
+          26,
+          20,
+          52,
+          14,
+          13,
+          41,
+          55,
+          37,
+          1
+        ],
+        [
+          61,
+          27,
+          21,
+          30,
+          4,
+          5,
+          3
+        ],
+        [
+          50,
+          49,
+          45,
+          46,
+          57,
+          43,
+          40,
+          42
+        ],
+        [
+          51,
+          63,
+          48,
+          44,
+          25,
+          12,
+          53,
+          64,
+          35,
+          38
+        ],
+        [
+          36,
+          33,
+          16,
+          9,
+          15,
+          34,
+          60,
+          59,
+          58,
+          31,
+          32
+        ],
+        [],
+        [],
+        [
+          22,
+          11,
+          28,
+          23,
+          10,
+          2,
+          39,
+          6,
+          0
+        ],
+        []
+      ],
+      "snapshot": "6fbd5eaa3404cb7e",
+      "scenario_sha256": "ef79023831030ac9f0dccc176125a9f04191732a0a2eb759c6c40cd62d72bf21",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "east",
+      "jobs": 66,
+      "method": "sat-exact",
+      "budget_s": 5,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 6,
+        "distance_m": 238403
+      },
+      "wall_ms": 4956,
+      "elapsed_ms": 4909,
+      "global_optimal": false,
+      "staff_proven": true,
+      "incumbent_origin": "sat_pipeline",
+      "scope": "global",
+      "status": "Time budget reached; best validated plan returned, optimality not proven",
+      "stages": [
+        {
+          "criterion": "urgent_unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "engineers",
+          "lower": 6,
+          "upper": 6,
+          "proven": true
+        },
+        {
+          "criterion": "distance_m",
+          "lower": 0,
+          "upper": 238403,
+          "proven": false
+        }
+      ],
+      "validated": true,
+      "orders": [
+        [
+          61,
+          56,
+          21,
+          45,
+          26,
+          46,
+          29,
+          53,
+          64,
+          35,
+          2,
+          62
+        ],
+        [
+          50,
+          49,
+          36,
+          33,
+          44,
+          54,
+          47,
+          30,
+          57,
+          14,
+          13,
+          37,
+          55
+        ],
+        [
+          24,
+          18,
+          19,
+          11,
+          12,
+          58,
+          59,
+          31,
+          3
+        ],
+        [],
+        [
+          22,
+          27,
+          28,
+          17,
+          23,
+          10,
+          39,
+          41,
+          1,
+          38
+        ],
+        [],
+        [],
+        [
+          51,
+          63,
+          48,
+          25,
+          20,
+          52,
+          60,
+          5,
+          40,
+          4,
+          32,
+          42,
+          65
+        ],
+        [
+          8,
+          16,
+          9,
+          15,
+          34,
+          7,
+          43,
+          0,
+          6
+        ],
+        []
+      ],
+      "snapshot": "6fbd5eaa3404cb7e",
+      "scenario_sha256": "ef79023831030ac9f0dccc176125a9f04191732a0a2eb759c6c40cd62d72bf21",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "east",
+      "jobs": 66,
+      "method": "sat-exact",
+      "budget_s": 30,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 6,
+        "distance_m": 240686
+      },
+      "wall_ms": 29938,
+      "elapsed_ms": 29913,
+      "global_optimal": false,
+      "staff_proven": true,
+      "incumbent_origin": "sat_pipeline",
+      "scope": "global",
+      "status": "Time budget reached; best validated plan returned, optimality not proven",
+      "stages": [
+        {
+          "criterion": "urgent_unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "engineers",
+          "lower": 6,
+          "upper": 6,
+          "proven": true
+        },
+        {
+          "criterion": "distance_m",
+          "lower": 0,
+          "upper": 240686,
+          "proven": false
+        }
+      ],
+      "validated": true,
+      "orders": [
+        [
+          61,
+          56,
+          21,
+          45,
+          26,
+          46,
+          29,
+          53,
+          64,
+          35,
+          2,
+          62
+        ],
+        [
+          49,
+          36,
+          51,
+          33,
+          44,
+          54,
+          47,
+          30,
+          57,
+          14,
+          13,
+          37,
+          55
+        ],
+        [
+          24,
+          18,
+          19,
+          11,
+          12,
+          58,
+          59,
+          31,
+          3
+        ],
+        [],
+        [
+          22,
+          27,
+          28,
+          17,
+          23,
+          10,
+          39,
+          41,
+          1,
+          38
+        ],
+        [],
+        [],
+        [
+          50,
+          63,
+          48,
+          20,
+          25,
+          52,
+          60,
+          5,
+          40,
+          4,
+          32,
+          42,
+          65
+        ],
+        [
+          8,
+          16,
+          9,
+          15,
+          34,
+          7,
+          43,
+          0,
+          6
+        ],
+        []
+      ],
+      "snapshot": "6fbd5eaa3404cb7e",
+      "scenario_sha256": "ef79023831030ac9f0dccc176125a9f04191732a0a2eb759c6c40cd62d72bf21",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "east",
+      "jobs": 66,
+      "method": "sat-exact",
+      "budget_s": 120,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 6,
+        "distance_m": 238403
+      },
+      "wall_ms": 119930,
+      "elapsed_ms": 119903,
+      "global_optimal": false,
+      "staff_proven": true,
+      "incumbent_origin": "sat_pipeline",
+      "scope": "global",
+      "status": "Time budget reached; best validated plan returned, optimality not proven",
+      "stages": [
+        {
+          "criterion": "urgent_unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "engineers",
+          "lower": 6,
+          "upper": 6,
+          "proven": true
+        },
+        {
+          "criterion": "distance_m",
+          "lower": 0,
+          "upper": 238403,
+          "proven": false
+        }
+      ],
+      "validated": true,
+      "orders": [
+        [
+          61,
+          56,
+          21,
+          45,
+          26,
+          46,
+          29,
+          53,
+          64,
+          35,
+          2,
+          62
+        ],
+        [
+          50,
+          49,
+          36,
+          33,
+          44,
+          54,
+          47,
+          30,
+          57,
+          14,
+          13,
+          37,
+          55
+        ],
+        [
+          24,
+          18,
+          19,
+          11,
+          12,
+          58,
+          59,
+          31,
+          3
+        ],
+        [],
+        [
+          22,
+          27,
+          28,
+          17,
+          23,
+          10,
+          39,
+          41,
+          1,
+          38
+        ],
+        [],
+        [],
+        [
+          51,
+          63,
+          48,
+          25,
+          20,
+          52,
+          60,
+          5,
+          40,
+          4,
+          32,
+          42,
+          65
+        ],
+        [
+          8,
+          16,
+          9,
+          15,
+          34,
+          7,
+          43,
+          0,
+          6
+        ],
+        []
+      ],
+      "snapshot": "6fbd5eaa3404cb7e",
+      "scenario_sha256": "ef79023831030ac9f0dccc176125a9f04191732a0a2eb759c6c40cd62d72bf21",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "east",
+      "jobs": 66,
+      "method": "routing-gls",
+      "budget_s": 1,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 7,
+        "distance_m": 161261
+      },
+      "wall_ms": 1662,
+      "elapsed_ms": 1001,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "solver",
+      "scope": "heuristic",
+      "status": "ROUTING_1",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          24,
+          61,
+          47,
+          45,
+          19,
+          29,
+          59,
+          58,
+          31,
+          32,
+          42
+        ],
+        [
+          18,
+          49,
+          25,
+          26,
+          17,
+          57,
+          40,
+          4,
+          5,
+          3
+        ],
+        [],
+        [],
+        [
+          56,
+          27,
+          21,
+          28,
+          46,
+          23,
+          10,
+          2,
+          39,
+          62,
+          65
+        ],
+        [],
+        [
+          50,
+          51,
+          44,
+          54,
+          48,
+          52,
+          53,
+          38
+        ],
+        [
+          8,
+          16,
+          15,
+          9,
+          14,
+          13,
+          41,
+          55,
+          37,
+          1
+        ],
+        [
+          22,
+          30,
+          11,
+          12,
+          7,
+          43,
+          0,
+          6
+        ],
+        [
+          36,
+          33,
+          63,
+          20,
+          60,
+          34,
+          64,
+          35
+        ]
+      ],
+      "snapshot": "6fbd5eaa3404cb7e",
+      "scenario_sha256": "ef79023831030ac9f0dccc176125a9f04191732a0a2eb759c6c40cd62d72bf21",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "east",
+      "jobs": 66,
+      "method": "routing-gls",
+      "budget_s": 5,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 7,
+        "distance_m": 139586
+      },
+      "wall_ms": 5413,
+      "elapsed_ms": 5001,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "solver",
+      "scope": "heuristic",
+      "status": "ROUTING_1",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          49,
+          22,
+          61,
+          47,
+          30,
+          57,
+          59,
+          58,
+          31,
+          40,
+          4,
+          32,
+          42
+        ],
+        [
+          24,
+          8,
+          15,
+          44,
+          34,
+          14,
+          13,
+          41,
+          55,
+          37,
+          1
+        ],
+        [
+          18,
+          26,
+          25,
+          29,
+          60
+        ],
+        [],
+        [
+          36,
+          33,
+          51,
+          63,
+          48,
+          20,
+          52,
+          53,
+          64,
+          35,
+          38
+        ],
+        [],
+        [],
+        [
+          50,
+          16,
+          9,
+          54,
+          28,
+          46,
+          23,
+          10,
+          2,
+          39,
+          62,
+          65
+        ],
+        [
+          27,
+          56,
+          21,
+          45,
+          17,
+          7,
+          43,
+          0,
+          6
+        ],
+        [
+          19,
+          11,
+          12,
+          5,
+          3
+        ]
+      ],
+      "snapshot": "6fbd5eaa3404cb7e",
+      "scenario_sha256": "ef79023831030ac9f0dccc176125a9f04191732a0a2eb759c6c40cd62d72bf21",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "east",
+      "jobs": 66,
+      "method": "routing-gls",
+      "budget_s": 30,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 7,
+        "distance_m": 121892
+      },
+      "wall_ms": 30426,
+      "elapsed_ms": 30001,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "solver",
+      "scope": "heuristic",
+      "status": "ROUTING_1",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          36,
+          33,
+          51,
+          63,
+          48,
+          20,
+          52,
+          53,
+          64,
+          35,
+          38
+        ],
+        [
+          49,
+          50,
+          19,
+          26,
+          29,
+          5,
+          40,
+          4,
+          32,
+          42
+        ],
+        [
+          24,
+          25,
+          9,
+          60,
+          14,
+          13
+        ],
+        [],
+        [
+          27,
+          61,
+          47,
+          21,
+          57,
+          7,
+          43,
+          0,
+          6
+        ],
+        [],
+        [],
+        [
+          18,
+          56,
+          28,
+          45,
+          17,
+          46,
+          23,
+          10,
+          2,
+          39,
+          62,
+          65
+        ],
+        [
+          8,
+          16,
+          54,
+          44,
+          15,
+          34,
+          37,
+          55,
+          41,
+          1
+        ],
+        [
+          22,
+          30,
+          11,
+          12,
+          59,
+          58,
+          31,
+          3
+        ]
+      ],
+      "snapshot": "6fbd5eaa3404cb7e",
+      "scenario_sha256": "ef79023831030ac9f0dccc176125a9f04191732a0a2eb759c6c40cd62d72bf21",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "east",
+      "jobs": 66,
+      "method": "routing-gls",
+      "budget_s": 120,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 7,
+        "distance_m": 121892
+      },
+      "wall_ms": 120482,
+      "elapsed_ms": 120000,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "solver",
+      "scope": "heuristic",
+      "status": "ROUTING_1",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          36,
+          33,
+          51,
+          63,
+          48,
+          20,
+          52,
+          53,
+          64,
+          35,
+          38
+        ],
+        [
+          49,
+          50,
+          19,
+          26,
+          29,
+          5,
+          40,
+          4,
+          32,
+          42
+        ],
+        [
+          24,
+          25,
+          9,
+          60,
+          14,
+          13
+        ],
+        [],
+        [
+          27,
+          61,
+          47,
+          21,
+          57,
+          7,
+          43,
+          0,
+          6
+        ],
+        [],
+        [],
+        [
+          18,
+          56,
+          28,
+          45,
+          17,
+          46,
+          23,
+          10,
+          2,
+          39,
+          62,
+          65
+        ],
+        [
+          8,
+          16,
+          54,
+          44,
+          15,
+          34,
+          37,
+          55,
+          41,
+          1
+        ],
+        [
+          22,
+          30,
+          11,
+          12,
+          59,
+          58,
+          31,
+          3
+        ]
+      ],
+      "snapshot": "6fbd5eaa3404cb7e",
+      "scenario_sha256": "ef79023831030ac9f0dccc176125a9f04191732a0a2eb759c6c40cd62d72bf21",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "east",
+      "jobs": 66,
+      "method": "cp-sat",
+      "budget_s": 1,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 9,
+        "distance_m": 265409
+      },
+      "wall_ms": 1481,
+      "elapsed_ms": 1003,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "greedy_seed",
+      "scope": "global",
+      "status": "UNKNOWN",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          33,
+          22,
+          27,
+          47,
+          11,
+          42
+        ],
+        [
+          50,
+          49,
+          36,
+          51,
+          15,
+          19,
+          57,
+          14,
+          10,
+          2,
+          39,
+          5,
+          3
+        ],
+        [
+          25,
+          20,
+          29,
+          13,
+          6,
+          32
+        ],
+        [
+          56,
+          45,
+          44,
+          55,
+          37,
+          41
+        ],
+        [
+          16,
+          61,
+          26,
+          46,
+          58,
+          59,
+          31,
+          43,
+          65,
+          62
+        ],
+        [
+          30,
+          28,
+          23,
+          12
+        ],
+        [
+          54,
+          48,
+          52,
+          53,
+          38
+        ],
+        [],
+        [
+          24,
+          18,
+          21,
+          17,
+          7,
+          40,
+          4,
+          0
+        ],
+        [
+          63,
+          8,
+          9,
+          60,
+          34,
+          64,
+          35,
+          1
+        ]
+      ],
+      "snapshot": "6fbd5eaa3404cb7e",
+      "scenario_sha256": "ef79023831030ac9f0dccc176125a9f04191732a0a2eb759c6c40cd62d72bf21",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "east",
+      "jobs": 66,
+      "method": "cp-sat",
+      "budget_s": 5,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 9,
+        "distance_m": 265409
+      },
+      "wall_ms": 5406,
+      "elapsed_ms": 5010,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "greedy_seed",
+      "scope": "global",
+      "status": "FEASIBLE",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          33,
+          22,
+          27,
+          47,
+          11,
+          42
+        ],
+        [
+          50,
+          49,
+          36,
+          51,
+          15,
+          19,
+          57,
+          14,
+          10,
+          2,
+          39,
+          5,
+          3
+        ],
+        [
+          25,
+          20,
+          29,
+          13,
+          6,
+          32
+        ],
+        [
+          56,
+          45,
+          44,
+          55,
+          37,
+          41
+        ],
+        [
+          16,
+          61,
+          26,
+          46,
+          58,
+          59,
+          31,
+          43,
+          65,
+          62
+        ],
+        [
+          30,
+          28,
+          23,
+          12
+        ],
+        [
+          54,
+          48,
+          52,
+          53,
+          38
+        ],
+        [],
+        [
+          24,
+          18,
+          21,
+          17,
+          7,
+          40,
+          4,
+          0
+        ],
+        [
+          63,
+          8,
+          9,
+          60,
+          34,
+          64,
+          35,
+          1
+        ]
+      ],
+      "snapshot": "6fbd5eaa3404cb7e",
+      "scenario_sha256": "ef79023831030ac9f0dccc176125a9f04191732a0a2eb759c6c40cd62d72bf21",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "east",
+      "jobs": 66,
+      "method": "cp-sat",
+      "budget_s": 30,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 9,
+        "distance_m": 258228
+      },
+      "wall_ms": 30418,
+      "elapsed_ms": 30023,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "solver",
+      "scope": "global",
+      "status": "FEASIBLE",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          33,
+          22,
+          27,
+          47,
+          11,
+          31,
+          42,
+          6
+        ],
+        [
+          49,
+          50,
+          15,
+          19,
+          57,
+          14,
+          10,
+          2,
+          39,
+          5,
+          3
+        ],
+        [
+          25,
+          20,
+          29,
+          13,
+          62,
+          32
+        ],
+        [
+          56,
+          45,
+          44,
+          55,
+          37,
+          41
+        ],
+        [
+          16,
+          61,
+          26,
+          46,
+          59,
+          58,
+          43,
+          0,
+          65
+        ],
+        [
+          30,
+          28,
+          23,
+          12
+        ],
+        [],
+        [
+          51,
+          8,
+          54,
+          48,
+          52,
+          53,
+          35,
+          38
+        ],
+        [
+          24,
+          18,
+          21,
+          17,
+          7,
+          40,
+          4
+        ],
+        [
+          36,
+          63,
+          9,
+          60,
+          34,
+          64,
+          1
+        ]
+      ],
+      "snapshot": "6fbd5eaa3404cb7e",
+      "scenario_sha256": "ef79023831030ac9f0dccc176125a9f04191732a0a2eb759c6c40cd62d72bf21",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "east",
+      "jobs": 66,
+      "method": "cp-sat",
+      "budget_s": 120,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 9,
+        "distance_m": 203721
+      },
+      "wall_ms": 120441,
+      "elapsed_ms": 120028,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "solver",
+      "scope": "global",
+      "status": "FEASIBLE",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          33,
+          63,
+          51,
+          21,
+          28,
+          46,
+          23,
+          10,
+          2,
+          62
+        ],
+        [
+          11,
+          30,
+          40,
+          4,
+          31,
+          32,
+          42
+        ],
+        [
+          22,
+          61,
+          20,
+          64,
+          35
+        ],
+        [
+          56,
+          52,
+          53,
+          38
+        ],
+        [
+          36,
+          24,
+          50,
+          54,
+          44,
+          60,
+          34,
+          55,
+          37,
+          41,
+          1
+        ],
+        [
+          18,
+          25,
+          19,
+          29,
+          59,
+          58,
+          65,
+          6
+        ],
+        [],
+        [
+          49,
+          48,
+          9,
+          14,
+          13
+        ],
+        [
+          27,
+          47,
+          45,
+          17,
+          57,
+          7,
+          39,
+          43,
+          0
+        ],
+        [
+          16,
+          8,
+          15,
+          26,
+          12,
+          5,
+          3
+        ]
+      ],
+      "snapshot": "6fbd5eaa3404cb7e",
+      "scenario_sha256": "ef79023831030ac9f0dccc176125a9f04191732a0a2eb759c6c40cd62d72bf21",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southeast",
+      "jobs": 83,
+      "method": "greedy-append",
+      "budget_s": null,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 31,
+        "engineers": 10,
+        "distance_m": 985582
+      },
+      "wall_ms": 7,
+      "elapsed_ms": 3,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "greedy",
+      "scope": "heuristic",
+      "status": "validated greedy plan",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          0,
+          1,
+          36,
+          37,
+          38,
+          72
+        ],
+        [
+          2,
+          3,
+          41,
+          42,
+          43
+        ],
+        [
+          4,
+          5,
+          7,
+          8,
+          13,
+          19,
+          71,
+          73
+        ],
+        [
+          40,
+          44
+        ],
+        [
+          6,
+          10,
+          23,
+          45,
+          48,
+          81
+        ],
+        [
+          9,
+          34,
+          74,
+          75,
+          76,
+          77,
+          78
+        ],
+        [
+          46,
+          53,
+          57,
+          64
+        ],
+        [
+          11,
+          12,
+          15,
+          33,
+          51,
+          79,
+          80
+        ],
+        [
+          14,
+          50,
+          67
+        ],
+        [
+          16,
+          25,
+          39,
+          82
+        ]
+      ],
+      "snapshot": "3d3954bdabb1befa",
+      "scenario_sha256": "2d3423ffb61fb6733172a1f3ea06d30f4ef35150c8d967cda9bac3480a8af51e",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southeast",
+      "jobs": 83,
+      "method": "greedy-insertion",
+      "budget_s": null,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 6,
+        "engineers": 10,
+        "distance_m": 1139084
+      },
+      "wall_ms": 7,
+      "elapsed_ms": 3,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "greedy",
+      "scope": "heuristic",
+      "status": "validated greedy plan",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          49,
+          78,
+          75,
+          74,
+          77,
+          73,
+          76,
+          71,
+          72
+        ],
+        [
+          6,
+          58,
+          17,
+          54,
+          29,
+          55,
+          7,
+          51,
+          13,
+          42,
+          37,
+          48
+        ],
+        [
+          20,
+          18,
+          5,
+          12,
+          8,
+          19
+        ],
+        [
+          52,
+          67,
+          41
+        ],
+        [
+          82,
+          81,
+          79,
+          80
+        ],
+        [
+          21,
+          26,
+          27,
+          22,
+          9,
+          38
+        ],
+        [
+          66,
+          70,
+          61,
+          65,
+          60,
+          69,
+          59,
+          57,
+          64,
+          44
+        ],
+        [
+          28,
+          63,
+          31,
+          47,
+          11,
+          39,
+          33,
+          40,
+          56,
+          53,
+          36,
+          46,
+          45,
+          43
+        ],
+        [
+          16,
+          4,
+          50,
+          14,
+          15,
+          0
+        ],
+        [
+          24,
+          10,
+          25,
+          23,
+          2,
+          3,
+          1
+        ]
+      ],
+      "snapshot": "3d3954bdabb1befa",
+      "scenario_sha256": "2d3423ffb61fb6733172a1f3ea06d30f4ef35150c8d967cda9bac3480a8af51e",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southeast",
+      "jobs": 83,
+      "method": "sat-fast",
+      "budget_s": 1,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 4,
+        "engineers": 9,
+        "distance_m": 1049707
+      },
+      "wall_ms": 35,
+      "elapsed_ms": 30,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "sat_pipeline",
+      "scope": "candidate_routes",
+      "status": "Fast search stopped at its effort/time limit; best validated plan returned, no global proof",
+      "stages": [
+        {
+          "criterion": "urgent_unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "unassigned",
+          "lower": 0,
+          "upper": 4,
+          "proven": false
+        }
+      ],
+      "validated": true,
+      "orders": [
+        [
+          52,
+          21,
+          22,
+          73,
+          69,
+          82,
+          81,
+          71,
+          76
+        ],
+        [
+          20,
+          58,
+          63,
+          5,
+          54,
+          9,
+          38,
+          43
+        ],
+        [
+          6,
+          24,
+          10,
+          25,
+          23,
+          2,
+          3,
+          37,
+          1
+        ],
+        [],
+        [
+          78,
+          79,
+          72,
+          75,
+          74,
+          80,
+          77
+        ],
+        [
+          17,
+          28,
+          35,
+          12,
+          15
+        ],
+        [
+          66,
+          70,
+          47,
+          61,
+          65,
+          55,
+          60,
+          62,
+          59,
+          56,
+          53,
+          42,
+          64,
+          44
+        ],
+        [
+          49,
+          26,
+          68,
+          11,
+          39,
+          7,
+          51,
+          13,
+          57,
+          36,
+          46,
+          48,
+          45
+        ],
+        [
+          4,
+          16,
+          50,
+          14,
+          67,
+          33,
+          40,
+          0,
+          41
+        ],
+        [
+          31,
+          29,
+          30,
+          8,
+          19
+        ]
+      ],
+      "snapshot": "3d3954bdabb1befa",
+      "scenario_sha256": "2d3423ffb61fb6733172a1f3ea06d30f4ef35150c8d967cda9bac3480a8af51e",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southeast",
+      "jobs": 83,
+      "method": "sat-exact",
+      "budget_s": 1,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 9,
+        "distance_m": 1000966
+      },
+      "wall_ms": 950,
+      "elapsed_ms": 936,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "sat_pipeline",
+      "scope": "global",
+      "status": "Time budget reached; best validated plan returned, optimality not proven",
+      "stages": [
+        {
+          "criterion": "urgent_unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "engineers",
+          "lower": 7,
+          "upper": 9,
+          "proven": false
+        }
+      ],
+      "validated": true,
+      "orders": [
+        [
+          6,
+          20,
+          54,
+          61,
+          30,
+          55,
+          8,
+          40,
+          0,
+          41,
+          71
+        ],
+        [
+          49,
+          21,
+          26,
+          68,
+          27,
+          34,
+          2,
+          64,
+          42,
+          37
+        ],
+        [
+          17,
+          18,
+          5,
+          29,
+          39,
+          15,
+          19,
+          81,
+          75,
+          74
+        ],
+        [
+          52,
+          50,
+          51,
+          57,
+          53,
+          48
+        ],
+        [
+          24,
+          10,
+          25,
+          23,
+          56,
+          13,
+          36,
+          46,
+          82,
+          45
+        ],
+        [
+          16,
+          4,
+          14,
+          35,
+          33,
+          72,
+          76,
+          38,
+          80
+        ],
+        [
+          58,
+          63,
+          66,
+          70,
+          47,
+          65,
+          67,
+          60,
+          62,
+          59,
+          44
+        ],
+        [
+          31,
+          28,
+          22,
+          69,
+          9,
+          77,
+          73,
+          79,
+          43,
+          78
+        ],
+        [],
+        [
+          32,
+          12,
+          11,
+          7,
+          3,
+          1
+        ]
+      ],
+      "snapshot": "3d3954bdabb1befa",
+      "scenario_sha256": "2d3423ffb61fb6733172a1f3ea06d30f4ef35150c8d967cda9bac3480a8af51e",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southeast",
+      "jobs": 83,
+      "method": "sat-exact",
+      "budget_s": 5,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 8,
+        "distance_m": 888377
+      },
+      "wall_ms": 4925,
+      "elapsed_ms": 4908,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "sat_pipeline",
+      "scope": "global",
+      "status": "Time budget reached; best validated plan returned, optimality not proven",
+      "stages": [
+        {
+          "criterion": "urgent_unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "engineers",
+          "lower": 7,
+          "upper": 8,
+          "proven": false
+        }
+      ],
+      "validated": true,
+      "orders": [
+        [
+          20,
+          6,
+          27,
+          69,
+          9,
+          77,
+          73,
+          76,
+          38,
+          74,
+          75
+        ],
+        [
+          58,
+          17,
+          65,
+          35,
+          12,
+          23,
+          2,
+          42,
+          37,
+          53,
+          36,
+          48
+        ],
+        [
+          28,
+          32,
+          11,
+          5,
+          7,
+          13,
+          82,
+          71
+        ],
+        [],
+        [
+          31,
+          29,
+          30,
+          8,
+          3,
+          64,
+          1,
+          44
+        ],
+        [
+          18,
+          24,
+          10,
+          25,
+          39,
+          15,
+          0,
+          78,
+          72,
+          80
+        ],
+        [
+          52,
+          63,
+          66,
+          70,
+          47,
+          61,
+          54,
+          55,
+          60,
+          62,
+          59,
+          56,
+          51,
+          57,
+          45
+        ],
+        [
+          49,
+          21,
+          26,
+          68,
+          22,
+          34,
+          19,
+          46,
+          81,
+          43,
+          79
+        ],
+        [
+          16,
+          4,
+          50,
+          14,
+          67,
+          33,
+          40,
+          41
+        ],
+        []
+      ],
+      "snapshot": "3d3954bdabb1befa",
+      "scenario_sha256": "2d3423ffb61fb6733172a1f3ea06d30f4ef35150c8d967cda9bac3480a8af51e",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southeast",
+      "jobs": 83,
+      "method": "sat-exact",
+      "budget_s": 30,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 8,
+        "distance_m": 905636
+      },
+      "wall_ms": 30037,
+      "elapsed_ms": 30023,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "sat_pipeline",
+      "scope": "global",
+      "status": "Time budget reached; best validated plan returned, optimality not proven",
+      "stages": [
+        {
+          "criterion": "urgent_unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "engineers",
+          "lower": 7,
+          "upper": 8,
+          "proven": false
+        }
+      ],
+      "validated": true,
+      "orders": [
+        [
+          20,
+          6,
+          27,
+          69,
+          9,
+          77,
+          73,
+          75,
+          74
+        ],
+        [
+          58,
+          17,
+          65,
+          12,
+          35,
+          39,
+          8,
+          3,
+          37,
+          53,
+          36,
+          48,
+          45
+        ],
+        [
+          28,
+          32,
+          11,
+          5,
+          7,
+          13,
+          82,
+          71
+        ],
+        [],
+        [
+          31,
+          30,
+          29,
+          23,
+          2,
+          1,
+          44
+        ],
+        [
+          18,
+          24,
+          25,
+          10,
+          15,
+          78,
+          72,
+          80,
+          38,
+          76
+        ],
+        [
+          52,
+          63,
+          66,
+          70,
+          47,
+          61,
+          54,
+          55,
+          60,
+          62,
+          59,
+          56,
+          51,
+          57,
+          42,
+          64
+        ],
+        [
+          49,
+          21,
+          26,
+          68,
+          22,
+          34,
+          19,
+          46,
+          81,
+          43,
+          79
+        ],
+        [
+          16,
+          4,
+          50,
+          14,
+          67,
+          33,
+          40,
+          0,
+          41
+        ],
+        []
+      ],
+      "snapshot": "3d3954bdabb1befa",
+      "scenario_sha256": "2d3423ffb61fb6733172a1f3ea06d30f4ef35150c8d967cda9bac3480a8af51e",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southeast",
+      "jobs": 83,
+      "method": "sat-exact",
+      "budget_s": 120,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 8,
+        "distance_m": 888377
+      },
+      "wall_ms": 119925,
+      "elapsed_ms": 119908,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "sat_pipeline",
+      "scope": "global",
+      "status": "Time budget reached; best validated plan returned, optimality not proven",
+      "stages": [
+        {
+          "criterion": "urgent_unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "engineers",
+          "lower": 7,
+          "upper": 8,
+          "proven": false
+        }
+      ],
+      "validated": true,
+      "orders": [
+        [
+          20,
+          6,
+          27,
+          69,
+          9,
+          77,
+          73,
+          76,
+          38,
+          74,
+          75
+        ],
+        [
+          58,
+          17,
+          65,
+          35,
+          12,
+          23,
+          2,
+          42,
+          37,
+          53,
+          36,
+          48
+        ],
+        [
+          28,
+          32,
+          11,
+          5,
+          7,
+          13,
+          82,
+          71
+        ],
+        [],
+        [
+          31,
+          29,
+          30,
+          8,
+          3,
+          64,
+          1,
+          44
+        ],
+        [
+          18,
+          24,
+          10,
+          25,
+          39,
+          15,
+          0,
+          78,
+          72,
+          80
+        ],
+        [
+          52,
+          63,
+          66,
+          70,
+          47,
+          61,
+          54,
+          55,
+          60,
+          62,
+          59,
+          56,
+          51,
+          57,
+          45
+        ],
+        [
+          49,
+          21,
+          26,
+          68,
+          22,
+          34,
+          19,
+          46,
+          81,
+          43,
+          79
+        ],
+        [
+          16,
+          4,
+          50,
+          14,
+          67,
+          33,
+          40,
+          41
+        ],
+        []
+      ],
+      "snapshot": "3d3954bdabb1befa",
+      "scenario_sha256": "2d3423ffb61fb6733172a1f3ea06d30f4ef35150c8d967cda9bac3480a8af51e",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southeast",
+      "jobs": 83,
+      "method": "routing-gls",
+      "budget_s": 1,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 9,
+        "distance_m": 533611
+      },
+      "wall_ms": 1650,
+      "elapsed_ms": 1000,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "solver",
+      "scope": "heuristic",
+      "status": "ROUTING_1",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          49,
+          26,
+          75,
+          68,
+          34,
+          69,
+          78,
+          79,
+          43
+        ],
+        [
+          6,
+          58,
+          18,
+          54,
+          5,
+          39,
+          8,
+          19,
+          46,
+          57,
+          42,
+          37
+        ],
+        [
+          17,
+          24,
+          10,
+          25,
+          23,
+          2,
+          3,
+          1
+        ],
+        [],
+        [
+          28,
+          61,
+          30,
+          55,
+          13,
+          56,
+          53,
+          36,
+          48,
+          45,
+          82
+        ],
+        [
+          72,
+          21,
+          22,
+          27,
+          9,
+          73,
+          77,
+          76,
+          38,
+          80,
+          74
+        ],
+        [
+          52,
+          63,
+          66,
+          70,
+          47,
+          65,
+          51,
+          59,
+          62,
+          64,
+          44
+        ],
+        [
+          20,
+          31,
+          29,
+          35,
+          60,
+          15,
+          0,
+          41,
+          71
+        ],
+        [
+          16,
+          4,
+          50,
+          14,
+          67,
+          33,
+          40
+        ],
+        [
+          32,
+          11,
+          12,
+          7,
+          81
+        ]
+      ],
+      "snapshot": "3d3954bdabb1befa",
+      "scenario_sha256": "2d3423ffb61fb6733172a1f3ea06d30f4ef35150c8d967cda9bac3480a8af51e",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southeast",
+      "jobs": 83,
+      "method": "routing-gls",
+      "budget_s": 5,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 9,
+        "distance_m": 531974
+      },
+      "wall_ms": 5393,
+      "elapsed_ms": 5001,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "solver",
+      "scope": "heuristic",
+      "status": "ROUTING_1",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          49,
+          21,
+          26,
+          68,
+          34,
+          69,
+          79,
+          43,
+          78
+        ],
+        [
+          17,
+          31,
+          29,
+          35,
+          60,
+          7,
+          59,
+          62,
+          64,
+          42,
+          37,
+          1,
+          44
+        ],
+        [
+          72,
+          76,
+          22,
+          27,
+          9,
+          73,
+          77,
+          74,
+          75,
+          38,
+          80
+        ],
+        [],
+        [
+          20,
+          61,
+          30,
+          55,
+          13,
+          56,
+          53,
+          57,
+          36,
+          48,
+          45,
+          82
+        ],
+        [
+          28,
+          24,
+          10,
+          25,
+          23,
+          2,
+          3
+        ],
+        [
+          52,
+          63,
+          66,
+          70,
+          47,
+          65,
+          51,
+          46
+        ],
+        [
+          6,
+          58,
+          18,
+          54,
+          5,
+          39,
+          15,
+          0,
+          41,
+          71
+        ],
+        [
+          16,
+          4,
+          50,
+          14,
+          67,
+          33,
+          40
+        ],
+        [
+          32,
+          11,
+          12,
+          8,
+          19,
+          81
+        ]
+      ],
+      "snapshot": "3d3954bdabb1befa",
+      "scenario_sha256": "2d3423ffb61fb6733172a1f3ea06d30f4ef35150c8d967cda9bac3480a8af51e",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southeast",
+      "jobs": 83,
+      "method": "routing-gls",
+      "budget_s": 30,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 9,
+        "distance_m": 521603
+      },
+      "wall_ms": 30395,
+      "elapsed_ms": 30002,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "solver",
+      "scope": "heuristic",
+      "status": "ROUTING_1",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          28,
+          24,
+          10,
+          25,
+          23,
+          2,
+          64,
+          42,
+          37
+        ],
+        [
+          17,
+          63,
+          31,
+          61,
+          35,
+          60,
+          7,
+          59,
+          62,
+          3,
+          1,
+          44
+        ],
+        [
+          6,
+          20,
+          30,
+          29,
+          39,
+          15,
+          0,
+          71
+        ],
+        [],
+        [
+          18,
+          54,
+          5,
+          55,
+          13,
+          56,
+          53,
+          57,
+          36,
+          46,
+          48
+        ],
+        [
+          72,
+          21,
+          22,
+          27,
+          9,
+          73,
+          77,
+          76,
+          38,
+          80,
+          74
+        ],
+        [
+          52,
+          58,
+          66,
+          70,
+          47,
+          65,
+          51,
+          45
+        ],
+        [
+          49,
+          26,
+          75,
+          68,
+          34,
+          69,
+          79,
+          43,
+          78
+        ],
+        [
+          16,
+          4,
+          50,
+          14,
+          67,
+          33,
+          40,
+          41
+        ],
+        [
+          32,
+          12,
+          11,
+          8,
+          19,
+          81,
+          82
+        ]
+      ],
+      "snapshot": "3d3954bdabb1befa",
+      "scenario_sha256": "2d3423ffb61fb6733172a1f3ea06d30f4ef35150c8d967cda9bac3480a8af51e",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southeast",
+      "jobs": 83,
+      "method": "routing-gls",
+      "budget_s": 120,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 9,
+        "distance_m": 521603
+      },
+      "wall_ms": 120400,
+      "elapsed_ms": 120001,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "solver",
+      "scope": "heuristic",
+      "status": "ROUTING_1",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          28,
+          24,
+          10,
+          25,
+          23,
+          2,
+          64,
+          42,
+          37
+        ],
+        [
+          17,
+          63,
+          31,
+          61,
+          35,
+          60,
+          7,
+          59,
+          62,
+          3,
+          1,
+          44
+        ],
+        [
+          6,
+          20,
+          30,
+          29,
+          39,
+          15,
+          0,
+          71
+        ],
+        [],
+        [
+          18,
+          54,
+          5,
+          55,
+          13,
+          56,
+          53,
+          57,
+          36,
+          46,
+          48
+        ],
+        [
+          72,
+          21,
+          22,
+          27,
+          9,
+          73,
+          77,
+          76,
+          38,
+          80,
+          74
+        ],
+        [
+          52,
+          58,
+          66,
+          70,
+          47,
+          65,
+          51,
+          45
+        ],
+        [
+          49,
+          26,
+          75,
+          68,
+          34,
+          69,
+          79,
+          43,
+          78
+        ],
+        [
+          16,
+          4,
+          50,
+          14,
+          67,
+          33,
+          40,
+          41
+        ],
+        [
+          32,
+          12,
+          11,
+          8,
+          19,
+          81,
+          82
+        ]
+      ],
+      "snapshot": "3d3954bdabb1befa",
+      "scenario_sha256": "2d3423ffb61fb6733172a1f3ea06d30f4ef35150c8d967cda9bac3480a8af51e",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southeast",
+      "jobs": 83,
+      "method": "cp-sat",
+      "budget_s": 1,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 6,
+        "engineers": 10,
+        "distance_m": 1139084
+      },
+      "wall_ms": 1512,
+      "elapsed_ms": 1034,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "greedy_seed",
+      "scope": "global",
+      "status": "UNKNOWN",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          49,
+          78,
+          75,
+          74,
+          77,
+          73,
+          76,
+          71,
+          72
+        ],
+        [
+          6,
+          58,
+          17,
+          54,
+          29,
+          55,
+          7,
+          51,
+          13,
+          42,
+          37,
+          48
+        ],
+        [
+          20,
+          18,
+          5,
+          12,
+          8,
+          19
+        ],
+        [
+          52,
+          67,
+          41
+        ],
+        [
+          82,
+          81,
+          79,
+          80
+        ],
+        [
+          21,
+          26,
+          27,
+          22,
+          9,
+          38
+        ],
+        [
+          66,
+          70,
+          61,
+          65,
+          60,
+          69,
+          59,
+          57,
+          64,
+          44
+        ],
+        [
+          28,
+          63,
+          31,
+          47,
+          11,
+          39,
+          33,
+          40,
+          56,
+          53,
+          36,
+          46,
+          45,
+          43
+        ],
+        [
+          16,
+          4,
+          50,
+          14,
+          15,
+          0
+        ],
+        [
+          24,
+          10,
+          25,
+          23,
+          2,
+          3,
+          1
+        ]
+      ],
+      "snapshot": "3d3954bdabb1befa",
+      "scenario_sha256": "2d3423ffb61fb6733172a1f3ea06d30f4ef35150c8d967cda9bac3480a8af51e",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southeast",
+      "jobs": 83,
+      "method": "cp-sat",
+      "budget_s": 5,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 6,
+        "engineers": 10,
+        "distance_m": 1139084
+      },
+      "wall_ms": 5428,
+      "elapsed_ms": 5031,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "greedy_seed",
+      "scope": "global",
+      "status": "FEASIBLE",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          49,
+          78,
+          75,
+          74,
+          77,
+          73,
+          76,
+          71,
+          72
+        ],
+        [
+          6,
+          58,
+          17,
+          54,
+          29,
+          55,
+          7,
+          51,
+          13,
+          42,
+          37,
+          48
+        ],
+        [
+          20,
+          18,
+          5,
+          12,
+          8,
+          19
+        ],
+        [
+          52,
+          67,
+          41
+        ],
+        [
+          82,
+          81,
+          79,
+          80
+        ],
+        [
+          21,
+          26,
+          27,
+          22,
+          9,
+          38
+        ],
+        [
+          66,
+          70,
+          61,
+          65,
+          60,
+          69,
+          59,
+          57,
+          64,
+          44
+        ],
+        [
+          28,
+          63,
+          31,
+          47,
+          11,
+          39,
+          33,
+          40,
+          56,
+          53,
+          36,
+          46,
+          45,
+          43
+        ],
+        [
+          16,
+          4,
+          50,
+          14,
+          15,
+          0
+        ],
+        [
+          24,
+          10,
+          25,
+          23,
+          2,
+          3,
+          1
+        ]
+      ],
+      "snapshot": "3d3954bdabb1befa",
+      "scenario_sha256": "2d3423ffb61fb6733172a1f3ea06d30f4ef35150c8d967cda9bac3480a8af51e",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southeast",
+      "jobs": 83,
+      "method": "cp-sat",
+      "budget_s": 30,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 6,
+        "engineers": 10,
+        "distance_m": 936487
+      },
+      "wall_ms": 30482,
+      "elapsed_ms": 30080,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "solver",
+      "scope": "global",
+      "status": "FEASIBLE",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          49,
+          78,
+          75,
+          74,
+          77,
+          73,
+          76,
+          71,
+          72
+        ],
+        [
+          6,
+          58,
+          17,
+          54,
+          29,
+          55,
+          7,
+          51,
+          13,
+          42,
+          37,
+          48
+        ],
+        [
+          20,
+          18,
+          5,
+          35,
+          8,
+          19
+        ],
+        [
+          52,
+          67,
+          41
+        ],
+        [
+          82,
+          81,
+          79,
+          80
+        ],
+        [
+          21,
+          26,
+          27,
+          22,
+          9,
+          38
+        ],
+        [
+          66,
+          70,
+          61,
+          65,
+          60,
+          62,
+          59,
+          57,
+          64,
+          44
+        ],
+        [
+          28,
+          63,
+          31,
+          47,
+          11,
+          39,
+          33,
+          40,
+          56,
+          53,
+          36,
+          46,
+          45,
+          43
+        ],
+        [
+          16,
+          4,
+          50,
+          14,
+          15,
+          0
+        ],
+        [
+          24,
+          10,
+          25,
+          23,
+          2,
+          3,
+          1
+        ]
+      ],
+      "snapshot": "3d3954bdabb1befa",
+      "scenario_sha256": "2d3423ffb61fb6733172a1f3ea06d30f4ef35150c8d967cda9bac3480a8af51e",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southeast",
+      "jobs": 83,
+      "method": "cp-sat",
+      "budget_s": 120,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 6,
+        "engineers": 10,
+        "distance_m": 936266
+      },
+      "wall_ms": 120438,
+      "elapsed_ms": 120033,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "solver",
+      "scope": "global",
+      "status": "FEASIBLE",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          49,
+          78,
+          75,
+          74,
+          77,
+          73,
+          76,
+          71,
+          72
+        ],
+        [
+          6,
+          58,
+          17,
+          54,
+          29,
+          55,
+          7,
+          51,
+          13,
+          42,
+          37,
+          44
+        ],
+        [
+          20,
+          18,
+          5,
+          35,
+          8,
+          19
+        ],
+        [
+          52,
+          67,
+          41
+        ],
+        [
+          82,
+          81,
+          79,
+          80
+        ],
+        [
+          21,
+          26,
+          27,
+          22,
+          9,
+          38
+        ],
+        [
+          66,
+          70,
+          61,
+          65,
+          60,
+          62,
+          59,
+          64,
+          57,
+          48
+        ],
+        [
+          28,
+          63,
+          31,
+          47,
+          11,
+          39,
+          33,
+          40,
+          56,
+          53,
+          36,
+          46,
+          45,
+          43
+        ],
+        [
+          16,
+          4,
+          50,
+          14,
+          15,
+          0
+        ],
+        [
+          24,
+          10,
+          25,
+          23,
+          2,
+          3,
+          1
+        ]
+      ],
+      "snapshot": "3d3954bdabb1befa",
+      "scenario_sha256": "2d3423ffb61fb6733172a1f3ea06d30f4ef35150c8d967cda9bac3480a8af51e",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southcentre",
+      "jobs": 56,
+      "method": "greedy-append",
+      "budget_s": null,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 14,
+        "engineers": 10,
+        "distance_m": 265371
+      },
+      "wall_ms": 5,
+      "elapsed_ms": 1,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "greedy",
+      "scope": "heuristic",
+      "status": "validated greedy plan",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          10,
+          20
+        ],
+        [
+          5,
+          6,
+          8,
+          18,
+          28,
+          29
+        ],
+        [
+          30,
+          31,
+          33
+        ],
+        [
+          7,
+          9,
+          11,
+          32,
+          40
+        ],
+        [
+          12,
+          13,
+          21
+        ],
+        [
+          34,
+          42,
+          50
+        ],
+        [
+          14,
+          15,
+          16,
+          25,
+          37,
+          45,
+          46,
+          53
+        ],
+        [
+          17,
+          22,
+          48
+        ],
+        [
+          19,
+          23,
+          26,
+          55
+        ]
+      ],
+      "snapshot": "3954d54dc0806876",
+      "scenario_sha256": "e5920ea183513522c61f0afeaeb544eb71376ac791bba8133f42116b2994cc92",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southcentre",
+      "jobs": 56,
+      "method": "greedy-insertion",
+      "budget_s": null,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 7,
+        "distance_m": 233368
+      },
+      "wall_ms": 5,
+      "elapsed_ms": 1,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "greedy",
+      "scope": "heuristic",
+      "status": "validated greedy plan",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          35,
+          39,
+          44,
+          27,
+          22,
+          49,
+          7,
+          6,
+          9,
+          30,
+          10,
+          29,
+          28,
+          3
+        ],
+        [
+          25,
+          26,
+          51,
+          13,
+          48,
+          32,
+          42,
+          18
+        ],
+        [],
+        [
+          52,
+          47,
+          36,
+          43,
+          41,
+          46,
+          45,
+          31,
+          40
+        ],
+        [
+          19,
+          14,
+          23,
+          54,
+          55,
+          8
+        ],
+        [],
+        [
+          53,
+          34,
+          50,
+          33
+        ],
+        [],
+        [
+          15,
+          17,
+          38,
+          16,
+          37,
+          11,
+          0,
+          4
+        ],
+        [
+          24,
+          5,
+          12,
+          21,
+          2,
+          1,
+          20
+        ]
+      ],
+      "snapshot": "3954d54dc0806876",
+      "scenario_sha256": "e5920ea183513522c61f0afeaeb544eb71376ac791bba8133f42116b2994cc92",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southcentre",
+      "jobs": 56,
+      "method": "sat-fast",
+      "budget_s": 1,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 6,
+        "distance_m": 204462
+      },
+      "wall_ms": 33,
+      "elapsed_ms": 29,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "sat_pipeline",
+      "scope": "candidate_routes",
+      "status": "Fast search stopped at its effort/time limit; best validated plan returned, no global proof",
+      "stages": [
+        {
+          "criterion": "urgent_unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "engineers",
+          "lower": 0,
+          "upper": 6,
+          "proven": false
+        }
+      ],
+      "validated": true,
+      "orders": [
+        [],
+        [
+          35,
+          52,
+          39,
+          17,
+          38,
+          16,
+          37,
+          9,
+          32,
+          34,
+          50,
+          10,
+          33,
+          40
+        ],
+        [],
+        [
+          44,
+          36,
+          43,
+          41,
+          51,
+          48,
+          30,
+          42
+        ],
+        [
+          47,
+          19,
+          22,
+          12,
+          49,
+          13,
+          45,
+          2,
+          18,
+          31,
+          4
+        ],
+        [],
+        [],
+        [
+          5,
+          23,
+          54,
+          11,
+          8,
+          20
+        ],
+        [
+          24,
+          15,
+          25,
+          53,
+          46,
+          1,
+          0
+        ],
+        [
+          27,
+          14,
+          26,
+          55,
+          7,
+          21,
+          6,
+          28,
+          3,
+          29
+        ]
+      ],
+      "snapshot": "3954d54dc0806876",
+      "scenario_sha256": "e5920ea183513522c61f0afeaeb544eb71376ac791bba8133f42116b2994cc92",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southcentre",
+      "jobs": 56,
+      "method": "sat-exact",
+      "budget_s": 1,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 5,
+        "distance_m": 253621
+      },
+      "wall_ms": 907,
+      "elapsed_ms": 900,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "sat_pipeline",
+      "scope": "global",
+      "status": "Time budget reached; best validated plan returned, optimality not proven",
+      "stages": [
+        {
+          "criterion": "urgent_unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "engineers",
+          "lower": 4,
+          "upper": 5,
+          "proven": false
+        }
+      ],
+      "validated": true,
+      "orders": [
+        [],
+        [
+          15,
+          17,
+          16,
+          25,
+          7,
+          6,
+          46,
+          1,
+          18,
+          31,
+          29,
+          4
+        ],
+        [],
+        [],
+        [
+          27,
+          14,
+          26,
+          51,
+          41,
+          11,
+          13,
+          0,
+          40,
+          20
+        ],
+        [],
+        [
+          52,
+          39,
+          35,
+          44,
+          43,
+          36,
+          38,
+          49,
+          48,
+          45,
+          53,
+          37,
+          34,
+          32,
+          30
+        ],
+        [
+          24,
+          47,
+          12,
+          23,
+          55,
+          21,
+          8,
+          42,
+          2,
+          28,
+          3
+        ],
+        [
+          19,
+          22,
+          5,
+          54,
+          9,
+          50,
+          10,
+          33
+        ],
+        []
+      ],
+      "snapshot": "3954d54dc0806876",
+      "scenario_sha256": "e5920ea183513522c61f0afeaeb544eb71376ac791bba8133f42116b2994cc92",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southcentre",
+      "jobs": 56,
+      "method": "sat-exact",
+      "budget_s": 5,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 5,
+        "distance_m": 253621
+      },
+      "wall_ms": 4908,
+      "elapsed_ms": 4900,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "sat_pipeline",
+      "scope": "global",
+      "status": "Time budget reached; best validated plan returned, optimality not proven",
+      "stages": [
+        {
+          "criterion": "urgent_unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "engineers",
+          "lower": 4,
+          "upper": 5,
+          "proven": false
+        }
+      ],
+      "validated": true,
+      "orders": [
+        [],
+        [
+          15,
+          17,
+          16,
+          25,
+          7,
+          6,
+          46,
+          1,
+          18,
+          31,
+          29,
+          4
+        ],
+        [],
+        [],
+        [
+          27,
+          14,
+          26,
+          51,
+          41,
+          11,
+          13,
+          0,
+          40,
+          20
+        ],
+        [],
+        [
+          52,
+          39,
+          35,
+          44,
+          43,
+          36,
+          38,
+          49,
+          48,
+          45,
+          53,
+          37,
+          34,
+          32,
+          30
+        ],
+        [
+          24,
+          47,
+          12,
+          23,
+          55,
+          21,
+          8,
+          42,
+          2,
+          28,
+          3
+        ],
+        [
+          19,
+          22,
+          5,
+          54,
+          9,
+          50,
+          10,
+          33
+        ],
+        []
+      ],
+      "snapshot": "3954d54dc0806876",
+      "scenario_sha256": "e5920ea183513522c61f0afeaeb544eb71376ac791bba8133f42116b2994cc92",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southcentre",
+      "jobs": 56,
+      "method": "sat-exact",
+      "budget_s": 30,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 5,
+        "distance_m": 253621
+      },
+      "wall_ms": 29910,
+      "elapsed_ms": 29900,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "sat_pipeline",
+      "scope": "global",
+      "status": "Time budget reached; best validated plan returned, optimality not proven",
+      "stages": [
+        {
+          "criterion": "urgent_unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "engineers",
+          "lower": 4,
+          "upper": 5,
+          "proven": false
+        }
+      ],
+      "validated": true,
+      "orders": [
+        [],
+        [
+          15,
+          17,
+          16,
+          25,
+          7,
+          6,
+          46,
+          1,
+          18,
+          31,
+          29,
+          4
+        ],
+        [],
+        [],
+        [
+          27,
+          14,
+          26,
+          51,
+          41,
+          11,
+          13,
+          0,
+          40,
+          20
+        ],
+        [],
+        [
+          52,
+          39,
+          35,
+          44,
+          43,
+          36,
+          38,
+          49,
+          48,
+          45,
+          53,
+          37,
+          34,
+          32,
+          30
+        ],
+        [
+          24,
+          47,
+          12,
+          23,
+          55,
+          21,
+          8,
+          42,
+          2,
+          28,
+          3
+        ],
+        [
+          19,
+          22,
+          5,
+          54,
+          9,
+          50,
+          10,
+          33
+        ],
+        []
+      ],
+      "snapshot": "3954d54dc0806876",
+      "scenario_sha256": "e5920ea183513522c61f0afeaeb544eb71376ac791bba8133f42116b2994cc92",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southcentre",
+      "jobs": 56,
+      "method": "sat-exact",
+      "budget_s": 120,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 5,
+        "distance_m": 253621
+      },
+      "wall_ms": 119925,
+      "elapsed_ms": 119917,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "sat_pipeline",
+      "scope": "global",
+      "status": "Time budget reached; best validated plan returned, optimality not proven",
+      "stages": [
+        {
+          "criterion": "urgent_unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "engineers",
+          "lower": 4,
+          "upper": 5,
+          "proven": false
+        }
+      ],
+      "validated": true,
+      "orders": [
+        [],
+        [
+          15,
+          17,
+          16,
+          25,
+          7,
+          6,
+          46,
+          1,
+          18,
+          31,
+          29,
+          4
+        ],
+        [],
+        [],
+        [
+          27,
+          14,
+          26,
+          51,
+          41,
+          11,
+          13,
+          0,
+          40,
+          20
+        ],
+        [],
+        [
+          52,
+          39,
+          35,
+          44,
+          43,
+          36,
+          38,
+          49,
+          48,
+          45,
+          53,
+          37,
+          34,
+          32,
+          30
+        ],
+        [
+          24,
+          47,
+          12,
+          23,
+          55,
+          21,
+          8,
+          42,
+          2,
+          28,
+          3
+        ],
+        [
+          19,
+          22,
+          5,
+          54,
+          9,
+          50,
+          10,
+          33
+        ],
+        []
+      ],
+      "snapshot": "3954d54dc0806876",
+      "scenario_sha256": "e5920ea183513522c61f0afeaeb544eb71376ac791bba8133f42116b2994cc92",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southcentre",
+      "jobs": 56,
+      "method": "routing-gls",
+      "budget_s": 1,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 6,
+        "distance_m": 151735
+      },
+      "wall_ms": 1465,
+      "elapsed_ms": 1001,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "solver",
+      "scope": "heuristic",
+      "status": "ROUTING_1",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          44,
+          27,
+          14,
+          26,
+          8,
+          42,
+          1,
+          18
+        ],
+        [
+          35,
+          43,
+          36,
+          41,
+          51,
+          13,
+          46,
+          45,
+          0,
+          2,
+          31
+        ],
+        [],
+        [],
+        [
+          39,
+          17,
+          16,
+          38,
+          49,
+          55,
+          48,
+          9,
+          30,
+          32,
+          34,
+          29,
+          4
+        ],
+        [],
+        [],
+        [
+          19,
+          47,
+          52,
+          23,
+          12,
+          54,
+          53,
+          10,
+          50,
+          33
+        ],
+        [
+          15,
+          24,
+          25,
+          37,
+          11,
+          20,
+          40
+        ],
+        [
+          5,
+          22,
+          7,
+          6,
+          21,
+          28,
+          3
+        ]
+      ],
+      "snapshot": "3954d54dc0806876",
+      "scenario_sha256": "e5920ea183513522c61f0afeaeb544eb71376ac791bba8133f42116b2994cc92",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southcentre",
+      "jobs": 56,
+      "method": "routing-gls",
+      "budget_s": 5,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 5,
+        "distance_m": 160253
+      },
+      "wall_ms": 5394,
+      "elapsed_ms": 5001,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "solver",
+      "scope": "heuristic",
+      "status": "ROUTING_1",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          39,
+          24,
+          25,
+          43,
+          36,
+          41,
+          46,
+          11,
+          45,
+          0,
+          2
+        ],
+        [
+          35,
+          52,
+          5,
+          22,
+          51,
+          13,
+          8,
+          30,
+          32,
+          34,
+          31,
+          40,
+          20
+        ],
+        [],
+        [],
+        [
+          15,
+          17,
+          16,
+          38,
+          37,
+          53,
+          10,
+          50,
+          33,
+          29,
+          4
+        ],
+        [],
+        [],
+        [
+          44,
+          19,
+          47,
+          23,
+          12,
+          54,
+          49,
+          9,
+          48,
+          42,
+          1,
+          18
+        ],
+        [],
+        [
+          27,
+          14,
+          26,
+          55,
+          7,
+          21,
+          6,
+          28,
+          3
+        ]
+      ],
+      "snapshot": "3954d54dc0806876",
+      "scenario_sha256": "e5920ea183513522c61f0afeaeb544eb71376ac791bba8133f42116b2994cc92",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southcentre",
+      "jobs": 56,
+      "method": "routing-gls",
+      "budget_s": 30,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 5,
+        "distance_m": 159368
+      },
+      "wall_ms": 30398,
+      "elapsed_ms": 30001,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "solver",
+      "scope": "heuristic",
+      "status": "ROUTING_1",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          44,
+          27,
+          14,
+          26,
+          55,
+          41,
+          11,
+          46,
+          1,
+          18
+        ],
+        [
+          19,
+          47,
+          23,
+          12,
+          54,
+          49,
+          7,
+          21,
+          34,
+          10,
+          50,
+          33,
+          29,
+          4
+        ],
+        [],
+        [],
+        [
+          15,
+          17,
+          16,
+          38,
+          37,
+          53,
+          45,
+          0,
+          2
+        ],
+        [],
+        [],
+        [
+          39,
+          24,
+          25,
+          36,
+          43,
+          51,
+          13,
+          8,
+          42,
+          31,
+          40,
+          20
+        ],
+        [
+          35,
+          52,
+          5,
+          22,
+          48,
+          6,
+          9,
+          30,
+          32,
+          3,
+          28
+        ],
+        []
+      ],
+      "snapshot": "3954d54dc0806876",
+      "scenario_sha256": "e5920ea183513522c61f0afeaeb544eb71376ac791bba8133f42116b2994cc92",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southcentre",
+      "jobs": 56,
+      "method": "routing-gls",
+      "budget_s": 120,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 5,
+        "distance_m": 159221
+      },
+      "wall_ms": 120410,
+      "elapsed_ms": 120002,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "solver",
+      "scope": "heuristic",
+      "status": "ROUTING_1",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          35,
+          52,
+          5,
+          22,
+          51,
+          13,
+          8,
+          42,
+          31,
+          40,
+          20
+        ],
+        [
+          24,
+          15,
+          38,
+          43,
+          36,
+          41,
+          45,
+          11,
+          46,
+          1,
+          18
+        ],
+        [],
+        [],
+        [
+          19,
+          47,
+          12,
+          23,
+          54,
+          49,
+          48,
+          6,
+          9,
+          30,
+          32,
+          3,
+          28
+        ],
+        [],
+        [],
+        [
+          44,
+          39,
+          17,
+          16,
+          25,
+          37,
+          53,
+          34,
+          10,
+          50,
+          33,
+          29,
+          4
+        ],
+        [],
+        [
+          27,
+          14,
+          26,
+          55,
+          7,
+          21,
+          2,
+          0
+        ]
+      ],
+      "snapshot": "3954d54dc0806876",
+      "scenario_sha256": "e5920ea183513522c61f0afeaeb544eb71376ac791bba8133f42116b2994cc92",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southcentre",
+      "jobs": 56,
+      "method": "cp-sat",
+      "budget_s": 1,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 7,
+        "distance_m": 233368
+      },
+      "wall_ms": 1302,
+      "elapsed_ms": 798,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "greedy_seed",
+      "scope": "global",
+      "status": "UNKNOWN",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          35,
+          39,
+          44,
+          27,
+          22,
+          49,
+          7,
+          6,
+          9,
+          30,
+          10,
+          29,
+          28,
+          3
+        ],
+        [
+          25,
+          26,
+          51,
+          13,
+          48,
+          32,
+          42,
+          18
+        ],
+        [],
+        [
+          52,
+          47,
+          36,
+          43,
+          41,
+          46,
+          45,
+          31,
+          40
+        ],
+        [
+          19,
+          14,
+          23,
+          54,
+          55,
+          8
+        ],
+        [],
+        [
+          53,
+          34,
+          50,
+          33
+        ],
+        [],
+        [
+          15,
+          17,
+          38,
+          16,
+          37,
+          11,
+          0,
+          4
+        ],
+        [
+          24,
+          5,
+          12,
+          21,
+          2,
+          1,
+          20
+        ]
+      ],
+      "snapshot": "3954d54dc0806876",
+      "scenario_sha256": "e5920ea183513522c61f0afeaeb544eb71376ac791bba8133f42116b2994cc92",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southcentre",
+      "jobs": 56,
+      "method": "cp-sat",
+      "budget_s": 5,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 7,
+        "distance_m": 232146
+      },
+      "wall_ms": 5418,
+      "elapsed_ms": 5019,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "solver",
+      "scope": "global",
+      "status": "FEASIBLE",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          35,
+          39,
+          44,
+          27,
+          22,
+          49,
+          7,
+          6,
+          9,
+          30,
+          10,
+          29,
+          28,
+          3
+        ],
+        [
+          25,
+          26,
+          51,
+          13,
+          48,
+          32,
+          42,
+          18
+        ],
+        [],
+        [
+          52,
+          47,
+          36,
+          43,
+          41,
+          46,
+          45,
+          31,
+          40
+        ],
+        [
+          19,
+          14,
+          23,
+          54,
+          55,
+          8
+        ],
+        [],
+        [],
+        [
+          53,
+          34,
+          50,
+          33,
+          20
+        ],
+        [
+          15,
+          17,
+          38,
+          16,
+          37,
+          11,
+          1
+        ],
+        [
+          24,
+          5,
+          12,
+          21,
+          2,
+          0,
+          4
+        ]
+      ],
+      "snapshot": "3954d54dc0806876",
+      "scenario_sha256": "e5920ea183513522c61f0afeaeb544eb71376ac791bba8133f42116b2994cc92",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southcentre",
+      "jobs": 56,
+      "method": "cp-sat",
+      "budget_s": 30,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 7,
+        "distance_m": 189940
+      },
+      "wall_ms": 30415,
+      "elapsed_ms": 30018,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "solver",
+      "scope": "global",
+      "status": "FEASIBLE",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          35,
+          22,
+          49,
+          7,
+          6,
+          9,
+          32,
+          30,
+          10,
+          29,
+          4
+        ],
+        [
+          44,
+          26,
+          51,
+          13,
+          48,
+          3,
+          28
+        ],
+        [],
+        [
+          47,
+          36,
+          43,
+          41,
+          46,
+          45,
+          42
+        ],
+        [
+          27,
+          14,
+          23,
+          54,
+          55,
+          8
+        ],
+        [],
+        [],
+        [
+          52,
+          39,
+          24,
+          25,
+          37,
+          53,
+          34,
+          50,
+          33,
+          31,
+          40,
+          20
+        ],
+        [
+          15,
+          17,
+          38,
+          16,
+          11,
+          1,
+          18
+        ],
+        [
+          19,
+          5,
+          12,
+          21,
+          2,
+          0
+        ]
+      ],
+      "snapshot": "3954d54dc0806876",
+      "scenario_sha256": "e5920ea183513522c61f0afeaeb544eb71376ac791bba8133f42116b2994cc92",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    },
+    {
+      "dataset": "southcentre",
+      "jobs": 56,
+      "method": "cp-sat",
+      "budget_s": 120,
+      "metrics": {
+        "urgent_unassigned": 0,
+        "unassigned": 0,
+        "engineers": 6,
+        "distance_m": 210830
+      },
+      "wall_ms": 120424,
+      "elapsed_ms": 120018,
+      "global_optimal": false,
+      "staff_proven": false,
+      "incumbent_origin": "solver",
+      "scope": "global",
+      "status": "FEASIBLE",
+      "stages": [],
+      "validated": true,
+      "orders": [
+        [
+          19,
+          47,
+          25,
+          49,
+          7,
+          6,
+          9,
+          32,
+          30,
+          4,
+          29,
+          33
+        ],
+        [
+          35,
+          44,
+          43,
+          36,
+          41,
+          51,
+          13,
+          48,
+          21,
+          28,
+          3
+        ],
+        [],
+        [],
+        [
+          27,
+          14,
+          26,
+          54,
+          50,
+          10
+        ],
+        [],
+        [],
+        [
+          24,
+          39,
+          52,
+          12,
+          23,
+          53,
+          37,
+          45,
+          34,
+          42,
+          31,
+          40,
+          20
+        ],
+        [
+          15,
+          17,
+          38,
+          16,
+          11,
+          46,
+          1,
+          18
+        ],
+        [
+          22,
+          5,
+          55,
+          8,
+          2,
+          0
+        ]
+      ],
+      "snapshot": "3954d54dc0806876",
+      "scenario_sha256": "e5920ea183513522c61f0afeaeb544eb71376ac791bba8133f42116b2994cc92",
+      "fingerprint": {
+        "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+        "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+        "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+      }
+    }
+  ],
+  "models": [
+    {
+      "dataset": "east",
+      "method": "sat-fast",
+      "scope": "candidate_routes",
+      "search_complete": false,
+      "candidate_routes": 819,
+      "generation_ms": 6,
+      "elapsed_ms": 26,
+      "encoding_ms": 2,
+      "variables": 4540,
+      "clauses": 18372,
+      "sat_calls": 2,
+      "optimal": false,
+      "stages": [
+        {
+          "criterion": "urgent_unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "engineers",
+          "lower": 0,
+          "upper": 8,
+          "proven": false
+        }
+      ],
+      "status": "Fast search stopped at its effort/time limit; best validated plan returned, no global proof"
+    },
+    {
+      "dataset": "east",
+      "method": "sat-exact",
+      "scope": "global",
+      "search_complete": false,
+      "candidate_routes": 0,
+      "generation_ms": 7,
+      "elapsed_ms": 119903,
+      "encoding_ms": 56,
+      "variables": 368881,
+      "clauses": 1457764,
+      "sat_calls": 7,
+      "optimal": false,
+      "stages": [
+        {
+          "criterion": "urgent_unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "engineers",
+          "lower": 6,
+          "upper": 6,
+          "proven": true
+        },
+        {
+          "criterion": "distance_m",
+          "lower": 0,
+          "upper": 238403,
+          "proven": false
+        }
+      ],
+      "status": "Time budget reached; best validated plan returned, optimality not proven"
+    },
+    {
+      "dataset": "southeast",
+      "method": "sat-fast",
+      "scope": "candidate_routes",
+      "search_complete": false,
+      "candidate_routes": 909,
+      "generation_ms": 10,
+      "elapsed_ms": 30,
+      "encoding_ms": 3,
+      "variables": 5766,
+      "clauses": 23146,
+      "sat_calls": 2,
+      "optimal": false,
+      "stages": [
+        {
+          "criterion": "urgent_unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "unassigned",
+          "lower": 0,
+          "upper": 4,
+          "proven": false
+        }
+      ],
+      "status": "Fast search stopped at its effort/time limit; best validated plan returned, no global proof"
+    },
+    {
+      "dataset": "southeast",
+      "method": "sat-exact",
+      "scope": "global",
+      "search_complete": false,
+      "candidate_routes": 0,
+      "generation_ms": 9,
+      "elapsed_ms": 119908,
+      "encoding_ms": 83,
+      "variables": 99694,
+      "clauses": 824426,
+      "sat_calls": 7,
+      "optimal": false,
+      "stages": [
+        {
+          "criterion": "urgent_unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "engineers",
+          "lower": 7,
+          "upper": 8,
+          "proven": false
+        }
+      ],
+      "status": "Time budget reached; best validated plan returned, optimality not proven"
+    },
+    {
+      "dataset": "southcentre",
+      "method": "sat-fast",
+      "scope": "candidate_routes",
+      "search_complete": false,
+      "candidate_routes": 695,
+      "generation_ms": 4,
+      "elapsed_ms": 29,
+      "encoding_ms": 2,
+      "variables": 3967,
+      "clauses": 16134,
+      "sat_calls": 2,
+      "optimal": false,
+      "stages": [
+        {
+          "criterion": "urgent_unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "engineers",
+          "lower": 0,
+          "upper": 6,
+          "proven": false
+        }
+      ],
+      "status": "Fast search stopped at its effort/time limit; best validated plan returned, no global proof"
+    },
+    {
+      "dataset": "southcentre",
+      "method": "sat-exact",
+      "scope": "global",
+      "search_complete": false,
+      "candidate_routes": 0,
+      "generation_ms": 5,
+      "elapsed_ms": 119917,
+      "encoding_ms": 27,
+      "variables": 37164,
+      "clauses": 255609,
+      "sat_calls": 3,
+      "optimal": false,
+      "stages": [
+        {
+          "criterion": "urgent_unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "unassigned",
+          "lower": 0,
+          "upper": 0,
+          "proven": true
+        },
+        {
+          "criterion": "engineers",
+          "lower": 4,
+          "upper": 5,
+          "proven": false
+        }
+      ],
+      "status": "Time budget reached; best validated plan returned, optimality not proven"
+    }
+  ],
+  "global_optima": 0,
+  "staff_proofs": 3
+}

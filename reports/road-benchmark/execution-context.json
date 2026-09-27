@@ -1,0 +1,8 @@
+{
+  "rustc": "rustc 1.95.0 (59807616e 2026-04-14)\nbinary: rustc\ncommit-hash: 59807616e1fa2540724bfbac14d7976d7e4a3860\ncommit-date: 2026-04-14\nhost: aarch64-apple-darwin\nrelease: 1.95.0\nLLVM version: 22.1.2",
+  "cargo": "cargo 1.95.0 (f2d3ce0bd 2026-03-21)",
+  "typst": "typst 0.14.2 (unknown hash)",
+  "cxx": "Apple clang version 21.0.0 (clang-2100.3.30.1)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin",
+  "hardware": "hw.model: Mac14,2\nhw.memsize: 17179869184\nhw.physicalcpu: 8\nhw.logicalcpu: 8",
+  "note": "Recorded after completed runs; tools/hardware were not changed during the experiment. Main environment.json preserves original runner metadata."
+}

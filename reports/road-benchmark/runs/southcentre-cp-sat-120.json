@@ -1,0 +1,102 @@
+{
+  "dataset": "southcentre",
+  "jobs": 56,
+  "method": "cp-sat",
+  "budget_s": 120,
+  "metrics": {
+    "urgent_unassigned": 0,
+    "unassigned": 0,
+    "engineers": 6,
+    "distance_m": 210830
+  },
+  "wall_ms": 120424,
+  "elapsed_ms": 120018,
+  "global_optimal": false,
+  "staff_proven": false,
+  "incumbent_origin": "solver",
+  "scope": "global",
+  "status": "FEASIBLE",
+  "stages": [],
+  "validated": true,
+  "orders": [
+    [
+      19,
+      47,
+      25,
+      49,
+      7,
+      6,
+      9,
+      32,
+      30,
+      4,
+      29,
+      33
+    ],
+    [
+      35,
+      44,
+      43,
+      36,
+      41,
+      51,
+      13,
+      48,
+      21,
+      28,
+      3
+    ],
+    [],
+    [],
+    [
+      27,
+      14,
+      26,
+      54,
+      50,
+      10
+    ],
+    [],
+    [],
+    [
+      24,
+      39,
+      52,
+      12,
+      23,
+      53,
+      37,
+      45,
+      34,
+      42,
+      31,
+      40,
+      20
+    ],
+    [
+      15,
+      17,
+      38,
+      16,
+      11,
+      46,
+      1,
+      18
+    ],
+    [
+      22,
+      5,
+      55,
+      8,
+      2,
+      0
+    ]
+  ],
+  "snapshot": "3954d54dc0806876",
+  "scenario_sha256": "e5920ea183513522c61f0afeaeb544eb71376ac791bba8133f42116b2994cc92",
+  "fingerprint": {
+    "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+    "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+    "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+  }
+}

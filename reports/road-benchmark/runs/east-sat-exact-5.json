@@ -1,0 +1,137 @@
+{
+  "dataset": "east",
+  "jobs": 66,
+  "method": "sat-exact",
+  "budget_s": 5,
+  "metrics": {
+    "urgent_unassigned": 0,
+    "unassigned": 0,
+    "engineers": 6,
+    "distance_m": 238403
+  },
+  "wall_ms": 4956,
+  "elapsed_ms": 4909,
+  "global_optimal": false,
+  "staff_proven": true,
+  "incumbent_origin": "sat_pipeline",
+  "scope": "global",
+  "status": "Time budget reached; best validated plan returned, optimality not proven",
+  "stages": [
+    {
+      "criterion": "urgent_unassigned",
+      "lower": 0,
+      "upper": 0,
+      "proven": true
+    },
+    {
+      "criterion": "unassigned",
+      "lower": 0,
+      "upper": 0,
+      "proven": true
+    },
+    {
+      "criterion": "engineers",
+      "lower": 6,
+      "upper": 6,
+      "proven": true
+    },
+    {
+      "criterion": "distance_m",
+      "lower": 0,
+      "upper": 238403,
+      "proven": false
+    }
+  ],
+  "validated": true,
+  "orders": [
+    [
+      61,
+      56,
+      21,
+      45,
+      26,
+      46,
+      29,
+      53,
+      64,
+      35,
+      2,
+      62
+    ],
+    [
+      50,
+      49,
+      36,
+      33,
+      44,
+      54,
+      47,
+      30,
+      57,
+      14,
+      13,
+      37,
+      55
+    ],
+    [
+      24,
+      18,
+      19,
+      11,
+      12,
+      58,
+      59,
+      31,
+      3
+    ],
+    [],
+    [
+      22,
+      27,
+      28,
+      17,
+      23,
+      10,
+      39,
+      41,
+      1,
+      38
+    ],
+    [],
+    [],
+    [
+      51,
+      63,
+      48,
+      25,
+      20,
+      52,
+      60,
+      5,
+      40,
+      4,
+      32,
+      42,
+      65
+    ],
+    [
+      8,
+      16,
+      9,
+      15,
+      34,
+      7,
+      43,
+      0,
+      6
+    ],
+    []
+  ],
+  "snapshot": "6fbd5eaa3404cb7e",
+  "scenario_sha256": "ef79023831030ac9f0dccc176125a9f04191732a0a2eb759c6c40cd62d72bf21",
+  "fingerprint": {
+    "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+    "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+    "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "dataset": "east",
+  "jobs": 66,
+  "method": "routing-gls",
+  "budget_s": 1.0,
+  "metrics": {
+    "urgent_unassigned": 0,
+    "unassigned": 0,
+    "engineers": 7,
+    "distance_m": 161261
+  },
+  "wall_ms": 1426,
+  "elapsed_ms": 1002,
+  "global_optimal": false,
+  "staff_proven": false,
+  "scope": "heuristic",
+  "status": "ROUTING_1",
+  "stages": [],
+  "validated": true,
+  "orders": [
+    [
+      24,
+      61,
+      47,
+      45,
+      19,
+      29,
+      59,
+      58,
+      31,
+      32,
+      42
+    ],
+    [
+      18,
+      49,
+      25,
+      26,
+      17,
+      57,
+      40,
+      4,
+      5,
+      3
+    ],
+    [],
+    [],
+    [
+      56,
+      27,
+      21,
+      28,
+      46,
+      23,
+      10,
+      2,
+      39,
+      62,
+      65
+    ],
+    [],
+    [
+      50,
+      51,
+      44,
+      54,
+      48,
+      52,
+      53,
+      38
+    ],
+    [
+      8,
+      16,
+      15,
+      9,
+      14,
+      13,
+      41,
+      55,
+      37,
+      1
+    ],
+    [
+      22,
+      30,
+      11,
+      12,
+      7,
+      43,
+      0,
+      6
+    ],
+    [
+      36,
+      33,
+      63,
+      20,
+      60,
+      34,
+      64,
+      35
+    ]
+  ],
+  "snapshot": "6fbd5eaa3404cb7e",
+  "scenario_sha256": "ef79023831030ac9f0dccc176125a9f04191732a0a2eb759c6c40cd62d72bf21",
+  "fingerprint": {
+    "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+    "runner_sha256": "2cc502ba9c85ff5885ffe27f38932d9665017108cf487923f25aa723b269518a",
+    "comparators_sha256": "450870724ac14701a6a47e0d8d5977f02b520d614310987545081a026cf7c72d"
+  }
+}

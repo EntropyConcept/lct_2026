@@ -1,0 +1,141 @@
+{
+  "dataset": "southeast",
+  "jobs": 83,
+  "method": "sat-fast",
+  "budget_s": 1,
+  "metrics": {
+    "urgent_unassigned": 0,
+    "unassigned": 4,
+    "engineers": 9,
+    "distance_m": 1049707
+  },
+  "wall_ms": 35,
+  "elapsed_ms": 30,
+  "global_optimal": false,
+  "staff_proven": false,
+  "incumbent_origin": "sat_pipeline",
+  "scope": "candidate_routes",
+  "status": "Fast search stopped at its effort/time limit; best validated plan returned, no global proof",
+  "stages": [
+    {
+      "criterion": "urgent_unassigned",
+      "lower": 0,
+      "upper": 0,
+      "proven": true
+    },
+    {
+      "criterion": "unassigned",
+      "lower": 0,
+      "upper": 4,
+      "proven": false
+    }
+  ],
+  "validated": true,
+  "orders": [
+    [
+      52,
+      21,
+      22,
+      73,
+      69,
+      82,
+      81,
+      71,
+      76
+    ],
+    [
+      20,
+      58,
+      63,
+      5,
+      54,
+      9,
+      38,
+      43
+    ],
+    [
+      6,
+      24,
+      10,
+      25,
+      23,
+      2,
+      3,
+      37,
+      1
+    ],
+    [],
+    [
+      78,
+      79,
+      72,
+      75,
+      74,
+      80,
+      77
+    ],
+    [
+      17,
+      28,
+      35,
+      12,
+      15
+    ],
+    [
+      66,
+      70,
+      47,
+      61,
+      65,
+      55,
+      60,
+      62,
+      59,
+      56,
+      53,
+      42,
+      64,
+      44
+    ],
+    [
+      49,
+      26,
+      68,
+      11,
+      39,
+      7,
+      51,
+      13,
+      57,
+      36,
+      46,
+      48,
+      45
+    ],
+    [
+      4,
+      16,
+      50,
+      14,
+      67,
+      33,
+      40,
+      0,
+      41
+    ],
+    [
+      31,
+      29,
+      30,
+      8,
+      19
+    ]
+  ],
+  "snapshot": "3d3954bdabb1befa",
+  "scenario_sha256": "2d3423ffb61fb6733172a1f3ea06d30f4ef35150c8d967cda9bac3480a8af51e",
+  "fingerprint": {
+    "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+    "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+    "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+  }
+}

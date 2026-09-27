@@ -1,0 +1,74 @@
+--- a/src/route.cc
++++ b/src/route.cc
+@@ -403,29 +403,6 @@
+   return std::nullopt;
+ }
+ 
+-std::optional<path> try_direct(osr::location const& from,
+-                               osr::location const& to) {
+-  auto const dist = geo::distance(from.pos_, to.pos_);
+-  if (dist < 8.0) {
+-    return std::optional{path{
+-        .cost_ = 60U,
+-        .duration_ = duration_from_cost(60U),
+-        .dist_ = dist,
+-        .segments_ = {path::segment{.polyline_ = {from.pos_, to.pos_},
+-                                    .from_level_ = from.lvl_,
+-                                    .to_level_ = to.lvl_,
+-                                    .from_ = node_idx_t::invalid(),
+-                                    .to_ = node_idx_t::invalid(),
+-                                    .way_ = way_idx_t::invalid(),
+-                                    .cost_ = 60U,
+-                                    .duration_ = duration_from_cost(60U),
+-                                    .dist_ = static_cast<distance_t>(dist)}},
+-        .uses_elevator_ = false}};
+-  } else {
+-    return std::nullopt;
+-  }
+-}
+-
+ template <Profile P>
+ std::optional<path> route_bidirectional(typename P::parameters const& params,
+                                         ways const& w,
+@@ -440,10 +417,6 @@
+                                         bitvec<node_idx_t> const* blocked,
+                                         sharing_data const* sharing,
+                                         elevation_storage const* elevations) {
+-  if (auto const direct = try_direct(from, to); direct.has_value()) {
+-    return *direct;
+-  }
+-
+   b.reset(params, std::max(kMinCostSettled, max), from, to);
+   if (!b.search_bounds_valid_) {
+     return std::nullopt;
+@@ -555,10 +528,6 @@
+     bitvec<node_idx_t> const* blocked,
+     sharing_data const* sharing,
+     elevation_storage const* elevations) {
+-  if (auto const direct = try_direct(from, to); direct.has_value()) {
+-    return *direct;
+-  }
+-
+   auto const limit_squared_max_matching_distance =
+       std::pow(geo::distance(from.pos_, to.pos_), 2) /
+       kMaxMatchingDistanceSquaredRatio;
+@@ -639,10 +608,6 @@
+                                 bitvec<node_idx_t> const* blocked,
+                                 sharing_data const* sharing,
+                                 elevation_storage const* elevations) {
+-  if (auto const direct = try_direct(from, to); direct.has_value()) {
+-    return *direct;
+-  }
+-
+   auto const limit_squared_max_matching_distance =
+       std::pow(geo::distance(from.pos_, to.pos_), 2) /
+       kMaxMatchingDistanceSquaredRatio;
+@@ -813,8 +778,6 @@
+       auto& r = result[k];
+       if (r.has_value()) {
+         ++found;
+-      } else if (auto const direct = try_direct(from, t); direct.has_value()) {
+-        r = direct;
+       } else {
+         auto const limit_squared_max_matching_distance =
+             geo::approx_squared_distance(from.pos_, t.pos_,

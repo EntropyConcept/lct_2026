@@ -1,0 +1,30 @@
+START southeast-greedy-append
+DONE southeast-greedy-append {'urgent_unassigned': 0, 'unassigned': 31, 'engineers': 10, 'distance_m': 985582} wall_ms 7 global_optimal False
+START southeast-greedy-insertion
+DONE southeast-greedy-insertion {'urgent_unassigned': 0, 'unassigned': 6, 'engineers': 10, 'distance_m': 1139084} wall_ms 7 global_optimal False
+START southeast-sat-fast-1
+DONE southeast-sat-fast-1 {'urgent_unassigned': 0, 'unassigned': 4, 'engineers': 9, 'distance_m': 1049707} wall_ms 35 global_optimal False
+START southeast-sat-exact-1
+DONE southeast-sat-exact-1 {'urgent_unassigned': 0, 'unassigned': 0, 'engineers': 9, 'distance_m': 1000966} wall_ms 950 global_optimal False
+START southeast-sat-exact-5
+DONE southeast-sat-exact-5 {'urgent_unassigned': 0, 'unassigned': 0, 'engineers': 8, 'distance_m': 888377} wall_ms 4925 global_optimal False
+START southeast-sat-exact-30
+DONE southeast-sat-exact-30 {'urgent_unassigned': 0, 'unassigned': 0, 'engineers': 8, 'distance_m': 905636} wall_ms 30037 global_optimal False
+START southeast-sat-exact-120
+DONE southeast-sat-exact-120 {'urgent_unassigned': 0, 'unassigned': 0, 'engineers': 8, 'distance_m': 888377} wall_ms 119925 global_optimal False
+START southeast-routing-gls-1
+DONE southeast-routing-gls-1 {'urgent_unassigned': 0, 'unassigned': 0, 'engineers': 9, 'distance_m': 533611} wall_ms 1650 global_optimal False
+START southeast-routing-gls-5
+DONE southeast-routing-gls-5 {'urgent_unassigned': 0, 'unassigned': 0, 'engineers': 9, 'distance_m': 531974} wall_ms 5393 global_optimal False
+START southeast-routing-gls-30
+DONE southeast-routing-gls-30 {'urgent_unassigned': 0, 'unassigned': 0, 'engineers': 9, 'distance_m': 521603} wall_ms 30395 global_optimal False
+START southeast-routing-gls-120
+DONE southeast-routing-gls-120 {'urgent_unassigned': 0, 'unassigned': 0, 'engineers': 9, 'distance_m': 521603} wall_ms 120400 global_optimal False
+START southeast-cp-sat-1
+DONE southeast-cp-sat-1 {'urgent_unassigned': 0, 'unassigned': 6, 'engineers': 10, 'distance_m': 1139084} wall_ms 1512 global_optimal False
+START southeast-cp-sat-5
+DONE southeast-cp-sat-5 {'urgent_unassigned': 0, 'unassigned': 6, 'engineers': 10, 'distance_m': 1139084} wall_ms 5428 global_optimal False
+START southeast-cp-sat-30
+DONE southeast-cp-sat-30 {'urgent_unassigned': 0, 'unassigned': 6, 'engineers': 10, 'distance_m': 936487} wall_ms 30482 global_optimal False
+START southeast-cp-sat-120
+DONE southeast-cp-sat-120 {'urgent_unassigned': 0, 'unassigned': 6, 'engineers': 10, 'distance_m': 936266} wall_ms 120438 global_optimal False

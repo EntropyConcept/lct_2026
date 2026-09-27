@@ -1,0 +1,2509 @@
+{
+  "scenario": {
+    "name": "dataset/Восток Синтетические данные.csv.new.csv",
+    "jobs": [
+      {
+        "id": "74198",
+        "address": "Город Москва, пр-кт.Волгоградский, д. 128 к 5",
+        "point": {
+          "lat": 55.70152,
+          "lon": 37.77926
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 1200,
+        "window_end": 1320,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "86160",
+        "address": "Город Москва, пер.Маяковского, д. 2",
+        "point": {
+          "lat": 55.73884,
+          "lon": 37.67087
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 1080,
+        "window_end": 1200,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "50104",
+        "address": "Город Москва, ул.Грайвороновская, д. 10 к 2",
+        "point": {
+          "lat": 55.70636,
+          "lon": 37.73299
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 1080,
+        "window_end": 1200,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "46393",
+        "address": "Город Москва, ул.Михайлова, д. 14",
+        "point": {
+          "lat": 55.7256,
+          "lon": 37.78075
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 1200,
+        "window_end": 1320,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "10135",
+        "address": "Город Москва, ул.3-я Институтская, д. 5 к 2",
+        "point": {
+          "lat": 55.72128,
+          "lon": 37.78456
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 1080,
+        "window_end": 1200,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "18754",
+        "address": "Город Москва, ул.1-я Новокузьминская, д. 16 к 1",
+        "point": {
+          "lat": 55.728010000000005,
+          "lon": 37.77665
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 1080,
+        "window_end": 1200,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "84627",
+        "address": "Город Москва, ул.Окская, д. 32",
+        "point": {
+          "lat": 55.70122,
+          "lon": 37.7746
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 1200,
+        "window_end": 1320,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "61540",
+        "address": "Город Москва, ул.Юных Ленинцев, д. 84",
+        "point": {
+          "lat": 55.70248,
+          "lon": 37.772549999999995
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 960,
+        "window_end": 1080,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "74949",
+        "address": "Город Москва, ул.Международная, д. 28 стр. 1",
+        "point": {
+          "lat": 55.73839,
+          "lon": 37.67277
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 600,
+        "window_end": 720,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "41077",
+        "address": "Город Москва, ул.Новорогожская, д. 8",
+        "point": {
+          "lat": 55.73689,
+          "lon": 37.67062
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 720,
+        "window_end": 840,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "87693",
+        "address": "Город Москва, ул.Чистова, д. 12",
+        "point": {
+          "lat": 55.70483,
+          "lon": 37.74146
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 960,
+        "window_end": 1080,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "93086",
+        "address": "Город Москва, ул.Паперника, д. 19",
+        "point": {
+          "lat": 55.73001,
+          "lon": 37.77704
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 720,
+        "window_end": 840,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "57866",
+        "address": "Город Москва, ул.Окская, д. 48/2",
+        "point": {
+          "lat": 55.73099,
+          "lon": 37.78403
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 840,
+        "window_end": 960,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "35675",
+        "address": "Город Москва, ул.Трофимова, д. 24 к 2",
+        "point": {
+          "lat": 55.71407000000001,
+          "lon": 37.689139999999995
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 960,
+        "window_end": 1080,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "82388",
+        "address": "Город Москва, ул.1-я Дубровская, д. 6",
+        "point": {
+          "lat": 55.71125,
+          "lon": 37.68423
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 840,
+        "window_end": 960,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "23380",
+        "address": "Город Москва, ул.Рогожский Вал, д. 2/50",
+        "point": {
+          "lat": 55.74065,
+          "lon": 37.66324
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 720,
+        "window_end": 840,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "37272",
+        "address": "Город Москва, ул.Талалихина, д. 2/1 к 4",
+        "point": {
+          "lat": 55.73742,
+          "lon": 37.67361
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 600,
+        "window_end": 720,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "71388",
+        "address": "Город Москва, ул.Артюхиной, д. 20А",
+        "point": {
+          "lat": 55.70984,
+          "lon": 37.73543
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 840,
+        "window_end": 960,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "34366",
+        "address": "Город Москва, ул.Малышева, д. 13",
+        "point": {
+          "lat": 55.70246,
+          "lon": 37.73487
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 600,
+        "window_end": 720,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "67554",
+        "address": "Город Москва, ул.Бронницкая, д. 12",
+        "point": {
+          "lat": 55.73009,
+          "lon": 37.72181
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 720,
+        "window_end": 840,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "94409",
+        "address": "Город Москва, ул.Авиамоторная, д. 14",
+        "point": {
+          "lat": 55.756510000000006,
+          "lon": 37.7014
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 720,
+        "window_end": 840,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "10245",
+        "address": "Город Москва, ул.Фёдора Полетаева, д. 2 к 6",
+        "point": {
+          "lat": 55.70108,
+          "lon": 37.7774
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 720,
+        "window_end": 840,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "52405",
+        "address": "Город Москва, ул.Зарайская, д. 51 к 2",
+        "point": {
+          "lat": 55.72701,
+          "lon": 37.78429
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 600,
+        "window_end": 720,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "30769",
+        "address": "Город Москва, ул.Саратовская, д. 14/1",
+        "point": {
+          "lat": 55.70213,
+          "lon": 37.74096
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 840,
+        "window_end": 960,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "98182",
+        "address": "Город Москва, ул.Нижегородская, д. 63",
+        "point": {
+          "lat": 55.72792,
+          "lon": 37.726099999999995
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 600,
+        "window_end": 720,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "76082",
+        "address": "Город Москва, ул.Смирновская, д. 6",
+        "point": {
+          "lat": 55.73399,
+          "lon": 37.71726
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 720,
+        "window_end": 840,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "29890",
+        "address": "Город Москва, ул.Нижегородская, д. 61",
+        "point": {
+          "lat": 55.73291,
+          "lon": 37.71725
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 720,
+        "window_end": 840,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "77563",
+        "address": "Город Москва, ул.Зеленодольская, д. 28Б",
+        "point": {
+          "lat": 55.70438,
+          "lon": 37.7741
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 600,
+        "window_end": 720,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "53587",
+        "address": "Город Москва, ул.Артюхиной, д. 16",
+        "point": {
+          "lat": 55.70809,
+          "lon": 37.74322
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 720,
+        "window_end": 840,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "82808",
+        "address": "Город Москва, ул.3-я Карачаровская, д. 4 к 1",
+        "point": {
+          "lat": 55.72806,
+          "lon": 37.71942
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 840,
+        "window_end": 960,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "7939",
+        "address": "Город Москва, пр-кт.Рязанский, д. 73",
+        "point": {
+          "lat": 55.72505,
+          "lon": 37.77412
+        },
+        "duration": 70,
+        "work_type": "connection",
+        "window_start": 720,
+        "window_end": 840,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "92031",
+        "address": "Город Москва, ул.Ферганская, д. 28/7",
+        "point": {
+          "lat": 55.713719999999995,
+          "lon": 37.82145
+        },
+        "duration": 20,
+        "work_type": "equipment",
+        "window_start": 1080,
+        "window_end": 1200,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "31260",
+        "address": "Город Москва, б-р.Самаркандский Квартал 137а, д. к5",
+        "point": {
+          "lat": 55.7076,
+          "lon": 37.8189
+        },
+        "duration": 20,
+        "work_type": "equipment",
+        "window_start": 1200,
+        "window_end": 1320,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "69967",
+        "address": "Город Москва, ул.Боровая, д. 14",
+        "point": {
+          "lat": 55.75649,
+          "lon": 37.70135
+        },
+        "duration": 20,
+        "work_type": "equipment",
+        "window_start": 600,
+        "window_end": 720,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "22634",
+        "address": "Город Москва, ул.Стройковская, д. 8",
+        "point": {
+          "lat": 55.74167,
+          "lon": 37.66597
+        },
+        "duration": 20,
+        "work_type": "equipment",
+        "window_start": 840,
+        "window_end": 960,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "98815",
+        "address": "Город Москва, ул.2-я Синичкина, д. 9 к 1",
+        "point": {
+          "lat": 55.76237,
+          "lon": 37.70206
+        },
+        "duration": 20,
+        "work_type": "equipment",
+        "window_start": 1080,
+        "window_end": 1200,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "33527",
+        "address": "Москва, проезд Орехово-Зуевский, д. 18/8",
+        "point": {
+          "lat": 55.73695,
+          "lon": 37.7223
+        },
+        "duration": 20,
+        "work_type": "equipment",
+        "window_start": 600,
+        "window_end": 720,
+        "skill": "connection",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "21571",
+        "address": "Город Москва, пер.Большой Рогожский, д. 10 к 2",
+        "point": {
+          "lat": 55.74155,
+          "lon": 37.66827
+        },
+        "duration": 30,
+        "work_type": "local",
+        "window_start": 1080,
+        "window_end": 1200,
+        "skill": "local",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "47670",
+        "address": "Город Москва, ул.Машкова, д. 13 стр. 1",
+        "point": {
+          "lat": 55.77653,
+          "lon": 37.675419999999995
+        },
+        "duration": 30,
+        "work_type": "local",
+        "window_start": 1200,
+        "window_end": 1320,
+        "skill": "local",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "17892",
+        "address": "Город Москва, ул.11-я Текстильщиков, д. 10",
+        "point": {
+          "lat": 55.71065,
+          "lon": 37.73668
+        },
+        "duration": 30,
+        "work_type": "local",
+        "window_start": 1080,
+        "window_end": 1200,
+        "skill": "local",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "51115",
+        "address": "Город Москва, ул.Паперника, д. 18",
+        "point": {
+          "lat": 55.72151,
+          "lon": 37.78147
+        },
+        "duration": 30,
+        "work_type": "local",
+        "window_start": 1080,
+        "window_end": 1200,
+        "skill": "local",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "76643",
+        "address": "Город Москва, ул.Большая Калитниковская, д. 38",
+        "point": {
+          "lat": 55.73469,
+          "lon": 37.66579
+        },
+        "duration": 30,
+        "work_type": "local",
+        "window_start": 1080,
+        "window_end": 1200,
+        "skill": "local",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "43506",
+        "address": "Город Москва, б-р.Самаркандский Квартал 137а, д. к5",
+        "point": {
+          "lat": 55.7076,
+          "lon": 37.8189
+        },
+        "duration": 30,
+        "work_type": "local",
+        "window_start": 1200,
+        "window_end": 1320,
+        "skill": "local",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "48174",
+        "address": "Город Москва, ул.Маршала Чуйкова, д. 9 к 2",
+        "point": {
+          "lat": 55.70347,
+          "lon": 37.780249999999995
+        },
+        "duration": 30,
+        "work_type": "local",
+        "window_start": 1080,
+        "window_end": 1200,
+        "skill": "local",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "48227",
+        "address": "Город Москва, ул.Талалихина, д. 16",
+        "point": {
+          "lat": 55.74106,
+          "lon": 37.66493
+        },
+        "duration": 30,
+        "work_type": "local",
+        "window_start": 720,
+        "window_end": 840,
+        "skill": "local",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "60720",
+        "address": "Город Москва, б-р.Волжский, д. 50 к 2",
+        "point": {
+          "lat": 55.70913,
+          "lon": 37.73912
+        },
+        "duration": 30,
+        "work_type": "local",
+        "window_start": 720,
+        "window_end": 840,
+        "skill": "local",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "48238",
+        "address": "Город Москва, ул.Артюхиной, д. 3",
+        "point": {
+          "lat": 55.70129,
+          "lon": 37.74314
+        },
+        "duration": 30,
+        "work_type": "local",
+        "window_start": 840,
+        "window_end": 960,
+        "skill": "local",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "41912",
+        "address": "Город Москва, проезд.Ферганский, д. 7 к 5",
+        "point": {
+          "lat": 55.7081,
+          "lon": 37.81103
+        },
+        "duration": 30,
+        "work_type": "local",
+        "window_start": 720,
+        "window_end": 840,
+        "skill": "local",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "4893",
+        "address": "Город Москва, ул.Земляной Вал, д. 24/30 стр. 1",
+        "point": {
+          "lat": 55.77598,
+          "lon": 37.683409999999995
+        },
+        "duration": 30,
+        "work_type": "local",
+        "window_start": 720,
+        "window_end": 840,
+        "skill": "local",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "68476",
+        "address": "Город Москва, ул.3-я Карачаровская, д. 8 к 2",
+        "point": {
+          "lat": 55.73111,
+          "lon": 37.718889999999995
+        },
+        "duration": 30,
+        "work_type": "local",
+        "window_start": 600,
+        "window_end": 720,
+        "skill": "local",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "50219",
+        "address": "Город Москва, ул.Чистопольская, д. 2 к 2",
+        "point": {
+          "lat": 55.72822,
+          "lon": 37.71832
+        },
+        "duration": 30,
+        "work_type": "local",
+        "window_start": 600,
+        "window_end": 720,
+        "skill": "local",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "76678",
+        "address": "Город Москва, ул.Боровая, д. 12",
+        "point": {
+          "lat": 55.75945,
+          "lon": 37.69883
+        },
+        "duration": 30,
+        "work_type": "local",
+        "window_start": 600,
+        "window_end": 720,
+        "skill": "local",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "47330",
+        "address": "Город Москва, ул.Красноказарменная, д. 9Б стр. 1",
+        "point": {
+          "lat": 55.76034,
+          "lon": 37.70587
+        },
+        "duration": 30,
+        "work_type": "local",
+        "window_start": 840,
+        "window_end": 960,
+        "skill": "local",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "26645",
+        "address": "Город Москва, ул.Сторожевая, д. 31",
+        "point": {
+          "lat": 55.75534,
+          "lon": 37.70174
+        },
+        "duration": 30,
+        "work_type": "local",
+        "window_start": 960,
+        "window_end": 1080,
+        "skill": "local",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "24076",
+        "address": "Город Москва, ул.Новорогожская, д. 10",
+        "point": {
+          "lat": 55.73591,
+          "lon": 37.66469
+        },
+        "duration": 30,
+        "work_type": "local",
+        "window_start": 720,
+        "window_end": 840,
+        "skill": "local",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "30243",
+        "address": "Город Москва, ул.Нижегородская, д. 25",
+        "point": {
+          "lat": 55.74116,
+          "lon": 37.66482
+        },
+        "duration": 30,
+        "work_type": "local",
+        "window_start": 1080,
+        "window_end": 1200,
+        "skill": "local",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "32807",
+        "address": "Город Москва, ул.Окская, д. 6 к 1",
+        "point": {
+          "lat": 55.69929,
+          "lon": 37.7711
+        },
+        "duration": 30,
+        "work_type": "local",
+        "window_start": 600,
+        "window_end": 720,
+        "skill": "local",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "73572",
+        "address": "Город Москва, пр-кт.Волгоградский, д. 97 к 1",
+        "point": {
+          "lat": 55.70762,
+          "lon": 37.77249
+        },
+        "duration": 30,
+        "work_type": "local",
+        "window_start": 840,
+        "window_end": 960,
+        "skill": "local",
+        "transport": null,
+        "urgent": false
+      },
+      {
+        "id": "41962",
+        "address": "г.Город Москва, б-р.Самаркандский, д. 32к1",
+        "point": {
+          "lat": 55.71027,
+          "lon": 37.81903
+        },
+        "duration": 80,
+        "work_type": "emergency",
+        "window_start": 960,
+        "window_end": 1080,
+        "skill": "emergency",
+        "transport": null,
+        "urgent": true
+      },
+      {
+        "id": "97886",
+        "address": "г.Город Москва, б-р.Самаркандский, д. 10к2",
+        "point": {
+          "lat": 55.71173,
+          "lon": 37.81109
+        },
+        "duration": 80,
+        "work_type": "emergency",
+        "window_start": 960,
+        "window_end": 1080,
+        "skill": "emergency",
+        "transport": null,
+        "urgent": true
+      },
+      {
+        "id": "17349",
+        "address": "г.Город Москва, ул.Новорогожская, д. 20",
+        "point": {
+          "lat": 55.74088,
+          "lon": 37.67246
+        },
+        "duration": 80,
+        "work_type": "emergency",
+        "window_start": 840,
+        "window_end": 960,
+        "skill": "emergency",
+        "transport": null,
+        "urgent": true
+      },
+      {
+        "id": "54964",
+        "address": "г.Город Москва, ул.Ташкентская, д. 16к2",
+        "point": {
+          "lat": 55.70598,
+          "lon": 37.8136
+        },
+        "duration": 80,
+        "work_type": "emergency",
+        "window_start": 600,
+        "window_end": 720,
+        "skill": "emergency",
+        "transport": null,
+        "urgent": true
+      },
+      {
+        "id": "21367",
+        "address": "г.Город Москва, ул.Саратовская, д. 16",
+        "point": {
+          "lat": 55.71036,
+          "lon": 37.74338
+        },
+        "duration": 80,
+        "work_type": "emergency",
+        "window_start": 1200,
+        "window_end": 1320,
+        "skill": "emergency",
+        "transport": null,
+        "urgent": true
+      },
+      {
+        "id": "24980",
+        "address": "г.Город Москва, наб.Семеновская, д. 3/1к2",
+        "point": {
+          "lat": 55.77141,
+          "lon": 37.68374
+        },
+        "duration": 80,
+        "work_type": "emergency",
+        "window_start": 600,
+        "window_end": 720,
+        "skill": "emergency",
+        "transport": null,
+        "urgent": true
+      },
+      {
+        "id": "15648",
+        "address": "г.Город Москва, наб.Семеновская, д. 2/1",
+        "point": {
+          "lat": 55.76853,
+          "lon": 37.6774
+        },
+        "duration": 80,
+        "work_type": "emergency",
+        "window_start": 960,
+        "window_end": 1080,
+        "skill": "emergency",
+        "transport": null,
+        "urgent": true
+      },
+      {
+        "id": "57299",
+        "address": "г.Город Москва, пр-кт.Волгоградский, д. 128к1",
+        "point": {
+          "lat": 55.69968,
+          "lon": 37.77082
+        },
+        "duration": 80,
+        "work_type": "emergency",
+        "window_start": 1200,
+        "window_end": 1320,
+        "skill": "emergency",
+        "transport": null,
+        "urgent": true
+      }
+    ],
+    "engineers": [
+      {
+        "id": "E01",
+        "name": "Инженер 01",
+        "start": {
+          "lat": 55.72646924242424,
+          "lon": 37.73340469696969
+        },
+        "shift_start": 540,
+        "shift_end": 1439,
+        "skills": [
+          "local",
+          "connection",
+          "emergency"
+        ],
+        "transport": "car",
+        "already_used": false
+      },
+      {
+        "id": "E02",
+        "name": "Инженер 02",
+        "start": {
+          "lat": 55.72646924242424,
+          "lon": 37.73340469696969
+        },
+        "shift_start": 540,
+        "shift_end": 1439,
+        "skills": [
+          "local",
+          "connection"
+        ],
+        "transport": "car",
+        "already_used": false
+      },
+      {
+        "id": "E03",
+        "name": "Инженер 03",
+        "start": {
+          "lat": 55.72646924242424,
+          "lon": 37.73340469696969
+        },
+        "shift_start": 540,
+        "shift_end": 1439,
+        "skills": [
+          "connection",
+          "emergency"
+        ],
+        "transport": "car",
+        "already_used": false
+      },
+      {
+        "id": "E04",
+        "name": "Инженер 04",
+        "start": {
+          "lat": 55.72646924242424,
+          "lon": 37.73340469696969
+        },
+        "shift_start": 540,
+        "shift_end": 1439,
+        "skills": [
+          "local"
+        ],
+        "transport": "walk",
+        "already_used": false
+      },
+      {
+        "id": "E05",
+        "name": "Инженер 05",
+        "start": {
+          "lat": 55.72646924242424,
+          "lon": 37.73340469696969
+        },
+        "shift_start": 540,
+        "shift_end": 1439,
+        "skills": [
+          "local",
+          "connection",
+          "emergency"
+        ],
+        "transport": "bicycle",
+        "already_used": false
+      },
+      {
+        "id": "E07",
+        "name": "Инженер 07",
+        "start": {
+          "lat": 55.72646924242424,
+          "lon": 37.73340469696969
+        },
+        "shift_start": 540,
+        "shift_end": 1439,
+        "skills": [
+          "connection",
+          "emergency"
+        ],
+        "transport": "car",
+        "already_used": false
+      },
+      {
+        "id": "E08",
+        "name": "Инженер 08",
+        "start": {
+          "lat": 55.72646924242424,
+          "lon": 37.73340469696969
+        },
+        "shift_start": 540,
+        "shift_end": 1439,
+        "skills": [
+          "local"
+        ],
+        "transport": "car",
+        "already_used": false
+      },
+      {
+        "id": "E09",
+        "name": "Инженер 09",
+        "start": {
+          "lat": 55.72646924242424,
+          "lon": 37.73340469696969
+        },
+        "shift_start": 540,
+        "shift_end": 1439,
+        "skills": [
+          "local",
+          "connection",
+          "emergency"
+        ],
+        "transport": "car",
+        "already_used": false
+      },
+      {
+        "id": "E10",
+        "name": "Инженер 10",
+        "start": {
+          "lat": 55.72646924242424,
+          "lon": 37.73340469696969
+        },
+        "shift_start": 540,
+        "shift_end": 1439,
+        "skills": [
+          "local",
+          "connection"
+        ],
+        "transport": "walk",
+        "already_used": false
+      },
+      {
+        "id": "E11",
+        "name": "Инженер 11",
+        "start": {
+          "lat": 55.72646924242424,
+          "lon": 37.73340469696969
+        },
+        "shift_start": 540,
+        "shift_end": 1439,
+        "skills": [
+          "connection",
+          "emergency"
+        ],
+        "transport": "bicycle",
+        "already_used": false
+      }
+    ],
+    "routing": {
+      "key": "ade5ede68337f6dc",
+      "source": "Valhalla / OpenStreetMap · static street-time estimates, not live traffic"
+    },
+    "notes": [
+      "Исходные данные: CSV dataset/Восток Синтетические данные.csv.new.csv — заявки, типы работ, адреса, районы и окна; нормативы — norms.xlsx. CSV не содержит координат или параметров инженеров. Это обогащённая ДЕМОНСТРАЦИЯ, не реальные маршруты по этим адресам.",
+      "Длительность на месте = технические работы + документы по нормативу; нормативная дорога исключена, переезд считается отдельно маршрутизатором. Дозаказ оборудования имеет отдельный норматив, но требует навыка подключения.",
+      "Координаты вымышлены при импорте вокруг центров районов; 12 синтетических инженеров, общая база в центре точек, смена 09:00–23:59. Глобальные проблемы считаются срочными. Требований транспорта в CSV нет.",
+      "Поля контрольного распределения (бригада, статус) не используются как ограничения или эталон оптимума. Пустые строки и подпись адреса офиса пропущены. Для реального планирования загрузите полный JSON.",
+      "Городские маршруты: геометрия, направленные расстояния и времена Valhalla/OSM по виду транспорта. Координаты подтверждены оператором; оценки статические, без онлайн-пробок. Общественный транспорт требует отдельного расписания GTFS и сейчас недоступен."
+    ]
+  },
+  "plan": {
+    "routes": [
+      {
+        "engineer_id": "E01",
+        "stops": [
+          {
+            "job_id": "69967",
+            "departure": 540,
+            "arrival": 562,
+            "start": 600,
+            "end": 620,
+            "distance_m": 6945,
+            "shape": "gxghiBgx~}fAw\\e@acBsn@u@bJ}K`xAaR`wBiG~r@_C~W_Gno@s@zKplAf|@pQfP|LbPxStWtb@|m@bMbSj@~@zArCrKtPbJ|R~KnYb`AnsChBbKzQbcAz@zEl@`DnSneAdk@zuC`AdFNtBFhCGnB_@dCeArCo@~@aBbCwTpVkEtFiCvBiCbAcBZqCDsCw@iBsAmAgDs`@be@kFfG_G`HqQzSyDpEmu@h|@ys@`~@sx@zcAkLtP_K|NiNzSyYvd@u`@fo@uDtDaEhAcBLuCu@kBeCcD}HiFeRoIuZeC}IqH{XeHsQcI_OwP}YkAmB}UaT{CiC}CgCoCaCuBeBqDsCkCsBeImGsIyGsMwJgI_H_CgBeFyDeGuEqFiEiBtKmWtzA{_@nzBkLtt@}Irl@yDvVuRroAiKrb@oPng@yEvUadA|lGsGlXiGbQmHtMsLnMwSlNk^`Mce@vK}q@jHkx@h@io@kFmo@wH_p@qRkr@i[qd@gXq`Aij@{MuFmPmEyO}B{O_A{JJgMjA}NjCkM|CgSlHkj@xVeHjEuOhLeThPkTbRqUpTwe@d[ou@|r@ay@rv@yMfLaOnKcdAzm@ew@rc@o}@ri@kJ~FeCzAyFlDmEjEkCaDsKmN_bAwmA{@gAaJ}Ksd@cl@yBoCf@yB|^q~AxAkGpa@ihBxBuJ`B}GnQsv@jEcRfQ{u@",
+            "explanation": "Навык и транспорт подходят. Переезд 22 мин; начало в окне 10:00–12:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "76678",
+            "departure": 620,
+            "arrival": 627,
+            "start": 627,
+            "end": 657,
+            "distance_m": 1263,
+            "shape": "ipbjiBirb|fAdCoKmAqAeAeAo@s@sMpk@{Nho@iOpp@{A`HgE{EqU{Y}Y}^gHqIoR{TqY{\\ib@qf@aKsLg[g^_AeAcb@wd@iDiD{BdIsRxs@w@vCqY|dAsDhN`FlFlAdBl`@~b@x@`BdAtG`AhF|AvEpB~CpNhQnAn@hA]~A{BtSuz@d@}@v@EnA|@p}@~kA",
+            "explanation": "Навык и транспорт подходят. Переезд 7 мин; начало в окне 10:00–12:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "24980",
+            "departure": 657,
+            "arrival": 667,
+            "start": 667,
+            "end": 747,
+            "distance_m": 2383,
+            "shape": "}zgjiByh~{fAq}@_lAoA}@w@De@|@uStz@_BzBiA\\oAo@qNiQqB_D}AwEaAiFeAuGy@aBm`@_c@mAeBaFmF}Sv|@c^dtA}BrJaEwEcQ}T_FmGed@}k@uCiDcNyP_h@io@oR{UmBoBuAw@}@]{@a@{BlGyn@vgBaL`\\iBxFcC~HiBbGgDje@WnEkAbSoAbXBjASnEeAvDi@bBe@zAkAjCiGfNyFxLcpAvnCwTnc@uEfJm@xAcH`Q}IdWcC`G}BzEe@|@_KtTS^yArCmCpFuHtOyBpEkClGiNzXgIfPmJfR_JjRbCzG|AzEdAdEd@nJJxZc@lSe@tSoArl@gAz]s@rNuCbd@o@zJeE_@qPk@gMgAyD]sCYNdLHtRb@pt@DhEJtFJhJr@`\\f@xSfCMzBI",
+            "explanation": "Навык и транспорт подходят. Переезд 10 мин; начало в окне 10:00–12:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "4893",
+            "departure": 747,
+            "arrival": 750,
+            "start": 750,
+            "end": 780,
+            "distance_m": 610,
+            "shape": "{o_kiBiw_{fA{BHgCLg@ySoBr@wSfHaMhEmMlE_ObFeDlAwDqGqCyEe@o@qKyNoImMgBoCgDmFuBgDgE}G}FqIiJ{O{B{DqIgC_BFiH`KuTb[}H|KmBnCyBtC{HnLyAxBsDnF_LpPcOfToCsH_@kAiDmKIY",
+            "explanation": "Навык и транспорт подходят. Переезд 3 мин; начало в окне 12:00–14:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "24076",
+            "departure": 780,
+            "arrival": 799,
+            "start": 799,
+            "end": 829,
+            "distance_m": 7858,
+            "shape": "sghkiBat_{fAHXhDlK^jAnCrHgJvNu_@vl@uHfNeGdMyGrOcHzTkFfS_WfaAou@`tCaYhkAk\\x~@aQ|h@sOvk@sWx}@ma@hjAaQje@iAdDoL~XuArCoBrE_BbEg@lAcB~DzGzMpIfTpw@nmBrPbb@fStf@hH`RvHhWfFnQfMjc@jEhOtHvW`Kh\\|BxHn[`_ArP`d@bXzv@nPtf@tVhr@dH`S`Md^tF~QtExQbIdg@xEn[tO~dAl@tDnFl]vDfVfAfHhJ|l@bFl]fB~J`@|BjD`ShBdKtA~HZfBl@pD`@vEd@jGTlARl@DHt@`BBDN\\TTVP\\H\\?j@Oz[c[|CyA`Be@`ASlBY`COxB@nCLvCR|Cb@dWbHlStFjMfDvCx@xSvFdCxAzCtDvCbGd@vB|@|Fn@|HRtSb@tcA?h@@|D@~DN`Jb@lHz@zE~AxGhEpOtA~EpEjLbBjDxAzBhAdBxCxEzFtJtDhG~PrYpN~ThVn_@jHrK~C|DtDdDlDfCbFlDxHzFnNu}@xBmN`@}BlBgMnCgIbDyMhFmZnFeYvGs[pGyWtDqLtE{JjSe\\pg@kv@dSiZdZ}d@~IcOtXoe@~OoXtk@q`Al[wh@pJwObGyIvBkCbBcBvCkCfCeB|LmG|\\kNz`@_PtKqDpEwAxQ_F|OmD`ZoEvk@mEdMm@hDM|GUhr@cCbb@u@rVe@tPK~JFzPf@tHRrXhBp_@tElXlEtc@~HnCl@jm@lOj@Nlc@|NXHv[vKxg@rPbO~EzH|BpFpAtFj@zOl@bRh@ta@h@rJb@pAFta@rAli@hBdYbB|IRdU|G|JdBbeAzH`Jf@~Fd@|H`@lEZvL~@fKv@p^nCzHh@nJj@jIb@dq@|EjHt@rRnBvGz@nEj@hEj@`ALxGfApDl@jPhDlOxFnRhIjDtApB|@pHdEjV~O\\\\h@`@`BtAdN`PzTtTpFnEhOdM~BdBhIi@nEU|CcAzJ{HrEqE`BeD^iDBaEi@eFuAmGaCaD}D_EoOwM}E_JyDwHc@kAiBcFeEsKsAuCaAkHYmINqFb@eEVqA`@sBlBgGzIkY~G_SlDeKhF{MxCwGtHuPzN}ZlK}TpKiT~\\ar@rDoHtBqEpFiLxIiRvRab@pVgg@dLsUbQs^~n@}rAdScb@h]ys@rAqC",
+            "explanation": "Навык и транспорт подходят. Переезд 19 мин; начало в окне 12:00–14:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "41077",
+            "departure": 829,
+            "arrival": 835,
+            "start": 835,
+            "end": 905,
+            "distance_m": 1693,
+            "shape": "mizhiBoa{yfAn]at@l\\yo@lS}`@n[wm@bIuO`I_PrAmCzEqJhBmDpE}Ix@uAtByDfBkD`FsJtCuFpb@qx@`KqRrZkk@tEh@rD`@dCzA|ApCjA|Fz@tGHrKgM`qAmAtJcPpfAiCnFaAtA{@v@qAHw@[_EqAuReRq_@_b@}D{FuB}C}FyGeF_Geq@qv@qA}A}GeIaAiAeMyNSUgDeDiQaKq\\cQ_^yRaw@gg@_C{A_KwGw@c@c@bDa@xCU`BpAt@v`A`n@e@fFS|Bc@nEPdFTfHo@fG",
+            "explanation": "Навык и транспорт подходят. Переезд 6 мин; начало в окне 12:00–14:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "48238",
+            "departure": 905,
+            "arrival": 924,
+            "start": 924,
+            "end": 954,
+            "distance_m": 7345,
+            "shape": "{l{hiB_ofzfAn@gGUgHQeFb@oER}Bd@gFnD~B`PnKfSdN|JnIhIbJhIbJrA|AxPrSpDxEtZz`@|BxCpObRnEnF|@fAbD`EtFdF~CxChAbBbWrh@|`@r{@pJbXbChAtBw@nAuDlI{w@v@gHnRmkBlKabAvAaNlGqn@`CwUnDsX`DoQ`DkPhK{Tbt@ygBhXyo@xCeHnHiRlZuv@fMg\\~Kga@~DqOfPwp@dKib@nUo_AnBaIz@cD`Qkt@|oAmjFtj@{~B~c@siBnoA}jFdDiNjA_Fh@wBrIs^lAcFtG}W`Ik[jZukAjZqmAjYkhALe@bG_StFkOjMo^fIwSdDmIxMw\\fEqK~m@i_BlQud@zY}u@ne@omAra@}jAzkA_yCpJiWtGyT`O{n@bCmL|Ty`AtG}XxbAchEzv@{fDjGkXfKad@rB}I~i@w}BxJmb@hbAkfE`f@asBjF}Tlh@cyBzN}m@jBeJlDmGhAgB`AqAdAy@xBgAvH_BdWcBhMOrCKxE[bEy@rHcDbHqEpQ}MjBs@nNoCjk@kJ`BWv|@}NvTsDdg@kIrMwB~Ey@rpAgSrMsBxV{DlCc@bFw@rk@kJbHmApB]jLsBtSiDzQwCbDi@lMuBtKgBnEs@rAUn_@gGc@cMi@mO_@kLkDwy@aC_k@q@oOgBcb@{@_SeGwwAWqFc@eLuDkbAiD}}@yBml@_@wJS}Eq@oQ_Dyz@g@sMyDv@mNnCah@`KcCkD{EcH}PsVc@}A",
+            "explanation": "Навык и транспорт подходят. Переезд 19 мин; начало в окне 14:00–16:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "30769",
+            "departure": 954,
+            "arrival": 956,
+            "start": 956,
+            "end": 1026,
+            "distance_m": 264,
+            "shape": "yuvfiBa|s~fAb@|A|PrVzEbHbCjDcE|@sd@~JuARaAR_@HaU~DR|E~Cdy@",
+            "explanation": "Навык и транспорт подходят. Переезд 2 мин; начало в окне 14:00–16:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "41962",
+            "departure": 1026,
+            "arrival": 1043,
+            "start": 1043,
+            "end": 1123,
+            "distance_m": 6367,
+            "shape": "uywfiBk|o~fA_Dey@S}E`U_E^I`AStASrd@_KbE}@`h@aKlNoCxDw@WsGyBil@a@eKcEchAoH_oBAUU{FqAy^q@mQs@wRKeDMuCOcEU{GUsFEuAg@mNQkEiAaZIwAwAo`@u@oRiAqS_Cwb@q@uMoGynA[wHeEuhAKkC}C{y@_@uJGqAkEajAsCgu@a@iO?qMh@iLz@{NdCs]J_Bp@cK|Be]NyBx@_Mr@mKtFsy@xA_TBe@tEwp@tBaZhAaP~@uMpGo`AxC_d@rAwR`AwN|C_f@jAaQdCi_@rBqZb@oG|AcUnJmxA|GabAtAsSv@iLzL_gBzBw[lDsg@LiBrBkZdDue@RmCpAkSvAwTlDog@j@kIdBuWt@mK`Gw{@p@kKxBe[l@eJdDif@xHcjAtAuS~AcVFgAxIiqARkCbKs{AbDce@hEmm@rAwRTkDZ_EzD}i@RcDzDok@|D}l@V}Df@aHTsDj@qIPgCjGk|@zAkT`BuWxF}v@VyOeM_B_b@}H{PiD{EaAX_HNkDzAu\\f@eLT{ETqFz@gTv@gRh@yM^sI`@sI\\}HbAsVzCys@LwCfAwYhAq\\~@iP^qChD_P|Lyh@`M{c@vIkZ|BaIrLya@pBuHfFaSrFsS`BiGtIg\\vJu_@rAaFNi@|G{WrDmN~@oDhGcXP{Af@qFC{Is@uGkAwGiC}JuCqIcCmGwBiEoDiGkFoH{Z{b@yCeEyAuBsOyTiEiGgEgHmEqHmEmHgAwAcW_\\wyAelB}EiGoGaIi[cg@aBaE{EyKuGiOwp@}{AiR_c@}DcJkGuNuLqX}BmF{C_HeLuWoHuPy\\uv@mAqCwh@_mAs@aBwMsZoAuCkHcM{JaFwTkGkUeLsVoKkGaCkFsBwOgGiAg@wBy@{NuFeUuIwCgAiEkAyMk@w[_HiK{BgVkFkL{BqNkCkCe@gB]aAScRmDuZkGmt@cOuSgEcDq@j@}F",
+            "explanation": "Навык и транспорт подходят. Переезд 17 мин; начало в окне 16:00–18:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "92031",
+            "departure": 1123,
+            "arrival": 1126,
+            "start": 1126,
+            "end": 1146,
+            "distance_m": 516,
+            "shape": "y_hgiBufhcgAk@|FeOgDoGgAoEsAsHmB{FmCkFoCaBqAoDwCsEmDsE{DiFyDkLeJsFgDmCsA{Ak@sHeC_MqCgXgFwWmFiOiCwAYeAUkI}An@yFRiAvKmo@@_IeAsGeAiBsAu@_B?eAfA",
+            "explanation": "Навык и транспорт подходят. Переезд 3 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "17892",
+            "departure": 1146,
+            "arrival": 1163,
+            "start": 1163,
+            "end": 1193,
+            "distance_m": 6309,
+            "shape": "eyngiBgrmcgAdAgA~A?rAt@dAhBdArGA~HwKlo@ShAo@xFjI|AdATvAXhOhCvWlFfXfF~LpCrHdCzAj@lCrArFfDjLdJhFxDgIxh@cYjjBi^t_Cie@xvCgZtkB}EnYsS~mAsx@r~E{Nv|@uThsAgPpiAgL|aAyLdpAWjCgKxrAkBrTmMlvAaBtPe@vFS`CmFrn@cB`SmFpn@sH|y@qSz|BeYl_DmKlkA{IvaAwI|`AgGfq@iChKaBfC{BhAcBXyC@oCo@k@]eByAmBiCkC{GqEoWmBoByCa@qBl@cB|B{@pFB~G~QzkA|Ol`AvCdQlIhf@pIlh@Jh@fLbu@hCdOhCvLvArDvAbCpDrGzCdI`HlW`BnJ|AzIvBfMhLlr@vM`x@fPraArAjIvIfi@zBvM~CnSnUnxA|Np}@pGr`@fEtX~CtTxOxgATpAbDlRzIng@`ErUnVzvAdOn{@ni@~}CnMhu@tAbI~F~\\tBvMzD`VrCpQ`Jhl@ZzB`AzF~BlNl@|DrRdjAl@lDxDbUjDbTpB~LbPjaAvG|`@jIbg@lGv_@jAhHfHvb@nAtHhDtSxCtQl\\~rBhA|GdBdKxGv`@vFt\\v@xE`BxJzBbOvCfO|Hzc@zClQTpJ?v@Efc@H~o@LlQzBEfAX~@d@xBbB|AfBbBvCjBnFzFpRfClIfDrLbFtP|BzHxQtp@lBjGd@zAjCnIoBr\\g@rHMxByUjnDwB~[gBrWcC~b@qA~WyAh`@{@f[eDf@sHbDsRxJkNdGiVbJ",
+            "explanation": "Навык и транспорт подходят. Переезд 17 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "21367",
+            "departure": 1193,
+            "arrival": 1200,
+            "start": 1200,
+            "end": 1280,
+            "distance_m": 1974,
+            "shape": "cvhgiBuof~fA_SpHuDtAk}@f\\qUzJc\\|L{TdJcFpBaYzKqWvJeDlAiAiGmJ}h@aAkFeAcGmE{VuNay@cBwJw@kEm@iDcLqp@wLir@kAwG{@_FmIge@wFq[mBiLiAyGaBwJsVexA}BqMrE_DpIkEzVmMp_@sStR{JxDyBjMyGjCuA~BmAbp@o\\zOaJbZsOlAo@vBeA`SoKlQoJtLqGdJoExFeCxIaDpGuApFeAhn@mLxS{DdEy@|C[zBEfAX~@d@xBbB|AfBbBvCjBnFzFpRfClIoApBm@`DkAvJA|_A?vBcR\\{_@L",
+            "explanation": "Навык и транспорт подходят. Переезд 7 мин; начало в окне 20:00–22:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "57299",
+            "departure": 1280,
+            "arrival": 1288,
+            "start": 1288,
+            "end": 1368,
+            "distance_m": 2722,
+            "shape": "cehgiB_vt~fAz_@MbR]?wB@}_AjAwJl@aDnAqBfDrLbFtP|BzHxQtp@lBjGd@zAjCnIhAvBbAfB`BlB`CdBfCt@zBJ~AOxAk@tAcAjNuzBpCeObBsDdDkEvAiAbYaQ|@i@|@k@hTaMj]eSnBiAzg@aZrGsD|@i@vAy@jj@q[tUgNn@a@zn@e_@bc@{VvPyJp[aRxA{@xg@mZ\\SfEgChr@ea@bJiFiAqS_Cwb@q@uMoGynA[wHeEuhAKkC}C{y@_@uJGqAkEajAsCgu@a@iO?qMh@iLz@{NdCs]J_Bp@cK|Be]NyBx@_Mr@mKtFsy@xA_TBe@tEwp@tBaZhAaP~@uMpGo`AxC_d@rAwR`AwN|C_f@jAaQdCi_@rBqZb@oG|AcUnJmxA|GabAtAsSv@iLl@qI",
+            "explanation": "Навык и транспорт подходят. Переезд 8 мин; начало в окне 20:00–22:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          }
+        ],
+        "distance_m": 46249
+      },
+      {
+        "engineer_id": "E02",
+        "stops": [
+          {
+            "job_id": "33527",
+            "departure": 540,
+            "arrival": 560,
+            "start": 600,
+            "end": 620,
+            "distance_m": 5723,
+            "shape": "gxghiBgx~}fAw\\e@acBsn@u@bJ}K`xAaR`wBiG~r@_C~W_Gno@s@zKplAf|@pQfP|LbPxStWtb@|m@bMbSj@~@zArCrKtPbJ|R~KnYb`AnsChBbKzQbcAz@zEl@`DnSneAdk@zuC`AdFNtBFhCGnB_@dCeArCo@~@aBbCwTpVkEtFiCvBiCbAcBZqCDsCw@iBsAmAgD}DuQq@yCod@mtBqOwq@mAmFwCmOeBcPg@qNKyTt@gQlB_QRyDB}DQyDa@sDq@eDcAqCoA}ByAaBcBcAgBc@iBCiBZeIlBaEBaD_@{B_AoBuAcB_CwBkFoLgf@_\\ouAiIo]{EcQeS{c@iIeQuJqNsRmRcQuJ{HmCmGgAaEk@sOcFgX{LqT{TsMiTyOwKcOeG{Eu@}ENwb@pFyEfAwEbByJ~EaIxEuHfBoJZkDk@yCiAqKaGqnAwjAeLsJsEyD_WcP{[cP}WkJy\\kHoeAoSieAmSeCg@ys@sg@aYwMyRmNiNoJrOurAvRvFdhCplApY~I|n@xMuFzl@g@nEuB`RsDn\\eCpTiAzJi@xEyBbRoGxi@iBtOmKf}@}CzWoGri@_C`Se@bE{PxyAiJrx@uC~UsBzPk@dI[`Im@@k@Xc@r@YbAInA@lANfAZ|@d@h@h@Rj@Ah@[`@q@V_AJkA~Fr@nn@tHfXdDbO`B`Hv@`D\\~Dd@dFj@tD`@vFn@bD^lCXB|ARvA`@hAl@p@r@Vr@Cp@a@^g@Xs@P}@HcA@kAIiAQaA[y@c@k@k@]q@Eo@Ri@h@wAqFm@{D|DmX`Ai[wF{Qg^uHk^kC??",
+            "explanation": "Навык и транспорт подходят. Переезд 20 мин; начало в окне 10:00–12:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "37272",
+            "departure": 620,
+            "arrival": 639,
+            "start": 639,
+            "end": 709,
+            "distance_m": 5887,
+            "shape": "k{{hiBunj}fA??j^jCf^tHvFzQaAh[}DlXl@zDvApFc@z@WlAIrAmCYcD_@wFo@uDa@eFk@_Ee@aD]aHw@cOaBgXeDon@uH_Gs@AmAMgAY}@c@m@i@Wm@@k@Xc@r@YbAInA}Ei@_BQoAMiBS{HaA_f@gF[EmD_@uC[sC[{@KcHu@sPeB}Hy@qN_Be^eEiKiAoDa@{AGyTcDkXoDoFgAeDc@iCk@eFcAuN{Bwb@cEcd@}EuPi@sGWsG\\sGvBo@\\oFvCmC|AaCnAkDlByDvBqOpIeE|B{CbBkGjDgB`AgCzAsP~IuBjAcCrAmm@r\\eRnKhBvO~BfStPfvAd@|D`MjfAzCxWhA`KkoB|iAuf@|WcDhBc_@bTqXrOoHzD}F|CyVtMmEhCg@VkKrFkEvFdBpPtZphCzAnMzu@xtGzFhg@fSvfBpBfQzNbpA~BpSfD~Y~R`dBjF|j@tAtSvAr[bApWzHxeCvBxs@~@`YlAl_@|Ct|@jHfvB|EpgApBnt@r@zWvItaDbBzm@zQvnFXjINdEPtFl@lRR|MH|JA`DApBCjHlGjDhM|JnEpD`At@hNrKtPlNhRfRzRpTlEvE`DzDbPlPlM`Mp^|[|UzTtGjGzX~V`LbK|i@`h@rVpTzR|R`n@bk@bRvQzApAdKxItB`BjDbDxPtOdPbLnBz@~GxCjHlChk@pZrAv@fe@fYTaB`@yCb@cDc@YyOgJwJ}FyCeB_CyAeIkF{@oAs@iBs@}Cg@mD[{DGoDDoDDgA?SR}Ar@oBnC_Hz@hBZ`@H|@jDzE~UfLtDf@r@b@tR`MrByLfCcP",
+            "explanation": "Навык и транспорт подходят. Переезд 19 мин; начало в окне 10:00–12:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "68476",
+            "departure": 709,
+            "arrival": 719,
+            "start": 719,
+            "end": 749,
+            "distance_m": 3368,
+            "shape": "{y|hiB}_lzfAgCbPxO`LqEv[}BdRq@lF_C{A_KwGw@c@c@YyOgJwJ}FyCeB_CyAeIkFsKkO_A_BiAoBKQw@wAm@aAgKaQuBeDmAaCq@{DCuClHkvA~Cqj@dTk`Ef@qJx[a{FlCkh@b@wH~FspAlM_tCv@uPdEcbAv\\u_IhEseAj@{NxIejBdC_p@fDgl@|Dwe@nD_d@rGcv@zCyYnE_^fKon@bS}eArLar@`CwN`Mqt@d@sCr]s_C`Jik@bw@wqEjByKjf@qtCnAiH|V}wArGq^pG_a@pIwi@tEsXpJo}@xEhBvGdC~EhBl@T",
+            "explanation": "Навык и транспорт подходят. Переезд 10 мин; начало в окне 10:00–12:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "67554",
+            "departure": 749,
+            "arrival": 751,
+            "start": 751,
+            "end": 821,
+            "distance_m": 280,
+            "shape": "iwphiBcce}fAfLhEx`@dOrE_a@fFoYsAcO{DyA{Q}GdIk}@",
+            "explanation": "Навык и транспорт подходят. Переезд 2 мин; начало в окне 12:00–14:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "7939",
+            "departure": 821,
+            "arrival": 834,
+            "start": 834,
+            "end": 904,
+            "distance_m": 4226,
+            "shape": "qkohiBkci}fAeIj}@zQ|GzDxArAbOgFnYsE~`@y`@eOuM_F_FiBwGeCyEiBpJocArJwoA~Bi]lAsQfFkt@~@eNzCik@lBod@h@_XBy]yAyv@y@aZaA{a@eAud@iEibBuBqm@mR}mEgA__@YyIc@oc@?or@d@cn@jBgf@lD_e@rLypAbMysApi@g}F|P{kBfEud@tM{qAvK{eAfLez@dCkQhG_^~M{v@dt@qvDx}@iiEvKeh@fF}IrBiC~BgCzCeBnBiBdCgElRou@xL_h@nCoLpPqt@~\\{cBvKkd@tMcj@xJsa@vg@msBbd@_iBrEcQcCuBgDwCcFyEiLqKaB}AmAuAcG{GuDgEwx@_~@oWwYu[i^sNaPaDoDiCwClBmIjDkO\\_BhFgUfHi[|DeQfA}E",
+            "explanation": "Навык и транспорт подходят. Переезд 13 мин; начало в окне 12:00–14:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "73572",
+            "departure": 904,
+            "arrival": 915,
+            "start": 915,
+            "end": 945,
+            "distance_m": 3485,
+            "shape": "yeehiB}xp`gAgA|E}DdQgHh[iFfU]~AkDjOmBlIaElQjCvCxCfDpXvZjc@df@`FrFr@x@vh@bl@bSxTrGhHr@v@pBpBhLhLrEzEhEaQr`@}bBfc@qjBlc@wjBrd@qjBvDePtNcp@|I}a@lA_BtAeAxAi@|AO|AN|Ad@`B~AjBhBxD`ExDhE|a@pb@hEyPdDgR~E}XlNe|@nD}TvArDvAbCpDrGzCdI`HlW`BnJ|AzIvBfMhLlr@vM`x@fPraArAjIvIfi@rL}IraAuv@fF}DrCsBlCkBtDqCfZaUfBsA`XgSfOeL`\\qV`I_GrNkKdGgE~L_JvRkNfI}DhAxGhFzZ^zBlErW~BdNfa@|aC`DdR`TloAfCjOhAtG|ErYt@jEtPpbAh@~CnMnv@vFn\\`DbRtAxIp@fJrI~AbOzENoEJoEWqGeHgf@{@qG]uGLuKfJem@rHu\\jKkc@`HiYhFiThLch@hEx@lJnCtIdCpGhBhGfBtIdCbKvC",
+            "explanation": "Навык и транспорт подходят. Переезд 11 мин; начало в окне 14:00–16:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "71388",
+            "departure": 945,
+            "arrival": 958,
+            "start": 958,
+            "end": 1028,
+            "distance_m": 3679,
+            "shape": "c_cgiBukn`gAcKwCuIeCiGgBqGiBuIeCmJoCiEy@iLbh@iFhTaHhYkKjc@sHt\\gJdm@MtK\\tGz@pGdHff@VpGKnEOnEcO{EsI_B?bHw@tOc@`J{Btf@mChm@MpCkGnuAoC|m@]hIgBxa@kBnc@QvEa@xLgAhK_DdIoCxB}WfSgPzLuOtLcLtI}GrFin@pg@yMtKaObMrCpQ`Jhl@ZzB`AzF~BlNl@|DrRdjAl@lDxDbUjDbTpB~LbPjaAvG|`@jIbg@lGv_@jAhHfHvb@nAtHhDtSxCtQl\\~rBhA|GdBdKxGv`@vFt\\v@xE`BxJzBbOvCfO|Hzc@zClQTpJ?v@Efc@H~o@LlQzBEfAX~@d@xBbB|AfBbBvCjBnFzFpRfClIfDrLbFtP|BzHxQtp@lBjGd@zAjCnIoBr\\g@rHMxByUjnDwB~[gBrWcC~b@qA~WyAh`@{@f[{@jl@i@`v@KzNAfBUj^SvvCS~DYvCq@|Cm@nB}MbVyVvc@uCxD{CjCcDlBiBJAuGC}H@ag@h@ySJaEKkXMy`@O}f@m@wdAD_[EsKnKA~OCzIC",
+            "explanation": "Навык и транспорт подходят. Переезд 13 мин; начало в окне 14:00–16:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "61540",
+            "departure": 1028,
+            "arrival": 1044,
+            "start": 1044,
+            "end": 1114,
+            "distance_m": 5970,
+            "shape": "}gggiBypd~fA{IB_PBoK@]cSEyBh@SnH}C~]gOnSyGfCWi@`v@KzNAfBUj^hBdm@dC~x@AnIQ~lAIl_@EhMYjJm@tIeAdKgBtL_BvIwN~m@uPfs@sVzdAiFrTkVlcA{d@|mB}Lzg@_HjYuEpI{A~@eBp@{@G}Bc@uAaAiAsAiEiH_AqCi@{GJ_JxCyLjCiExJ}GvD_ErFkKrWwgAlCkL`Msi@jEkQlBcJlBcIhAaEv@sBdAsA`BcAjB_@~_@y@vTk@}gAdnE}Nh{@sLbr@_I|j@wDx[mEhQ}F`NeG~ByCSmB{AcBmCoAsEq@aGU{Gd@_NlCeQxJmb@hbAkfE`f@asBjF}Tlh@cyBzN}m@jBeJ~@mGfA{Jn@qM\\aVJwb@Z{hB`@mqAn@_~@f@}i@h@k\\p@oUx@oVdBya@v@uO~E}v@~RqzCp_@yoF~]ejFfUcbDtLakB|Po`CrQoqCpYohEnTcdDlFmv@`R}vCpH{eAr]uaFjAyExAoDvKqKzAiDhAcEnCi`@fIcjA`A\\~QpGxA{@|@jGrHhCpFbUlWhIrQxFSrC~SvGsB|W",
+            "explanation": "Навык и транспорт подходят. Переезд 16 мин; начало в окне 16:00–18:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "48174",
+            "departure": 1114,
+            "arrival": 1118,
+            "start": 1118,
+            "end": 1148,
+            "distance_m": 665,
+            "shape": "_rxfiByjm`gArB}W_TwGRsCsQyFmWiIqFcUsHiC}@kGyAz@_RqGaA]pCi`@|C{f@hIiqA~Ckg@JaBdDuh@Z{EjCeb@vF}{@cJ}CyCcAtCwb@",
+            "explanation": "Навык и транспорт подходят. Переезд 4 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "51115",
+            "departure": 1148,
+            "arrival": 1160,
+            "start": 1160,
+            "end": 1190,
+            "distance_m": 4047,
+            "shape": "uxzfiBcp|`gAjCg`@zr@yiKdBgMbEcb@lBsNnH{`@rFy\\lBmMfCuRlEsj@fFim@bBkQh@aG`D}Y`CqRlA}GpG{NgIgIkY{GyJrBkJaB_AUsSqEaIaByb@{Im`@cImiAgToRoDaAU]Ge@KyGwAeDi@qA[yJuBkk@gLuLyCgXuGgA[mBe@aGmAq@KkmA}VgFaAg@SeI_B_GaA{AWiPuDobAqS}_@_IiASaHyAwNyCgWkF{Bc@}WkEaBOgIoA_LeCw@QeU_Fab@gKiJmBe@Km@McFcAkO_D}QqDiUqEoAUmJsBsNyCyA[iKyBcF_AoGkAoAu@OKaAk@W[{AgCsA}D{AcGs@gEg@wC{BgF}AmBkB}ByEeCeBBeA?_ABaCp@sBjAwBvB}BhE{AlEs@fCs@bF]lFEtFNpF`@vFt@lEhDbR|B`Pe@vFS`CmFrn@cB`SmFpn@sH|y@qSz|BeYl_DmKlkA{IvaAwI|`AgGfq@cMftAgHfr@oHri@qJ~q@sH}Fce@ig@q@s@oY_[{i@kk@yFhV]vAqGzCyCbMsFrU",
+            "explanation": "Навык и транспорт подходят. Переезд 12 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "10135",
+            "departure": 1190,
+            "arrival": 1192,
+            "start": 1192,
+            "end": 1262,
+            "distance_m": 305,
+            "shape": "st~giBmq_agArFsUxCcMpG{C\\wAxFiVmYoYsLwLaBcBbBoHfT}_AdOvOpAyF",
+            "explanation": "Навык и транспорт подходят. Переезд 2 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "31260",
+            "departure": 1262,
+            "arrival": 1274,
+            "start": 1274,
+            "end": 1294,
+            "distance_m": 3995,
+            "shape": "{v}giB_beagAqAxFeOwOrQax@lDwOnAsFRmA`@kDDsDS_Ek@yE}Kao@aBgEmDwGgDyFgHuGgIuHeSkTmXmZiJoJ_UkVeIwIyGkH}Zs\\sAwAgEsEpA_GxFcWzLaj@xC{M^cBzEmTtFyVjNyn@x@oDtHa]vCuMb@kBdBcI_Qe]cCcHCuGlRay@vFeVvF}TtAeGdHiZf~@}}DjDkOfF}KdHnAbExB~CjIpC~KxAxNxApNzFrh@bD|SzD`JjEpDtKnBbCp@dDr@nE`AvQ|DnSvE|D`AtLjCxz@bRzDz@zCp@rCp@zXjG~AZdBv@zAxAjAfB`AhChArE|A`Kt@lE`AnCbAhClAxBx@fAz@|@~@t@pBdAjCb@lAJ`BM`B_@zAu@zAw@lAgBfAcBdAyBFO`AyCt@gDh@sDX{DLaE@kDOuE]aEs@gEg@wCeC{Oq@cI[uGtNwaBz@mJ`Iwz@pIut@vTg}AnGua@xYofBfEoW|e@gwCra@ofCpL{s@pCuSt\\{sArXevA`E_WfQgiAh_@eyBlC{OnN{|@`BpAjFnCzFlCrHlBnErAnGfAdOfDbDp@tSfElt@bObBmQPwQjt@bLjW|FVeI",
+            "explanation": "Навык и транспорт подходят. Переезд 12 мин; начало в окне 20:00–22:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "43506",
+            "departure": 1294,
+            "arrival": 1294,
+            "start": 1294,
+            "end": 1324,
+            "distance_m": 0,
+            "shape": "w_cgiBcahcgA??",
+            "explanation": "Навык и транспорт подходят. Переезд 0 мин; начало в окне 20:00–22:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          }
+        ],
+        "distance_m": 41630
+      },
+      {
+        "engineer_id": "E03",
+        "stops": [
+          {
+            "job_id": "98182",
+            "departure": 540,
+            "arrival": 544,
+            "start": 600,
+            "end": 670,
+            "distance_m": 800,
+            "shape": "gxghiBgx~}fAw\\e@acBsn@u@bJ}K`xAaR`wBiG~r@_C~W_Gno@s@zKplAf|@pQfP",
+            "explanation": "Навык и транспорт подходят. Переезд 4 мин; начало в окне 10:00–12:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "34366",
+            "departure": 670,
+            "arrival": 683,
+            "start": 683,
+            "end": 753,
+            "distance_m": 4286,
+            "shape": "qqjhiB}sr}fA|LbPxStWtb@|m@fOyIvm@ac@~mAggAxi@sn@r^uc@lUcYtWsSfNmIzNaFnOeD~SqC|WcAv[DxZf@|]x@~]hDf]rD|b@nErc@zKp\\tHhMzAni@zE`RhCx`AbY`B`@|A~A~@lCd@zDAdEi@bEoAlEoRh`@wFlKkM~UgLvRwB~EgAzDpFnDnCnAhAV`AFt@K`Am@f@{@v@_BxHeWhEiKj@kAxb@m{@tRk`@vHwQjFeNlCwGxKsXtJaXxCyHlDcH`EiGlCgDdEgEfDkC~BcB|DqBrCcAtCo@pFs@tAKzF]rO_AvCKnYkAnaA{El]_Cl]}BpY_A|a@q@hIWlJe@jKcA~JcBjRgFjBs@nNoCjk@kJ`BWv|@}NvTsDdg@kIrMwB~Ey@rpAgSrMsBxV{DlCc@bFw@rk@kJbHmApB]jLsBtSiDzQwCbDi@lMuBtKgBnEs@rAUn_@gGc@cM}e@hIif@dIcZbF_G~@oDn@}FhAq^hG_HjAiZdFKkCO}DkAaZEwAq@qQKuCk@_Qd@_HcA_[o@sUp@Oj@k@b@cATqADyAIyAWqAc@}@o@g@q@Kc@JOBg@d@a@x@",
+            "explanation": "Навык и транспорт подходят. Переезд 13 мин; начало в окне 10:00–12:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "29890",
+            "departure": 753,
+            "arrival": 767,
+            "start": 767,
+            "end": 837,
+            "distance_m": 4748,
+            "shape": "ytxfiBwtc~fA??WfAKnA@rANlAXbAd@r@h@^n@Fn@rUbA~Ze@~Gj@~PJtCp@pQDvAjA`ZN|DJjC}k@xJakA`S}Ex@acDbj@_d@pHeLxAwIhAwI~@_KZoJb@qk@hBqXfA}_@hDeYvCiBJ_LfAwTzB_DToKt@uT~AoABkO^wCFwR`A}G|@sE|@eElAmF|BiC~AqA~@mDpCaEdEmDfEgJdP}@tBmCpGqDdEyDbHaKdTqErCyCbA_E?gU{EqKeDgXkEgd@kEcc@iCkh@_@i_@QgPKgc@bA{V_Ew|@cJmZkAo\\i@w[YeR\\qP~AaO`CoPtDuJpDeHdD_GnCgYzT}EhFuNzM}yBvvBodAh}@kLlIuKtGkOjGaOvDsOhBqPTmR_AuQu@{i@wB_Q_EwPoFaJkFwDkEiEwHoI{OwAaBkImMqF_GyCkCwDoB}CuAqDa@yH`@eXtD_FlA_C`AaBnAeBfBoBxCaBrDsAjEcA|Eo@jF]tFIxFHzFZtFn@jF`A|ErAjE`BtDnBzCxB|B`C|Ar\\dOzB|BvBnEdB~Fr@bHZbKP~[G`AwAfTsDli@}I`kAqA|NcDh^aHps@u@hIkEz_@wF`c@gHdd@{Gpb@mF~Z{L|r@oIpf@gAfGsGmEaN}Em_@uMkE}AnAkPzCi[|AaQrA_IpIiUvAgPfBmXrT{DfCfF",
+            "explanation": "Навык и транспорт подходят. Переезд 14 мин; начало в окне 12:00–14:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "76082",
+            "departure": 837,
+            "arrival": 839,
+            "start": 839,
+            "end": 909,
+            "distance_m": 153,
+            "shape": "qethiBawa}fAgCgFsTzDgBlXsi@mP",
+            "explanation": "Навык и транспорт подходят. Переезд 2 мин; начало в окне 12:00–14:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "22634",
+            "departure": 909,
+            "arrival": 922,
+            "start": 922,
+            "end": 942,
+            "distance_m": 4272,
+            "shape": "imvhiBmpa}fAri@lPwAfPqIhUsA~H}A`Q{Ch[oAjPjE|Al_@tM`N|ErGlEgg@~tCiBtKmWtzA{_@nzBkLtt@}Irl@yDvVuRroAgPdeAoXvwAgIdf@{H|j@oEzc@kGtv@cDtc@cCj^a@xFwBra@qCtt@uAv_@qEr_AiBdb@cF`kAuH`fBmKzcCiEffAq@`O_Eh_AwA~Z_G|sA_JxtBa@lHsCfh@eEhv@wI~{AkLjrBoA~TwSduDwKbpBYjE_A~D}@`BoB|AiD|BaEfAeDN{HkA}\\cW}AkA_LeLgw@at@kSeRaVqTqd@ca@kE_E]nBMxAItALvFx@xYpAva@tBbn@hB|l@VfGVnGpEviAnAh[dBt`@ApCgOvBsH`A_b@xF_ERFhCF|@JhDBhAn@jS`A~Zr@lRv@f\\JjDjA|OlBdMvFxWxDfJvHfQ|EjKvRjc@lA`CfPb[xRj_@",
+            "explanation": "Навык и транспорт подходят. Переезд 13 мин; начало в окне 14:00–16:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "82808",
+            "departure": 942,
+            "arrival": 954,
+            "start": 954,
+            "end": 1024,
+            "distance_m": 4437,
+            "shape": "qneiiB{g}yfAd[`m@fBh@rJ{VbDmIhDgZdAcn@?kEK{B_A}L]_HuAgZi@sJyAwWSkD{@{NsB}ScEgb@gAeLD{Gz@kFpBcFbGyB~@{@XuACk^MoGa@aTpBg@d_@iFn[kFhG}@pXaExBg@bBo@~BmBlA_Et@eYv@{XTwIJ{D`@oB\\eC\\uDfDcf@lHkvA~Cqj@dTk`Ef@qJx[a{FlCkh@b@wH~FspAlM_tCv@uPdEcbAv\\u_IhEseAj@{NxIejBdC_p@fDgl@|Dwe@nD_d@rGcv@zCyYnE_^fKon@bS}eArLar@`CwN`Mqt@d@sCr]s_C`Jik@bw@wqEjByKjf@qtCnAiH|V}wArGq^pG_a@pIwi@tEsXpJo}@pJocArJwoA~Bi]lAsQfFkt@dHrBfAx@fBdDpCnGnEjFxEjBlOzBzPbEdUtFp[dKvDbB`KzFnQzObSzQhNjM",
+            "explanation": "Навык и транспорт подходят. Переезд 12 мин; начало в окне 14:00–16:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "97886",
+            "departure": 1024,
+            "arrival": 1050,
+            "start": 1050,
+            "end": 1130,
+            "distance_m": 8824,
+            "shape": "uakhiBsje}fAcDjMgAv@cChBiBpD@pIXxMcEvWkEpXmBtJgIde@cLb`@s@lF{CxP_B~Ik`@{ZkCsB|UwxAfs@gkEjGu_@\\yB`@eCBuToQ{OaK{FHsClDihAl@_DlCgLx[f_@|f@ti@d@n@zIjL`HvLnHxQrEvOjSj{@`]hxAfApD`BrDzErKdDnJdCjL|AjOp@`KR`KKfM}Ahg@SbH@fHZ`Hz@dHzDlLbKze@bNpn@fFhUp@tCxDvPjFgGr`@ce@}DuQq@yCod@mtBqOwq@mAmFwCmOeBcPg@qNKyTt@gQlB_QRyDB}DQyDa@sDq@eDcAqCoA}ByAaBcBcAgBc@iBCiBZeIlBaEBaD_@{B_AoBuAcB_CwBkFoLgf@_\\ouAiIo]{CsYwCoPeFoNwF}KqLqRsO_P}NgO{LaJoMaHkO{EeNeCwUkDkGu@qOiBuEaAoCeAsCiCeCkDoBaF}AeGmAmLaDce@kCgc@qE}f@iEibBuBqm@mR}mEgA__@YyIc@oc@?or@d@cn@jBgf@lD_e@rLypAbMysApi@g}F|P{kBfEud@tM{qAvK{eAfLez@dCkQhG_^~M{v@dt@qvDx}@iiEvKeh@nR{x@jUa`AhYkkAta@_cBdh@{uBrg@mvBbc@cgBhEaQr`@}bBfc@qjBlc@wjBrd@qjBvDePtNcp@|I}a@dDiPfEwUbMeq@xLgw@lCwQrNeaAnE{^dHuq@bAsKj]cwDtTocC`w@mvI|D_d@zOqgBZwDTaCb@gFdBwQhLquApBaTtNwaBz@mJ`Iwz@pIut@vTg}AnGua@xYofBfEoW|e@gwCra@ofCpL{s@`FnEfBjAfEvCjTzPj@iDvEg@hEc@pHu@vC[tHw@nLmAvBU?NFlC",
+            "explanation": "Навык и транспорт подходят. Переезд 26 мин; начало в окне 16:00–18:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "18754",
+            "departure": 1130,
+            "arrival": 1145,
+            "start": 1145,
+            "end": 1215,
+            "distance_m": 4740,
+            "shape": "{fkgiBqvxbgAGmC?OwBToLlAuHv@wCZqHt@iEb@wEf@k@hDkT{PgEwCgBkAaFoEpCuSt\\{sArXevA`E_WfQgiAh_@eyBlC{OnN{|@oDwCsEmDsE{DgIxh@cYjjBi^t_Cie@xvCgZtkB}EnYsS~mAsx@r~E{Nv|@uThsAgPpiAgL|aAyLdpAWjCgKxrAkBrTmMlvAaBtPe@vFS`CmFrn@cB`SmFpn@sH|y@qSz|BeYl_DmKlkA{IvaAwI|`AgGfq@cMftAgHfr@oHri@qJ~q@{Ftb@cM|w@k@zCiKhj@oDpEoGbHaFoHmBoByuAouA{q@eu@_CoCwGuH_CsFeCvKkEdRaExQqB~IsU`dAyApGeG`XsHl\\yArGaKzc@yH~\\cFvTiDgDcaAidAaAcAwK}Lo@u@_BgBm@k@w`@o`@}B{BwLbb@gD|LwCnK}DxNwNrh@k@tBuHbXuWmZkJ_F",
+            "explanation": "Навык и транспорт подходят. Переезд 15 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "46393",
+            "departure": 1215,
+            "arrival": 1219,
+            "start": 1219,
+            "end": 1289,
+            "distance_m": 590,
+            "shape": "otjhiBu_v`gAjJ~EtWlZtHcXj@uBvNsh@|DyNvCoKfD}LvLcb@|BzBv`@n`@l@j@n@gCjH_Yl@iCnJu_@zHa[z@uDkD}D{i@{k@pIg_@",
+            "explanation": "Навык и транспорт подходят. Переезд 4 мин; начало в окне 20:00–22:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          }
+        ],
+        "distance_m": 32850
+      },
+      {
+        "engineer_id": "E04",
+        "stops": [],
+        "distance_m": 0
+      },
+      {
+        "engineer_id": "E05",
+        "stops": [
+          {
+            "job_id": "32807",
+            "departure": 540,
+            "arrival": 560,
+            "start": 600,
+            "end": 630,
+            "distance_m": 5641,
+            "shape": "gxghiBgx~}fAw\\e@acBsn@n@uHxIcz@f@sEdKwgAjHsq@t^gQxFqCp\\aPjn@aZj@YxZ_O|@mANwALgBsj@{jGvByB|CkA`BQhEMdAdMtBjWvMxxAbBbRvAjRbDve@`B~Q~@nIt@xHfAdFnAhEfBrD|@bB|CxCjBrAbD|BfCjAnBr@hBPjCDf@?fBGlDe@pBi@zBeApB{AtDoFbFoItGqKxGmKfAcBjAyAhAqAhAmAnAkAlAcApA_ApAy@|Au@zAq@nAc@nA]jD}@pDaAzJcClu@cP`JqB`JsB|I_C|DeAbp@yP|ImBbJmBtMqCpBc@x@Y~CeAyB{PuB_PwCuSuAcIwBeLqGu[eEcWsCuOyBwMgAgIm@sFOcD@kFpAsP~DmR~Hy[ll@a_Chb@}}Atn@waCvAqFtEyPdAeEjIo\\vF_UhCeKtaAuvDjEmPlD}MlMsf@nE{Pd\\qoAfa@i}AdM}f@nBqI|CsOvK{j@`@eBvHeb@xy@vPxFt@hIEbAa@tBw@`OcMxMuKhn@qg@|GsFbLuItOuLfP{L|WgSnCyB|YqUrGiFzEwChEuDfImGxI{Gfx@_n@pReN`ZqUdGcFjEqDpEsB`G?nGdBvAb@zSlGfUtF|KvCdDz@fK`D~IpCpNhEhEnA~N~EbDbA`SzGtE|AhCz@tp@nUlAZpJbBnFVjXoBlP}@bFU`FTxF~@~f@dPrC~@hVxHpo@nSvGtBpGo`AxC_d@rAwR`AwN|C_f@jAaQdCi_@rBqZb@oG|AcUnJmxA|GabAtAsSv@iL|Cyc@",
+            "explanation": "Навык и транспорт подходят. Переезд 20 мин; начало в окне 10:00–12:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "54964",
+            "departure": 630,
+            "arrival": 646,
+            "start": 646,
+            "end": 726,
+            "distance_m": 4351,
+            "shape": "m}rfiBmxj`gA|GebAzBw[lDsg@LiBrBkZdDue@RmCpAkSvAwTlDog@j@kIdBuWt@mK`Gw{@p@kKxBe[l@eJdDif@xHcjAtAuS~AcVFgAxIiqARkCbKs{AbDce@hEmm@rAwRTkDZ_EzD}i@RcDzDok@|D}l@V}Df@aHTsDj@qIPgCjGk|@zAkT`BuWxF}v@VyOAaGkLqAuz@uQyK_C{|Bce@g@M}FwA}m@wLs@OuK{B{f@kKeG}AsL}B_@xHcAdScApBk^kAoc@gM_c@cUizAwZ[Ie@K_MsCoA]cx@aPiL}BiXmFgAScBSiGeAs@OstAuZq@IhA{Oh@aIqGkAj@oCbA{Dvr@auCpd@qqBpLof@xKkd@uCwCoAsAiTcUkpAwvAeg@ij@yCeD}UuWy@_Ac@g@cEqEdDcNr@yCbD_Nh`@s`B`@_BhO}n@`P_p@pBmIzZkoAlB{HjEkQnC}K`CwIjSsx@xLmg@lVocAhRsx@rDyO|DvEtHlIbLtQvAnD",
+            "explanation": "Навык и транспорт подходят. Переезд 16 мин; начало в окне 10:00–12:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "41912",
+            "departure": 726,
+            "arrival": 728,
+            "start": 728,
+            "end": 758,
+            "distance_m": 464,
+            "shape": "we`giB}~|bgAwAoDcLuQuHmI}DwEsDxOiRrx@mVncAyLlg@kSrx@aCvIoE_FiIaJSSlA}ErBoIfKmb@",
+            "explanation": "Навык и транспорт подходят. Переезд 2 мин; начало в окне 12:00–14:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "60720",
+            "departure": 758,
+            "arrival": 776,
+            "start": 776,
+            "end": 806,
+            "distance_m": 5210,
+            "shape": "_{cgiBctxbgAgKlb@sBnImA|ERRhI`JnE~EoC|KkEjQmBzH{ZjoAqBlIaP~o@iO|n@a@~Ai`@r`BcD~Ms@xCeDbN_B|GcQ~s@eClLiBrIeHv\\aFxUiGbYaE`RyOru@iDfPoi@vbCeCzKgKle@_Lvh@k@hDuArIqBbNQrA{YvlAaUddAoIv_@}ChNUjAcCfKoBnIoZhqAod@|oBiE|QoCjLrAhIn^d{BbGn^hBtK|D~UjFj[bAhGzIji@vJzl@lQpgApB|LvBvMfBjKfCfO\\rBjGx_@tArIzAfJtHzd@zXzcBhBbLhAxGhFzZ^zBlErW~BdNfa@|aC`DdR`TloAfCjOhAtG|ErYt@jEtPpbAh@~CnMnv@vFn\\`DbRtAxIp@fJ?bHw@tOc@`J{Btf@mChm@MpCkGnuAoC|m@]hIgBxa@kBnc@QvEa@xLgAhK_DdIoCxB}WfSgPzLuOtLcLtI}GrFin@pg@yMtKaObMrCpQ`Jhl@ZzB`AzF~BlNl@|DrRdjAl@lDxDbUjDbTpB~LbPjaAvG|`@jIbg@lGv_@jAhHfHvb@nAtHhDtSxCtQl\\~rBhA|GdBdKxGv`@vFt\\v@xE`BxJzBbOvCfO|Hzc@zClQTpJ?v@Efc@H~o@LlQzBEfAX~@d@xBbB|AfBbBvCjBnFzFpRfClIfDrLbFtP|BzHxQtp@lBjGd@zAjCnIoBr\\g@rHMxByUjnDwB~[Cd@",
+            "explanation": "Навык и транспорт подходят. Переезд 18 мин; начало в окне 12:00–14:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "93086",
+            "departure": 806,
+            "arrival": 840,
+            "start": 840,
+            "end": 910,
+            "distance_m": 9747,
+            "shape": "o~egiBegl~fAcBlVcC~b@gCi@wDs@iFaAoAOaAg@i@iAB{Nt@}bFyGbHmm@Q_BDwJE@wN@iNHktA@wh@_YLU_d@EaIhn@mLxS{DdEy@|C[MmQI_p@Dgc@?w@UqJ{CmQ}H{c@wCgO{BcOaByJw@yEwFu\\yGw`@eBeKiA}Gm\\_sByCuQiDuSoAuHgHwb@kAiHmGw_@kIcg@wG}`@cPkaAqB_MkDcTyDcUm@mDsRejAm@}D_CmNaA{F[{BaJil@sCqQ{DaVuBwM_G_]uAcIoMiu@oi@_~CeOo{@oV{vAaEsU{Iog@cDmRUqAyOygA_DuTgEuXqGs`@}Nq}@oUoxA_DoS{BwMrL}IraAuv@fF}DrCsBy@sFaA_G_EsVgHme@yKat@_@_CcG}_@cAkGiCsPod@avCoGga@wBiNYiBsFw]eBuKi@iD]PyHdEaXpOgD`CaAjBw@nCq@|D}Bna@kA~OsArEw@nAoAlAoIz@mBP_AKmAcA_AaB{@uB{@sDaJck@sMiz@uCwQ}Kyq@_Hc`@qEoWSeAaHg]yWggAqW}`B_c@{oCaDySmA}HyNu}@yT_~@uN_d@{Sgd@a_AwlBsPu\\gGwMaFgMkGqRuEgSaFi[yDo^uHsg@cEeScDsMcJyU[w@yLsPuC{EwOuW_HgLsMqTqp@{gAsd@ov@{QuZsR}[qN{Uyj@q_Ac^{l@{CcFaE}Ga`@so@{z@ewAq`Aq_BkEiHwfA{fA{Z{ZsEiEwWkVymAuiAiZyX{XoWo]}[_XoVsKyJ_B`IMj@eDbQqqAzoGsu@tnDrOzTjPzUtaC`kDdg@jt@zEdHw@jGsCjTuEh\\gHph@KnJj@jJ\\tAlJ|H|KlLlCnC`QtQxRnSr^v_@~@VdAEpAV~OfR`XvZ~EnHhCdIbBdHlAbLpJdv@zBdWRdBp]v}D~l@rqG`Hzt@pF|h@|w@zoIx@|HzAjNhRfxBn@xGfJhbA`CjZxC`_@R`DsD|NgKz[~PvL",
+            "explanation": "Навык и транспорт подходят. Переезд 34 мин; начало в окне 12:00–14:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "57866",
+            "departure": 910,
+            "arrival": 912,
+            "start": 912,
+            "end": 982,
+            "distance_m": 456,
+            "shape": "{tohiB_~v`gA_QwLfK{[rD}NSaDyCa_@aCkZgJibAo@yGiRgxBzAoIhUsfA",
+            "explanation": "Навык и транспорт подходят. Переезд 2 мин; начало в окне 14:00–16:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "26645",
+            "departure": 982,
+            "arrival": 1026,
+            "start": 1026,
+            "end": 1056,
+            "distance_m": 12718,
+            "shape": "kephiBqpcagAtv@yqDh_AijEjUseAxc@avBfYevAdRux@VgJr@sW]os@@kUrC_NzLwXr@eAzIoSxKoZxHqYzEkMtNoc@XeI{A_IcDcEcE{D_OyH}\\qk@aSk^iWkd@c@eAcC}FaKmP}@wAuBeDyEsHaEsKqJc]wIm[qI_S_ImLwG}GyMg_A}Go`@_BoIim@gaAiV{a@_EwD{BwDw@sDkw@_sAkDmMsCeFqIsMqLiNyoAkpA{DyFaAuAmBcAkE_CuW{OySoPuIgN}d@ic@a[g[wWuVcYaWqSwQgJcJmCeCcC{A}BDoCqAqE`BdDcQLk@~AaIgLsKaQcPkGyFiJsI_B{AsMuLcBaCaOoRa\\mb@aUb_@mPhXmAbB_BtA}AfAgB|@eBn@kr@rRkwF~~AaI|BsDn@mEf@wB_@wA}@eAwBg@gCG}CVgDx@}BfAwApBoArTsHvCeA~QoGzAk@~IiDjPvoArCtVnArMZtDh@jH~@jObEzy@|@pNlAxMzBpSxHlr@hB`PX`Ic@~G}@bEwBlC_RdJ{GpDkBLyEa@sCy@eE}AyByBwB_BeCq@uC@iCv@wBfBoBxCsAnDkAbGe@|HBvE`@vFt@lEpA|DvAjCpBvBfCnAvAzAfBtCvAzDn@zD`@vDLxDg@dSk@|U}I|sD}LlfFoCniAm@fVo@jWIzCQpHuChpAw@p]QhIGdCiCd`AaAx^UhKuB~~@]vO_@xKu@z[MjF}@~]Y|JGbBo@jW}A~l@i@dVeEt`BK|De@xOyAbg@]xK[pKwBby@q@l^eCvsAy@xd@U~NiAvc@i@`Qe@nPu@lXO~FOpIGxDOlGm@jUqAzg@]~NWjJYpK{@t\\wAtj@m@rUeA`a@c@vPWdKKfFs@dWuAdj@WdJuAjj@cAz`@OfF]rNa@nN{@v[k@zSwBnx@}Abk@wAji@_Bxl@c@hOWdKeAj`@eCl~@cCh|@c@jOgA~b@UhIs@tXkDbpAwAhi@uNtIkp@da@gW~NsCjBa]tRwHjEyWzO_IvEm\\|ReO~I}\\~R_K|FcJnFgXzO{@f@uRbLcV~MkEbC{CbBuAv@KFwDvBg_@|Ske@|WoT~LkSfLaHbDqJjFs`@nT}OhI}Ax@{dAjj@}OpIuUdMsItEwRnKyHdEiHrDka@dTi@X[NkG~D_FvCm@n@s@|Ai@bCSrCGrBC|BlPp}AxA`NdIrt@bIxs@nO~tAzV~}Bjr@bgGlUxrBnU`lB`m@vaFhUnlBlVpqBbUdpBhs@voGvJ~{@hf@rjEdT~lB`B~MzAfMx`@tkDtKr_Al@`FUjHy@lF_AhDkCtGsGlDcKrFeDjBiK`GgN`Hq^~RaRbK}BhAkBtAsDzDaBrBsAbC]lAYrCQlCEl@GnBBhHzM~iA`Idr@jB~PlG`l@L`CXnCVnDn@jIItIiAnHI^eXzgAq@jCcTp{@sWbgAq@rCaPpq@oI|]cNjj@oFbV{YrqAmSz}@}c@loBn@r@dAdAlApAnSo|@",
+            "explanation": "Навык и транспорт подходят. Переезд 44 мин; начало в окне 16:00–18:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "15648",
+            "departure": 1056,
+            "arrival": 1068,
+            "start": 1068,
+            "end": 1148,
+            "distance_m": 3381,
+            "shape": "swajiBi|d|fArgAayEhMml@|WuiAz@uDzCuLnDyNfF{SbH}XuA_Bq@y@gAqAsWbgAq@rCaPpq@oI|]cNjj@oFbV{YrqAmSz}@}c@loBsMpk@{Nho@iOpp@{A`H_C`K{Mfk@_@|A_d@~nBqOnp@e@lBc\\hvAkEjPkB|IqQts@e@hB}DnOu[tnAyM`j@iIv\\}@vCad@phByBzIeE`PaArDgA~Dk@vBwJz^oIx[}EzQaD`Mkg@tmBgHxVUfDg@zHMdHBjHB~GyBnk@]|I{Blk@aAbXiAhXsBxj@SzDm@xK_@KgEy@AA}d@cIyIs@}EL_SpAeDRa~@fHaEb@uXnCgXxB}ALyPrBkPxBmJdAkm@vGsg@|FwC`@@n@NdG`Az]XfLfA`a@vA~e@wA\\eAT",
+            "explanation": "Навык и транспорт подходят. Переезд 12 мин; начало в окне 16:00–18:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "30243",
+            "departure": 1148,
+            "arrival": 1162,
+            "start": 1162,
+            "end": 1192,
+            "distance_m": 3887,
+            "shape": "k~yjiB_wszfAdAUvA]PpH^lOJ~C|ACvF@~XCbs@y@bCVF~FfFln@lDrb@z@rKxBzWlAzEzA{@xDsAxHaBn@GdEw@`Hk@dDMjGIxDBjLh@zFz@zH`B`GzBjLnIpLnJxJ`KnBlB`GjFxAt@hOxGbH|B~CdA`IvDb@DbCXt@HlYlFbGfAtCb@xe@|GdMfBzUtCbKpArDd@bT|CxO|BnNtBzQnClMlBbC^j@H|ARlAFtCXbCn@zCp@hBdAvB|AfC~Vt@tEZhBnAjHvCdNnDnNdEtLnEdKt@dBjErHrFdH`VfWxW~XdOvOpArAjCvBvDhDrCfHtAfFn@hDXtAZdRBn@Bl@^lJ\\jHtFfrAjAlXTrFvCns@XvFtBlg@\\hIV~EP`EXdD\\bAb@p@v@Tz@AjUeD|PmCl@Fd@h@Nl@LbAlAfYJ~ARfAf@`Al@b@p@H`}@sJfA_@f@_@XSb@c@f@dBrUfv@fCpHRd@j@rAzB~E`DdEdChCtArAjAhA\\^^\\hAfA~@eE|AgFd@wArAyDpEqIbAsAfEkFlHkFxFwDhG_ElXmQpKaHxCoBfDyB|@m@pd@uZx_@{VjFoCpAy@jYeRnFsDbIsFhPeL`rAwgAxi@mg@tPqQrPePnJiIpMiKpMiKtJmExCuBpAm@hAGbA?vAPzAl@tA~@jAxA~@dA^vBhAtElBbH`AnDtCzIzDdLtHoDdCGbO]dAGrP_AjKqAtPsEnS{HrH_ChDOnE]jO}Gve@{S`DuAjA|OlBdMvFxWxDfJvHfQ|EjKvRjc@lA`CfPb[~n@lmAfBh@{BlHg@pA",
+            "explanation": "Навык и транспорт подходят. Переезд 14 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "21571",
+            "departure": 1192,
+            "arrival": 1194,
+            "start": 1194,
+            "end": 1224,
+            "distance_m": 288,
+            "shape": "gtdiiBol{yfAf@qAzBmHrJ{VbDmIhDgZdAcn@?kEK{B_A}L]_HsA\\oHpBsXzHUoDuC_h@",
+            "explanation": "Навык и транспорт подходят. Переезд 2 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "47670",
+            "departure": 1224,
+            "arrival": 1242,
+            "start": 1242,
+            "end": 1272,
+            "distance_m": 5105,
+            "shape": "ieeiiBofazfAtC~g@TnDio@nQkBb@mAaCwRkc@}EkKwHgQyDgJwFyWmBeMkA}OKkDw@g\\s@mRaA_[o@kSCiAKiDG}@GiCaEh@sQxBcC^kC^{InAiNtBoFt@mC`@oUlDs^rFoFv@iZpDyI|@gQhB_DXcFd@oG\\i@tCYdBu@fES~@m@fC{DhW{@rGiAdFa@|@kAdCGLw@nAg@dAmApBsYjYoE~DiVfV_U`T{i@lg@ykAbeA_S|M}NhJ{MxIkHhFcAp@sMjKgT`NsXbQgQxL_Ap@eD|BoBr@kAb@m@RsDbCuBvA}CrBoTvNoDrCuJfHiAv@mF`EoEvEkCvD_C~DeB|Dg@hA]jAe@|A{AnFwAqAmCkCyBwCuBsDe@{AcDaKwUau@g@cBs@yDIoBWwQ_A{o@MsHEoCMeJO{K?iEHiEPeCbC{_@lFmv@^cFFcAOWoBeEyFiOeO}a@gPud@}AmEQ@aBRgBh@gk@fSoR|Gk`@hNaCf@_@F{AAy@Kk@GoBi@mCuAgDmBgL_IiC{BeCyCeCoEyBmFwBgGoGoWgDcJ{BqES]}AiCgBmCeCqCyI{IaDqDsImMq@wA{AaDqb@siAyPid@cC_@mMmB{QoCoNuByO}BcT}CsDe@cKqA{UuCeMgBye@}GuCc@cGgAmYmFu@IcCYc@EaIwD_DeAcH}BiOyGyAu@aGkFoBmByJaKqLoJkLoIaG{B{HaB{F{@kLi@yDCkGHeDLaHj@eEv@o@FyH`ByDrA{Az@mA{EyB{W{@sKmDsb@gFmn@G_GC}EBkxBE{g@@{D?o@mJdAkm@vGsg@|FwC`@_Fn@oJpAsC^iH~@oPdC_WxDaC^qBXwMrBcDf@yf@vH_JfBkATiDp@_Dh@o^`Fk@HwK|A{Er@qMhBgMrBsRjC{HjAaDh@_Cd@uATkUpE}UtEmOxCu@NuHxAsCj@qCh@}HtAqIzAy@NmEt@yIxAuB\\sF`A{@V{@VwAbAkA`BoAnCsNr[wDnJ}L~ZaHdRyPpc@qB`FPb@v@hBt@jB",
+            "explanation": "Навык и транспорт подходят. Переезд 18 мин; начало в окне 20:00–22:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          }
+        ],
+        "distance_m": 51248
+      },
+      {
+        "engineer_id": "E07",
+        "stops": [
+          {
+            "job_id": "52405",
+            "departure": 540,
+            "arrival": 557,
+            "start": 600,
+            "end": 670,
+            "distance_m": 4400,
+            "shape": "gxghiBgx~}fAw\\e@acBsn@n@uH}D_AgIoBkRqEyDy@ug@eLq\\qH}OkD}I_CgCiq@iCmEqEuDkA{Bw@qE}@k`@E{XReRd@gLz@aOzG}v@|BgWlAeNjHkv@~LquA|BaXbOkaBj@asAFyPPi^|P{kBfEud@tM{qAvK{eAfLez@dCkQhG_^~M{v@dt@qvDx}@iiEvKeh@fF}IrBiC~BgCzCeBnBiBdCgElRou@xL_h@nCoLpPqt@~\\{cBvKkd@tMcj@xJsa@vg@msBbd@_iBrEcQcCuBgDwCcFyEiLqKaB}AmAuAcG{GuDgEwx@_~@oWwYu[i^sNaPaDoDiCwClBmIjDkO\\_BhFgUfHi[|DeQhLqg@dOqp@pB}InLih@lBkIiDgDcaAidAaAcAwK}Lo@u@_BgBm@k@w`@o`@}B{Buv@gy@mGyGsAwALuHnRoy@}Q{SiKiLcDqDj`@}_BxTccA",
+            "explanation": "Навык и транспорт подходят. Переезд 17 мин; начало в окне 10:00–12:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "77563",
+            "departure": 670,
+            "arrival": 686,
+            "start": 686,
+            "end": 756,
+            "distance_m": 4805,
+            "shape": "}shhiB{gdagAyTbcAk`@|_BbDpDhKhL|QzSoRny@MtHrAvAlGxGtv@fy@|BzBv`@n`@l@j@n@gCjH_Yl@iCnJu_@zHa[hChCjOhOl^v^hSrU`K`LjCpDyArGaKzc@yH~\\cFvTmBjIoLhh@qB|IeOpp@iLpg@}DdQgHh[iFfU]~AkDjOmBlIaElQjCvCxCfDpXvZjc@df@`FrFr@x@vh@bl@bSxTrGhHr@v@pBpBhLhLrEzEhEaQr`@}bBfc@qjBlc@wjBrd@qjBvDePtNcp@|I}a@lA_BtAeAxAi@|AO|AN|Ad@`B~AjBhBxD`ExDhE|a@pb@hEyPdDgR~E}XlNe|@nD}TvArDvAbCpDrGzCdI`HlW`BnJ|AzIvBfMhLlr@vM`x@fPraArAjIvIfi@rL}IraAuv@fF}DrCsBlCkBtDqCfZaUfBsA`XgSfOeL`\\qV`I_GrNkKdGgE~L_JvRkNfI}D~GqEbNoKhWuSdIuGzOoMhn@ie@|@q@r@i@|KoItQaOjPmMlHuFbO{I~ImE|DsAtCu@hc@fMdrAda@nF~Ahd@nN|WjI`SzGrBn@`pAfc@fBn@~OnEi\\pvEqHfeA",
+            "explanation": "Навык и транспорт подходят. Переезд 16 мин; начало в окне 10:00–12:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "53587",
+            "departure": 756,
+            "arrival": 762,
+            "start": 762,
+            "end": 832,
+            "distance_m": 2080,
+            "shape": "wr|fiBgpp`gAmAzP_o@vlJyFvy@gR|vC}IhrAum@vaJ{PlaCKzA}Dxj@sPx_CqL|s@kJpe@uDxYkE`p@o@pJkBxYuJd{Ac@fHwAfVyTfrDc@pGmCha@mBvXuAxRhAvBbAfB`BlB`CdBfCt@zBJ~AOxAk@tAcAnAeS",
+            "explanation": "Навык и транспорт подходят. Переезд 6 мин; начало в окне 12:00–14:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "10245",
+            "departure": 832,
+            "arrival": 839,
+            "start": 839,
+            "end": 909,
+            "distance_m": 2579,
+            "shape": "}_dgiBiht~fAzKofBvOccC|Bk^NwBxAoPlCe[hE_c@dC{VbBoPtIigAvGyy@l@e`@BsN_Aiz@|Po`CrQoqCpYohEnTcdDlFmv@`R}vCpH{eAr]uaFpYwgElBgYhZ_nEdOpEpA`@h|A`f@v@TdF`BzStGbR~Fj@N",
+            "explanation": "Навык и транспорт подходят. Переезд 7 мин; начало в окне 12:00–14:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "82388",
+            "departure": 909,
+            "arrival": 933,
+            "start": 933,
+            "end": 1003,
+            "distance_m": 9143,
+            "shape": "_cvfiBikw`gAxBl@rE~Ank@|QnH~BfiAr^~FjBu@lKeBtWk@jImDng@wAvTqAjSSlCeDte@sBjZMhBmDrg@{Bv[{L~fBw@hLuArS}G`bAoJlxA}AbUc@nGsBpZeCh_@kA`Q}C~e@aAvNkGmB{\\oKmP}Eo~@wY{MgEe[wJqJyC{UqHwk@sQoEwA}CcAwa@uMqDcAePeFcEoAgR|vC}IhrAum@vaJ{PlaCKzA}Dxj@sPx_CuGp|@cU`cDe]lfFaE|l@sOx}BoHpeAeSf{CuEvt@cChf@eBld@{@xZq@n\\i@dg@KhXInQEzNc@pfBAnIQ~lAIl_@EhMYjJm@tIeAdKgBtL_BvIwN~m@uPfs@sVzdAiFrTkVlcA{d@|mB}Lzg@_HjYyUdbAwYvoAyNzn@cLpf@mNpm@mHt[_F`Tgk@tdCeo@|lCcR`x@qb@njBaFfTyA|FmEjQoGfSsIxVmnAf_D{M~\\moAh`DglAvyCcMj[kZdz@iFhGqA~@yB`AwANcEs@yVkLeBeBaAwB]{AYiAKsCA}DLqFvEyc@PcBf@mEhEka@jLcn@jB_N|Gqk@fA}GbByF|AsClBkBtC}@hBQrC\\tBnA|BpCrBfEbP`k@jNlr@pe@btBhOdu@nd@v{BtJbh@|Nn{@dIph@jFr]lD`WvJls@`Uv|AzOndAvDhUhE~Ut\\zgBdr@~qDhTzmAfClMtCtKpD~LbEpMjVlt@fOxc@lExNjEhPjLje@jDzOvNzu@~@tJDfG_@bD{@`DaA~AkBh@_BQcCwA}CwCeCqD_CuGs@aD[cDCuDDmBPuCb@cDv@gEr@kB`AmBlt@kf@l^oV`q@gf@rFkDbBcAfNsItLqHwAqJwCaPKe@cKsj@}AkI|DmDhNgLhMmK}AoHkLik@rEsD",
+            "explanation": "Навык и транспорт подходят. Переезд 24 мин; начало в окне 14:00–16:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "87693",
+            "departure": 1003,
+            "arrival": 1020,
+            "start": 1020,
+            "end": 1090,
+            "distance_m": 5453,
+            "shape": "}ajgiBafa{fAsErDjLhk@|AnHiMlKiNfL}DlD|AjIbKrj@Jd@vC`PyTbOmAx@{M~IwLhImVpEiBRoCdAgBdAcGdD}W~P{An@{AVuCAaC_@aCsAcBuAyAsBuAyBcBiEeXsw@o]}bAgDoJa[q{@mLe]sQyk@uEyQwi@mtCiS{fAiH{_@gEuUsD}TyOgdAwKkkA{KsaAk[}nCiC_T}BoPiDuRwEmTy@aIy\\a|AqUgmAmBcLoAeKy@wL[eLMiNTmNp@eLz@iK^_E~@cInAcNbCyN~B_MzY}u@ne@omAra@}jAzkA_yCpJiWtGyT`O{n@bCmL|Ty`AtG}XxbAchEzv@{fDjGkXfKad@rB}I~i@w}BxJmb@hbAkfE`f@asBjF}Tlh@cyBzN}m@jBeJlDmGhAgB`AqAdAy@xBgAvH_BdWcBhMOrCKxE[bEy@rHcDbHqEpQ}MjBs@nNoCjk@kJ`BWv|@}NvTsDdg@kIrMwB_@yI]cJcHimBa@_LiEukAqCkv@yA_a@}BBkC[qB_@gEy@aQeBiJa@wBe@}Ae@_BuBkAuCwDmQu@gGOgG?iE^mGpBoN`Ha\\hDmM|FsT~DeNfJuZ~J_\\aByBaIoKrMmc@eGaIkCkD",
+            "explanation": "Навык и транспорт подходят. Переезд 17 мин; начало в окне 16:00–18:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "50104",
+            "departure": 1090,
+            "arrival": 1094,
+            "start": 1094,
+            "end": 1164,
+            "distance_m": 613,
+            "shape": "qv}fiBudp~fAjCjDdG`IsMlc@`InK`BxB_K~[gJtZ_EdN}FrTiDlMaH`\\qBnN_@lG?hENfGt@fGvDlQjAtC~AtBsELkFL}AD{MKeUW}Pa@_CvfC",
+            "explanation": "Навык и транспорт подходят. Переезд 4 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "98815",
+            "departure": 1164,
+            "arrival": 1192,
+            "start": 1192,
+            "end": 1212,
+            "distance_m": 9290,
+            "shape": "gbagiBigc~fA~BwfC|P`@dUVzMJ|AEjFMrEM|Ad@vBd@hJ`@`QdBfEx@pB^jCZ|BCxA~`@pCjv@hEtkA`@~KbHhmB\\bJacDbj@_d@pHeLxAwIhAwI~@_KZoJb@qk@hBqXfA}_@hDeYvCiBJ_LfAwTzB_DToKt@uT~AoABkO^wCFwR`A}G|@sE|@eElAmF|BiC~AqA~@mDpCaEdEmDfEgJdP}@tBmCpGqDdEyDbHaKdTqErCyCbA_E?gU{EqKeDgXkEgd@kEcc@iCkh@_@i_@QgPKgc@bA{V_Ew|@cJmZkAo\\i@w[YeR\\qP~AaO`CoPtDuJpDeHdD_GnCgYzT}EhFuNzM}yBvvBodAh}@kLlIuKtGkOjGaOvDsOhBqPTmR_AuQu@{i@wBqaBuGyNiAgHkAqPkFsSaJcQaK_PgNq[iZqnAwjAeLsJsEyD_WcP{[cP}WkJy\\kHoeAoSieAmSeCg@ys@sg@aYwMyRmNiNoJ_Ao@oDcCk]eXwAgAmb@i[gGqEkg@q`@{NwOwPmTqImNyKyTqIyUmEaLiDkEcFuBkIg@wRaBiWM{dAGmBCqMQ}Ef@{DbAiDlBuAvDcHpSoEfQmDbRcE`\\sEnf@cH|n@qLvk@oLxo@}a@fcCq@rDsU~zAwKvk@iGj\\m@hDkD|N{@jFsCtPcAzLc@~KMxGDdI^hMbAzOJrEXvJx@tLz@xEt@rBJ~@dDrXxD~[dAzIrA~Kp@|Fl@~E|Fxf@~Dr\\dBbOeNpHog@jXaXvNeDfBcCrA_WhNuWzNcH|D{BnAgDpByErC}MbHoNmmAwCcXi@cDe@aBa@mAg@}@u@a@sAC{AJkB^eb@d`@{A~Aq@jAo@nA{@~BYdDClBHlBPbCfL~aAb@bHIvDiAfDeDjBiK`GgN`Hq^~RaRbK}BhAiBp@aBh@wA`@iATsBVgJ@y[kAqLgAwPs@eYGkXS}Jk@kc@aAoOOkN[q^w@iv@oDaOq@mI_@_[w@y@EmEMgB?yEdBqBpBmBhCe@z@qCxGc@hA[z@}DlRsPnl@kKv^gMhd@yAlF{Qpn@qCpJoBzGcLba@aAnDiRhs@qP|k@ku@riCuC~JeAjDyY`aA_FzR_B`Hw@fDiEn^oCbZWlC{AjPhArAh@p@jAjAvA`BhKtS|f@fx@oChJ\\h@d@l@p\\v_@rTbZgKfa@",
+            "explanation": "Навык и транспорт подходят. Переезд 28 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "74198",
+            "departure": 1212,
+            "arrival": 1244,
+            "start": 1244,
+            "end": 1314,
+            "distance_m": 12234,
+            "shape": "asmjiBspc|fAfKga@sTcZq\\w_@e@m@]i@mDtJss@noBcEdLKlFtC~StCpGlAzLUvE}GrWkC~Jdd@|k@~ElGbQ|T`EvEnBjClA`BbQzSzi@fr@tBfDvi@|o@jFbHdRzUlEpFnNfQrVj[rh@dp@hDzDdArAp@v@pAbBfDnEliAbsAvErFrBdCdnAv~AnE|FjB_GtTmq@~CsIpBoEp@iAlAqArAm@nAQ~BBfDxEvBWhA_@x@u@hAyAfIaKbTy]dRyU`UkTpzA{`BnS}QnkAalApg@mh@`_Aa~@vOwL~^iYxKgH|b@}VpZsLpNsDpMaCdNy@nIUjOv@fM`BbRlFvKpEt_Axk@jg@vZnp@zZvo@xRzq@xHzk@jF`{@Str@kHjg@wK~`@cOf`@mPdL{FdNaIhUkPz^gYfZcZ|}@ueA~nAs{A`|@shA`Xo_@pFwHpQcW~h@ox@`n@cy@lhDenEtv@edAzJsLrDoDbDsCnEoCpFsCvEsBlGaBbGkAlIk@rHAtGFfHfAhGdBjGzBtGnDrGxEdGvF`FrFnJpNzElIpDxHhDdJhF~Pd\\|mAlw@|yCdErNvDlLzElMhTpi@|DnM|CzKrCnLvCzMbEfRjQp`AjNlr@Z~Fh\\dfBbAdJRpGGfFc@vFcAxEqAlDkBjC{BhBuBp@qBNuBUkBw@oBgByAkDqAmCyIwf@_@oByCiPxMw\\fEqK~m@i_BlQud@zY}u@ne@omAra@}jAzkA_yCpJiWtGyT`O{n@bCmL|Ty`AtG}XxbAchEzv@{fDjGkXfKad@rB}I~i@w}BxJmb@hbAkfE`f@asBjF}Tlh@cyBzN}m@jBeJ~@mGfA{Jn@qM\\aVJwb@Z{hB`@mqAn@_~@f@}i@h@k\\p@oUx@oVdBya@v@uO~E}v@~RqzCp_@yoF~]ejFfUcbDtLakB|Po`CrQoqCpYohEnTcdDlFmv@`R}vCpH{eAr]uaFpYwgElBgYhZ_nEdOpEvF}{@|AeS|@iMdIzCjqAz`@c@dH",
+            "explanation": "Навык и транспорт подходят. Переезд 32 мин; начало в окне 20:00–22:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "84627",
+            "departure": 1314,
+            "arrival": 1318,
+            "start": 1318,
+            "end": 1388,
+            "distance_m": 733,
+            "shape": "cmwfiB{wz`gAmAlRYjEgvAcd@_Bi@yAYwF|{@pA`@h|A`f@v@TdF`BzStGbR~FdD|@rE~Ae@xGuQ|gC}Cxb@",
+            "explanation": "Навык и транспорт подходят. Переезд 4 мин; начало в окне 20:00–22:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          }
+        ],
+        "distance_m": 51330
+      },
+      {
+        "engineer_id": "E08",
+        "stops": [],
+        "distance_m": 0
+      },
+      {
+        "engineer_id": "E09",
+        "stops": [
+          {
+            "job_id": "50219",
+            "departure": 540,
+            "arrival": 554,
+            "start": 600,
+            "end": 630,
+            "distance_m": 3800,
+            "shape": "gxghiBgx~}fAw\\e@acBsn@u@bJ}K`xAaR`wBiG~r@_C~W_Gno@s@zKplAf|@pQfP|LbPxStWtb@|m@bMbSj@~@zArCrKtPbJ|R~KnYb`AnsChBbKzQbcAz@zEl@`DnSneAdk@zuC`AdFNtBFhCGnB_@dCeArCo@~@aBbCwTpVkEtFiCvBiCbAcBZqCDsCw@iBsAmAgDs`@be@kFfG_G`HqQzSyDpEmu@h|@ys@`~@sx@zcAkLtP_K|NiNzSyYvd@u`@fo@uDtDaEhAcBLuCu@kBeCcD}HiFeRoIuZeC}IqH{XeHsQcI_OwP}YkAmB}UaT{CiC}CgCoCaCuBeBqDsCkCsBeImGsIyGsMwJgI_H_CgBeFyDeGuEjf@qtCnAiH|V}wArGq^pG_a@pIwi@tEsXpJo}@xEhBvGdC~EhBtM~Ex`@dOrE_a@fFoYfF{@zGnEQ~Lzb@hZ",
+            "explanation": "Навык и транспорт подходят. Переезд 14 мин; начало в окне 10:00–12:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "74949",
+            "departure": 630,
+            "arrival": 645,
+            "start": 645,
+            "end": 715,
+            "distance_m": 5076,
+            "shape": "sokhiBgxc}fAcEvWkEpXmBtJgIde@cLb`@s@lF{CxP_B~Ik`@{ZkCsB|UwxAfs@gkEjGu_@\\yB`@eCBuToQ{OaK{FHsClDihAl@_DlCgLx[f_@~D|AxC?hD_AzBuBhBuCxAuE~@wF^aGA{Eg@uI}A_HuJqNsRmRcQuJ{HmCmGgAaEk@iLp@}SaA_MuBgK_FwIkHqKaMwAaBkImMqF_GyCkCwDoB}CuAqDa@yH`@eXtD_FlA_C`AaBnAeBfBoBxCaBrDsAjEcA|Eo@jF]tFIxFHzFZtFn@jF`A|ErAjE`BtDnBzCxB|B`C|Ar\\dOzB|BvBnEdB~Fr@bHZbKP~[G`AwAfTsDli@}I`kAqA|NcDh^aHps@u@hIkEz_@wF`c@gHdd@{Gpb@mF~Z{L|r@oIpf@gAfGgg@~tCiBtKmWtzA{_@nzBkLtt@}Irl@yDvVuRroAgPdeAoXvwAgIdf@{H|j@oEzc@kGtv@cDtc@cCj^a@xFwBra@qCtt@uAv_@qEr_AiBdb@cF`kAuH`fBmKzcCiEffAq@`O_Eh_AwA~Z_G|sA_JxtBa@lHsCfh@eEhv@wI~{AkLjrBoA~TwSduDwKbpBYjE[hRYnSDrENpCDdCjHlCp`@zS",
+            "explanation": "Навык и транспорт подходят. Переезд 15 мин; начало в окне 10:00–12:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "23380",
+            "departure": 715,
+            "arrival": 720,
+            "start": 720,
+            "end": 790,
+            "distance_m": 1671,
+            "shape": "sa_iiByljzfAvItErAv@fe@fYpAt@v`A`n@nD~B`PnKfSdN|JnIhIbJhIbJrA|AxPrSpDxEtZz`@|BxCpObRx@dDh@dETbDFbDGpEo@xEuJ~Rq^~t@mb@~z@yq@~uAaM~VuKhUsT|d@ol@|nA}Ob\\qHlOiS|a@uKvTia@p{@oHuHog@kh@oXaYUUkCiC|@_Hl@wD|B_Q~@_IzAaNaCqAg@W[_AsB}AiCwGpBoUQ}DwHqD??",
+            "explanation": "Навык и транспорт подходят. Переезд 5 мин; начало в окне 12:00–14:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "48227",
+            "departure": 790,
+            "arrival": 795,
+            "start": 795,
+            "end": 825,
+            "distance_m": 1060,
+            "shape": "ghciiBuxvyfA??vHpDP|DqBnUhCvGrB|AZ~@f@V`CpAjFcb@z@yJdN}eA|Gos@d@eFb@}GTeFh@qNXoLnD}jAf@gRp@wVl@kTNsF|@_\\sEiAyLeBoLrIiD|JiEnVoP_CmBiT{FS_G\\cFtAuAn@tAfZsA\\oHpBsXzHio@nQkBb@fPb[~n@lmAfBh@nCn@",
+            "explanation": "Навык и транспорт подходят. Переезд 5 мин; начало в окне 12:00–14:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "94409",
+            "departure": 825,
+            "arrival": 840,
+            "start": 840,
+            "end": 910,
+            "distance_m": 5124,
+            "shape": "sjdiiB_w{yfAoCo@{BlHkInToM|[}JrUoKpPy[~g@]h@uCtA_AeFaBcHgCsK}FcVeDkMoCqKmHuYa@wAmDuMwCuKkAgEkCaJeGaTY{@yByG}BqGqCgH{Qu`@iAaCqAeCaHqMy@}AwAoC}FyKyCyFuFuK}FcLqBeD}LoQkKpAsP~@eAFcO\\eCFkBe@sAy@k@k@k@s@]cAg@oBcCwNyFmY_AiGs@sF{B}PwCgVm@}IMyCGiBEaBOyFe@iQ_Ao\\g@gQ{EsdBYmJu@kWaBgg@_A{b@WsY?aL?cEN_LVeJdA{\\vDa}@rEgfAzCoo@f@yUFaDN{G@aG@uB@kE?cEMgLa@wNW}Ee@gJYoFi@qO[{I}Ca_A}K_rDsHwsCiCg}@i@eQsByr@_AiTKaByAeTqAuSuFafB_DkaAeCwe@gDogAoCqiA{E_{AwBcf@qDac@aB{PuCmWgNmmAoGsj@kH_o@{B}R{Ko`A}Qw_BeCuToOisAgZqjC{CcXuDc\\`@iGj@{CbBsC~Aw@`CQr@r@~@fCl@rErBbn@~AdYz@|H`AfGzFl^XbEOtBYjA{@v@u[dZgCjCgJpK}JpL_Xz]uD`FmAdByCfF{AhCkDxH}@rBeFlL{JjX}BdHyIp[mGjTiQ|p@wCtKaUx{@eOrk@mZpjA_AlD{Qvq@}@dD}Ldd@_DxLeMxe@oBrHoWxbAuO`m@eBsBqScVwRiU_@c@mf@kk@sNsP{O_RsTgUsC_D`B}GnQsv@jEcRtQew@",
+            "explanation": "Навык и транспорт подходят. Переезд 15 мин; начало в окне 12:00–14:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "47330",
+            "departure": 910,
+            "arrival": 914,
+            "start": 914,
+            "end": 944,
+            "distance_m": 876,
+            "shape": "{objiBssb|fAvBeJmAqAeAeAo@s@sMpk@{Nho@iOpp@{A`HgE{EqU{Y}Y}^gHqIoR{TqY{\\ib@qf@aKsLg[g^_AeAcb@wd@iDiDfBaH`Nui@bG{UvHqZ`Pao@aE}F",
+            "explanation": "Навык и транспорт подходят. Переезд 4 мин; начало в окне 14:00–16:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "17349",
+            "departure": 944,
+            "arrival": 958,
+            "start": 958,
+            "end": 1038,
+            "distance_m": 4736,
+            "shape": "{yijiBqmk|fA`E|F`AgEdR{t@j[_oA|FyTtEiQbEcPzHoZjCeKjI_\\hBkHbAyDpMsg@zLye@l@_CxCkLvX{fAxA}FtCaLdB{G`I_[fPio@p@gC`Ks`@pHoYpAkFv@{Cne@`Bfc@dBbUr@xT`AhL{@tYzAjAFbDs@rASdC[vACrBQn@Ox@QjBk@pBu@pViNz@g@lTeMxFcD`N_IfKcG|HoErQsKlB_An@[nDkBtPbzAfO|rAtB~Q`DdY~CpYdBpPtZphCzAnMzu@xtGzFhg@fSvfBpBfQzNbpA~BpSfD~Y~R`dBjF|j@tAtSvAr[bApWzHxeCvBxs@~@`YlAl_@|Ct|@jHfvB|EpgApBnt@r@zWvItaDbBzm@zQvnFXjINdEPtFl@lRR|MH|JA`DApBCjHlGjDhM|JnEpD`At@hNrKtPlNhRfRzRpTlEvE`DzDbPlPlM`Mp^|[|UzTtGjGzX~V`LbK|i@`h@rVpTPrFj@zSN`KnAt[nAbb@CnCJdEJtNfAh[p@nSlChw@JnCNlErSEn@IjASpBg@QoJUaLk@i]hC_@",
+            "explanation": "Навык и транспорт подходят. Переезд 14 мин; начало в окне 14:00–16:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "35675",
+            "departure": 1038,
+            "arrival": 1054,
+            "start": 1054,
+            "end": 1124,
+            "distance_m": 4667,
+            "shape": "i{ciiBmvizfAiC^j@h]T`LPnJd_@iFn[kFhG}@pXaExBg@bBo@~BmBlA_Et@eYv@{XTwIJ{DjHlChk@pZrAv@fe@fYpAt@v`A`n@nD~B`PnKfSdN|JnIhIbJhIbJrA|AxPrSpDxEtZz`@|BxCpObRnEnF|@fAbD`EtFdF~CxChAbBbWrh@|`@r{@pJbXbChAtBw@nAuDlI{w@v@gHnRmkBxC~FhVfj@jDzHbDlHjCrEpDhEdD`CxCxA~ErBfDv@nD^jDAjCa@tFeCxRaK`ToL`b@qTzImEvBmAlr@q]|KwFd_@cRpGaDzi@aZxIeFtZmQ`EmCvFyDrR_Obh@k`@zTwPlF{DnJeHpIkGda@iZtJiHnK}HnJiHvGcFfU_QrH{FzC_CjG{EpKcI`CgBnKkCvLyGdKiGxNyIrHqEpKkHzqCylBxuA_`Apf@q\\bBiAbIkG~HqFnI{F`e@s[fBqAdAo@bKiHf_@iXlt@kf@l^oV`q@gf@rFkDbBcAfNsItLqHwAqJwCaPKe@cKsj@}AkIeDiQsR{aA{w@wdEaAgFcB_J}F}X{Hka@sHia@i]shBuGjGg@f@wBrBvAzGpBrJ~Qz|@",
+            "explanation": "Навык и транспорт подходят. Переезд 16 мин; начало в окне 16:00–18:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "76643",
+            "departure": 1124,
+            "arrival": 1139,
+            "start": 1139,
+            "end": 1169,
+            "distance_m": 4752,
+            "shape": "y`ogiBiak{fA_R{|@qBsJwA{GvBsBf@g@tGkGh]rhBrHha@zHja@|F|XbB~I`AfFzw@vdErRzaAdDhQ|AjIbKrj@Jd@vC`PyTbOmAx@{M~IwLhIsc@v[_tAr}@mRxLaHlEaK`HyEbDwJxG{OtKcVjPqPhLqA|@sg@j`@_h@h^asCtnB{BxAyA~@oV|OyWzPuBrA{H~EuMjIeYpTiItIaCfBqKbIkGzE{C~BsHzFgU~PwGbFoJhHoK|HuJhHea@hZqIjGoJdHmFzD{TvPch@j`@sR~NwFxDaElCuZlQyIdF{i@`ZqG`De_@bR}KvFmr@p]wBlA{IlEab@pTaTnLyR`KuFdCkC`@kD@oD_@gDw@_FsByCyAeDaCqDiEkCsEcDmHkD{HiVgj@yC_GqBqDmAtJcPpfAwCzTeAlHyI~z@c@tIo@nLmFbgAwApKiBbHsMp\\qHhRoA|CqG~OeHjQqAxBsBrFyIhRsZh_@wBrCiOnQgLbOuBlCqPtSqSxVyCjDkI~JuRhUmFhGsGtI{KnNcCgHi@aBiHgRaVil@sJwUoG_PeKyWoBcF~n@}rAdScb@h]ys@b`@sx@l\\yo@hClIrBnGfInW",
+            "explanation": "Навык и транспорт подходят. Переезд 15 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "86160",
+            "departure": 1169,
+            "arrival": 1176,
+            "start": 1176,
+            "end": 1246,
+            "distance_m": 2314,
+            "shape": "i{whiB}{|yfArJxZ~Kh]nh@`aBrDfLyIhRsZh_@wBrCiOnQgLbOuBlCqPtSqSxVyCjDkI~JuRhUmFhGsGtI{KnNkCvDwIpLiBdCyT|ZyCdEqg@ps@_ArAmGvIiClD{CfEcApAuDvEcJhLaEdFsCnDkOpPeHpHwGnGwMrMgEnEmIvHoFhF_RnOsBtAyAbA_EnC{SnLaAh@cObIoB`AeLhFsAuC_D}EmCiGwCoGwBeFmByFq@_EG_EVwEfAmKdA_JNsAfEqa@`Fm`@bE{[zFme@xBoQLiAjAqJhPuiAx@uFlCqQhF_Z|@_Hl@wD|B_Q~@_IzAaNjFcb@z@yJdN}eA|Gos@d@eFb@}GTeFh@qNXoLnD}jAf@gRp@wVl@kTNsF|@_\\X{KhE_~AvAih@LwEbFj@l@HxLvAfAL??",
+            "explanation": "Навык и транспорт подходят. Переезд 7 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          }
+        ],
+        "distance_m": 34076
+      },
+      {
+        "engineer_id": "E10",
+        "stops": [],
+        "distance_m": 0
+      },
+      {
+        "engineer_id": "E11",
+        "stops": [],
+        "distance_m": 0
+      }
+    ],
+    "unassigned": [],
+    "metrics": {
+      "urgent_unassigned": 0,
+      "unassigned": 0,
+      "engineers": 6,
+      "distance_m": 257383
+    }
+  },
+  "baseline": {
+    "routes": [
+      {
+        "engineer_id": "E01",
+        "stops": [
+          {
+            "job_id": "74198",
+            "departure": 540,
+            "arrival": 562,
+            "start": 1200,
+            "end": 1270,
+            "distance_m": 7384,
+            "shape": "gxghiBgx~}fAw\\e@acBsn@u@bJ}K`xAaR`wBiG~r@_C~W_Gno@s@zKplAf|@pQfP|LbPxStWtb@|m@fOyIvm@ac@~mAggAxi@sn@r^uc@lUcYtWsSfNmIzNaFnOeD~SqC|WcAv[DxZf@|]x@~]hDf]rD|b@nErfAxHr]`Chb@~Fv^pIn^rLb}@n_@lqAfk@rq@~WjFnF`E`HlC|I~AjJ~@vL?vIStK_AvJaExQilAhoFk@tD_@|DMbE?dELbE\\|Dj@tDx@fDdAxCnAfCzApB`BzAfB`AlBh@lBLnBMlBe@fBaAbByAxAqBpAeCdAyCx@gDl@uD\\}DfXowBvPsrAzOocA`f@asBjF}Tlh@cyBzN}m@jBeJ~@mGfA{Jn@qM\\aVJwb@Z{hB`@mqAn@_~@f@}i@h@k\\p@oUx@oVdBya@v@uO~E}v@~RqzCp_@yoF~]ejFfUcbDtLakB|Po`CrQoqCpYohEnTcdDlFmv@`R}vCpH{eAr]uaFpYwgElBgYhZ_nEdOpEvF}{@|AeS|@iMdIzCjqAz`@c@dH",
+            "explanation": "Навык и транспорт подходят. Переезд 22 мин; начало в окне 20:00–22:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "46393",
+            "departure": 1270,
+            "arrival": 1286,
+            "start": 1286,
+            "end": 1356,
+            "distance_m": 5017,
+            "shape": "cmwfiB{wz`gAmAlRYjEgvAcd@_Bi@yAY|AeS|@iMbFku@xMmqBdIomAhEgl@jHseAfCo`@zDim@fB{W~JuzAnCsf@lEsj@fFim@bBkQh@aG`D}Y`CqRlA}GpG{NgIgIkY{GyJrBkJaB_AUsSqEaIaByb@{Im`@cImiAgToRoDaAU]Ge@KyGwAeDi@qA[yJuBkk@gLuLyCgXuGgA[mBe@aGmAq@KkmA}VgFaAg@SeI_B_GaA{AWiPuDobAqS}_@_IiASaHyAwNyCgWkF{Bc@}WkEaBOgIoA_LeCw@QeU_Fab@gKiJmBe@Km@McFcAkO_D}QqDiUqEoAUmJsBsNyCyA[iKyBcF_AoGkAoAu@OKaAk@W[{AgCsA}D{AcGs@gEg@wC{BgF}AmBkB}ByEeCeBBeA?_ABaCp@sBjAwBvB}BhE{AlEs@fCs@bF]lFEtFNpF`@vFt@lEhDbR|B`Pe@vFS`CmFrn@cB`SmFpn@sH|y@qSz|BeYl_DmKlkA{IvaAwI|`AgGfq@cMftAgHfr@oHri@qJ~q@{Ftb@cM|w@k@zCiKhj@oDpEoGbHaFoHmBoByuAouA{q@eu@_CoCwGuH_CsF}BwF}VuZgI}Ikg@ik@qDoE}BfJeOhm@oHvYeNvj@qTt~@kD}D{i@{k@pIg_@",
+            "explanation": "Навык и транспорт подходят. Переезд 16 мин; начало в окне 20:00–22:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          }
+        ],
+        "distance_m": 12401
+      },
+      {
+        "engineer_id": "E02",
+        "stops": [
+          {
+            "job_id": "86160",
+            "departure": 540,
+            "arrival": 562,
+            "start": 1080,
+            "end": 1150,
+            "distance_m": 7381,
+            "shape": "gxghiBgx~}fAw\\e@acBsn@u@bJ}K`xAaR`wBiG~r@_C~W_Gno@s@zKplAf|@pQfP|LbPxStWtb@|m@bMbSj@~@zArCrKtPbJ|R~KnYb`AnsChBbKzQbcAz@zEl@`DnSneAdk@zuC`AdFNtBFhCGnB_@dCeArCo@~@aBbCwTpVkEtFiCvBiCbAcBZqCDsCw@iBsAmAgDs`@be@kFfGyDwPq@uCgFiUcNqn@cK{e@oAaNBmFf@_F|@uDpAqCbBuAtBi@dBHfBn@jBdB|BxElE|JlEbRf{BzxJzClMrL`j@lHd]xU|gAfc@~rB~BhKlAxFjAnG~@`G|@zHh@rIXbI@pIQvI]`Is@bJmDb]}C~ZqGtq@kEtq@QdBy@vHiEna@w@nHuHpr@uAzN{@tLKpFLtFf@xGz@xD~AjDnC~DhF~H`EhGrBrEpC`H}Jpb@eMfi@aDdMmAfFep@dnCw@|C_BfHcIr]On@yFjUuEfR}hAzsE}\\dxA}p@tsCuL~f@qeA`mE}Td~@kLjf@{Iz^ca@lbBqJt[gSli@_A~BqYvs@_DvHyH|QiIrR{[tx@eHrP_Pv_@oOh[}`@zr@wHjM}NhW}OhYkd@by@oDnGkLvSsKdSmCbFqB~Dc@~@wEvJuBvEmCpFyErJuJ~Rq^~t@mb@~z@yq@~uAaM~VuKhUsT|d@ol@|nA}Ob\\qHlOiS|a@uKvTia@p{@oHuHog@kh@oXaYUUkCiC|@_Hl@wD|B_Q~@_IzAaNjFcb@z@yJdN}eA|Gos@d@eFb@}GTeFh@qNXoLnD}jAf@gRp@wVl@kTNsF|@_\\X{KhE_~AvAih@LwEbFj@l@HxLvAfAL??",
+            "explanation": "Навык и транспорт подходят. Переезд 22 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "50104",
+            "departure": 1150,
+            "arrival": 1170,
+            "start": 1170,
+            "end": 1240,
+            "distance_m": 7096,
+            "shape": "w}_iiBmlfzfA??gAMyLwAm@IcFk@`A}]|@w\\h@mRt@eYv@{XTwIJ{DjHlChk@pZrAv@fe@fYpAt@v`A`n@nD~B`PnKfSdN|JnIhIbJhIbJrA|AxPrSpDxEtZz`@|BxCpObRnEnF|@fAbD`EtFdF~CxChAbBbWrh@|`@r{@pJbXbChAtBw@nAuDlI{w@v@gHnRmkBlKabAvAaNlGqn@`CwUnDsX`DoQ`DkPhK{Tbt@ygBhXyo@xCeHnHiRlZuv@fMg\\~Kga@~DqOfPwp@dKib@nUo_AnBaIz@cD`Qkt@|oAmjFtj@{~B~c@siBnoA}jFdDiNjA_Fh@wBrIs^lAcFtG}W`Ik[jZukAjZqmAjYkhALe@bG_StFkOjMo^fIwSdDmIxMw\\fEqK~m@i_BlQud@zY}u@ne@omAra@}jAzkA_yCpJiWtGyT`O{n@bCmL|Ty`AtG}XxbAchEzv@{fDjGkXfKad@rB}I~i@w}BxJmb@hbAkfE`f@asBjF}Tlh@cyBzN}m@jBeJlDmGhAgB`AqAdAy@xBgAvH_BdWcBhMOrCKxE[bEy@rHcDbHqEpQ}MjBs@nNoCjk@kJ`BWv|@}NvTsDdg@kIrMwB_@yI]cJcHimBa@_LiEukAqCkv@yA_a@}BBkC[qB_@gEy@aQeBiJa@wBe@}Ae@sELkFL}AD{MKeUW}Pa@_CvfC",
+            "explanation": "Навык и транспорт подходят. Переезд 20 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "84627",
+            "departure": 1240,
+            "arrival": 1252,
+            "start": 1252,
+            "end": 1322,
+            "distance_m": 3119,
+            "shape": "gbagiBigc~fA~BwfC|P`@dUVzMJ|AEjFMrEM_BuBkAuCwDmQu@gGOgG?iE^mGpBoN`Ha\\hDmM|FsT~DeNfJuZ~J_\\l@gBdBkF`Qmj@fKw[^gAh@cBzQim@tCmJ`GyRbAeDtEkOjH_VzHcWl@wBjNqd@bFmPlA}DlAaErAoEzAaFtDaMzFkRlXw}@bPei@`G}RxKs^tF}QQeBqBsRyDe_@{@iIhr@ea@bJiFiAqS_Cwb@q@uMoGynA[wHeEuhAKkC}C{y@_@uJGqAkEajAsCgu@a@iO?qMh@iLz@{NdCs]J_Bp@cK|Be]NyBx@_Mr@mKtFsy@xA_TBe@tEwp@tBaZhAaP~@uMpGo`AxC_d@rAwR`AwN|C_f@jAaQdCi_@rBqZb@oG|AcUnJmxA|GabAtAsSv@iLzL_gBzBw[lDsg@LiBkH}B{NqE_IcCePiF_UkHwKkDks@gUzBiI`@wF",
+            "explanation": "Навык и транспорт подходят. Переезд 12 мин; начало в окне 20:00–22:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          }
+        ],
+        "distance_m": 17596
+      },
+      {
+        "engineer_id": "E03",
+        "stops": [
+          {
+            "job_id": "10135",
+            "departure": 540,
+            "arrival": 555,
+            "start": 1080,
+            "end": 1150,
+            "distance_m": 4289,
+            "shape": "gxghiBgx~}fAw\\e@acBsn@n@uH}D_AgIoBkRqEyDy@ug@eLq\\qH}OkD}I_CgCiq@iCmEqEuDkA{Bw@qE}@k`@E{XReRd@gLz@aOzG}v@|BgWlAeNjHkv@~LquA|BaXbOkaBj@asAFyPPi^|P{kBfEud@tM{qAvK{eAfLez@dCkQhG_^~M{v@dt@qvDx}@iiEvKeh@fF}IrBiC~BgCzCeBnBiBdCgElRou@xL_h@nCoLpPqt@~\\{cBvKkd@tMcj@xJsa@vg@msBbd@_iBrEcQcCuBgDwCcFyEiLqKaB}AmAuAcG{GuDgEwx@_~@oWwYu[i^sNaPaDoDiCwClBmIjDkO\\_BhFgUfHi[|DeQhLqg@dOqp@pB}InLih@lBkIbFwTxH_]`K{c@xAsGrHm\\dGaXxAqGrUadApB_J`EyQjEeRdCwKvBgIfB}BxT}}@pSez@lBiIbBoHfT}_AdOvOpAyF",
+            "explanation": "Навык и транспорт подходят. Переезд 15 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "18754",
+            "departure": 1150,
+            "arrival": 1155,
+            "start": 1155,
+            "end": 1225,
+            "distance_m": 1162,
+            "shape": "{v}giB_beagAqAxFeOwOgT|_AcBnHmBhIqSdz@yT|}@gB|BwBfIeCvKkEdRaExQqB~IsU`dAyApGeG`XsHl\\yArGaKzc@yH~\\cFvTiDgDcaAidAaAcAwK}Lo@u@_BgBm@k@w`@o`@}B{BwLbb@gD|LwCnK}DxNwNrh@k@tBuHbXuWmZkJ_F",
+            "explanation": "Навык и транспорт подходят. Переезд 5 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "31260",
+            "departure": 1225,
+            "arrival": 1240,
+            "start": 1240,
+            "end": 1260,
+            "distance_m": 4866,
+            "shape": "otjhiBu_v`gAjJ~EtWlZoKn_@uT`x@mLdb@ySns@sBxHsA~ExAn@dXvHlIvCnNnFbRtIvc@rSvd@vR|JbFrDpBrFaVjCvCxCfDpXvZjc@df@`FrFr@x@vh@bl@bSxTrGhHr@v@pBpBhLhLrEzEhEaQr`@}bBfc@qjBlc@wjBrd@qjBvDePtNcp@|I}a@dDiPfEwUbMeq@xLgw@lCwQrNeaAnE{^dHuq@bAsKj]cwDtTocC`w@mvI|D_d@zOqgBZwDTaCb@gFdBwQhLquApBaTtNwaBz@mJ`Iwz@pIut@vTg}AnGua@xYofBfEoW|e@gwCra@ofCpL{s@pCuSt\\{sArXevA`E_WfQgiAh_@eyBlC{OnN{|@`BpAjFnCzFlCrHlBnErAnGfAdOfDbDp@tSfElt@bObBmQPwQjt@bLjW|FVeI",
+            "explanation": "Навык и транспорт подходят. Переезд 15 мин; начало в окне 20:00–22:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "21367",
+            "departure": 1260,
+            "arrival": 1277,
+            "start": 1277,
+            "end": 1357,
+            "distance_m": 6246,
+            "shape": "w_cgiBcahcgAWdIkW}Fkt@cLQvQcBlQtZjGbRlD`ARfB\\jCd@pNjCjLzBfVjFhKzBv[~GrR|K`LpEpMhFnL|EvB|@dBp@bVfJrIdDrEdB`P`GjVbCvTjGzJ`FjHbMnAtCvMrZr@`Bvh@~lAlApCx\\tv@nHtPdLtWzC~G|BlFtLpXjGtN|DbJhR~b@vp@|{AtGhOzExK`B`ElBlG~EbPt@pE\\vDEnGkDhLUxF?dD`@xCfBxHzTlYvu@z`Abt@d`AnA`BhAhAhCbBqExOcLn`@qTzu@{l@zsBm{@tzCkGxTmQdo@aH~Wks@jgCgHzX_I`_@{Hh`@kGr]mLrx@eD`W}Db_@gDb^qBxScY`cEsBhZ{r@xgK_IzjA}E~t@i\\pvE_KbwA_o@vlJyFvy@gR|vC}IhrAum@vaJ{PlaCKzA}Dxj@sPx_CqL|s@kJpe@uDxYkE`p@o@pJkBxYuJd{AeB`@}EjAeQtB_NzAuCZoVnCoPjBsETuLF}ELTpJ?v@Efc@H~o@LlQzBEfAX~@d@xBbB|AfBbBvCjBnFzFpRfClIoApBm@`DkAvJA|_A?vBcR\\{_@L",
+            "explanation": "Навык и транспорт подходят. Переезд 17 мин; начало в окне 20:00–22:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          }
+        ],
+        "distance_m": 16563
+      },
+      {
+        "engineer_id": "E04",
+        "stops": [
+          {
+            "job_id": "21571",
+            "departure": 540,
+            "arrival": 604,
+            "start": 1080,
+            "end": 1110,
+            "distance_m": 5094,
+            "shape": "gxghiBgx~}fAw\\e@acBsn@u@bJ}K`xAaR`wBiG~r@_C~W_Gno@}Ai@S`CaA|@gBG_e@iN{@}A]_CMsDNgEeB_AkA{@e@wCcCdEeQtWlD~j@bAnNpB~XlCbG?hOrBlVoBps@[zKq@`VqDxEgB|n@m@pAy@`BuB{As@j@eCzX}Gdv@v@rKKlA{AvQkCz[wFr]uEli@eCzXiI|~@aCpXoLj}@kArIkDdWuJhl@mOt{@iOpz@kHx`@gL~n@FxAFtAF`Af@`AYdBw@pE{@bFIb@w@Cy@`@c@l@_@[yAmAoAeAkB}AeA{@oFmEoBaB}AoAuu@pxEmNfw@aHne@sEfZcQ|iAgGn_@gBxHuJ`m@ZTyA`JoGr`@kUrrAoB|KiDbVmAhEeAtM{IniA_Drc@cBnMkCpIQxGoBdv@cB`RgA`f@g@xE}AhGHr@VrCVzCRbCHvAJ~Aw@|LO`CYbEGt@{@rCy@jSmApRa@zK{Aj_@iFjlAkDxw@]pFqDo@g@hLiFhlAjCrIiAfX_FhlADrIoBbf@eAzWu@xJe@|NiGntAsHd_BaB~\\q@dH_HtvA}Btd@kElm@[rGQvFuKfkBgA`U{MtdC_B`YMxBM`CaBhZyJbiBm@rDFvGDzOY~E]lFMtBKjB]tFeDyCwFpKo@vAo@tA}DxJq@rAgAjCmMlZ]vLi]fFu^vGPnJqBf@`@`TLnGBj^YtA_Az@cGxBqBbF{@jFEzGfAdLbEfb@rB|Sz@zNcBVlFz~@ib@fLuC_h@",
+            "explanation": "Навык и транспорт подходят. Переезд 64 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "47670",
+            "departure": 1110,
+            "arrival": 1169,
+            "start": 1200,
+            "end": 1230,
+            "distance_m": 4783,
+            "shape": "ieeiiBofazfAtC~g@oCt@kMdDiBf@{RbFoFtA_AO{@rBqAxCeBgDWi@sUqh@e@oCqO{[uEwViFa^we@zSkO|GoE\\iDNsH~BoSzHuPrEkKpAsP~@eAFcO\\eCFSaGwDcDaMy{@aEfCiGzDkFdDU{H}@mHiAwAcAc@_Ae@mCwA_As@{AgAiBnFcA\\q@Tk@bJUrBs@hBqAhBm_@~\\eCtBgBRs@dAcF_BeIcBuIiEgcAkg@}EkCgCq@mAB}@r@_@hBGhB_EyIkBtEuAdDgCaG{Lc`@uJaTg\\mc@sNwQiCcDka@yh@}SqWiUsXiKuJOnASnASpAg@`Di@`Dg@`DSnASpACRk@]cPoJsHcBoGkAgE_@mEIkHBiKfAsI|BkIjDqHhEwj@xZaXdSiNjUcOvQ}EnEuUjLc@v@K|Ax@rKkIfEuAwJg@cAo@OuHlDkRvKmL|BwB@sDb@KbBg@hAu@\\y@Wg@eAQaBmLDgEqAoIoBMt@Y^a@B]YQo@Ay@eEaAqI{G{FwEeLaN}EqG}CiFsCgG_BdE{ArDSf@Ob@]z@u@gAyd@kkAsQqd@oNeBFaD{QoCoNuByO}BcT}CsDe@cKqA{UuCeMgBye@}GuCc@cGgAmYmFu@IcCYc@EaIwD_DeAI@iVaKiu@gr@ud@qH{@K}AUaWv@s@HcEd@mAV_Cd@sDz@aDfAy@gAwDed@iDia@_Eme@GyA@oAFOYo@KgGCkBy@{BgAUaAS[owBOmg@oFj@KyDCm@km@vGsg@|FwC`@_Fn@oJpAsC^iH~@oPdC_WxDaC^qBXwMrBcDf@yf@vH_JfBkATiDp@_Dh@o^`Fk@HwK|A{Er@qMhBgMrBsRjC{HjAaDh@_Cd@uATkUpE}UtEmOxCu@NuHxAsCj@qCh@}HtAqIzAy@NmEt@yIxAuB\\sF`A{@V{@VwAbAkA`BoAnCsNr[hAfCRh@kl@t`BuBzE",
+            "explanation": "Навык и транспорт подходят. Переезд 59 мин; начало в окне 20:00–22:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          }
+        ],
+        "distance_m": 9877
+      },
+      {
+        "engineer_id": "E05",
+        "stops": [
+          {
+            "job_id": "61540",
+            "departure": 540,
+            "arrival": 560,
+            "start": 960,
+            "end": 1030,
+            "distance_m": 5432,
+            "shape": "gxghiBgx~}fAw\\e@acBsn@n@uHxIcz@f@sEdKwgAjHsq@t^gQxFqCp\\aPjn@aZj@YxZ_O|@mANwALgBsj@{jGvByB|CkA`BQhEMdAdMtBjWvMxxAbBbRvAjRbDve@`B~Q~@nIt@xHfAdFnAhEfBrD|@bB|CxCjBrAbD|BfCjAnBr@hBPjCDf@?fBGlDe@pBi@zBeApB{AtDoFbFoItGqKxGmKfAcBjAyAhAqAhAmAnAkAlAcApA_ApAy@|Au@zAq@nAc@nA]jD}@pDaAzJcClu@cP`JqB`JsB|I_C|DeAbp@yP|ImBbJmBtMqCpBc@x@Y~CeAyB{PuB_PwCuSuAcIwBeLqGu[eEcWsCuOyBwMgAgIm@sFOcD@kFpAsP~DmR~Hy[ll@a_Chb@}}Atn@waCvAqFtEyPdAeEjIo\\vF_UhCeKtaAuvDjEmPlD}MlMsf@nE{Pd\\qoAfa@i}AdM}f@nBqI|CsOvK{j@`@eBvHeb@xy@vPxFt@hIEbAa@tBw@`OcMxMuKhn@qg@|GsFbLuItOuLfP{L|WgSnCyB|YqUrGiFzEwChEuDfImGxI{Gfx@_n@pReN`ZqUdGcFjEqDpEsB`G?nGdBvAb@zSlGfUtF|KvCdDz@fK`D~IpCpNhEhEnA~N~EbKgzAbAeO~Dik@|Dkj@`@yFfHmbArPocCjHkcAzAqTnCi`@bAZtK`DdMrD`FueArHhCpFbUlWhIrQxFSrC~SvGsB|W",
+            "explanation": "Навык и транспорт подходят. Переезд 20 мин; начало в окне 16:00–18:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "87693",
+            "departure": 1030,
+            "arrival": 1043,
+            "start": 1043,
+            "end": 1113,
+            "distance_m": 3483,
+            "shape": "_rxfiByjm`gArB}W_TwGRsCsQyFmWiIqFcUsHiC}@kGdGkq@tKrCtCcd@yA{EmFkBXqEz@cNrHolAxCqe@`l@~PeRjnCpAjF|MbEr@sIhk@bSnAlDjMzNjs@fUvKjD~TjHdPhF~HbCzNpEjH|BMhBmDrg@{Bv[{L~fBw@hLuArS}G`bAoJlxA}AbUc@nGsBpZeCh_@kA`Q}C~e@aAvNsAvRyC~c@qGn`A_AtMiA`PuB`ZuEvp@Cd@yA~SuFry@s@lKy@~LOxB}Bd]q@bKK~AeCr]{@zNi@hL?pM`@hOrCfu@jE`jAFpA^tJ|Czy@JjCdEthAZvHnGxnAp@tM~Bvb@hApSt@nRvAn`@HvAhA`ZPjEwF|@oq@tNuF|QyKr^aG|RcPdi@mXv}@{FjRuD`M{A`FsAnEmA`EmA|DcFlPkNpd@m@vB{HbWkH~UuEjOcAdDaGxRuClJ{Qhm@i@bB_@fAgKv[sBmCkIqKeFhQeGaIkCkD",
+            "explanation": "Навык и транспорт подходят. Переезд 13 мин; начало в окне 16:00–18:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "92031",
+            "departure": 1113,
+            "arrival": 1138,
+            "start": 1138,
+            "end": 1158,
+            "distance_m": 7103,
+            "shape": "qv}fiBudp~fAjCjDdG`IdFiQjIpKrBlCfKw[^gAh@cBzQim@tCmJ`GyRbAeDtEkOjH_VzHcWl@wBjNqd@bFmPlA}DlAaErAoEzAaFtDaMzFkRlXw}@bPei@`G}RxKs^tF}QQeBqBsRyDe_@{@iIhr@ea@bJiFiAqS_Cwb@q@uMoGynA[wHeEuhAKkC}C{y@_@uJGqAkEajAsCgu@a@iO?qMh@iLz@{NdCs]J_Bp@cK|Be]NyBx@_Mr@mKtFsy@xA_TBe@tEwp@tBaZhAaP~@uMpGo`AxC_d@rAwRkGmB{\\oKmP}Eo~@wY{MgEe[wJqJyC{UqHwk@sQoEwA}CcAwa@uMqDcAePeFcEoAqMsDgHiBiNyDkN{DuQcF{g@yOkDgAkDcAgDaAc`@oLgM_E}VaIuX{Ig`@gMmDkAcO{EsI_Bq@gJuAyIaDcRwFo\\oMov@i@_DuPqbAu@kE}EsYiAuGgCkOaTmoAaDeRga@}aC_CeNmEsW_@{BiF{ZiAyGiBcL{X{cBuH{d@{AgJuAsIkGy_@]sBgCgOgBkKwBwMqB}LmQqgAwJ{l@{Iki@cAiGkFk[}D_ViBuKcGo^o^e{BsAiInCkLhE}Qnd@}oBnZiqAnBoIbCgKTkA|CiNnIw_@`UedAzYwlAPsApBcNtAsIj@iD~Kwh@fKme@dC{Kni@wbChDgPxOsu@`EaRhGcY`FyUdHw\\hBsIdCmLbQ_t@~A}GdDcNr@yCbD_Nh`@s`B`@_BhO}n@`P_p@pBmIzZkoAlB{HjEkQnC}KoE_FiIaJSSiF{FgRqSsFeG{IsJqAwAgc@{e@oD{DoD{D_ToUwDeEwa@gd@yFiGoJkKsR}S_EmEuDcEiIcJaEmEoDaE}HmI}@cAsBsBaAgAcDqD`E_WfQgiAh_@eyBlC{OnN{|@oDwCsEmDsE{DiFyDkLeJsFgDmCsA{Ak@sHeC_MqCgXgFwWmFiOiCwAYeAUkI}An@yFRiAvKmo@@_IeAsGeAiBsAu@_B?eAfA",
+            "explanation": "Навык и транспорт подходят. Переезд 25 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "17892",
+            "departure": 1158,
+            "arrival": 1182,
+            "start": 1182,
+            "end": 1212,
+            "distance_m": 6945,
+            "shape": "eyngiBgrmcgAdAgA~A?rAt@dAhBdArGA~HwKlo@ShAo@xFjI|AdATvAXhOhCvWlFfXfF~LpCrHdCzAj@lCrArFfDjLdJhFxDrEzDrElDnDvC`BpAjFnCzFlCrHlBnErAnGfAdOfDbDp@tSfElt@bOtZjGbRlD`ARfB\\jCd@pNjCjLzBfVjFhKzBv[~GrR|K`LpEpKxMpBzBp@~Al@bDPpIcAbE[pAqG|WoGb_@cMre@yKtd@mMni@sDxOiRrx@mVncAyLlg@kSrx@aCvIoC|KkEjQmBzH{ZjoAqBlIaP~o@iO|n@a@~Ai`@r`BcD~Ms@xCeDbN_B|GcQ~s@eClLiBrIeHv\\aFxUiGbYaE`RyOru@iDfPoi@vbCeCzKgKle@_Lvh@k@hDuArIqBbNQrA{YvlAaUddAoIv_@}ChNUjAcCfKoBnIoZhqAod@|oBiE|QoCjLrAhIn^d{BbGn^hBtK|D~UjFj[bAhGzIji@vJzl@lQpgApB|LvBvMfBjKfCfO\\rBjGx_@tArIzAfJtHzd@zXzcBhBbLhAxGhFzZ^zBlErW~BdNfa@|aC`DdR`TloAfCjOhAtG|ErYt@jEtPpbAh@~CnMnv@vFn\\`DbRtAxIp@fJ?bHw@tOc@`J{Btf@mChm@MpCkGnuAoC|m@]hIgBxa@kBnc@QvEa@xLgAhK_DdIoCxB}WfSgPzLuOtLcLtI}GrFin@pg@yMtKaObMrCpQ`Jhl@ZzB`AzF~BlNl@|DrRdjAl@lDxDbUjDbTpB~LbPjaAvG|`@jIbg@lGv_@jAhHfHvb@nAtHhDtSxCtQl\\~rBhA|GdBdKxGv`@vFt\\v@xE`BxJzBbOvCfO|Hzc@zClQTpJ?v@Efc@H~o@LlQzBEfAX~@d@xBbB|AfBbBvCjBnFzFpRfClIfDrLbFtP|BzHxQtp@lBjGd@zAjCnIoBr\\g@rHMxByUjnDwB~[gBrWcC~b@qA~WyAh`@{@f[eDf@sHbDsRxJkNdGiVbJ",
+            "explanation": "Навык и транспорт подходят. Переезд 24 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "43506",
+            "departure": 1212,
+            "arrival": 1237,
+            "start": 1237,
+            "end": 1267,
+            "distance_m": 7199,
+            "shape": "cvhgiBuof~fA_SpHuDtAk}@f\\qUzJc\\|L{TdJcFpBaYzKqWvJeDlAiAiGmJ}h@aAkFeAcGmE{VuNay@cBwJw@kEm@iDcLqp@wLir@kAwG{@_FmIge@wFq[mBiLiAyGaBwJsVexA}BqMqCyPiBiKgKol@oL}p@_G{\\aDmNgHyc@aJci@gY}dBYcBqAaI_AwFu@mEgH_c@wGaa@wCkQsCkRdAeEjIo\\vF_UhCeKtaAuvDjEmPlD}MlMsf@nE{Pd\\qoAfa@i}AdM}f@nBqI|CsOvK{j@`@eBvHeb@xy@vPxFt@hIEbAa@tBw@`OcMxMuKhn@qg@|GsFbLuItOuLfP{L|WgSnCyB~CeIfAiK`@yLPwEjBoc@fBya@\\iInC}m@jGouALqClCim@zBuf@b@aJv@uO?cHq@gJuAyIaDcRwFo\\oMov@i@_DuPqbAu@kE}EsYiAuGgCkOaTmoAaDeRga@}aC_CeNmEsW_@{BiF{ZiAyGiBcL{X{cBuH{d@{AgJuAsIkGy_@]sBgCgOgBkKwBwMqB}LmQqgAwJ{l@{Iki@cAiGkFk[}D_ViBuKcGo^o^e{BsAiInCkLhE}Qnd@}oBnZiqAnBoIbCgKTkA|CiNnIw_@`UedAzYwlAPsApBcNtAsIj@iD~Kwh@fKme@dC{Kni@wbChDgPxOsu@`EaRhGcY`FyUdHw\\hBsIdCmLbQ_t@~A}GdDcNr@yCbD_Nh`@s`B`@_BhO}n@`P_p@pBmIzZkoAlB{HjEkQnC}KoE_FiIaJSSiF{FgRqSsFeG{IsJqAwAgc@{e@oD{DoD{D_ToUwDeEwa@gd@yFiGoJkKsR}S_EmEz@qFtGo^rGk`@bBkK`UouArDkElAkJjs@yGhBqIdIu_@d_@vIrBkOfHio@h@{GbBmQPwQjt@bLjW|FVeI",
+            "explanation": "Навык и транспорт подходят. Переезд 25 мин; начало в окне 20:00–22:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "57299",
+            "departure": 1267,
+            "arrival": 1282,
+            "start": 1282,
+            "end": 1362,
+            "distance_m": 4326,
+            "shape": "w_cgiBcahcgAWdIkW}Fkt@cLQvQcBlQtZjGbRlD`ARfB\\jCd@pNjCjLzBfVjFhKzBv[~GrR|K`LpEpMhFnL|EvB|@dBp@bVfJrIdDrEdB`P`GjVbCvTjGzJ`FjHbMnAtCvMrZr@`Bvh@~lAlApCx\\tv@nHtPdLtWzC~G|BlFtLpXjGtN|DbJhR~b@vp@|{AtGhOzExK`B`ElBlG~EbPt@pE\\vDEnGkDhLUxF?dD`@xCfBxHzTlYvu@z`Abt@d`AnA`BhAhAhCbB|FpDzEzCrEfD~BdBdBTxAMtAy@jEoCnCkD|AiAxAUdA@xAtBxCdEzZzb@jFnHnDhGvBhEbClGtCpIhC|JjAvGr@tGBzIg@pFQzAiGbX_AnDsDlN}GzWOh@sA`FwJt_@uIf\\aBhGsFrSgF`SqBtHsLxa@}B`IwIjZ`BjBbVvXp`@zf@lS`T__@f}AaKjh@{Ch_@w@zLiLrhBkDrk@?jB@`GWxOyF|v@aBtW{AjTkGj|@QfCk@pIUrDg@`HW|D}D|l@{Dnk@SbD{D|i@[~DUjDsAvRiElm@cDbe@cKr{ASjCyIhqAGfA_BbVuAtSyHbjAeDhf@m@dJyBd[q@jKaGv{@u@lKeBtWk@jImDng@wAvTqAjSSlCeDte@sBjZMhBmDrg@{Bv[mKl|A",
+            "explanation": "Навык и транспорт подходят. Переезд 15 мин; начало в окне 20:00–22:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          }
+        ],
+        "distance_m": 34488
+      },
+      {
+        "engineer_id": "E07",
+        "stops": [
+          {
+            "job_id": "74949",
+            "departure": 540,
+            "arrival": 557,
+            "start": 600,
+            "end": 670,
+            "distance_m": 5653,
+            "shape": "gxghiBgx~}fAw\\e@acBsn@u@bJ}K`xAaR`wBiG~r@_C~W_Gno@s@zKplAf|@pQfP|LbPxStWtb@|m@bMbSj@~@zArCrKtPbJ|R~KnYb`AnsChBbKzQbcAz@zEl@`DnSneAdk@zuC`AdFNtBFhCGnB_@dCeArCo@~@aBbCwTpVkEtFiCvBiCbAcBZqCDsCw@iBsAmAgDs`@be@kFfG_G`HqQzSyDpEmu@h|@ys@`~@sx@zcAkLtP_K|NiNzSyYvd@u`@fo@uDtDaEhAcBLuCu@kBeCcD}HiFeRoIuZeC}IqH{XeHsQcI_OwP}YkAmB}UaT{CiC}CgCoCaCuBeBqDsCkCsBeImGsIyGsMwJgI_H_CgBeFyDeGuEqFiEiBtKmWtzA{_@nzBkLtt@}Irl@yDvVuRroAgPdeAoXvwAgIdf@{H|j@oEzc@kGtv@cDtc@cCj^a@xFwBra@qCtt@uAv_@qEr_AiBdb@cF`kAuH`fBmKzcCiEffAq@`O_Eh_AwA~Z_G|sA_JxtBa@lHsCfh@eEhv@wI~{AkLjrBoA~TwSduDwKbpBYjE[hRYnSDrENpCDdCjHlCp`@zS",
+            "explanation": "Навык и транспорт подходят. Переезд 17 мин; начало в окне 10:00–12:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "41077",
+            "departure": 670,
+            "arrival": 672,
+            "start": 720,
+            "end": 790,
+            "distance_m": 274,
+            "shape": "sa_iiByljzfAvItErAv@fe@fYpAt@v`A`n@e@fFS|Bc@nEPdFTfHo@fG",
+            "explanation": "Навык и транспорт подходят. Переезд 2 мин; начало в окне 12:00–14:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "93086",
+            "departure": 790,
+            "arrival": 813,
+            "start": 813,
+            "end": 883,
+            "distance_m": 9211,
+            "shape": "{l{hiB_ofzfAn@gGUgHQeFb@oER}Bd@gFnD~Bh@Jf@I`@_@Xg@PkA@gAKcAWw@a@aAaw@gg@_C{A_KwGw@c@c@YyOgJwJ}FyCeB_CyAeIkFyKmGMGgB{@iEqBi@WwB_AoBkAqEoB{FgCyB_AkE}BeL_IsKqH}\\cW}AkA_LeLgw@at@kSeRaVqTqd@ca@kE_EeXgWgKiJiC}Bm\\o\\i^e\\_J}I_G}GeHqJcAmAwB}C{SoUcJsJmQ_PuYsWuB{AmEyDyIgHq@m@qDoC?cEMgLa@wNW}Ee@gJYoFi@qO[{I}Ca_A}K_rDsHwsCiCg}@i@eQsByr@_AiTKaByAeTqAuSuFafB_DkaAeCwe@gDogAoCqiA{E_{AwBcf@qDac@aB{PuCmWgNmmAoGsj@kH_o@{B}R{Ko`A}Qw_BeCuToOisAgZqjC{CcXuDc\\iJ_w@]yC}Q_|A{B_RkI{s@{Jo{@eT_kBeCsTkEq_@]qDom@ilFGi@]aDkO_uAeN{mAox@wiHeg@yoEkUepB{\\gyCo\\ksC_MmeAZcLtC_OvBaD~DwAfH_B~Fa@dMu@~IWbNTzMhBjNvC`PxFtSvJlf@jd@hWrPzKpHjIjEpO~GvP|FvNhCpMJrPqBzMyD~IaFtG}EjI_H`LaNnIwLrLkSfxA{qCx[_q@vM_[jJeXvMo_@rJ{[zC_KnTux@nOwm@vOck@|Scm@nMy[bQ_`@bFuKjSmc@hj@elAjT}e@daAyvBn\\qt@xo@uyAf`@o|@ld@gdArIuRzu@wdBzo@oyAtl@ktA~_@c|@zTag@lYmm@js@kvA`g@qbAxc@o_A|Zis@ba@{aA~i@{xAp]e~@l^k|@z[_v@~DqJ|Uwj@f`@w~@",
+            "explanation": "Навык и транспорт подходят. Переезд 23 мин; начало в окне 12:00–14:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "57866",
+            "departure": 883,
+            "arrival": 907,
+            "start": 907,
+            "end": 977,
+            "distance_m": 10820,
+            "shape": "g`ohiBc{v`gAhF_MrUcl@lRkk@zPcm@bTo|@~^w~An]kyAz`@ueBpkAagFpfAqsE`{@ktDnYcnA~V}bAn[}nAdd@cjBjOwo@tVikAdSe}@nq@euCv\\{wAfm@iiCvQsz@bOuu@`Mss@rOk_AnIqe@pLsn@hNgq@nSw~@bo@smChP_u@rPow@|Oiv@hMmq@`Hac@pK{{@lNciAR}AzF{b@vFq^p@eEdRmaAnp@kvClEmPpEaO`\\c}@`FeOlEeNrCqJrAaFjAmFtAmHjAcH|@sGx@eHj@sGd@sGX_HTuGLcGF_HBwFE_GK_G[qFi@yFw@_Fy@mDuAqEcAiCsAqCwAsBuB_Cua@s^yBaDeDsHwBkKoBgOm@eLAoPj@uE`C{HbCgFzCmDvCqAhEy@hLr@~d@xJhhBpv@bk@nVblAbh@zd@`Sbo@pXrGlMbBvDnApEx@fFb@vFH|FO|Fe@rF_AdFsAlEeBnDwBnCcCfBeHzCsKrAuJOiIqBaD{BmCoCgBkEgBgFgAcGu@}JMkIzA{WrSixBvC{Z~F{QnAsBtAcBvAkA|AaAbBm@`Be@bCIfCJ|Bl@zBjAnBdBjB|BlBnDdBrEfAhFz@zF^fHBlHEjHe@jHmAdG{AlFeB|DmBzCcCtCcChBqH`DkIt@oNKcJkB{d@yRciAwf@qj@gV{]gO_^eOiwAim@kTaQuFuGsEsIwCiJsAaM[oKh@gJlAuHhCuHrEoHxXa^nFkEzEoA`FBpDdBlCvBvD|F`ClG~A`I\\`NStOaGvkAeZ|hGoA`TuAhRmB~Qi@dEmB`OyBtM{E`VaFlTsDpPySl_AsK`f@y_@x`BeP|v@sH~a@eKnu@cLj|@_OlnAeG`b@cJth@sHp_@qO~t@{Nlr@yTjaAql@|eCgMvj@eLfj@sK|i@mH`b@sHzb@uLxt@qNlw@mNns@yPxv@qm@hkCikBjeImPnv@gTz}@oSdz@u[lpAwRdu@kR~s@gHvYyM~l@cc@boBiSh{@cPfr@gRpx@uc@blBylBvkIq]fzAiPpr@",
+            "explanation": "Навык и транспорт подходят. Переезд 24 мин; начало в окне 14:00–16:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "35675",
+            "departure": 977,
+            "arrival": 1004,
+            "start": 1004,
+            "end": 1074,
+            "distance_m": 10896,
+            "shape": "{_lhiBcb_agAeNbl@uTz}@wPvl@iQ|g@uSzh@}Pfa@iAjCaUth@wSvf@mNr\\iS|e@o_@~}@w]f~@cl@l}Aa]jz@Yp@oOd^{KbWwb@`~@ug@`cAks@nvAoY`m@sTff@m`@f}@gfA`dCmdAf_CwVxj@mXzm@qN~[_q@j|Aqs@`_Bmn@rsAuStc@oStc@}eAh~Bg`@d|@{Tvm@oQfm@gP|m@_Tjw@iNzh@aPpi@mLdX{\\xl@_jA`lBiv@~oAyEvMeB`NQbOfAjNpCvMlEbInHdI^Nx^|O`P|DbPnAnYg@v]sD`l@wGpWyAfNbClLtGtJvIzUbV|]|l@`Xzf@~`@lcAx_@veAfRpj@vPda@lRx]`OzUlUlXfUbSvMvJhr@zg@lq@fg@bWbQnUvMlXvK~R~FxY`GbKvB~v@jP~cBn^bX`Kr\\bPzTvNvTvPr^b]nq@~n@vSxRrR`OxRvKrOvGdVjGnNhAvYtAht@lK`\\tEd^jGvOjH~NfK|KpJbPbPvMvSxKdVjJxXbJx_@d\\tsA|a@jjBdCjL|Mvn@hXjlAlEbRf{BzxJzClMnNpg@nX``AvLze@zNrq@pWdnAbX|dAnO~t@tW~rAhGf]``@j~BhOdu@nd@v{BtJbh@|Nn{@dIph@jFr]lD`WvJls@`Uv|AzOndAvDhUhE~Ut\\zgBdr@~qDhTzmAfClMtCtKpD~LbEpMjVlt@fOxc@lExNjEhPjLje@jDzOvNzu@~@tJDfG_@bD{@`DaA~AkBh@_BQcCwA}CwCeCqD_CuGs@aD[cDCuDDmBPuCb@cDv@gEr@kB`AmBlt@kf@l^oV`q@gf@rFkDbBcAfNsItLqHwAqJwCaPKe@cKsj@}AkIeDiQsR{aA{w@wdEaAgFcB_J}F}X{Hka@sHia@i]shBuGjGg@f@wBrBvAzGpBrJ~Qz|@",
+            "explanation": "Навык и транспорт подходят. Переезд 27 мин; начало в окне 16:00–18:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "98815",
+            "departure": 1074,
+            "arrival": 1101,
+            "start": 1101,
+            "end": 1121,
+            "distance_m": 8842,
+            "shape": "y`ogiBiak{fA_R{|@qBsJwA{GvBsBf@g@tGkGh]rhBrHha@zHja@|F|XbB~I`AfFzw@vdErRzaAdDhQ|AjIbKrj@Jd@vC`PyTbOmAx@{M~IwLhImVpEiBRoCdAgBdAcGdD}W~P{An@{AVuCAaC_@aCsAcBuAyAsBuAyBcBiEeXsw@o]}bAgDoJa[q{@mLe]sQyk@uEyQwi@mtCiS{fAiH{_@gEuUsD}TyOgdA_Uo|AePqkAoF{]cIqh@eGw^iGu]sJmg@wS{cAeUalAgNkr@qFgYcCqOsBgQmB}SqJkrAaB}QcBmN}BkOwC{PyDiRk[gzAwS_~@cG{TgRgo@cGcT_Ss}@eUudAuEcTqOyp@}CmKuDkKgDkHiFaJuFgIkFaGqF{EqHuD_G}BuEqAcEu@}Ec@kJ?uENeFf@sH|AcDfAgGxDoErDkHvHoKjNoyGnvI_o@b{@eh@vv@{a@xk@s_@|h@gn@fw@ys@r~@ok@xq@sh@pm@aXxWgUrQm]lUm\\bQ{b@xSk^`Mce@vK}q@jHkx@h@io@kFmo@wH_p@qRkr@i[qd@gXq`Aij@{MuFmPmEyO}B{O_A{JJgMjA}NjCkM|CgSlHkj@xVeHjEuOhLeThPkTbRqUpTwe@d[ou@|r@ay@rv@yMfLaOnKcdAzm@ew@rc@o}@ri@kJ~FeCzAyFlDmEjEkCaDsKmN_bAwmA{@gAaJ}Ksd@cl@yBoCf@yB|^q~AxAkGpa@ihBxBuJ_AeAq@w@{@_AgE{EqU{Y}Y}^gHqIoR{TqY{\\ib@qf@aKsLg[g^_AeAcb@wd@iDiD{F}GaaAgkAwAeB{^neA_AlCoChJ\\h@d@l@p\\v_@rTbZgKfa@",
+            "explanation": "Навык и транспорт подходят. Переезд 27 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          }
+        ],
+        "distance_m": 45696
+      },
+      {
+        "engineer_id": "E08",
+        "stops": [
+          {
+            "job_id": "51115",
+            "departure": 540,
+            "arrival": 555,
+            "start": 1080,
+            "end": 1110,
+            "distance_m": 4165,
+            "shape": "gxghiBgx~}fAw\\e@acBsn@n@uH}D_AgIoBkRqEyDy@ug@eLq\\qH}OkD}I_CgCiq@iCmEqEuDkA{Bw@qE}@k`@E{XReRd@gLz@aOzG}v@|BgWlAeNjHkv@~LquA|BaXbOkaBj@asAFyPPi^|P{kBfEud@tM{qAvK{eAfLez@dCkQhG_^~M{v@dt@qvDx}@iiEvKeh@fF}IrBiC~BgCzCeBnBiBdCgElRou@xL_h@nCoLpPqt@~\\{cBvKkd@tMcj@xJsa@vg@msBbd@_iBrEcQcCuBgDwCcFyEiLqKaB}AmAuAcG{GuDgEwx@_~@oWwYu[i^sNaPaDoDiCwClBmIjDkO\\_BhFgUfHi[|DeQhLqg@dOqp@pB}InLih@lBkIbFwTxH_]`K{c@xAsGrHm\\dGaXxAqGrUadApB_J`EyQjEeRdCwK~BrFvGtH~BnCnC_KnTe~@x@y@bE~CJdEzL`Kf@sB",
+            "explanation": "Навык и транспорт подходят. Переезд 15 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "76643",
+            "departure": 1110,
+            "arrival": 1134,
+            "start": 1134,
+            "end": 1164,
+            "distance_m": 9719,
+            "shape": "st~giBmq_agArFsUxCcMpG{C\\wAxFiVzi@jk@nY~Zp@r@be@hg@rH|F{Ftb@cM|w@k@zCiKhj@cEnT_WrlAsk@rbCiiA`zEye@nqByD~PwjAb}Eq_A~vDeM`i@yYtnAwJza@kUpcA}DhOeKra@w_AznEcs@bqDoMtv@qDnSuEfYsKnw@gHbq@gEpa@iJj_AcGbr@wHdz@}Cx\\eP|cBoHvv@oCpYeNnyAsHty@yF|n@aIj|@kDdf@g@lJsArc@_@xd@Czh@Jn^d@pW\\jNbAlYdAhWrCzm@hBv`@`JfgCrI`jCr@t_@XxLj@fWr@j^\\vVClSm@dXmCle@uHpqAG`AwAfTsDli@}I`kAqA|NcDh^aHps@u@hIkEz_@wF`c@gHdd@{Gpb@mF~Z{L|r@oIpf@gAfGgg@~tCiBtKmWtzA{_@nzBkLtt@}Irl@yDvVuRroAgPdeAoXvwAgIdf@{H|j@oEzc@kGtv@cDtc@cCj^a@xFwBra@qCtt@uAv_@qEr_AiBdb@cF`kAuH`fBmKzcCiEffAq@`O_Eh_AwA~Z_G|sA_JxtBa@lHsCfh@eEhv@wI~{AkLjrBoA~TwSduDwKbpBYjE[hRYnSDrENpCDdCjHlChk@pZrAv@fe@fYpAt@v`A`n@nD~B`PnKfSdN|JnIhIbJhIbJrA|AxPrSpDxEtZz`@|BxCpObRnEnF|@fAbD`EtFdF~CxChAbBbWrh@|`@r{@pJbXo@nLmFbgAwApKiBbHsMp\\qHhRoA|CqG~OeHjQqAxBsBrFyIhRsZh_@wBrCiOnQgLbOuBlCqPtSqSxVyCjDkI~JuRhUmFhGsGtI{KnNcCgHi@aBiHgRaVil@sJwUoG_PeKyWoBcF~n@}rAdScb@h]ys@b`@sx@l\\yo@hClIrBnGfInW",
+            "explanation": "Навык и транспорт подходят. Переезд 24 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "48174",
+            "departure": 1164,
+            "arrival": 1186,
+            "start": 1186,
+            "end": 1216,
+            "distance_m": 9354,
+            "shape": "i{whiB}{|yfArJxZ~Kh]nh@`aBrDfLyIhRsZh_@wBrCiOnQgLbOuBlCqPtSqSxVyCjDkI~JuRhUmFhGsGtI{KnNcCgHi@aBiHgRaVil@sJwUoG_PeKyWoBcF~n@}rAdScb@h]ys@b`@sx@l\\yo@lS}`@n[wm@bIuO`I_PrAmCzEqJhBmDpE}Ix@uAtByDfBkD`FsJtCuFpb@qx@`KqRrZkk@nKmSvGiM~Uia@jKeQhK{Tbt@ygBhXyo@xCeHnHiRlZuv@fMg\\~Kga@~DqOfPwp@dKib@nUo_AnBaIz@cD`Qkt@|oAmjFtj@{~B~c@siBnoA}jFdDiNjA_Fh@wBrIs^lAcFtG}W`Ik[jZukAjZqmAjYkhALe@bG_StFkOjMo^fIwSdDmIxMw\\fEqK~m@i_BlQud@zY}u@ne@omAra@}jAzkA_yCpJiWtGyT`O{n@bCmL|Ty`AtG}XxbAchEzv@{fDjGkXfKad@rB}I~i@w}BxJmb@hbAkfE`f@asBjF}Tlh@cyBzN}m@jBeJ~@mGfA{Jn@qM\\aVJwb@Z{hB`@mqAn@_~@f@}i@h@k\\p@oUx@oVdBya@v@uO~E}v@~RqzCp_@yoF~]ejFfUcbDtLakB|Po`CrQoqCpYohEnTcdDlFmv@`R}vCpH{eAr]uaFpYwgElBgYhZ_nE~Fm|@tCwb@",
+            "explanation": "Навык и транспорт подходят. Переезд 22 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          }
+        ],
+        "distance_m": 23238
+      },
+      {
+        "engineer_id": "E09",
+        "stops": [
+          {
+            "job_id": "82388",
+            "departure": 540,
+            "arrival": 558,
+            "start": 840,
+            "end": 910,
+            "distance_m": 5511,
+            "shape": "gxghiBgx~}fAw\\e@acBsn@u@bJ}K`xAaR`wBiG~r@_C~W_Gno@s@zKplAf|@pQfP|LbPxStWtb@|m@bMbSj@~@zArCrKtPbJ|R~KnYb`AnsChBbKzQbcAz@zEl@`DnSneAdk@zuC`AdFNtBFhCGnB_@dCeArCo@~@aBbCwTpVkEtFiCvBiCbAcBZqCDsCw@iBsAmAgDs`@be@kFfGyDwPq@uCgFiUcNqn@cK{e@oAaNBmFf@_F|@uDpAqCbBuAtBi@dBHfBn@jBdB|BxElE|JlEbRf{BzxJzClMnNpg@nX``AvLze@zNrq@pWdnAbX|dAnO~t@tW~rAhGf]``@j~BhOdu@nd@v{BtJbh@|Nn{@dIph@jFr]lD`WvJls@`Uv|AzOndAvDhUhE~Ut\\zgBdr@~qDhTzmAfClMtCtKpD~LbEpMjVlt@fOxc@lExNjEhPjLje@jDzOvNzu@~@tJDfG_@bD{@`DaA~AkBh@_BQcCwA}CwCeCqD_CuGs@aD[cDCuDDmBPuCb@cDv@gEr@kB`AmBlt@kf@l^oV`q@gf@rFkDbBcAfNsItLqHwAqJwCaPKe@cKsj@}AkI|DmDhNgLhMmK}AoHkLik@rEsD",
+            "explanation": "Навык и транспорт подходят. Переезд 18 мин; начало в окне 14:00–16:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "71388",
+            "departure": 910,
+            "arrival": 929,
+            "start": 929,
+            "end": 999,
+            "distance_m": 6431,
+            "shape": "}ajgiBafa{fAsErDjLhk@|AnHiMlKiNfL}DlD|AjIbKrj@Jd@vC`PyTbOmAx@{M~IwLhImVpEiBRoCdAgBdAcGdD}W~P{An@{AVuCAaC_@aCsAcBuAyAsBuAyBcBiEeXsw@o]}bAgDoJa[q{@mLe]sQyk@uEyQwi@mtCiS{fAiH{_@gEuUsD}TyOgdA_Uo|AePqkAoF{]cIqh@eGw^iGu]sJmg@wS{cAeUalAgNkr@qFgYcCqOsBgQmB}SqJkrAaB}QcBmN}BkOwC{PyDiRk[gzAwS_~@cG{TgRgo@cGcT_Ss}@kV_w@gD{HeBwCsBaCkBmAiB_@cBCkBZ{BfAqBbCwArC}@xDk@vEMhFFjG^xD~@~DjMt`@~EtQpYrhAxh@xmB~BhKlAxFjAnG~@`G|@zHh@rIXbI@pIQvI]`Is@bJmDb]}C~ZqGtq@kEtq@QdBy@vHiEna@w@nHuHpr@uAzN^tDv@bB`A\\lASp@kA\\oAJaAF_CQgGKsCA}DLqFvEyc@PcBf@mEhEka@zEqm@hLycAtLegAb`@_kDlAaKjCeTjFi^rTayA|PqpA`DkWtDwZrD_^bCoSdAgIjDaT~Gkc@`QagApIue@rAiHdZquA|EuTtGkZrMyk@tAuFlIc]f@kBlBeIjFkUfF}VtLgg@lPio@vI{_@vJid@tC_NnAuHfAyItAmN~Ce\\lAgMfAmKbBkLrAiHpCaLtCuIrDsIxOi\\|Pe]`Vie@lSea@~Uye@xYen@fHkQ`Sy\\xCyHlDcH`EiGlCgDdEgEcAkFoB{Kc@{CmCoP{Goa@sDaUuAoIw@{EaF}ZcDaSc@oCeHcc@iDcSm@qDcAiGeCeOpDsA~W{J~v@k[vZqLrXuJdr@yV|[yLDxB\\bSnKA~OCzIC",
+            "explanation": "Навык и транспорт подходят. Переезд 19 мин; начало в окне 14:00–16:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "26645",
+            "departure": 999,
+            "arrival": 1021,
+            "start": 1021,
+            "end": 1051,
+            "distance_m": 8252,
+            "shape": "}gggiBypd~fA{IB_PBoK@]cSEyBh@SnH}C~]gOnSyGfCWi@`v@KzNAfBUj^hBdm@dC~x@AnIQ~lAIl_@EhMYjJm@tIeAdKgBtL_BvIwN~m@uPfs@sVzdAiFrTkVlcA{d@|mB}Lzg@_HjYyUdbAwYvoAyNzn@cLpf@mNpm@mHt[_F`Tgk@tdCeo@|lCcR`x@qb@njBaFfTyA|FmEjQoGfSsIxVmnAf_D{M~\\cVje@oj@dgAuOf]aHzOsBfEyB`DgCdCaC`ByC~@wCZcDIcCe@iCqAiCsBeB{ByBwD{AsEuAaGmd@g{BaDeOqDqO}FcYk_@ciB_Ss}@eUudAuEcTqOyp@}CmKuDkKgDkHiFaJuFgIkFaGqF{EqHuD_G}BuEqAcEu@}Ec@kJ?uENeFf@sH|AcDfAgGxDoErDkHvHoKjNoyGnvI_o@b{@eh@vv@{a@xk@s_@|h@gn@fw@ys@r~@ok@xq@sh@pm@aXxWgUrQm]lUm\\bQ{b@xSk^`Mce@vK}q@jHkx@h@io@kFmo@wH_p@qRkr@i[qd@gXq`Aij@{MuFmPmEyO}B{O_A{JJgMjA}NjCkM|CgSlHkj@xVeHjEuOhLeThPkTbRqUpTwe@d[ou@|r@ay@rv@yMfLaOnKcdAzm@ew@rc@o}@ri@kJ~FeCzAyFlDmEjEkCaDsKmN_bAwmA{@gAaJ}Ksd@cl@yBoCf@yB|^q~AxAkGpa@ihBxBuJ`B}GnQsv@jEcRlUkbAnSo|@",
+            "explanation": "Навык и транспорт подходят. Переезд 22 мин; начало в окне 16:00–18:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "30243",
+            "departure": 1051,
+            "arrival": 1063,
+            "start": 1080,
+            "end": 1110,
+            "distance_m": 4672,
+            "shape": "swajiBi|d|fArgAayEhMml@|WuiAz@uDzCuLnDyNfF{SbH}XpUu`AhOkk@rF_V\\oAReAbCqNvLcHtBgAdNgHfKmFvd@aVn]sQpJ{ElE}BbPrzAnJl|@rDwBv@e@pBiAzAnMzu@xtGzFhg@fSvfBpBfQzNbpA~BpSfD~Y~R`dBjF|j@tAtSvAr[bApWzHxeCvBxs@~@`YlAl_@|Ct|@jHfvB|EpgApBnt@r@zWvItaDbBzm@zQvnFXjINdEPtFl@lRR|MH|JA`DApBCjHI~IEjD]~SE~@o@dOaDpv@uAb\\kAzZiEdhAa@tOMpEItJCnGAdGAhCT`XhAxh@vB|u@f@jQp@dVdBjm@dBhq@z@r\\JjGFxDP`JPdCH~ALrBt@vP~AnQ|@zHdBhJvDfS^vBhAtElBbH`AnDtCzIzDdLxBvGfEdMhIvVjApDfMr`@bAlDjGlTbB~FnEvOnErOxBxHpFhRp@pCh@zB~AvGvC|KbAjDlAtEtHvX`HhU`Nxg@`CjIfJ~YtA~ExGrVzAtFpA|FnB_Cdw@e_A`@e@bCiBtCuA\\i@x[_h@nKqP|JsUnM}[bH}Q",
+            "explanation": "Навык и транспорт подходят. Переезд 12 мин; начало в окне 18:00–20:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          }
+        ],
+        "distance_m": 24866
+      },
+      {
+        "engineer_id": "E10",
+        "stops": [
+          {
+            "job_id": "23380",
+            "departure": 540,
+            "arrival": 605,
+            "start": 720,
+            "end": 790,
+            "distance_m": 5154,
+            "shape": "gxghiBgx~}fAw\\e@acBsn@u@bJ}K`xAaR`wBiG~r@_C~W_Gno@}Ai@S`CaA|@gBG_e@iN{@}A]_CMsDNgEeB_AkA{@e@wCcCdEeQtWlD~j@bAnNpB~XlCbG?hOrBlVoBps@[zKq@`VqDxEgB|n@m@pAy@`BuB{As@j@eCzX}Gdv@v@rKKlA{AvQkCz[wFr]uEli@eCzXiI|~@aCpXoLj}@kArIkDdWuJhl@mOt{@iOpz@kHx`@gL~n@FxAFtAF`Af@`AYdBw@pE{@bFIb@w@Cy@`@c@l@_@[yAmAoAeAkB}AeA{@oFmEoBaB}AoAuu@pxEmNfw@aHne@sEfZcQ|iAgGn_@gBxHuJ`m@ZTyA`JoGr`@kUrrAoB|KiDbVmAhEeAtM{IniA_Drc@cBnMkCpIQxGoBdv@cB`RgA`f@g@xE}AhGHr@VrCVzCRbCHvAJ~Aw@|LO`CYbEGt@{@rCy@jSmApRa@zK{Aj_@iFjlAkDxw@]pFqDo@g@hLiFhlAjCrIiAfX_FhlADrIoBbf@eAzWu@xJe@|NiGntAsHd_BaB~\\q@dH_HtvA}Btd@kElm@[rGQvFuKfkBgA`U{MtdC_B`YMxBM`CaBhZyJbiBm@rDFvGDzOY~E]lFMtBKjB]tFmBf{@_@|BHpKCdF`@BaApXg@rOEpVgHthC[`KqCxy@g@bWiHlyB{H]iLg@}AbM}AfE]lA]rA_MnVuAtU}AzVeErI",
+            "explanation": "Навык и транспорт подходят. Переезд 65 мин; начало в окне 12:00–14:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "94409",
+            "departure": 790,
+            "arrival": 834,
+            "start": 834,
+            "end": 904,
+            "distance_m": 3571,
+            "shape": "eociiBkbxyfAdEsIeI}OhDoIsFe^kD}EaI_LiBxGiAqAmDdJiH_MWi@`B}DnEyK[a@s@y@cAeCVy@so@emAsRk_@eBgDWi@sUqh@e@oCqO{[uEwViFa^s@wHgBul@_A_[k@eSEoAMeDC_AIkCMcECa@oCybAiDonAOuEM{EsCqaAeAs\\gAc]kA{^wAgd@[}J{VoUgOkNeK{]Uo@eAcCmDmC}BkAiAeDuIeIqn@wi@w@b@iA}@wAgAuAgA{AkAg@mCaBeBmEkD}BeB_Ag@s@Mo@Lm@b@IHOc@_@oA]mAeAwBoBi@eG}AgEgAy@Uq@QAk@QoAa@_AaJgJj@uCT_B`@qC^wBLo@m@cBc@uBQkDXsQd@{FeBcB_OoMUaHg@mRgBVYcJsTvCm@y@iCuDiIqLiOkTk@y@{CqEwDVuEdGiCxDo@{AaB{DuA~CoFyIoh@qw@im@q`AmRsZkB{C{]}j@oLmRoEmIwHaMeLaQyA{BeWub@e`@{l@aMoRqVm`@cAvCm`AazAeAaBmD{Fg[}d@bAcDaCwCgEeSYiEqA@_CiB_@aBm@sBuA?u@?wB_CiFqH_C{DiEoHuFiJgEcPyAoU_@qLOk@c@_EMyCGsKfFeSp\\mqAbO_l@dEmPlCgKeBsBqScVwRiUn@kCmg@sl@tFmVvGsYnEyRuq@gw@aBiJrRiz@",
+            "explanation": "Навык и транспорт подходят. Переезд 44 мин; начало в окне 12:00–14:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "22634",
+            "departure": 904,
+            "arrival": 944,
+            "start": 944,
+            "end": 964,
+            "distance_m": 3296,
+            "shape": "mmbjiBcqb|fAsRhz@`BhJtq@fw@oExRwGrYuFlVlg@rl@o@jCvRhUpSbVdBrBmCfKeElPcO~k@q\\lqAgFdSFrKLxCb@~DNj@^pLxAnUfEbPtFhJhEnH~BzDhFpHvB~Bt@?tA?l@rB^`B~BhBpAAXhEfEdS`CvCcAbDf[|d@bAuD`GxIv{@buAfC~DpVl`@`MnRd`@zl@dWtb@xAzBdL`QvH`MnElInLlRz]|j@jBzClRrZhm@p`Anh@pw@nFxItA_D`BzDn@zAhCyDtEeGvDWzCpEj@x@hOjThIpLhCtDl@x@rTwCXbJfBWf@lRT`H~NnMdBbBe@zFYrQPjDb@tBl@bBMn@_@vBa@pCU~Ak@tC`JfJ`@~@PnA@j@p@Px@TfEfAdG|AnBh@dAvB\\lA^nANb@HIl@c@n@Mr@L~@f@|BdBlEjD`BdBf@lCzAjAtAfAvAfAhA|@v@c@pn@vi@tIdIhAdD|BjAlDlCdAbCTn@dKz]fOjNzVnUZ|JvAfd@jAz^fAb]dAr\\rCpaALzENtEhDnnAfEe@h@zShB~p@F~BFhCF|@JhDBhAn@jS`A~Zr@lRv@f\\|AI`@xNxBrRxEpT`AfCfCfG|BfF|KvVvAzCnPz]|BpEfB~C`_@rt@",
+            "explanation": "Навык и транспорт подходят. Переезд 40 мин; начало в окне 14:00–16:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          }
+        ],
+        "distance_m": 12021
+      },
+      {
+        "engineer_id": "E11",
+        "stops": [
+          {
+            "job_id": "37272",
+            "departure": 540,
+            "arrival": 562,
+            "start": 600,
+            "end": 670,
+            "distance_m": 5977,
+            "shape": "gxghiBgx~}fAw\\e@acBsn@u@bJ}K`xAaR`wBiG~r@_C~W_Gno@s@zKplAf|@pQfP|LbPxStWtb@|m@bMbSj@~@zArCrKtPbJ|R~KnYb`AnsChBbKzQbcAz@zEl@`DnSneAdk@zuC`AdFNtBFhCGnB_@dCeArCo@~@aBbCwTpVkEtFiCvBiCbAcBZqCDsCw@iBsAmAgDs`@be@kFfGyDwPq@uCgFiUcNqn@cK{e@oAaNBmFf@_F|@uDpAqCbBuAtBi@dBHfBn@jBdB|BxElE|JlEbRf{BzxJzClMrL`j@lHd]xU|gAfc@~rB~BhKlAxFjAnG~@`G|@zHh@rIXbI@pIQvI]`Is@bJmDb]}C~ZqGtq@kEtq@QdBy@vHiEna@w@nHuHpr@uAzN{@tLKpFLtFf@xGz@xD~AjDnC~DhF~H`EhGrBrEpC`H}Jpb@eMfi@aDdMmAfFep@dnCw@|C_BfHcIr]On@yFjUuEfR}hAzsE}\\dxA}p@tsCuL~f@qeA`mEgDvGoHnMgOtTiCjG_DbEcEjCaElC{@FeERwJt@eQvAsGn@kAHaFb@k]jCe{BfUcVxBk[hDqCx@{ErBqs@pj@qCrBiOxKaQ|LuF~DaItF}EjDul@na@sA~@wDhC_NlJ}GxEgD~B{g@~]}F`EgBtAsJhHlBzJ|Ifr@jBhR_BdAkAt@kG`EwFvFoAzD[jPuLfYt@jFkDtT",
+            "explanation": "Навык и транспорт подходят. Переезд 22 мин; начало в окне 10:00–12:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "34366",
+            "departure": 670,
+            "arrival": 692,
+            "start": 692,
+            "end": 762,
+            "distance_m": 6181,
+            "shape": "{y|hiB}_lzfAgCbPsBxLuRaMs@c@uDg@_VgLkD{EI}@[a@{@iBhJmUnG_Pl@{AlG}V|c@whAfHmN|MiJrJiHfBuA|FaEzg@_^fD_C|GyE~MmJvDiCrA_Atl@oa@|EkD`IuFtF_E`Q}LhOyKpCsBps@qj@zEsBpCy@j[iDbVyBd{BgUj]kC`Fc@jAIrGo@dQwAvJu@dESz@GjAGvESfNo@dEuA|EeDvB_Cz@cD`Qkt@|oAmjFtj@{~B~c@siBnoA}jFdDiNjA_Fh@wBrIs^lAcFtG}W`Ik[jZukAjZqmAjYkhALe@bG_StFkOjMo^fIwSdDmIxMw\\fEqK~m@i_BlQud@zY}u@ne@omAra@}jAzkA_yCpJiWtGyT`O{n@bCmL|Ty`AtG}XxbAchEzv@{fDjGkXfKad@rB}I~i@w}BxJmb@hbAkfE`f@asBjF}Tlh@cyBzN}m@jBeJlDmGhAgB`AqAdAy@xBgAvH_BdWcBhMOrCKxE[bEy@rHcDbHqEpQ}MjBs@nNoCjk@kJ`BWv|@}NvTsDdg@kIrMwB_@yI]cJcHimBnBYlAQxNsBnNqBjIkAbb@aGr@KhFy@vOcCzTiDo@sUp@Oj@k@b@cATqADyAIyAWqAc@}@o@g@q@Kc@JOBg@d@a@x@",
+            "explanation": "Навык и транспорт подходят. Переезд 22 мин; начало в окне 10:00–12:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "67554",
+            "departure": 762,
+            "arrival": 781,
+            "start": 781,
+            "end": 851,
+            "distance_m": 4846,
+            "shape": "ytxfiBwtc~fA??WfAKnA@rANlAXbAd@r@h@^n@Fn@rUbA~Ze@~Gj@~PJtCp@pQDvAjA`ZN|DJjC}k@xJakA`S}Ex@acDbj@_d@pHeLxAwIhAwI~@_KZoJb@qk@hBqXfA}_@hDeYvCiBJ_LfAwTzB_DToKt@uT~AoABkO^wCFwR`A}G|@sE|@eElAmF|BiC~AqA~@mDpCaEdEmDfEgJdP}@tBmCpGqDdEyDbHaKdTyBpEgV|e@qYrk@oRh`@wFlKkM~UgLvRwB~EgAzDuEnKyJxR_MdWiB~G_@z@nKxZj@xBRp@s|IloL}Al@eCtEoc@hq@_MxT_k@vy@yA}GkAcFyA_J{b@dj@c@[wAaCiCbAcBZqCDsCw@iBsAmAgDs`@be@kFfG_G`HqQzSyDpEmu@h|@ys@`~@sx@zcAkLtP_K|NiNzSyYvd@u`@fo@uDtDaEhAcBLuCu@kBeCcD}HiFeRoIuZeC}IqH{XeHsQcI_OwP}YkAmB}UaT{CiC}CgCoCaCp@}DxGc`@lVe}AbIyj@rDkZvGmi@l@_F~Eca@xCiVdAuIhIgr@zAgMhFoc@jAoKjDqYdAkKrE_a@fFoYsAcO{DyA{Q}GdIk}@",
+            "explanation": "Навык и транспорт подходят. Переезд 19 мин; начало в окне 12:00–14:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "30769",
+            "departure": 851,
+            "arrival": 872,
+            "start": 872,
+            "end": 942,
+            "distance_m": 5406,
+            "shape": "qkohiBkci}fAeIj}@zQ|GzDxArAbOgFnYsE~`@eAjKkDpYkAnKiFnc@{AfMiIfr@eAtIyChV_Fba@m@~EwGli@sDjZcIxj@mVd}AyGb`@q@|DnC`C|CfCzChC|U`TjAlBvP|YbI~NdHrQpHzXdC|InItZhFdRbD|HjBdCtCt@bBM`EiAtDuDt`@go@xYwd@hN{S~J}NjLuPrx@{cAxs@a~@lu@i|@xDqEpQ{S~FaHjFgGr`@ce@lAfDhBrArCv@pCEbB[hCcAvA`Cb@Zzb@ej@xA~IjAbFxA|G~j@wy@~LyTnc@iq@dCuE|Am@r|ImoLSq@k@yBoKyZ^{@hB_H~LeWxJyRtEoKpFnDnCnAhAV`AFt@K`Am@f@{@v@_BxHeWhEiKj@kAxb@m{@tRk`@vHwQjFeNlCwGxKsXtJaXxCyHlDcH`EiGlCgDdEgEfDkC~BcB|DqBrCcAtCo@pFs@tAKzF]rO_AvCKnYkAnaA{El]_Cl]}BpY_A|a@q@hIWlJe@jKcA~JcBjRgFjBs@nNoCjk@kJ`BWv|@}NvTsDdg@kIrMwB_@yI]cJcHimBa@_LiEukAqCkv@yA_a@fEs@vZcGjB_@~w@kMn]qFpdAePdGaAcA}PcAeVc@kMaCwt@cBX_LpBoFovAaAeWa@cK",
+            "explanation": "Навык и транспорт подходят. Переезд 21 мин; начало в окне 14:00–16:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "41962",
+            "departure": 942,
+            "arrival": 965,
+            "start": 965,
+            "end": 1045,
+            "distance_m": 6573,
+            "shape": "uywfiBk|o~fA_Dey@S}E`U_E^I`AStASrd@_KbE}@`h@aKlNoCxDw@WsGyBil@a@eKcEchAoH_oBAUU{FqAy^q@mQs@wRKeDMuCOcEU{GUsFEuAg@mNQkEiAaZIwAwAo`@u@oRiAqS_Cwb@q@uMoGynA[wHeEuhAKkC}C{y@_@uJGqAkEajAsCgu@a@iO?qMh@iLz@{NdCs]J_Bp@cK|Be]NyBx@_Mr@mKtFsy@xA_TBe@tEwp@tBaZhAaP~@uMpGo`AxC_d@rAwRkGmB{\\oKmP}Eo~@wY{MgEe[wJqJyC{UqHwk@sQoEwA}CcAwa@uMqDcAePeFcEoAqMsDgHiBiNyDkN{DuQcF{g@yOkDgAkDcAgDaAc`@oLgM_E}VaIuX{Ig`@gMmDkAcO{EsI_Bq@gJuAyIaDcRwFo\\oMov@i@_DuPqbAu@kE}EsYiAuGgCkOaTmoAaDeRga@}aC_CeNmEsW_@{BiF{ZiAyGiBcL{X{cBuH{d@{AgJuAsIkGy_@]sBgCgOgBkKwBwMqB}LmQqgAwJ{l@{Iki@cAiGkFk[}D_ViBuKcGo^o^e{BsAiInCkLhE}Qnd@}oBnZiqAnBoIbCgKTkA|CiNnIw_@`UedAzYwlAPsApBcNtAsIj@iD~Kwh@fKme@dC{Kni@wbChDgPxOsu@`EaRhGcY`FyUdHw\\hBsIdCmLbQ_t@~A}GdDcNr@yCbD_Nh`@s`B`@_BhO}n@`P_p@pBmIzZkoAlB{HjEkQnC}KoE_FiIaJSSiF{FgRqSsFeG{IsJqAwAgc@{e@oD{DoD{D_ToUwDeEwa@gd@yFiGoJkKsR}S_EmEz@qFtGo^rGk`@bBkK`UouArDkElAkJnP_eA`@qClLsv@^sGj@}F",
+            "explanation": "Навык и транспорт подходят. Переезд 23 мин; начало в окне 16:00–18:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          },
+          {
+            "job_id": "97886",
+            "departure": 1045,
+            "arrival": 1048,
+            "start": 1048,
+            "end": 1128,
+            "distance_m": 742,
+            "shape": "y_hgiBufhcgAk@|F_@rGmLrv@a@pCoP~dAmAjJsDjEaUnuAcBjKe\\oUyKzn@wAfI_A`FnD`E}@pF{CtQc@lCgAxGuD`Um@jDm@pDoDjTsBbMUpAgAtG_DlRw@tEeJnj@vEg@hEc@pHu@vC[tHw@nLmAvBU?NFlC",
+            "explanation": "Навык и транспорт подходят. Переезд 3 мин; начало в окне 16:00–18:00, работа заканчивается до конца смены. Порядок выбран для совместного выполнения заявок с меньшим числом инженеров и пробегом; он не обязательно единственный."
+          }
+        ],
+        "distance_m": 29725
+      }
+    ],
+    "unassigned": [
+      {
+        "job_id": "10245",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "52405",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "98182",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "76082",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "29890",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "77563",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "53587",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "82808",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "7939",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "69967",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "33527",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "48227",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "60720",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "48238",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "41912",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "4893",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "68476",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "50219",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "76678",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "47330",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "24076",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "32807",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "73572",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "17349",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "54964",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "24980",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      },
+      {
+        "job_id": "15648",
+        "reason": "Не включена в найденный план при конкуренции за время исполнителей. Это не доказательство невозможности: может существовать другой план"
+      }
+    ],
+    "metrics": {
+      "urgent_unassigned": 4,
+      "unassigned": 27,
+      "engineers": 10,
+      "distance_m": 226471
+    }
+  },
+  "stats": {
+    "scope": "global",
+    "search_complete": false,
+    "candidate_routes": 0,
+    "generation_ms": 18,
+    "elapsed_ms": 299905,
+    "encoding_ms": 73,
+    "variables": 334818,
+    "clauses": 1356457,
+    "sat_calls": 7,
+    "optimal": false,
+    "stages": [
+      {
+        "criterion": "urgent_unassigned",
+        "lower": 0,
+        "upper": 0,
+        "proven": true
+      },
+      {
+        "criterion": "unassigned",
+        "lower": 0,
+        "upper": 0,
+        "proven": true
+      },
+      {
+        "criterion": "engineers",
+        "lower": 6,
+        "upper": 6,
+        "proven": true
+      },
+      {
+        "criterion": "distance_m",
+        "lower": 0,
+        "upper": 257383,
+        "proven": false
+      }
+    ],
+    "status": "Time budget reached; best validated plan returned, optimality not proven"
+  },
+  "changes": [],
+  "last_event_time": 0
+}

@@ -1,0 +1,1169 @@
+{
+  "name": "/Users/beldmian/docs/prog/hack/dataset/Восток Синтетические данные.csv.new.csv",
+  "jobs": [
+    {
+      "id": "74198",
+      "address": "Город Москва, пр-кт.Волгоградский, д. 128 к 5",
+      "point": {
+        "lat": 55.70152,
+        "lon": 37.77926
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 1200,
+      "window_end": 1320,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "86160",
+      "address": "Город Москва, пер.Маяковского, д. 2",
+      "point": {
+        "lat": 55.73884,
+        "lon": 37.67087
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 1080,
+      "window_end": 1200,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "50104",
+      "address": "Город Москва, ул.Грайвороновская, д. 10 к 2",
+      "point": {
+        "lat": 55.70636,
+        "lon": 37.73299
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 1080,
+      "window_end": 1200,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "46393",
+      "address": "Город Москва, ул.Михайлова, д. 14",
+      "point": {
+        "lat": 55.7256,
+        "lon": 37.78075
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 1200,
+      "window_end": 1320,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "10135",
+      "address": "Город Москва, ул.3-я Институтская, д. 5 к 2",
+      "point": {
+        "lat": 55.72128,
+        "lon": 37.78456
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 1080,
+      "window_end": 1200,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "18754",
+      "address": "Город Москва, ул.1-я Новокузьминская, д. 16 к 1",
+      "point": {
+        "lat": 55.728010000000005,
+        "lon": 37.77665
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 1080,
+      "window_end": 1200,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "84627",
+      "address": "Город Москва, ул.Окская, д. 32",
+      "point": {
+        "lat": 55.70122,
+        "lon": 37.7746
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 1200,
+      "window_end": 1320,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "61540",
+      "address": "Город Москва, ул.Юных Ленинцев, д. 84",
+      "point": {
+        "lat": 55.70248,
+        "lon": 37.772549999999995
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 960,
+      "window_end": 1080,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "74949",
+      "address": "Город Москва, ул.Международная, д. 28 стр. 1",
+      "point": {
+        "lat": 55.73839,
+        "lon": 37.67277
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 600,
+      "window_end": 720,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "41077",
+      "address": "Город Москва, ул.Новорогожская, д. 8",
+      "point": {
+        "lat": 55.73689,
+        "lon": 37.67062
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 720,
+      "window_end": 840,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "87693",
+      "address": "Город Москва, ул.Чистова, д. 12",
+      "point": {
+        "lat": 55.70483,
+        "lon": 37.74146
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 960,
+      "window_end": 1080,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "93086",
+      "address": "Город Москва, ул.Паперника, д. 19",
+      "point": {
+        "lat": 55.73001,
+        "lon": 37.77704
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 720,
+      "window_end": 840,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "57866",
+      "address": "Город Москва, ул.Окская, д. 48/2",
+      "point": {
+        "lat": 55.73099,
+        "lon": 37.78403
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 840,
+      "window_end": 960,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "35675",
+      "address": "Город Москва, ул.Трофимова, д. 24 к 2",
+      "point": {
+        "lat": 55.71407000000001,
+        "lon": 37.689139999999995
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 960,
+      "window_end": 1080,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "82388",
+      "address": "Город Москва, ул.1-я Дубровская, д. 6",
+      "point": {
+        "lat": 55.71125,
+        "lon": 37.68423
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 840,
+      "window_end": 960,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "23380",
+      "address": "Город Москва, ул.Рогожский Вал, д. 2/50",
+      "point": {
+        "lat": 55.74065,
+        "lon": 37.66324
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 720,
+      "window_end": 840,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "37272",
+      "address": "Город Москва, ул.Талалихина, д. 2/1 к 4",
+      "point": {
+        "lat": 55.73742,
+        "lon": 37.67361
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 600,
+      "window_end": 720,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "71388",
+      "address": "Город Москва, ул.Артюхиной, д. 20А",
+      "point": {
+        "lat": 55.70984,
+        "lon": 37.73543
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 840,
+      "window_end": 960,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "34366",
+      "address": "Город Москва, ул.Малышева, д. 13",
+      "point": {
+        "lat": 55.70246,
+        "lon": 37.73487
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 600,
+      "window_end": 720,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "67554",
+      "address": "Город Москва, ул.Бронницкая, д. 12",
+      "point": {
+        "lat": 55.73009,
+        "lon": 37.72181
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 720,
+      "window_end": 840,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "94409",
+      "address": "Город Москва, ул.Авиамоторная, д. 14",
+      "point": {
+        "lat": 55.756510000000006,
+        "lon": 37.7014
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 720,
+      "window_end": 840,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "10245",
+      "address": "Город Москва, ул.Фёдора Полетаева, д. 2 к 6",
+      "point": {
+        "lat": 55.70108,
+        "lon": 37.7774
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 720,
+      "window_end": 840,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "52405",
+      "address": "Город Москва, ул.Зарайская, д. 51 к 2",
+      "point": {
+        "lat": 55.72701,
+        "lon": 37.78429
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 600,
+      "window_end": 720,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "30769",
+      "address": "Город Москва, ул.Саратовская, д. 14/1",
+      "point": {
+        "lat": 55.70213,
+        "lon": 37.74096
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 840,
+      "window_end": 960,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "98182",
+      "address": "Город Москва, ул.Нижегородская, д. 63",
+      "point": {
+        "lat": 55.72792,
+        "lon": 37.726099999999995
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 600,
+      "window_end": 720,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "76082",
+      "address": "Город Москва, ул.Смирновская, д. 6",
+      "point": {
+        "lat": 55.73399,
+        "lon": 37.71726
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 720,
+      "window_end": 840,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "29890",
+      "address": "Город Москва, ул.Нижегородская, д. 61",
+      "point": {
+        "lat": 55.73291,
+        "lon": 37.71725
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 720,
+      "window_end": 840,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "77563",
+      "address": "Город Москва, ул.Зеленодольская, д. 28Б",
+      "point": {
+        "lat": 55.70438,
+        "lon": 37.7741
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 600,
+      "window_end": 720,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "53587",
+      "address": "Город Москва, ул.Артюхиной, д. 16",
+      "point": {
+        "lat": 55.70809,
+        "lon": 37.74322
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 720,
+      "window_end": 840,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "82808",
+      "address": "Город Москва, ул.3-я Карачаровская, д. 4 к 1",
+      "point": {
+        "lat": 55.72806,
+        "lon": 37.71942
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 840,
+      "window_end": 960,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "7939",
+      "address": "Город Москва, пр-кт.Рязанский, д. 73",
+      "point": {
+        "lat": 55.72505,
+        "lon": 37.77412
+      },
+      "duration": 70,
+      "work_type": "connection",
+      "window_start": 720,
+      "window_end": 840,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "92031",
+      "address": "Город Москва, ул.Ферганская, д. 28/7",
+      "point": {
+        "lat": 55.713719999999995,
+        "lon": 37.82145
+      },
+      "duration": 20,
+      "work_type": "equipment",
+      "window_start": 1080,
+      "window_end": 1200,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "31260",
+      "address": "Город Москва, б-р.Самаркандский Квартал 137а, д. к5",
+      "point": {
+        "lat": 55.7076,
+        "lon": 37.8189
+      },
+      "duration": 20,
+      "work_type": "equipment",
+      "window_start": 1200,
+      "window_end": 1320,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "69967",
+      "address": "Город Москва, ул.Боровая, д. 14",
+      "point": {
+        "lat": 55.75649,
+        "lon": 37.70135
+      },
+      "duration": 20,
+      "work_type": "equipment",
+      "window_start": 600,
+      "window_end": 720,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "22634",
+      "address": "Город Москва, ул.Стройковская, д. 8",
+      "point": {
+        "lat": 55.74167,
+        "lon": 37.66597
+      },
+      "duration": 20,
+      "work_type": "equipment",
+      "window_start": 840,
+      "window_end": 960,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "98815",
+      "address": "Город Москва, ул.2-я Синичкина, д. 9 к 1",
+      "point": {
+        "lat": 55.76237,
+        "lon": 37.70206
+      },
+      "duration": 20,
+      "work_type": "equipment",
+      "window_start": 1080,
+      "window_end": 1200,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "33527",
+      "address": "Москва, проезд Орехово-Зуевский, д. 18/8",
+      "point": {
+        "lat": 55.73695,
+        "lon": 37.7223
+      },
+      "duration": 20,
+      "work_type": "equipment",
+      "window_start": 600,
+      "window_end": 720,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "21571",
+      "address": "Город Москва, пер.Большой Рогожский, д. 10 к 2",
+      "point": {
+        "lat": 55.74155,
+        "lon": 37.66827
+      },
+      "duration": 30,
+      "work_type": "local",
+      "window_start": 1080,
+      "window_end": 1200,
+      "skill": "local",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "47670",
+      "address": "Город Москва, ул.Машкова, д. 13 стр. 1",
+      "point": {
+        "lat": 55.77653,
+        "lon": 37.675419999999995
+      },
+      "duration": 30,
+      "work_type": "local",
+      "window_start": 1200,
+      "window_end": 1320,
+      "skill": "local",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "17892",
+      "address": "Город Москва, ул.11-я Текстильщиков, д. 10",
+      "point": {
+        "lat": 55.71065,
+        "lon": 37.73668
+      },
+      "duration": 30,
+      "work_type": "local",
+      "window_start": 1080,
+      "window_end": 1200,
+      "skill": "local",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "51115",
+      "address": "Город Москва, ул.Паперника, д. 18",
+      "point": {
+        "lat": 55.72151,
+        "lon": 37.78147
+      },
+      "duration": 30,
+      "work_type": "local",
+      "window_start": 1080,
+      "window_end": 1200,
+      "skill": "local",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "76643",
+      "address": "Город Москва, ул.Большая Калитниковская, д. 38",
+      "point": {
+        "lat": 55.73469,
+        "lon": 37.66579
+      },
+      "duration": 30,
+      "work_type": "local",
+      "window_start": 1080,
+      "window_end": 1200,
+      "skill": "local",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "43506",
+      "address": "Город Москва, б-р.Самаркандский Квартал 137а, д. к5",
+      "point": {
+        "lat": 55.7076,
+        "lon": 37.8189
+      },
+      "duration": 30,
+      "work_type": "local",
+      "window_start": 1200,
+      "window_end": 1320,
+      "skill": "local",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "48174",
+      "address": "Город Москва, ул.Маршала Чуйкова, д. 9 к 2",
+      "point": {
+        "lat": 55.70347,
+        "lon": 37.780249999999995
+      },
+      "duration": 30,
+      "work_type": "local",
+      "window_start": 1080,
+      "window_end": 1200,
+      "skill": "local",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "48227",
+      "address": "Город Москва, ул.Талалихина, д. 16",
+      "point": {
+        "lat": 55.74106,
+        "lon": 37.66493
+      },
+      "duration": 30,
+      "work_type": "local",
+      "window_start": 720,
+      "window_end": 840,
+      "skill": "local",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "60720",
+      "address": "Город Москва, б-р.Волжский, д. 50 к 2",
+      "point": {
+        "lat": 55.70913,
+        "lon": 37.73912
+      },
+      "duration": 30,
+      "work_type": "local",
+      "window_start": 720,
+      "window_end": 840,
+      "skill": "local",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "48238",
+      "address": "Город Москва, ул.Артюхиной, д. 3",
+      "point": {
+        "lat": 55.70129,
+        "lon": 37.74314
+      },
+      "duration": 30,
+      "work_type": "local",
+      "window_start": 840,
+      "window_end": 960,
+      "skill": "local",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "41912",
+      "address": "Город Москва, проезд.Ферганский, д. 7 к 5",
+      "point": {
+        "lat": 55.7081,
+        "lon": 37.81103
+      },
+      "duration": 30,
+      "work_type": "local",
+      "window_start": 720,
+      "window_end": 840,
+      "skill": "local",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "4893",
+      "address": "Город Москва, ул.Земляной Вал, д. 24/30 стр. 1",
+      "point": {
+        "lat": 55.77598,
+        "lon": 37.683409999999995
+      },
+      "duration": 30,
+      "work_type": "local",
+      "window_start": 720,
+      "window_end": 840,
+      "skill": "local",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "68476",
+      "address": "Город Москва, ул.3-я Карачаровская, д. 8 к 2",
+      "point": {
+        "lat": 55.73111,
+        "lon": 37.718889999999995
+      },
+      "duration": 30,
+      "work_type": "local",
+      "window_start": 600,
+      "window_end": 720,
+      "skill": "local",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "50219",
+      "address": "Город Москва, ул.Чистопольская, д. 2 к 2",
+      "point": {
+        "lat": 55.72822,
+        "lon": 37.71832
+      },
+      "duration": 30,
+      "work_type": "local",
+      "window_start": 600,
+      "window_end": 720,
+      "skill": "local",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "76678",
+      "address": "Город Москва, ул.Боровая, д. 12",
+      "point": {
+        "lat": 55.75945,
+        "lon": 37.69883
+      },
+      "duration": 30,
+      "work_type": "local",
+      "window_start": 600,
+      "window_end": 720,
+      "skill": "local",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "47330",
+      "address": "Город Москва, ул.Красноказарменная, д. 9Б стр. 1",
+      "point": {
+        "lat": 55.76034,
+        "lon": 37.70587
+      },
+      "duration": 30,
+      "work_type": "local",
+      "window_start": 840,
+      "window_end": 960,
+      "skill": "local",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "26645",
+      "address": "Город Москва, ул.Сторожевая, д. 31",
+      "point": {
+        "lat": 55.75534,
+        "lon": 37.70174
+      },
+      "duration": 30,
+      "work_type": "local",
+      "window_start": 960,
+      "window_end": 1080,
+      "skill": "local",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "24076",
+      "address": "Город Москва, ул.Новорогожская, д. 10",
+      "point": {
+        "lat": 55.73591,
+        "lon": 37.66469
+      },
+      "duration": 30,
+      "work_type": "local",
+      "window_start": 720,
+      "window_end": 840,
+      "skill": "local",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "30243",
+      "address": "Город Москва, ул.Нижегородская, д. 25",
+      "point": {
+        "lat": 55.74116,
+        "lon": 37.66482
+      },
+      "duration": 30,
+      "work_type": "local",
+      "window_start": 1080,
+      "window_end": 1200,
+      "skill": "local",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "32807",
+      "address": "Город Москва, ул.Окская, д. 6 к 1",
+      "point": {
+        "lat": 55.69929,
+        "lon": 37.7711
+      },
+      "duration": 30,
+      "work_type": "local",
+      "window_start": 600,
+      "window_end": 720,
+      "skill": "local",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "73572",
+      "address": "Город Москва, пр-кт.Волгоградский, д. 97 к 1",
+      "point": {
+        "lat": 55.70762,
+        "lon": 37.77249
+      },
+      "duration": 30,
+      "work_type": "local",
+      "window_start": 840,
+      "window_end": 960,
+      "skill": "local",
+      "transport": null,
+      "urgent": false
+    },
+    {
+      "id": "41962",
+      "address": "г.Город Москва, б-р.Самаркандский, д. 32к1",
+      "point": {
+        "lat": 55.71027,
+        "lon": 37.81903
+      },
+      "duration": 80,
+      "work_type": "emergency",
+      "window_start": 960,
+      "window_end": 1080,
+      "skill": "emergency",
+      "transport": null,
+      "urgent": true
+    },
+    {
+      "id": "97886",
+      "address": "г.Город Москва, б-р.Самаркандский, д. 10к2",
+      "point": {
+        "lat": 55.71173,
+        "lon": 37.81109
+      },
+      "duration": 80,
+      "work_type": "emergency",
+      "window_start": 960,
+      "window_end": 1080,
+      "skill": "emergency",
+      "transport": null,
+      "urgent": true
+    },
+    {
+      "id": "17349",
+      "address": "г.Город Москва, ул.Новорогожская, д. 20",
+      "point": {
+        "lat": 55.74088,
+        "lon": 37.67246
+      },
+      "duration": 80,
+      "work_type": "emergency",
+      "window_start": 840,
+      "window_end": 960,
+      "skill": "emergency",
+      "transport": null,
+      "urgent": true
+    },
+    {
+      "id": "54964",
+      "address": "г.Город Москва, ул.Ташкентская, д. 16к2",
+      "point": {
+        "lat": 55.70598,
+        "lon": 37.8136
+      },
+      "duration": 80,
+      "work_type": "emergency",
+      "window_start": 600,
+      "window_end": 720,
+      "skill": "emergency",
+      "transport": null,
+      "urgent": true
+    },
+    {
+      "id": "21367",
+      "address": "г.Город Москва, ул.Саратовская, д. 16",
+      "point": {
+        "lat": 55.71036,
+        "lon": 37.74338
+      },
+      "duration": 80,
+      "work_type": "emergency",
+      "window_start": 1200,
+      "window_end": 1320,
+      "skill": "emergency",
+      "transport": null,
+      "urgent": true
+    },
+    {
+      "id": "24980",
+      "address": "г.Город Москва, наб.Семеновская, д. 3/1к2",
+      "point": {
+        "lat": 55.77141,
+        "lon": 37.68374
+      },
+      "duration": 80,
+      "work_type": "emergency",
+      "window_start": 600,
+      "window_end": 720,
+      "skill": "emergency",
+      "transport": null,
+      "urgent": true
+    },
+    {
+      "id": "15648",
+      "address": "г.Город Москва, наб.Семеновская, д. 2/1",
+      "point": {
+        "lat": 55.76853,
+        "lon": 37.6774
+      },
+      "duration": 80,
+      "work_type": "emergency",
+      "window_start": 960,
+      "window_end": 1080,
+      "skill": "emergency",
+      "transport": null,
+      "urgent": true
+    },
+    {
+      "id": "57299",
+      "address": "г.Город Москва, пр-кт.Волгоградский, д. 128к1",
+      "point": {
+        "lat": 55.69968,
+        "lon": 37.77082
+      },
+      "duration": 80,
+      "work_type": "emergency",
+      "window_start": 1200,
+      "window_end": 1320,
+      "skill": "emergency",
+      "transport": null,
+      "urgent": true
+    }
+  ],
+  "engineers": [
+    {
+      "id": "E01",
+      "name": "Инженер 01",
+      "start": {
+        "lat": 55.72646924242424,
+        "lon": 37.73340469696969
+      },
+      "shift_start": 540,
+      "shift_end": 1439,
+      "skills": [
+        "local",
+        "connection",
+        "emergency"
+      ],
+      "transport": "car",
+      "already_used": false
+    },
+    {
+      "id": "E02",
+      "name": "Инженер 02",
+      "start": {
+        "lat": 55.72646924242424,
+        "lon": 37.73340469696969
+      },
+      "shift_start": 540,
+      "shift_end": 1439,
+      "skills": [
+        "local",
+        "connection"
+      ],
+      "transport": "car",
+      "already_used": false
+    },
+    {
+      "id": "E03",
+      "name": "Инженер 03",
+      "start": {
+        "lat": 55.72646924242424,
+        "lon": 37.73340469696969
+      },
+      "shift_start": 540,
+      "shift_end": 1439,
+      "skills": [
+        "connection",
+        "emergency"
+      ],
+      "transport": "car",
+      "already_used": false
+    },
+    {
+      "id": "E04",
+      "name": "Инженер 04",
+      "start": {
+        "lat": 55.72646924242424,
+        "lon": 37.73340469696969
+      },
+      "shift_start": 540,
+      "shift_end": 1439,
+      "skills": [
+        "local"
+      ],
+      "transport": "walk",
+      "already_used": false
+    },
+    {
+      "id": "E05",
+      "name": "Инженер 05",
+      "start": {
+        "lat": 55.72646924242424,
+        "lon": 37.73340469696969
+      },
+      "shift_start": 540,
+      "shift_end": 1439,
+      "skills": [
+        "local",
+        "connection",
+        "emergency"
+      ],
+      "transport": "bicycle",
+      "already_used": false
+    },
+    {
+      "id": "E07",
+      "name": "Инженер 07",
+      "start": {
+        "lat": 55.72646924242424,
+        "lon": 37.73340469696969
+      },
+      "shift_start": 540,
+      "shift_end": 1439,
+      "skills": [
+        "connection",
+        "emergency"
+      ],
+      "transport": "car",
+      "already_used": false
+    },
+    {
+      "id": "E08",
+      "name": "Инженер 08",
+      "start": {
+        "lat": 55.72646924242424,
+        "lon": 37.73340469696969
+      },
+      "shift_start": 540,
+      "shift_end": 1439,
+      "skills": [
+        "local"
+      ],
+      "transport": "car",
+      "already_used": false
+    },
+    {
+      "id": "E09",
+      "name": "Инженер 09",
+      "start": {
+        "lat": 55.72646924242424,
+        "lon": 37.73340469696969
+      },
+      "shift_start": 540,
+      "shift_end": 1439,
+      "skills": [
+        "local",
+        "connection",
+        "emergency"
+      ],
+      "transport": "car",
+      "already_used": false
+    },
+    {
+      "id": "E10",
+      "name": "Инженер 10",
+      "start": {
+        "lat": 55.72646924242424,
+        "lon": 37.73340469696969
+      },
+      "shift_start": 540,
+      "shift_end": 1439,
+      "skills": [
+        "local",
+        "connection"
+      ],
+      "transport": "walk",
+      "already_used": false
+    },
+    {
+      "id": "E11",
+      "name": "Инженер 11",
+      "start": {
+        "lat": 55.72646924242424,
+        "lon": 37.73340469696969
+      },
+      "shift_start": 540,
+      "shift_end": 1439,
+      "skills": [
+        "connection",
+        "emergency"
+      ],
+      "transport": "bicycle",
+      "already_used": false
+    }
+  ],
+  "routing": {
+    "key": "6fbd5eaa3404cb7e",
+    "source": "OSRM/FOSSGIS car-bike-foot road tables; benchmark only; no geometry"
+  },
+  "notes": [
+    "Исходные данные: CSV /Users/beldmian/docs/prog/hack/dataset/Восток Синтетические данные.csv.new.csv — заявки, типы работ, адреса, районы и окна; нормативы — norms.xlsx. CSV не содержит координат или параметров инженеров. Это обогащённая ДЕМОНСТРАЦИЯ, не реальные маршруты по этим адресам.",
+    "Длительность на месте = технические работы + документы по нормативу; нормативная дорога исключена, переезд считается отдельно маршрутизатором. Дозаказ оборудования имеет отдельный норматив, но требует навыка подключения.",
+    "Координаты вымышлены при импорте вокруг центров районов; 12 синтетических инженеров, общая база в центре точек, смена 09:00–23:59. Глобальные проблемы считаются срочными. Требований транспорта в CSV нет.",
+    "Поля контрольного распределения (бригада, статус) не используются как ограничения или эталон оптимума. Пустые строки и подпись адреса офиса пропущены. Для реального планирования загрузите полный JSON.",
+    "Benchmark: intentionally SYNTHETIC coordinates, workforce and base. Real OSRM/FOSSGIS road tables, no geometry/traffic. Public engineers explicitly excluded: E06, E12"
+  ]
+}

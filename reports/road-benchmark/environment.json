@@ -1,0 +1,14 @@
+{
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "python": "3.13.3 (main, Apr  9 2025, 03:47:57) [Clang 20.1.0 ]",
+  "ortools": "9.15.6755",
+  "cpu": "Apple M2",
+  "seed": 1,
+  "workers": 1,
+  "repetitions": 1,
+  "fast_budget_s": 1,
+  "timing": "Budget covers matrices/seed/model/search. Wall includes process startup, serialization and teardown; validation excluded.",
+  "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+  "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+  "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+}

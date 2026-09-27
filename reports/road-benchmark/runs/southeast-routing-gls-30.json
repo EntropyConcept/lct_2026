@@ -1,0 +1,132 @@
+{
+  "dataset": "southeast",
+  "jobs": 83,
+  "method": "routing-gls",
+  "budget_s": 30,
+  "metrics": {
+    "urgent_unassigned": 0,
+    "unassigned": 0,
+    "engineers": 9,
+    "distance_m": 521603
+  },
+  "wall_ms": 30395,
+  "elapsed_ms": 30002,
+  "global_optimal": false,
+  "staff_proven": false,
+  "incumbent_origin": "solver",
+  "scope": "heuristic",
+  "status": "ROUTING_1",
+  "stages": [],
+  "validated": true,
+  "orders": [
+    [
+      28,
+      24,
+      10,
+      25,
+      23,
+      2,
+      64,
+      42,
+      37
+    ],
+    [
+      17,
+      63,
+      31,
+      61,
+      35,
+      60,
+      7,
+      59,
+      62,
+      3,
+      1,
+      44
+    ],
+    [
+      6,
+      20,
+      30,
+      29,
+      39,
+      15,
+      0,
+      71
+    ],
+    [],
+    [
+      18,
+      54,
+      5,
+      55,
+      13,
+      56,
+      53,
+      57,
+      36,
+      46,
+      48
+    ],
+    [
+      72,
+      21,
+      22,
+      27,
+      9,
+      73,
+      77,
+      76,
+      38,
+      80,
+      74
+    ],
+    [
+      52,
+      58,
+      66,
+      70,
+      47,
+      65,
+      51,
+      45
+    ],
+    [
+      49,
+      26,
+      75,
+      68,
+      34,
+      69,
+      79,
+      43,
+      78
+    ],
+    [
+      16,
+      4,
+      50,
+      14,
+      67,
+      33,
+      40,
+      41
+    ],
+    [
+      32,
+      12,
+      11,
+      8,
+      19,
+      81,
+      82
+    ]
+  ],
+  "snapshot": "3d3954bdabb1befa",
+  "scenario_sha256": "2d3423ffb61fb6733172a1f3ea06d30f4ef35150c8d967cda9bac3480a8af51e",
+  "fingerprint": {
+    "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+    "runner_sha256": "7e0dc0efffa7b604a9b2f02bf1a524e8c36221a892d3e78b64c7aa5844e2930d",
+    "comparators_sha256": "bd27921f8f2b8dc31d63c7fe09a220649d7437b9117052f67429c98a0bed0d2e"
+  }
+}

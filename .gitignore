@@ -1,0 +1,15 @@
+/target/
+.DS_Store
+/.pi/
+/.routing-cache/
+/.bench-venv/
+__pycache__/
+/.transit/
+
+# Local environments, credentials, and duplicate project exports.
+/.venv/
+/.env
+/.env.*
+!/.env.example
+*.py[cod]
+/Archive.zip

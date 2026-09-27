@@ -1,0 +1,265 @@
+{
+  "name": "Москва / контрольный день",
+  "jobs": [
+    {
+      "id": "J01",
+      "address": "Локальная диагностика",
+      "point": {
+        "lat": 55.752,
+        "lon": 37.62
+      },
+      "duration": 60,
+      "window_start": 600,
+      "window_end": 600,
+      "skill": "local",
+      "transport": "car",
+      "urgent": false,
+      "work_type": "local"
+    },
+    {
+      "id": "J02",
+      "address": "Срочное подключение",
+      "point": {
+        "lat": 55.748,
+        "lon": 37.612
+      },
+      "duration": 45,
+      "window_start": 615,
+      "window_end": 630,
+      "skill": "connection",
+      "transport": "car",
+      "urgent": true,
+      "work_type": "connection"
+    },
+    {
+      "id": "J03",
+      "address": "Замена роутера",
+      "point": {
+        "lat": 55.758,
+        "lon": 37.63
+      },
+      "duration": 30,
+      "window_start": 660,
+      "window_end": 750,
+      "skill": "local",
+      "transport": null,
+      "urgent": false,
+      "work_type": "local"
+    },
+    {
+      "id": "J04",
+      "address": "Новая линия",
+      "point": {
+        "lat": 55.76,
+        "lon": 37.625
+      },
+      "duration": 45,
+      "window_start": 660,
+      "window_end": 780,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false,
+      "work_type": "connection"
+    },
+    {
+      "id": "J05",
+      "address": "Восстановление связи",
+      "point": {
+        "lat": 55.745,
+        "lon": 37.607
+      },
+      "duration": 60,
+      "window_start": 720,
+      "window_end": 780,
+      "skill": "emergency",
+      "transport": null,
+      "urgent": true,
+      "work_type": "emergency"
+    },
+    {
+      "id": "J06",
+      "address": "Монтаж оборудования",
+      "point": {
+        "lat": 55.742,
+        "lon": 37.611
+      },
+      "duration": 45,
+      "window_start": 810,
+      "window_end": 900,
+      "skill": "connection",
+      "transport": null,
+      "urgent": false,
+      "work_type": "connection"
+    },
+    {
+      "id": "J07",
+      "address": "Диагностика кабеля",
+      "point": {
+        "lat": 55.754,
+        "lon": 37.638
+      },
+      "duration": 30,
+      "window_start": 780,
+      "window_end": 870,
+      "skill": "local",
+      "transport": "bicycle",
+      "urgent": false,
+      "work_type": "local"
+    },
+    {
+      "id": "J08",
+      "address": "Подключение офиса",
+      "point": {
+        "lat": 55.759,
+        "lon": 37.642
+      },
+      "duration": 60,
+      "window_start": 900,
+      "window_end": 960,
+      "skill": "connection",
+      "transport": "car",
+      "urgent": false,
+      "work_type": "connection"
+    },
+    {
+      "id": "J09",
+      "address": "Авария на линии",
+      "point": {
+        "lat": 55.751,
+        "lon": 37.623
+      },
+      "duration": 45,
+      "window_start": 900,
+      "window_end": 990,
+      "skill": "emergency",
+      "transport": null,
+      "urgent": true,
+      "work_type": "emergency"
+    },
+    {
+      "id": "J10",
+      "address": "Проверка порта",
+      "point": {
+        "lat": 55.747,
+        "lon": 37.616
+      },
+      "duration": 30,
+      "window_start": 990,
+      "window_end": 1020,
+      "skill": "local",
+      "transport": null,
+      "urgent": false,
+      "work_type": "local"
+    },
+    {
+      "id": "J11",
+      "address": "Поздний визит — конфликт смены",
+      "point": {
+        "lat": 55.75,
+        "lon": 37.619
+      },
+      "duration": 60,
+      "window_start": 1060,
+      "window_end": 1070,
+      "skill": "local",
+      "transport": null,
+      "urgent": false,
+      "work_type": "local"
+    },
+    {
+      "id": "J12",
+      "address": "Настройка приставки",
+      "point": {
+        "lat": 55.756,
+        "lon": 37.626
+      },
+      "duration": 30,
+      "window_start": 840,
+      "window_end": 960,
+      "skill": "local",
+      "transport": null,
+      "urgent": false,
+      "work_type": "local"
+    }
+  ],
+  "engineers": [
+    {
+      "id": "E1",
+      "name": "Алексей Морозов",
+      "start": {
+        "lat": 55.751,
+        "lon": 37.617
+      },
+      "shift_start": 540,
+      "shift_end": 1080,
+      "skills": [
+        "local",
+        "connection",
+        "emergency"
+      ],
+      "transport": "car"
+    },
+    {
+      "id": "E2",
+      "name": "Мария Волкова",
+      "start": {
+        "lat": 55.751,
+        "lon": 37.617
+      },
+      "shift_start": 540,
+      "shift_end": 1080,
+      "skills": [
+        "connection"
+      ],
+      "transport": "walk"
+    },
+    {
+      "id": "E3",
+      "name": "Илья Соколов",
+      "start": {
+        "lat": 55.751,
+        "lon": 37.617
+      },
+      "shift_start": 540,
+      "shift_end": 1080,
+      "skills": [
+        "local",
+        "connection"
+      ],
+      "transport": "bicycle"
+    },
+    {
+      "id": "E4",
+      "name": "Анна Белова",
+      "start": {
+        "lat": 55.751,
+        "lon": 37.617
+      },
+      "shift_start": 540,
+      "shift_end": 1080,
+      "skills": [
+        "emergency",
+        "local"
+      ],
+      "transport": "public"
+    },
+    {
+      "id": "E5",
+      "name": "Денис Орлов",
+      "start": {
+        "lat": 55.751,
+        "lon": 37.617
+      },
+      "shift_start": 540,
+      "shift_end": 1080,
+      "skills": [
+        "local"
+      ],
+      "transport": "car"
+    }
+  ],
+  "notes": [
+    "Вымышленный набор: 12 заявок, 5 инженеров, все навыки и типы транспорта. J11 заведомо не помещается в смену. Базовый алгоритм отдаёт J01 универсальному инженеру и теряет срочную J02.",
+    "Расстояния по прямой; постоянные скорости, без пробок и возврата на базу."
+  ]
+}

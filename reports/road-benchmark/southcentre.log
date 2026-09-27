@@ -1,0 +1,30 @@
+START southcentre-greedy-append
+DONE southcentre-greedy-append {'urgent_unassigned': 0, 'unassigned': 14, 'engineers': 10, 'distance_m': 265371} wall_ms 5 global_optimal False
+START southcentre-greedy-insertion
+DONE southcentre-greedy-insertion {'urgent_unassigned': 0, 'unassigned': 0, 'engineers': 7, 'distance_m': 233368} wall_ms 5 global_optimal False
+START southcentre-sat-fast-1
+DONE southcentre-sat-fast-1 {'urgent_unassigned': 0, 'unassigned': 0, 'engineers': 6, 'distance_m': 204462} wall_ms 33 global_optimal False
+START southcentre-sat-exact-1
+DONE southcentre-sat-exact-1 {'urgent_unassigned': 0, 'unassigned': 0, 'engineers': 5, 'distance_m': 253621} wall_ms 907 global_optimal False
+START southcentre-sat-exact-5
+DONE southcentre-sat-exact-5 {'urgent_unassigned': 0, 'unassigned': 0, 'engineers': 5, 'distance_m': 253621} wall_ms 4908 global_optimal False
+START southcentre-sat-exact-30
+DONE southcentre-sat-exact-30 {'urgent_unassigned': 0, 'unassigned': 0, 'engineers': 5, 'distance_m': 253621} wall_ms 29910 global_optimal False
+START southcentre-sat-exact-120
+DONE southcentre-sat-exact-120 {'urgent_unassigned': 0, 'unassigned': 0, 'engineers': 5, 'distance_m': 253621} wall_ms 119925 global_optimal False
+START southcentre-routing-gls-1
+DONE southcentre-routing-gls-1 {'urgent_unassigned': 0, 'unassigned': 0, 'engineers': 6, 'distance_m': 151735} wall_ms 1465 global_optimal False
+START southcentre-routing-gls-5
+DONE southcentre-routing-gls-5 {'urgent_unassigned': 0, 'unassigned': 0, 'engineers': 5, 'distance_m': 160253} wall_ms 5394 global_optimal False
+START southcentre-routing-gls-30
+DONE southcentre-routing-gls-30 {'urgent_unassigned': 0, 'unassigned': 0, 'engineers': 5, 'distance_m': 159368} wall_ms 30398 global_optimal False
+START southcentre-routing-gls-120
+DONE southcentre-routing-gls-120 {'urgent_unassigned': 0, 'unassigned': 0, 'engineers': 5, 'distance_m': 159221} wall_ms 120410 global_optimal False
+START southcentre-cp-sat-1
+DONE southcentre-cp-sat-1 {'urgent_unassigned': 0, 'unassigned': 0, 'engineers': 7, 'distance_m': 233368} wall_ms 1302 global_optimal False
+START southcentre-cp-sat-5
+DONE southcentre-cp-sat-5 {'urgent_unassigned': 0, 'unassigned': 0, 'engineers': 7, 'distance_m': 232146} wall_ms 5418 global_optimal False
+START southcentre-cp-sat-30
+DONE southcentre-cp-sat-30 {'urgent_unassigned': 0, 'unassigned': 0, 'engineers': 7, 'distance_m': 189940} wall_ms 30415 global_optimal False
+START southcentre-cp-sat-120
+DONE southcentre-cp-sat-120 {'urgent_unassigned': 0, 'unassigned': 0, 'engineers': 6, 'distance_m': 210830} wall_ms 120424 global_optimal False

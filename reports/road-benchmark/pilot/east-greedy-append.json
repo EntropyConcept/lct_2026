@@ -1,0 +1,88 @@
+{
+  "dataset": "east",
+  "jobs": 66,
+  "method": "greedy-append",
+  "budget_s": null,
+  "metrics": {
+    "urgent_unassigned": 4,
+    "unassigned": 27,
+    "engineers": 10,
+    "distance_m": 215644
+  },
+  "wall_ms": 7,
+  "elapsed_ms": 2,
+  "global_optimal": false,
+  "staff_proven": false,
+  "scope": "heuristic",
+  "status": "validated greedy plan",
+  "stages": [],
+  "validated": true,
+  "orders": [
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2,
+      6,
+      32
+    ],
+    [
+      4,
+      5,
+      62,
+      65
+    ],
+    [
+      37,
+      38
+    ],
+    [
+      7,
+      10,
+      31,
+      39,
+      42
+    ],
+    [
+      8,
+      9,
+      11,
+      12,
+      13,
+      35
+    ],
+    [
+      40,
+      41,
+      43
+    ],
+    [
+      14,
+      17,
+      53,
+      55
+    ],
+    [
+      15,
+      20,
+      34
+    ],
+    [
+      16,
+      18,
+      19,
+      23,
+      58,
+      59
+    ]
+  ],
+  "snapshot": "6fbd5eaa3404cb7e",
+  "scenario_sha256": "ef79023831030ac9f0dccc176125a9f04191732a0a2eb759c6c40cd62d72bf21",
+  "fingerprint": {
+    "binary_sha256": "51ec5e3cf74d818fb163d05c742082ef1eed8461311dc3885233d4b8813e5935",
+    "runner_sha256": "2cc502ba9c85ff5885ffe27f38932d9665017108cf487923f25aa723b269518a",
+    "comparators_sha256": "450870724ac14701a6a47e0d8d5977f02b520d614310987545081a026cf7c72d"
+  }
+}
