@@ -1,0 +1,133 @@
+name: Container images
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: images-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  images:
+    runs-on: ubuntu-24.04
+    # A cold MOTIS build compiles two architectures with bounded parallelism.
+    timeout-minutes: 180
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - image: dispatch-sat
+            dockerfile: Dockerfile
+          - image: motis
+            dockerfile: docker/motis.Dockerfile
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Validate Compose configuration
+        run: docker compose --profile routing --profile tools config --quiet
+
+      - uses: docker/setup-qemu-action@v3
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Image name and publication policy
+        id: image
+        env:
+          REPOSITORY: ${{ github.repository }}
+          IMAGE: ${{ matrix.image }}
+          # Fork and Dependabot PRs have read-only tokens; never use pull_request_target.
+          PUBLISH: ${{ (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main') || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository)) && github.actor != 'dependabot[bot]' }}
+        run: |
+          echo "name=ghcr.io/${REPOSITORY,,}/${IMAGE}" >> "$GITHUB_OUTPUT"
+          echo "publish=${PUBLISH}" >> "$GITHUB_OUTPUT"
+
+      - name: Rust tests
+        if: matrix.image == 'dispatch-sat'
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: Dockerfile
+          target: test
+          platforms: linux/amd64
+          cache-from: type=gha,scope=dispatch-sat-test
+          cache-to: type=gha,mode=max,scope=dispatch-sat-test
+
+      - name: Build native image for smoke tests
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: ${{ matrix.dockerfile }}
+          platforms: linux/amd64
+          load: true
+          tags: local/${{ matrix.image }}:test
+          cache-from: |
+            type=gha,scope=${{ matrix.image }}
+            type=gha,scope=dispatch-sat-test
+          cache-to: type=gha,mode=max,scope=${{ matrix.image }}
+
+      - name: Smoke test app image and Compose
+        if: matrix.image == 'dispatch-sat'
+        env:
+          IMAGE_PREFIX: local
+          IMAGE_TAG: test
+          DISPATCH_PORT: 18080
+          DISPATCH_PUBLIC_ORIGIN: http://localhost:18080
+        run: |
+          trap 'docker compose logs; docker compose down --volumes' EXIT
+          docker compose up --no-build --pull never --wait --wait-timeout 60 app
+          python3 scripts/container-smoke.py http://localhost:18080
+          docker compose exec -T app sh -c 'test "$(id -u)" != 0 && touch "$DISPATCH_ROUTING_CACHE/.smoke"'
+          docker compose up -d --no-build --pull never --force-recreate --wait --wait-timeout 60 app
+          docker compose exec -T app test -f /var/lib/dispatch/routing-cache/.smoke
+          docker compose run --rm --no-deps app solve demo 0.1 > /tmp/plan.json
+          python3 -c 'import json; p=json.load(open("/tmp/plan.json")); assert "plan" in p'
+
+      - name: Smoke test patched MOTIS executable
+        if: matrix.image == 'motis'
+        run: |
+          docker run --rm local/motis:test --help
+          docker run --rm local/motis:test import --help
+          docker run --rm local/motis:test server --help
+
+      - name: Image tags and labels
+        id: metadata
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ steps.image.outputs.name }}
+          flavor: latest=false
+          tags: |
+            type=raw,value=main,enable=${{ github.ref == 'refs/heads/main' }}
+            type=sha,format=long,prefix=sha-
+            type=ref,event=pr
+
+      - name: Log in to GitHub Container Registry
+        if: steps.image.outputs.publish == 'true'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish AMD64 and ARM64 images
+        if: steps.image.outputs.publish == 'true'
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: ${{ matrix.dockerfile }}
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.metadata.outputs.tags }}
+          labels: ${{ steps.metadata.outputs.labels }}
+          cache-from: type=gha,scope=${{ matrix.image }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.image }}

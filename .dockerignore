@@ -1,0 +1,18 @@
+# Allow only build inputs; never send local routing data, credentials or reports.
+**
+!Cargo.toml
+!Cargo.lock
+!src/
+!src/**
+!web/
+!web/**
+!dataset/
+!dataset/**
+!norms.xlsx
+!city-example.json
+!demo.json
+!docker/
+!docker/**
+!scripts/
+!scripts/motis-strict-streets.patch
+!Dockerfile

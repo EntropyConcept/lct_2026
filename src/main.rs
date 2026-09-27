@@ -7,6 +7,7 @@ mod norms;
 mod routing;
 mod routing_work;
 mod sat;
+mod server_config;
 mod street;
 #[cfg(test)]
 mod tests;
@@ -88,43 +89,38 @@ fn api(method: &str, url: &str, body: &str) -> Result<String> {
     }
 }
 fn serve(port: u16) -> Result<()> {
-    let server = Server::http(("127.0.0.1", port)).map_err(|e| e.to_string())?;
+    let bind = std::env::var("DISPATCH_BIND").unwrap_or_else(|_| "127.0.0.1".into());
+    let server = Server::http((bind.as_str(), port)).map_err(|e| e.to_string())?;
     let port = server
         .server_addr()
         .to_ip()
         .ok_or("Expected TCP listener")?
         .port();
-    eprintln!("Dispatcher: http://127.0.0.1:{port} (Ctrl-C to stop)");
+    let access = server_config::Access::new(
+        port,
+        std::env::var("DISPATCH_PUBLIC_ORIGIN").ok().as_deref(),
+    )?;
+    eprintln!("Dispatcher listening on {bind}:{port} (Ctrl-C to stop)");
     // ponytail: one solve at a time for the local demo; add a bounded worker pool for multiple dispatchers.
     for mut req in server.incoming_requests() {
         let method = req.method().as_str().to_owned();
         let url = req.url().to_owned();
-        let hosts = ["127.0.0.1", "localhost"].map(|h| {
-            if port == 80 {
-                h.to_owned()
-            } else {
-                format!("{h}:{port}")
-            }
-        });
-        let trusted_host = req
+        let host = req
             .headers()
             .iter()
             .find(|h| h.field.equiv("Host"))
-            .is_some_and(|h| hosts.iter().any(|host| h.value.as_str() == host));
+            .map(|h| h.value.as_str());
+        let trusted_host = access.allows(host, None);
         let trusted_origin = req
             .headers()
             .iter()
             .filter(|h| h.field.equiv("Origin"))
-            .all(|h| {
-                hosts
-                    .iter()
-                    .any(|host| h.value.as_str() == format!("http://{host}"))
-            });
+            .all(|h| access.allows(host, Some(h.value.as_str())));
         let (status, content_type, text) = if !trusted_host || !trusted_origin {
             (
                 403,
                 "application/json; charset=utf-8",
-                "{\"error\":\"Only same-origin localhost requests are allowed\"}".into(),
+                "{\"error\":\"Only configured same-origin requests are allowed\"}".into(),
             )
         } else if method == "GET" && url == "/" {
             (

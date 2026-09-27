@@ -1,0 +1,24 @@
+server:
+  host: 0.0.0.0
+  port: 8081
+  n_threads: 4
+osm: /inputs/moscow.osm.pbf
+timetable:
+  # Set this to your scenario's service date and use a GTFS feed covering it.
+  first_day: 2026-09-27
+  num_days: 30
+  with_shapes: true
+  railviz: false
+  adjust_footpaths: true
+  max_footpath_length: 15
+  default_transfer_time: 2
+  datasets:
+    moscow:
+      path: /inputs/moscow.gtfs.zip
+      extend_calendar: false
+street_routing: true
+osr_footpath: true
+geocoding: false
+reverse_geocoding: false
+logging:
+  log_level: info
