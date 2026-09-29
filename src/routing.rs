@@ -770,7 +770,7 @@ pub fn geocode(mut s: Scenario) -> Result<Scenario> {
                 .query("countrycodes", "ru")
                 .header(
                     "User-Agent",
-                    "Kontur-Dispatcher/0.1 (local operator-controlled prototype)",
+                    "BeeKeeper-Dispatcher/0.1 (local operator-controlled prototype)",
                 )
                 .call()
                 .map_err(|e| format!("Geocoder unavailable: {e}"))?;

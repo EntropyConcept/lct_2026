@@ -48,7 +48,7 @@ export const Header = () => {
             <img className={'h-7 w-7'} src="/beeline.png" alt=""></img>
             <span>билайн</span>
             <div className="w-[2px] mx-4 bg-gray-300 h-8"/>
-            <span>beekeeper</span>
+            <span>BeeKeeper</span>
         </div>
         <div className={'flex gap-4 items-center'}>
             <button aria-label="Настройки" title="Настройки" data-testid="settings-open" className="rounded-lg p-2 hover:bg-gray-100" onClick={event => { event.currentTarget.focus(); setCalendarOpen(false); setSettingsOpen(true); }}><SettingsIcon size={20}/></button>
