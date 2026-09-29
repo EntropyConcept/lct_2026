@@ -7,6 +7,7 @@ import { Button } from '../../shared/ui/button';
 
 export const Actions = () => {
   const busy = useStore(navigation.$busy);
+  const searchSeconds = useStore(navigation.$searchSeconds);
   const locked = useStore(navigation.$historyLocked);
   const scenario = useStore(navigation.$scenario).value;
   const error = useStore(navigation.$error);
@@ -17,7 +18,7 @@ export const Actions = () => {
   return <div className="flex flex-col gap-3">
     <div className="flex gap-2">
       <Button data-testid="solve" className="flex-1" disabled={busy || locked || !scenario.jobs.length || !scenario.engineers.length || needsRouting} onClick={() => navigation.startSearch()}>
-        <Route size={16}/>{status === 'routing' ? 'Подготовка дорог…' : busy ? 'Загрузка…' : 'Построить маршрут'}
+        <Route size={16}/>{status === 'routing' ? 'Подготовка дорог…' : searchSeconds !== null ? `Поиск: ${searchSeconds} с…` : busy ? 'Загрузка…' : 'Построить маршрут'}
       </Button>
       <Button variant="outline" disabled={busy} onClick={() => file.current?.click()} aria-label="Импорт данных"><ArrowDownToLine size={16}/></Button>
       <input ref={file} type="file" data-testid="import" accept=".json,.csv" hidden onChange={async event => {

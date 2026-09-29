@@ -36,7 +36,8 @@ export const SettingsDialog = ({ onClose }: { onClose: () => void }) => {
       <h3 className="font-medium">Параметры расчёта и дороги</h3>
       <fieldset disabled={busy || locked} className="flex flex-col gap-2 pt-3 text-sm">
         <label>Режим <select data-testid="solver-mode" className="control" value={solver} onChange={e => navigation.$solver.set(e.currentTarget.value as 'fast' | 'exact')}><option value="fast">Быстрый SAT</option><option value="exact">Полный SAT</option></select></label>
-        <label>Бюджет, секунд <input data-testid="solver-seconds" className="control" type="number" min="0.01" max="300" step="0.1" value={seconds} onInput={e => navigation.$seconds.set(Number(e.currentTarget.value))}/></label>
+        <label>Максимальный бюджет попытки, секунд <input data-testid="solver-seconds" className="control" type="number" min="0.01" max="300" step="0.1" value={seconds} onInput={e => navigation.$seconds.set(Number(e.currentTarget.value))}/></label>
+        <p className="text-gray-500">Автоматический поиск с бюджетами 1, 5, 10, 15 и 30 секунд до выбранного предела. При доказанном оптимуме поиск завершается раньше.</p>
         <label>Дата транспорта <input className="control" type="date" value={scenario.transit_date || ''} onInput={e => { navigation.setScenario({ ...scenario, transit_date: e.currentTarget.value || undefined }); setConfirmed(false); }}/></label>
         <Button variant="outline" onClick={() => { setConfirmed(false); navigation.geocode(); }}>Найти координаты адресов</Button>
         <label className="flex gap-2"><input type="checkbox" checked={confirmed} onChange={e => setConfirmed(e.currentTarget.checked)}/>Координаты заявок и баз проверены</label>

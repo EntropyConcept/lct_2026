@@ -17,12 +17,12 @@ const setup = handler => {
   return { calls, restore: () => { globalThis.fetch = original; } };
 };
 
-test('today and exact SAT / five seconds are defaults; dataset loading prepares for selected date', async () => {
+test('today and exact SAT / thirty seconds are defaults; dataset loading prepares for selected date', async () => {
   const nav = navigationFactory();
   assert.equal(nav.$date.get(), startOfDay(new Date()).toISOString());
   assert.equal(nav.$scenario.get().value.transit_date, today());
   assert.equal(nav.$solver.get(), 'exact');
-  assert.equal(nav.$seconds.get(), 5);
+  assert.equal(nav.$seconds.get(), 30);
   const mock = setup((path, body) => path === '/api/demo'
     ? { ...demo, transit_date: '2020-01-01', routing: { key: 'obsolete' } }
     : { ...body.scenario, routing: { key: 'prepared' } });
@@ -105,4 +105,122 @@ test('manual seeking resets fractional playback even within the same minute', ()
   nav.$playhead.set(720.5);
   nav.setDate(new Date(2026,9,3));
   assert.equal(nav.$playhead.get(), nav.$time.get());
+});
+
+const solution = (scenario, metrics = {}, optimal = false) => {
+  const plan = { routes: [], unassigned: [], metrics: { urgent_unassigned: 0, unassigned: 0, engineers: 2, distance_m: 1000, ...metrics } };
+  return { scenario, plan, baseline: plan, stats: { optimal }, changes: [], last_event_time: 0 };
+};
+
+test('search publishes intermediate solutions with increasing budgets and keeps the best objective', async () => {
+  const nav = navigationFactory();
+  let attempt = 0;
+  const candidates = [
+    { urgent_unassigned: 1, distance_m: 1 },
+    { unassigned: 2, distance_m: 3000 },
+    { unassigned: 3, distance_m: 1 }, // Worse despite a shorter route.
+    { unassigned: 2, engineers: 1, distance_m: 4000 },
+    { unassigned: 2, engineers: 1, distance_m: 4000 },
+  ];
+  const distances = [];
+  const unsubscribe = nav.$result.subscribe(result => { if (result.value) distances.push(result.value.plan.metrics.distance); });
+  const mock = setup((path, body) => {
+    assert.equal(path, '/api/plan');
+    assert.equal(nav.$busy.get(), true);
+    assert.equal(nav.$searchSeconds.get(), body.seconds);
+    return solution(body.scenario, candidates[attempt++]);
+  });
+  try {
+    const pending = nav.startSearch();
+    assert.equal(await nav.startSearch(), false, 'overlapping searches are blocked');
+    assert.equal(await pending, true);
+    assert.deepEqual(mock.calls.map(call => call.body.seconds), [1, 5, 10, 15, 30]);
+    assert.deepEqual(distances, [1, 3000, 4000, 4000]);
+    assert.equal(nav.$status.get().value, 'suboptimal');
+    assert.equal(nav.$busy.get(), false);
+    assert.equal(nav.$searchSeconds.get(), null);
+  } finally { unsubscribe(); mock.restore(); }
+});
+
+test('search stops immediately when optimality is proven', async () => {
+  const nav = navigationFactory();
+  const mock = setup((path, body) => solution(body.scenario, {}, body.seconds === 5));
+  try {
+    assert.equal(await nav.startSearch(), true);
+    assert.deepEqual(mock.calls.map(call => call.body.seconds), [1, 5]);
+    assert.equal(nav.$status.get().value, 'optimal');
+    assert.equal(nav.$searchSeconds.get(), null);
+  } finally { mock.restore(); }
+});
+
+test('search respects custom maximum budgets and rejects invalid budgets before requesting', async () => {
+  const nav = navigationFactory();
+  const mock = setup((path, body) => solution(body.scenario));
+  try {
+    for (const [limit, expected] of [[0.5, [0.5]], [5, [1, 5]], [12, [1, 5, 10, 12]], [40, [1, 5, 10, 15, 30, 40]]]) {
+      mock.calls.length = 0;
+      nav.$seconds.set(limit);
+      assert.equal(await nav.startSearch(), true);
+      assert.deepEqual(mock.calls.map(call => call.body.seconds), expected);
+    }
+    for (const limit of [0, NaN, Infinity, 301]) {
+      mock.calls.length = 0;
+      nav.$seconds.set(limit);
+      assert.equal(await nav.startSearch(), false);
+      assert.equal(mock.calls.length, 0);
+    }
+  } finally { mock.restore(); }
+});
+
+test('failed refinement retains the published result and releases the UI', async () => {
+  const nav = navigationFactory();
+  const mock = setup((path, body) => body.seconds === 1 ? solution(body.scenario) : { error: 'Solver unavailable' });
+  try {
+    assert.equal(await nav.startSearch(), false);
+    assert.deepEqual(mock.calls.map(call => call.body.seconds), [1, 5]);
+    assert.equal(nav.$result.get().value.plan.metrics.distance, 1000);
+    assert.equal(nav.exportResult().plan.metrics.distance_m, 1000);
+    assert.equal(nav.$status.get().value, 'suboptimal');
+    assert.equal(nav.$error.get(), 'Solver unavailable');
+    assert.equal(nav.$busy.get(), false);
+    assert.equal(nav.$searchSeconds.get(), null);
+  } finally { mock.restore(); }
+});
+
+test('failed first attempt restores the previous status without leaving search active', async () => {
+  const nav = navigationFactory();
+  const mock = setup(() => ({ error: 'Solver unavailable' }));
+  try {
+    assert.equal(await nav.startSearch(), false);
+    assert.equal(mock.calls.length, 1);
+    assert.equal(nav.$result.get().value, null);
+    assert.equal(nav.$status.get().value, 'initial');
+    assert.equal(nav.$busy.get(), false);
+    assert.equal(nav.$searchSeconds.get(), null);
+  } finally { mock.restore(); }
+});
+
+test('event refinement reuses original scenario and history without applying the event twice', async () => {
+  const nav = navigationFactory();
+  const mock = setup((path, body) => {
+    if (!body.event) return solution(body.scenario, {}, true);
+    const result = solution({ ...body.scenario, name: 'After event' });
+    return { ...result, changes: ['Cancelled'], last_event_time: body.event.time };
+  });
+  try {
+    await nav.startSearch();
+    const original = nav.exportResult();
+    assert.equal(await nav.cancelJob('J06'), true);
+    const attempts = mock.calls.slice(1).map(call => call.body);
+    assert.deepEqual(attempts.map(body => body.seconds), [1, 5, 10, 15, 30]);
+    for (const { seconds, ...body } of attempts) {
+      assert.deepEqual(body, {
+        scenario: original.scenario, mode: 'exact', previous: original.plan,
+        event: { kind: 'cancel', time: 720, job_id: 'J06' }, last_event_time: 0,
+      });
+    }
+    assert.equal(nav.$historyLocked.get(), true);
+    assert.equal(nav.exportResult().scenario.name, 'After event');
+    assert.deepEqual(nav.exportResult().changes, ['Cancelled']);
+  } finally { mock.restore(); }
 });

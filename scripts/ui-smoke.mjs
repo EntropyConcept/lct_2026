@@ -79,7 +79,9 @@ try {
   await evaluate(`document.querySelector('[data-testid=settings-open]').click()`);
   await waitFor(`document.querySelector('[data-testid=settings-dialog]')?.open`);
   assert.equal(await evaluate(`document.querySelector('[data-testid=solver-mode]').value`), 'exact');
-  assert.equal(await evaluate(`document.querySelector('[data-testid=solver-seconds]').value`), '5');
+  assert.equal(await evaluate(`document.querySelector('[data-testid=solver-seconds]').value`), '30');
+  // Keep this workflow smoke test to one attempt; model tests cover refinement.
+  await evaluate(`(()=>{const input=document.querySelector('[data-testid=solver-seconds]');input.value='1';input.dispatchEvent(new Event('input',{bubbles:true}))})()`);
   await screenshot('settings');
   await send('Input.dispatchKeyEvent', { type:'keyDown', key:'Escape', code:'Escape', windowsVirtualKeyCode:27 });
   await send('Input.dispatchKeyEvent', { type:'keyUp', key:'Escape', code:'Escape', windowsVirtualKeyCode:27 });
@@ -96,7 +98,7 @@ try {
   assert.equal(await evaluate(`document.querySelectorAll('[data-testid=engineers] tbody tr').length`),5);
   await evaluate(`document.querySelector('[data-testid=solve]').click()`);
   await waitFor(`window.__plans.length === 1 && !document.querySelector('[data-testid=solve]').disabled`);
-  assert.deepEqual(await evaluate(`({mode:window.__planRequests[0].mode, seconds:window.__planRequests[0].seconds})`), {mode:'exact', seconds:5});
+  assert.deepEqual(await evaluate(`({mode:window.__planRequests[0].mode, seconds:window.__planRequests[0].seconds})`), {mode:'exact', seconds:1});
   assert.ok(await evaluate(`Number(document.querySelector('[data-testid=map]').dataset.routeCount)`) > 0);
   await waitFor(`document.querySelectorAll('[data-testid=map] .dispatch-marker').length > 0 || document.querySelectorAll('[data-testid=map] svg polyline').length > 0`);
   await waitFor(`Number(document.querySelector('[data-testid=map]').dataset.renderedRoutes) > 0 || document.querySelectorAll('[data-testid=map] svg polyline').length > 0`);

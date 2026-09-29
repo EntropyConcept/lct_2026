@@ -23,7 +23,8 @@ export const navigationFactory = () => {
   const $error = atom('');
   const $datasets = atom<string[]>([]);
   const $norms = atom<Norm[]>([]);
-  const $seconds = atom(5);
+  const $seconds = atom(30);
+  const $searchSeconds = atom<number | null>(null);
   const $solver = atom<'fast' | 'exact'>('exact');
   const $time = atom(720);
   const $playhead = atom(720);
@@ -121,22 +122,46 @@ export const navigationFactory = () => {
     if (!event && $historyLocked.get()) throw Error('История зафиксирована. Откройте исходный набор для нового плана.');
     const previous = rawResults.get(day);
     if (event && !previous) throw Error('Сначала постройте план.');
+    const limit = $seconds.get();
+    if (!Number.isFinite(limit) || limit < 0.01 || limit > 300) throw Error('Бюджет должен быть от 0.01 до 300 секунд.');
     $statusMap.setKey(day, event ? 'rerouting' : 'search');
-    const result = await request<ApiResult>('/api/plan', {
-      scenario: toScenario($scenarioMap.get()[day], day), seconds: $seconds.get(), mode: $solver.get(),
+    // Every attempt uses the same input, so replanning never applies an event twice.
+    const body = {
+      scenario: toScenario($scenarioMap.get()[day], day), mode: $solver.get(),
       ...(event && previous ? { event, last_event_time: previous.last_event_time,
         previous: { ...previous.plan, routes: previous.plan.routes.map(route => ({ ...route,
           stops: route.stops.map(({ shape: _shape, ...stop }) => stop) })) } } : {}),
-    });
-    rawResults.set(day, result);
-    $scenarioMap.setKey(day, fromScenario(result.scenario, day));
-    $resultMap.setKey(day, fromResult(result, day));
-    $statusMap.setKey(day, result.stats.optimal ? 'optimal' : 'suboptimal');
+    };
+    const budgets = [...[1, 5, 10, 15, 30].filter(seconds => seconds < limit), limit];
+    const criteria = ['urgent_unassigned', 'unassigned', 'engineers', 'distance_m'] as const;
+    let best: ApiResult | undefined;
+    try {
+      for (const seconds of budgets) {
+        $searchSeconds.set(seconds);
+        const result = await request<ApiResult>('/api/plan', { ...body, seconds });
+        // Longer independent searches can return worse plans. Keep the best
+        // lexicographic objective, matching the backend's priority order.
+        const bestMetrics = best?.plan.metrics;
+        const difference = bestMetrics
+          ? criteria.map(key => result.plan.metrics[key] - bestMetrics[key]).find(value => value !== 0) ?? 0
+          : -1;
+        if (difference <= 0) {
+          best = result;
+          rawResults.set(day, result);
+          $scenarioMap.setKey(day, fromScenario(result.scenario, day));
+          $resultMap.setKey(day, fromResult(result, day));
+        }
+        if (best?.stats.optimal) break;
+      }
+    } finally {
+      $searchSeconds.set(null);
+      if (best) $statusMap.setKey(day, best.stats.optimal ? 'optimal' : 'suboptimal');
+    }
   });
   let initialized = false;
   return {
     $date, $scenario, $result, $status, $viewMode, $busy, $error, $datasets, $norms,
-    $seconds, $solver, $time, $playhead, $baseline, $historyLocked, $needsRouting,
+    $seconds, $searchSeconds, $solver, $time, $playhead, $baseline, $historyLocked, $needsRouting,
     seekTime: (minute: number) => { $time.set(minute); $playhead.set(minute); },
     $dates: computed($scenarioMap, values => Object.keys(values)),
     setScenario, load, importFile,
