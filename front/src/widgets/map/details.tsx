@@ -10,6 +10,7 @@ import { JobEditor } from '../../features/editor/job';
 import { Button } from '../../shared/ui/button';
 import { skillNames, transportNames } from '../settings/engineers';
 import { formatTime } from '../settings/jobs/utils';
+import { AssignmentReasons } from './assignment-reasons';
 
 export const MapDetails = () => {
   const placement = useStore(editorModel.$placement);
@@ -56,7 +57,7 @@ export const MapDetails = () => {
           <p className="font-medium">{job.address}</p>
           <dl className="metrics-grid"><dt>Окно</dt><dd>{formatTime(job.windowStart, job.windowEnd)}</dd><dt>Работа</dt><dd>{job.duration} мин</dd><dt>Навык</dt><dd>{skillNames[job.skill]}</dd><dt>Транспорт</dt><dd>{job.transport ? transportNames[job.transport] : 'Любой'}</dd><dt>Статус</dt><dd>{!plan ? 'Ожидает расчёта' : stop ? 'Назначена' : 'Не назначена'}</dd></dl>
           {assigned && <button className="text-left rounded-lg bg-amber-50 p-3" onClick={() => editorModel.startEditEngineer(assigned.id, 'map')}><span className="text-xs text-gray-500 block">Исполнитель</span><b>{assigned.name}</b>{stop && <span className="block mt-1">Обслуживание {formatTime(stop.start, stop.end)}</span>}</button>}
-          {stop && <p className="text-gray-600">{String(stop.explanation)}</p>}
+          {stop && assigned && <AssignmentReasons job={job} engineer={assigned} stop={stop} baseline={baseline}/>}
           {reason && <p className="rounded-lg bg-orange-50 p-3">{reason}</p>}
           {job.geocodeMatch && <p className="text-xs text-gray-500">{job.geocodeMatch}</p>}
           {live && result && !baseline && <Button variant="outline" disabled={busy || !!stop && stop.departure < atMinute(time, day)} onClick={async () => { if (await navigation.cancelJob(id)) editorModel.close(); }}>Отменить заявку в выбранное время</Button>}

@@ -33,7 +33,7 @@ export const Panel = () => {
     <h3 className="font-medium mt-5 mb-3">Маршрут и расписание</h3>
     <div className="flex min-w-max pb-4 overflow-x-auto">
       <StopCard icon={<Car size={18}/>} title="Старт" subtitle="База" time={clock(minutes(route?.stops[0]?.departure || engineer.shiftStart))}/>
-      {route?.stops.map((stop, i) => <StopCard key={stop.jobId} icon={i + 1} title={stop.jobId} subtitle={scenario.jobs.find(job => job.id === stop.jobId)?.address || ''} time={formatTime(stop.start, stop.end)} explanation={String(stop.explanation)} onClick={() => editorModel.startEditJob(stop.jobId)}/>)}
+      {route?.stops.map((stop, i) => <StopCard key={stop.jobId} icon={i + 1} title={stop.jobId} subtitle={scenario.jobs.find(job => job.id === stop.jobId)?.address || ''} time={formatTime(stop.start, stop.end)} onClick={() => editorModel.startEditJob(stop.jobId, 'map')}/>)}
       <StopCard icon={<Flag size={18}/>} title="Финиш" subtitle={route?.stops.length ? 'Последняя заявка' : 'База'} time={clock(minutes(route?.stops.at(-1)?.end || engineer.shiftStart))}/>
     </div>
     <div className="flex flex-wrap gap-8 border rounded-xl p-3 mt-3 text-sm">
@@ -47,8 +47,8 @@ function duration(value: number) { return `${Math.floor(value / 60)} ч ${Math.r
 function Reason({ icon, title, text }: { icon: preact.ComponentChildren; title: string; text: string }) {
   return <div className="flex gap-3 border rounded-xl p-3 max-w-72"><span className="rounded-full bg-yellow-300 size-10 shrink-0 grid place-items-center">{icon}</span><div><b>{title}</b><p className="text-gray-500 mt-1">{text}</p></div></div>;
 }
-function StopCard({ icon, title, subtitle, time, explanation, onClick }: { icon: preact.ComponentChildren; title: string; subtitle: string; time: string; explanation?: string; onClick?: () => void }) {
-  return <button className="relative flex-1 min-w-36 max-w-60 text-center px-3" onClick={onClick} title={explanation}>
+function StopCard({ icon, title, subtitle, time, onClick }: { icon: preact.ComponentChildren; title: string; subtitle: string; time: string; onClick?: () => void }) {
+  return <button className="relative flex-1 min-w-36 max-w-60 text-center px-3" onClick={onClick} title={onClick ? 'Открыть заявку и причины назначения' : undefined}>
     <div className="absolute top-4 left-0 right-0 h-[2px] bg-yellow-300"/>
     <span className="relative mx-auto rounded-full bg-yellow-300 size-9 grid place-items-center font-bold mb-2">{icon}</span>
     <b className="text-sm">{title}</b><div className="text-xs text-gray-500 max-w-48 whitespace-normal">{subtitle}</div><div className="text-sm mt-1">{time}</div>
