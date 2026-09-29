@@ -2,7 +2,6 @@
 use crate::{
     model::{Point, Result, Transport},
     routing::{agent, decode_shape, point_key, response, Leg},
-    routing_work::run_bounded,
 };
 use serde_json::Value;
 use std::time::{Duration, Instant};
@@ -175,54 +174,44 @@ fn check_deadline(deadline: Instant) -> Result<()> {
     Ok(())
 }
 
-pub(crate) fn matrix(
+pub(crate) fn leg(
     base: &str,
     profile: Transport,
-    sources: &[Point],
-    targets: &[Point],
+    from: Point,
+    to: Point,
     deadline: Instant,
-) -> Result<Vec<Vec<Option<Leg>>>> {
-    let requested_mode = mode(profile)?;
-    if sources.is_empty() || targets.is_empty() || sources.len() > 10 || targets.len() > 10 {
-        return Err("Road matrix requests require 1–10 sources and targets".into());
-    }
+) -> Result<Option<Leg>> {
     check_deadline(deadline)?;
-    let base = base.trim_end_matches('/');
-    let mut rows = vec![vec![None; targets.len()]; sources.len()];
-    run_bounded(
-        sources.len() * targets.len(),
-        4,
-        |index| {
-            check_deadline(deadline)?;
-            let from = sources[index / targets.len()];
-            let to = targets[index % targets.len()];
-            if point_key(from) == point_key(to) {
-                return Ok(Some(Leg {
-                    minutes: 0,
-                    metres: 0,
-                    shape: String::new(),
-                }));
-            }
-            let r = request(agent(), format!("{base}/api/v6/plan"), deadline)?
-                .query("fromPlace", format!("{},{}", from.lat, from.lon))
-                .query("toPlace", format!("{},{}", to.lat, to.lon))
-                .query("transitModes", "")
-                .query("directModes", requested_mode)
-                .query("detailedLegs", "true")
-                .query("maxDirectTime", "21600")
-                .query("maxMatchingDistance", "250")
-                .call()
-                .map_err(|e| format!("MOTIS {requested_mode} street route {},{} -> {},{} unavailable: {e}. No fallback.", from.lat, from.lon, to.lat, to.lon))?;
-            parse_direct(&response(r)?, requested_mode)
-        },
-        |index, leg| {
-            // Returning an error here cancels queued work before dispatching more.
-            check_deadline(deadline)?;
-            rows[index / targets.len()][index % targets.len()] = leg;
-            Ok(())
-        },
-    )?;
-    Ok(rows)
+    if point_key(from) == point_key(to) {
+        return Ok(Some(Leg {
+            minutes: 0,
+            metres: 0,
+            shape: String::new(),
+        }));
+    }
+    let requested_mode = mode(profile)?;
+    let r = request(
+        agent(),
+        format!("{}/api/v6/plan", base.trim_end_matches('/')),
+        deadline,
+    )?
+    .query("fromPlace", format!("{},{}", from.lat, from.lon))
+    .query("toPlace", format!("{},{}", to.lat, to.lon))
+    .query("transitModes", "")
+    .query("directModes", requested_mode)
+    .query("detailedLegs", "true")
+    .query("maxDirectTime", "21600")
+    .query("maxMatchingDistance", "250")
+    .call()
+    .map_err(|e| {
+        format!(
+            "MOTIS {requested_mode} street route {},{} -> {},{} unavailable: {e}. No fallback.",
+            from.lat, from.lon, to.lat, to.lon
+        )
+    })?;
+    let leg = parse_direct(&response(r)?, requested_mode)?;
+    check_deadline(deadline)?;
+    Ok(leg)
 }
 
 #[cfg(test)]

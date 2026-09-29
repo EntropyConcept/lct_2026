@@ -406,6 +406,7 @@ fn street_fixture() -> Scenario {
             transport: Transport::Car,
             legs,
             lower: vec![],
+            coverage: None,
         }],
     }));
     s

@@ -14,6 +14,7 @@ mod tests;
 mod transit;
 mod transit_scope;
 mod transit_snapshot;
+mod web;
 
 use model::Result;
 use std::{
@@ -122,24 +123,17 @@ fn serve(port: u16) -> Result<()> {
                 "application/json; charset=utf-8",
                 "{\"error\":\"Only configured same-origin requests are allowed\"}".into(),
             )
-        } else if method == "GET" && url == "/" {
-            (
-                200,
-                "text/html; charset=utf-8",
-                include_str!("../web/index.html").to_owned(),
-            )
-        } else if method == "GET" && url == "/vendor/leaflet.js" {
-            (
-                200,
-                "text/javascript; charset=utf-8",
-                include_str!("../web/vendor/leaflet.js").to_owned(),
-            )
-        } else if method == "GET" && url == "/vendor/leaflet.css" {
-            (
-                200,
-                "text/css; charset=utf-8",
-                include_str!("../web/vendor/leaflet.css").to_owned(),
-            )
+        } else if (method == "GET" || method == "HEAD") && !url.starts_with("/api/") {
+            let (status, content_type, bytes) = web::asset(&url);
+            let response = Response::from_data(bytes)
+                .with_status_code(StatusCode(status))
+                .with_header(Header::from_bytes("Content-Type", content_type).unwrap())
+                .with_header(Header::from_bytes("Cache-Control", "no-cache").unwrap())
+                .with_header(Header::from_bytes("X-Content-Type-Options", "nosniff").unwrap());
+            if let Err(e) = req.respond(response) {
+                eprintln!("HTTP response: {e}");
+            }
+            continue;
         } else {
             let mut body = String::new();
             let read = req.as_reader().take(2_000_001).read_to_string(&mut body);

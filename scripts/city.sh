@@ -22,6 +22,10 @@ case "${1:-app}" in
             echo 'Build the dispatcher first: cargo build --release --locked' >&2
             exit 1
         fi
+        if [ ! -f "$ROOT/front/dist/index.html" ]; then
+            echo 'Build the frontend first: npm --prefix front ci && npm --prefix front run build' >&2
+            exit 1
+        fi
         cd "$ROOT"
         export DISPATCH_MOTIS_URL="${DISPATCH_MOTIS_URL:-http://127.0.0.1:8081}"
         if [ -z "${DISPATCH_ROAD_BACKEND:-}" ]; then

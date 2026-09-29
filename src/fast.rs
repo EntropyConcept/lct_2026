@@ -494,6 +494,7 @@ mod tests {
                 transport: Transport::Car,
                 legs,
                 lower: vec![],
+                coverage: None,
             }],
             transit: None,
         }));

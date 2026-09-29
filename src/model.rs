@@ -244,6 +244,22 @@ impl Travel {
                 }
             }
         }
+        for profile in &snapshot.profiles {
+            if profile.transport == Transport::Public {
+                continue;
+            }
+            if let Some(covered) = &profile.coverage {
+                let required =
+                    crate::transit_scope::required_for(s, &snapshot.points, profile.transport)?;
+                for (from, row) in required.iter().enumerate() {
+                    for (to, needed) in row.iter().enumerate() {
+                        if needed.is_some() && !covered[from][to] {
+                            return Err("Road coverage is incomplete after input changes: prepare city routing again".into());
+                        }
+                    }
+                }
+            }
+        }
         let job_points: Vec<_> = s
             .jobs
             .iter()

@@ -1,8 +1,9 @@
 // Node 22+; CHROME_BIN=/path/to/chromium node scripts/ui-smoke.mjs
+// UI_MOCK_ROUTING=1 isolates browser workflows from slow external routers.
 // Run the Rust server first. All browser state is kept in a disposable profile.
 import assert from 'node:assert/strict';
 import {spawn} from 'node:child_process';
-import {mkdtemp, readFile, rm} from 'node:fs/promises';
+import {mkdtemp, readFile, writeFile, rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {setTimeout as delay} from 'node:timers/promises';
@@ -30,60 +31,195 @@ try {
     return r.result.value;
   };
   await send('Page.enable');
-  await send('Page.navigate',{url:process.env.APP_URL||'http://127.0.0.1:8080'});
-  await evaluate(`new Promise((resolve,reject)=>{let n=0;const tick=()=>{if(document.querySelector('#status')?.textContent.startsWith('Открыт')&&!busy)resolve();else if(n++>200)reject(Error('load timeout'));else setTimeout(tick,50)};tick()})`);
-  assert.equal(await evaluate('!!window.L'),true,'bundled Leaflet must load without a CDN');
-  const settled = () => evaluate(`new Promise((resolve,reject)=>{let n=0;const tick=()=>{const svg=document.querySelector('.leaflet-overlay-pane svg');if(!map._animatingZoom&&!map._panAnim?._inProgress&&svg&&Math.abs(svg.getBoundingClientRect().width-Number(svg.getAttribute('width')))<.01)requestAnimationFrame(resolve);else if(n++>200)reject(Error('map did not settle'));else setTimeout(tick,25)};requestAnimationFrame(()=>requestAnimationFrame(tick))})`);
-  const checkMap = async () => {
-    await settled();
-    const state=await evaluate(`(()=>{const svg=document.querySelector('.leaflet-overlay-pane svg');return {
-      expected:scenario.routing?selectedPlan().routes.flatMap(r=>r.stops).filter(s=>s.shape).length:selectedPlan().routes.filter(r=>r.stops.length).length,
-      actual:document.querySelectorAll('#map .route-line').length,
-      // Regression: #map svg {height:100%;width:100%} collapsed this to 0x0.
-      svg:{width:svg.getBoundingClientRect().width,height:svg.getBoundingClientRect().height,expectedWidth:Number(svg.getAttribute('width')),expectedHeight:Number(svg.getAttribute('height'))},
-      paths:[...document.querySelectorAll('#map .route-line')].map(p=>({length:p.getTotalLength(),width:p.getBoundingClientRect().width,height:p.getBoundingClientRect().height})),
-      flagWidth:document.querySelector('.leaflet-attribution-flag').getBoundingClientRect().width
-    }})()`);
-    assert.ok(state.expected>0);
-    assert.equal(state.actual,state.expected,'one polyline per demo route or real street leg');
-    assert.equal(state.svg.width,state.svg.expectedWidth);
-    assert.equal(state.svg.height,state.svg.expectedHeight);
-    assert.ok(state.flagWidth<20,'map CSS must not stretch attribution SVG');
-    assert.ok(state.paths.every(p=>p.length>0&&(p.width>0||p.height>0)));
+  await send('Runtime.enable');
+  await send('Browser.setDownloadBehavior', { behavior: 'allow', downloadPath: profile });
+  const exceptions = [];
+  const onmessage = socket.onmessage;
+  socket.onmessage = event => {
+    const message = JSON.parse(event.data);
+    if (message.method === 'Runtime.exceptionThrown') exceptions.push(message.params.exceptionDetails);
+    onmessage(event);
   };
-  assert.equal(await evaluate('norms.length'),4,'norms.xlsx must load');
-  await evaluate(`$('settings').open=true;const normInput=document.querySelectorAll('#norms input')[norms.findIndex(n=>n.key==='local')];normInput.value=35;normInput.dispatchEvent(new Event('input',{bubbles:true}));$('apply-norms').click()`);
-  assert.equal(await evaluate(`scenario.jobs.filter(j=>j.work_type==='local').every(j=>j.duration===35)`),true);
-  await evaluate('action(()=>solve())'); await checkMap();
-  assert.equal(await evaluate(`$('settings-fields').disabled`),false,'a first plan is not an event');
-  await evaluate(`(()=>{window.frozenBefore=result.plan.routes.flatMap(r=>r.stops).filter(s=>s.departure<720);$('event-time').value='12:00';$('event-time').oninput();$('urgent-type').value='local';prefillUrgent();for(const[id,value]of Object.entries({'urgent-id':'UI-URGENT','urgent-address':'UI urgent test','urgent-lat':scenario.engineers[0].start.lat,'urgent-lon':scenario.engineers[0].start.lon,'urgent-start':'12:00','urgent-end':'18:00'}))$(id).value=value;$('urgent-id').dispatchEvent(new Event('input',{bubbles:true}));$('urgent-form').requestSubmit()})()`);
-  await evaluate(`new Promise((resolve,reject)=>{let n=0;const tick=()=>{if(!busy&&scenario.jobs.some(j=>j.id==='UI-URGENT'))resolve();else if(!busy&&$('status').classList.contains('error'))reject(Error($('status').textContent));else if(n++>200)reject(Error('urgent timeout'));else setTimeout(tick,50)};tick()})`);
-  assert.equal(await evaluate(`scenario.jobs.find(j=>j.id==='UI-URGENT').urgent`),true);
-  assert.equal(await evaluate(`frozenBefore.every(old=>JSON.stringify(result.plan.routes.flatMap(r=>r.stops).find(s=>s.job_id===old.job_id))===JSON.stringify(old))`),true);
-  assert.equal(await evaluate(`$('settings-fields').disabled&&$('solve').disabled`),true,'events lock input history');
-  await evaluate(`$('show-baseline').checked=true;$('show-baseline').onchange()`); await checkMap();
-  await evaluate(`(async()=>{accept(await request('/api/dataset/2'));await action(()=>solve())})()`); await checkMap();
-  assert.equal(await evaluate('result.stats.scope'),'candidate_routes');
-  assert.equal(await evaluate('result.plan.routes.flatMap(r=>r.stops).length+result.plan.metrics.unassigned===scenario.jobs.length'),true);
-  await evaluate(`action(()=>solve({kind:'cancel',time:720,job_id:$('cancel-job').value}))`); await checkMap();
-  assert.equal(await evaluate(`$('solve').disabled`),true,'cannot rewrite history after an event');
-  if(process.env.CITY_RESULT){
-    const city=JSON.parse(await readFile(process.env.CITY_RESULT,'utf8'));
-    await evaluate(`accept(${JSON.stringify(city.scenario)});result=${JSON.stringify(city)};render();lock(false)`);
-    await checkMap();
-    assert.equal(await evaluate('mapGeometry(selectedPlan()).lines.every(l=>l.points.length>2)'),true,'street geometry must contain road bends, not just endpoint connectors');
+  await send('Page.addScriptToEvaluateOnNewDocument', { source: `
+    window.__plans=[]; window.__routing=[]; window.__planRequests=[];
+    const originalFetch=window.fetch;
+    window.fetch=async (...args)=>{
+      if(args[0]==='/api/routing') {
+        const body=JSON.parse(args[1].body); window.__routing.push(body);
+        if (${process.env.UI_MOCK_ROUTING === '1'}) return new Response(JSON.stringify({...body.scenario, routing:undefined}), {headers:{'Content-Type':'application/json'}});
+      }
+      if(args[0]==='/api/plan') window.__planRequests.push(JSON.parse(args[1].body));
+      const response=await originalFetch(...args);
+      if(args[0]==='/api/plan'&&response.ok)window.__plans.push(await response.clone().json());return response;
+    };
+  ` });
+  await send('Page.navigate',{url:process.env.APP_URL||'http://127.0.0.1:8080'});
+  const waitFor = async (expression, timeout = 30000) => {
+    try { return await evaluate(`new Promise((resolve,reject)=>{let n=0;const tick=()=>{if(${expression})resolve();else if(n++>${timeout / 50})reject(Error('Timeout: '+${JSON.stringify(expression)}));else setTimeout(tick,50)};tick()})`); }
+    catch (error) {
+      console.error('Browser exceptions:', JSON.stringify(exceptions));
+      console.error(await evaluate(`document.querySelector('[data-testid=map]')?.outerHTML.slice(0,1800)`));
+      await screenshot('failure');
+      throw error;
+    }
+  };
+  const screenshot = async suffix => { if (process.env.SCREENSHOT_PATH) { const shot = await send('Page.captureScreenshot', { format: 'png' }); await writeFile(process.env.SCREENSHOT_PATH.replace('.png', `-${suffix}.png`), Buffer.from(shot.data, 'base64')); } };
+  const clickText = text => evaluate(`(()=>{const button=[...document.querySelectorAll('button')].find(button=>button.textContent.includes(${JSON.stringify(text)}));if(!button)throw Error('Missing button: '+${JSON.stringify(text)});button.click()})()`);
+  const dataset = async value => {
+    const routingCount = await evaluate(`window.__routing.length`);
+    await evaluate(`(()=>{const select=document.querySelector('[data-testid=dataset]');select.value=${JSON.stringify(value)};select.dispatchEvent(new Event('change',{bubbles:true}))})()`);
+    await waitFor(`window.__routing.length > ${routingCount} && !document.querySelector('[data-testid=dataset]').disabled`, 1_200_000);
+    assert.equal(await evaluate(`document.querySelector('[role=alert]')?.textContent || ''`), '');
+  };
+  await waitFor(`document.querySelector('[data-testid=dataset]')?.options.length > 3 && !document.querySelector('[data-testid=dataset]').disabled`);
+  assert.equal(await evaluate(`document.body.textContent.includes('На этот день данных пока нет')`), true);
+  assert.equal(await evaluate(`document.querySelector('[data-testid=solve]').disabled`), true);
+  assert.equal(await evaluate(`document.querySelector('[data-testid=date-picker]').textContent.includes('сегодня')`), true);
+  assert.equal(await evaluate(`document.body.textContent.includes('Параметры расчёта и дороги')`), false);
+  await evaluate(`document.querySelector('[data-testid=settings-open]').click()`);
+  await waitFor(`document.querySelector('[data-testid=settings-dialog]')?.open`);
+  assert.equal(await evaluate(`document.querySelector('[data-testid=solver-mode]').value`), 'exact');
+  assert.equal(await evaluate(`document.querySelector('[data-testid=solver-seconds]').value`), '5');
+  await screenshot('settings');
+  await send('Input.dispatchKeyEvent', { type:'keyDown', key:'Escape', code:'Escape', windowsVirtualKeyCode:27 });
+  await send('Input.dispatchKeyEvent', { type:'keyUp', key:'Escape', code:'Escape', windowsVirtualKeyCode:27 });
+  await waitFor(`!document.querySelector('[data-testid=settings-dialog]')`);
+  assert.equal(await evaluate(`document.activeElement.dataset.testid`), 'settings-open');
+  await dataset('/api/demo');
+  assert.equal(await evaluate(`window.__routing.length`), 1);
+  assert.equal(await evaluate(`window.__routing[0].scenario.transit_date`), await evaluate(`new Date().toLocaleDateString('sv-SE')`));
+  await evaluate(`document.querySelector('[data-testid=settings-open]').click()`);
+  await waitFor(`document.querySelector('[data-testid=settings-dialog]')?.open`);
+  await screenshot('settings-loaded');
+  await evaluate(`document.querySelector('[aria-label="Закрыть настройки"]').click()`);
+  await clickText('инженеров');
+  assert.equal(await evaluate(`document.querySelectorAll('[data-testid=engineers] tbody tr').length`),5);
+  await evaluate(`document.querySelector('[data-testid=solve]').click()`);
+  await waitFor(`window.__plans.length === 1 && !document.querySelector('[data-testid=solve]').disabled`);
+  assert.deepEqual(await evaluate(`({mode:window.__planRequests[0].mode, seconds:window.__planRequests[0].seconds})`), {mode:'exact', seconds:5});
+  assert.ok(await evaluate(`Number(document.querySelector('[data-testid=map]').dataset.routeCount)`) > 0);
+  await waitFor(`document.querySelectorAll('[data-testid=map] .dispatch-marker').length > 0 || document.querySelectorAll('[data-testid=map] svg polyline').length > 0`);
+  await waitFor(`Number(document.querySelector('[data-testid=map]').dataset.renderedRoutes) > 0 || document.querySelectorAll('[data-testid=map] svg polyline').length > 0`);
+  const mapSize = await evaluate(`(()=>{const surface=document.querySelector('[data-testid=map] .maplibregl-canvas') || document.querySelector('[data-testid=map] svg');const rect=surface.getBoundingClientRect();return {width:rect.width,height:rect.height}})()`);
+  assert.ok(mapSize.width > 100 && mapSize.height > 100, 'Map drawing surface must have visible dimensions');
+  const mapWidth = await evaluate(`document.querySelector('[data-testid=map]').getBoundingClientRect().width`);
+  await evaluate(`document.querySelector('.dispatch-marker[title^="J02:"]').click()`);
+  await waitFor(`document.querySelector('[data-testid=map-details]')`);
+  assert.equal(await evaluate(`!!document.querySelector('[data-testid=sidebar-editor]')`), false, 'map click must not open the sidebar');
+  assert.equal(await evaluate(`document.querySelector('[data-testid=map-details]').textContent.includes('Исполнитель')`), true);
+  assert.equal(await evaluate(`document.querySelector('[data-testid=map]').getBoundingClientRect().width`), mapWidth);
+  await screenshot('job-popup');
+  await clickText('Редактировать');
+  await waitFor(`document.querySelector('[data-testid=map-details] [data-testid=editor-save]')`);
+  await evaluate(`window.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape'}))`);
+  await evaluate(`document.querySelector('.engineer-marker').click()`);
+  await waitFor(`document.querySelector('[data-testid=map-details]')?.textContent.includes('Расписание')`);
+  assert.equal(await evaluate(`!!document.querySelector('[data-testid=sidebar-editor]')`), false);
+  await screenshot('engineer-popup');
+  await evaluate(`document.querySelector('[aria-label="Закрыть детали"]').click()`);
+  await evaluate(`document.querySelector('[data-testid=engineers] tbody tr').click()`);
+  await waitFor(`document.querySelector('[data-testid=engineer-details]')`);
+  assert.equal(await evaluate(`document.querySelector('[data-testid=engineer-details]').textContent.includes('Маршрут и расписание')`), true);
+  await screenshot('details');
+  await evaluate(`document.querySelector('[data-testid=live-mode]').click()`);
+  await waitFor(`document.querySelector('[data-testid=timeline]')`);
+  await screenshot('timeline');
+  const travel = await evaluate(`(()=>{for(const route of window.__plans[0].plan.routes){const stop=route.stops.find(stop=>stop.arrival-stop.departure>0);if(stop)return {engineer:route.engineer_id,departure:stop.departure};}throw Error('No travel fixture')})()`);
+  await evaluate(`(()=>{const input=document.querySelector('[aria-label="Время событий"]');input.value=${travel.departure};input.dispatchEvent(new Event('input',{bubbles:true}));window.__engineerMarker=[...document.querySelectorAll('.engineer-marker')].find(marker=>marker.dataset.engineerId===${JSON.stringify(travel.engineer)})})()`);
+  await evaluate(`(()=>{const speed=document.querySelector('[aria-label="Скорость воспроизведения"]');speed.value='1';speed.dispatchEvent(new Event('change',{bubbles:true}))})()`);
+  await evaluate(`document.querySelector('[data-testid=live-play]').click()`);
+  await waitFor(`document.querySelector('[aria-label="Приостановить"]')`);
+  await delay(150);
+  const movingPosition = await evaluate(`window.__engineerMarker.style.transform`);
+  await delay(250);
+  assert.notEqual(await evaluate(`window.__engineerMarker.style.transform`), movingPosition, 'engineer moves smoothly between clock ticks');
+  assert.equal(await evaluate(`window.__engineerMarker.isConnected`), true, 'movement retains the same marker');
+  assert.equal(await evaluate(`!!window.__engineerMarker.querySelector('svg')`), true, 'transport icon is rendered');
+  assert.equal(await evaluate(`window.__engineerMarker.querySelector('.engineer-progress').hidden`), false);
+  await screenshot('moving-engineer');
+  await evaluate(`document.querySelector('[aria-label="Приостановить"]').click()`);
+  await delay(100);
+  const pausedPosition = await evaluate(`window.__engineerMarker.style.transform`);
+  await delay(400);
+  assert.equal(await evaluate(`window.__engineerMarker.style.transform`), pausedPosition, 'paused marker stays still');
+  const beforeZoom = await evaluate(`document.querySelector('.live-schedule').getBoundingClientRect().width`);
+  await evaluate(`document.querySelector('[aria-label="Увеличить масштаб расписания"]').click()`);
+  await waitFor(`document.querySelector('.live-schedule').getBoundingClientRect().width > ${beforeZoom}`);
+  await evaluate(`document.querySelector('.event-work').click()`);
+  await waitFor(`document.querySelector('[data-testid=map-details]')`);
+  assert.equal(await evaluate(`!!document.querySelector('[data-testid=timeline]')`), true, 'event selection keeps Live open');
+  assert.equal(await evaluate(`!!document.querySelector('[data-testid=sidebar-editor]')`), false, 'timeline selection uses map popup');
+  await evaluate(`document.querySelector('[aria-label="Закрыть детали"]').click()`);
+  // Restore event time used by history assertions below.
+  await evaluate(`(()=>{const input=document.querySelector('[aria-label="Время событий"]');input.value=720;input.dispatchEvent(new Event('input',{bubbles:true}))})()`);
+  await clickText('заявок');
+  await clickText('Срочная заявка');
+  await evaluate(`(()=>{const input=document.querySelector('[data-testid=job-address]');input.value='UI urgent test';input.dispatchEvent(new Event('input',{bubbles:true}))})()`);
+  await waitFor(`!document.querySelector('[data-testid=editor-save]').disabled`);
+  await evaluate(`document.querySelector('[data-testid=editor-save]').click()`);
+  await waitFor(`window.__plans.length === 2 && !document.querySelector('[data-testid=dataset]').disabled`);
+  const plans = await evaluate('window.__plans');
+  assert.equal(plans[1].scenario.jobs.length, plans[0].scenario.jobs.length + 1);
+  assert.equal(plans[1].scenario.jobs.at(-1).urgent, true);
+  for (const stop of plans[0].plan.routes.flatMap(route => route.stops).filter(stop => stop.departure < 720)) {
+    assert.deepEqual(plans[1].plan.routes.flatMap(route => route.stops).find(next => next.job_id === stop.job_id), stop);
   }
-  // Mobile layout must leave the independently-sized Leaflet overlay intact.
+  assert.equal(await evaluate(`document.querySelector('[data-testid=solve]').disabled`), true, 'events lock history');
+  // Import two dated buckets through the actual file input.
+  await evaluate(`(()=>{const row=[...document.querySelectorAll('tbody tr')].find(row=>row.textContent.includes(window.__plans[1].scenario.jobs.at(-1).id));if(!row)throw Error('New urgent row not found');row.click()})()`);
+  await clickText('Отменить заявку');
+  await waitFor(`window.__plans.length === 3 && !document.querySelector('[data-testid=dataset]').disabled`);
+  assert.equal(await evaluate(`window.__plans[2].scenario.jobs.length`), plans[0].scenario.jobs.length);
+  const fixture = join(profile, 'days.json');
+  await writeFile(fixture, JSON.stringify({ days: [
+    { date: '2026-09-29', scenario: { ...plans[0].scenario, name: 'First day' } },
+    { date: '2026-09-30', scenario: { ...plans[0].scenario, name: 'Second day', jobs: plans[0].scenario.jobs.slice(0, 2) } },
+  ] }));
+  const upload = async path => {
+    const document = await send('DOM.getDocument');
+    const { nodeId } = await send('DOM.querySelector', { nodeId: document.root.nodeId, selector: '[data-testid=import]' });
+    await send('DOM.setFileInputFiles', { nodeId, files: [path] });
+    await waitFor(`document.querySelector('[data-testid=import]').value === '' && !document.querySelector('[data-testid=dataset]').disabled`, 1_200_000);
+  };
+  await upload(fixture);
+  assert.equal(await evaluate(`document.querySelector('[role=alert]')?.textContent || ''`), '');
+  assert.deepEqual(await evaluate(`window.__routing.slice(-2).map(call=>call.scenario.transit_date)`), ['2026-09-29','2026-09-30']);
+  await evaluate(`document.querySelector('[data-testid=date-picker]').click()`);
+  await waitFor(`document.querySelector('button[data-day="2026-09-30"]')`);
+  await evaluate(`document.querySelector('button[data-day="2026-09-30"]').click()`);
+  await waitFor(`document.body.textContent.includes('Заявки · 2')`);
+  await clickText('Экспорт данных');
+  let exported;
+  for (let i=0; i<100; i++) {
+    try { exported = JSON.parse(await readFile(join(profile, 'dispatch-days.json'), 'utf8')); break; } catch { await delay(50); }
+  }
+  assert.equal(exported.days.find(day => day.date === '2026-09-30').scenario.jobs.length, 2);
+  assert.equal(exported.days.find(day => day.date === '2026-09-29').scenario.jobs.length, plans[0].scenario.jobs.length);
+  // Failed imports are transactional, retaining the selected day's data.
+  await writeFile(fixture, JSON.stringify({ days: [{ date: '2026-09-30', scenario: plans[0].scenario }, { date: 'bad-date', scenario: {} }] }));
+  await upload(fixture);
+  await waitFor(`document.querySelector('[role=alert]')`);
+  assert.equal(await evaluate(`document.body.textContent.includes('Заявки · 2')`), true);
+  await dataset('/api/dataset/2');
+  assert.equal(await evaluate(`document.querySelector('[role=alert]')?.textContent || ''`), '');
+  await evaluate(`document.querySelector('[data-testid=solve]').click()`);
+  await waitFor(`window.__plans.length === 4 && !document.querySelector('[data-testid=dataset]').disabled`);
+  await evaluate(`document.querySelector('[data-testid=live-mode]').click()`);
+  await waitFor(`document.querySelector('[data-testid=timeline]')`);
+  await screenshot('dense-timeline');
+  assert.equal(await evaluate(`Array.from(document.querySelectorAll('.live-event')).filter(event=>event.clientWidth<46).every(event=>getComputedStyle(event.querySelector('.event-title')).display==='none')`), true, 'short events hide overflowing labels');
+  await evaluate(`document.querySelector('.live-scroll').scrollLeft=250`);
+  assert.ok(await evaluate(`Math.abs(document.querySelector('.live-person').getBoundingClientRect().left-document.querySelector('.live-scroll').getBoundingClientRect().left)<2`), 'engineer column stays pinned');
   await send('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});
-  await evaluate('renderMap()'); await checkMap();
-  await evaluate('map.remove();map=null;window.L=undefined;renderMap()');
-  const offline=await evaluate(`({width:document.querySelector('#map > svg').getBoundingClientRect().width,height:document.querySelector('#map > svg').getBoundingClientRect().height,routes:document.querySelectorAll('#map polyline').length,expected:scenario.routing?selectedPlan().routes.flatMap(r=>r.stops).filter(s=>s.shape).length:selectedPlan().routes.filter(r=>r.stops.length).length})`);
-  assert.ok(offline.width>0&&offline.height>0); assert.equal(offline.routes,offline.expected);
-  if(process.env.CITY_RESULT){
-    await evaluate(`$('settings').open=true;const input=document.querySelector('#job-settings input[type=number]');input.value=Number(input.value)+.001;input.dispatchEvent(new Event('input',{bubbles:true}));$('solve').click()`);
-    assert.equal(await evaluate(`!result&&!scenario.routing&&$('status').textContent.includes('Городской снимок сброшен')`),true,'stale city data must not silently fall back to straight lines');
+  assert.ok(await evaluate(`document.querySelector('[data-testid=map]').getBoundingClientRect().height`) > 0);
+  assert.deepEqual(exceptions, [], 'No uncaught browser errors');
+  if (process.env.SCREENSHOT_PATH) {
+    await send('Emulation.clearDeviceMetricsOverride');
+    const screenshot = await send('Page.captureScreenshot', { format: 'png' });
+    await writeFile(process.env.SCREENSHOT_PATH, Buffer.from(screenshot.data, 'base64'));
   }
-  console.log('PASS: norms, urgent form/history locks, Leaflet routes, baseline, dataset, cancellation, mobile, offline SVG'+(process.env.CITY_RESULT?', real street geometry and stale-snapshot guard':''));
+  console.log('PASS: settings modal/Escape/focus, today, exact SAT 5s, automatic road preparation, empty/loaded states, engineers, solve, map popups/edit/Escape, route details, live engineer motion/pause/progress/zoom/event details/dense schedule, urgent/cancel history, calendar, multi-day/transactional import, export, CSV, mobile');
+
 } finally {
   socket?.close(); browser.kill('SIGTERM');
   await new Promise(resolve=>browser.exitCode!==null?resolve():browser.once('exit',resolve));

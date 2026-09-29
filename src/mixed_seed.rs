@@ -186,6 +186,7 @@ mod tests {
                     transport: Transport::Car,
                     legs: vec![vec![leg(0, 0), leg(500, 1)], vec![leg(500, 1), leg(0, 0)]],
                     lower: vec![],
+                    coverage: None,
                 },
                 timetable.profile(),
             ],

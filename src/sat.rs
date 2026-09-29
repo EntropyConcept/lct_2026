@@ -1336,6 +1336,7 @@ mod circuit_tests {
                 transport: Transport::Car,
                 legs,
                 lower: vec![],
+                coverage: None,
             }],
             transit: None,
         };
@@ -1463,6 +1464,7 @@ mod circuit_tests {
                 transport: Transport::Car,
                 legs,
                 lower: vec![],
+                coverage: None,
             }],
             transit: None,
         }));

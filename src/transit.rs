@@ -361,20 +361,6 @@ fn fetch(
     store(parse_journeys(&routing::response(response)?, origin)?, now)
 }
 
-fn workers() -> Result<usize> {
-    match std::env::var("DISPATCH_TRANSIT_WORKERS") {
-        Ok(value) => value
-            .parse::<usize>()
-            .ok()
-            .filter(|&n| (1..=8).contains(&n))
-            .ok_or_else(|| "DISPATCH_TRANSIT_WORKERS must be between 1 and 8".into()),
-        Err(std::env::VarError::NotPresent) => {
-            Ok(std::thread::available_parallelism().map_or(1, |n| n.get().min(4)))
-        }
-        Err(e) => Err(e.to_string()),
-    }
-}
-
 pub fn configured_provider() -> Result<String> {
     let url = std::env::var("DISPATCH_MOTIS_URL").map_err(|_| "Public transport requires DISPATCH_MOTIS_URL pointing to a MOTIS instance with Moscow GTFS and OSM data; no walking/speed substitution is made")?;
     if !(url.starts_with("http://") || url.starts_with("https://")) || url.len() > 2048 {
@@ -432,7 +418,7 @@ pub fn prepare(s: &Scenario, snapshot: &mut Snapshot, deadline: Instant) -> Resu
     let provider = timetable.provider.clone();
     crate::routing_work::run_bounded(
         pending.len(),
-        workers()?,
+        crate::routing_work::configured_workers("DISPATCH_TRANSIT_WORKERS")?,
         |index| {
             if Instant::now() >= deadline {
                 return Err("Transit preparation deadline exceeded; cached pairs are retained. Retry with the same service date.".into());

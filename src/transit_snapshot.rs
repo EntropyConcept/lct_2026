@@ -222,6 +222,7 @@ impl Timetable {
             transport: Transport::Public,
             legs,
             lower: vec![],
+            coverage: None,
         }
     }
 }

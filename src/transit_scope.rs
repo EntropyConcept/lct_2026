@@ -44,6 +44,16 @@ impl Coverage {
 }
 
 pub(crate) fn required(s: &Scenario, points: &[Point]) -> Result<Vec<Vec<Option<Coverage>>>> {
+    required_for(s, points, Transport::Public)
+}
+
+/// Every arc a valid schedule can use, before accounting for nonnegative travel.
+/// Shared by roads and transit: no base-to-base or incompatible/time-reversed work.
+pub(crate) fn required_for(
+    s: &Scenario,
+    points: &[Point],
+    transport: Transport,
+) -> Result<Vec<Vec<Option<Coverage>>>> {
     let mut required = vec![vec![None; points.len()]; points.len()];
     let job_points = s
         .jobs
@@ -57,11 +67,7 @@ pub(crate) fn required(s: &Scenario, points: &[Point]) -> Result<Vec<Vec<Option<
             *cell = Some(cell.map_or(interval, |old| old.union(interval)));
         }
     };
-    for engineer in s
-        .engineers
-        .iter()
-        .filter(|e| e.transport == Transport::Public)
-    {
+    for engineer in s.engineers.iter().filter(|e| e.transport == transport) {
         let base = point_index(points, engineer.start)?;
         let feasible: Vec<_> = s
             .jobs

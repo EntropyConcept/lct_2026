@@ -54,6 +54,9 @@ pub struct Profile {
     pub legs: Vec<Vec<Option<Leg>>>,
     #[serde(skip)]
     pub lower: Vec<Vec<u32>>,
+    // None is a legacy complete matrix; false is unqueried, not unreachable.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub coverage: Option<Vec<Vec<bool>>>,
 }
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct Snapshot {
@@ -234,6 +237,11 @@ fn lower_bounds(s: &mut Snapshot) -> Result<()> {
     for profile in &mut s.profiles {
         if profile.legs.len() != n || profile.legs.iter().any(|r| r.len() != n) {
             return Err("Invalid routing matrix dimensions".into());
+        }
+        if profile.coverage.as_ref().is_some_and(|coverage| {
+            coverage.len() != n || coverage.iter().any(|row| row.len() != n)
+        }) {
+            return Err("Invalid routing coverage dimensions".into());
         }
         profile.lower = profile
             .legs
@@ -431,6 +439,8 @@ pub fn decode_shape(shape: &str) -> Result<Vec<Point>> {
     Ok(points)
 }
 
+#[cfg(test)]
+#[allow(clippy::too_many_arguments)]
 fn fill_road_profile(
     points: &[Point],
     profile: &mut Profile,
@@ -438,6 +448,24 @@ fn fill_road_profile(
     provider: &str,
     now: u64,
     deadline: Instant,
+    required: Option<&[Vec<Option<crate::transit_scope::Coverage>>]>,
+    fetch: impl FnMut(Transport, &[Point], &[Point]) -> Result<Vec<Vec<Option<Leg>>>>,
+) -> Result<()> {
+    fill_road_profile_with(
+        points, profile, root, provider, now, deadline, required, None, fetch,
+    )
+}
+
+#[allow(clippy::too_many_arguments)]
+fn fill_road_profile_with(
+    points: &[Point],
+    profile: &mut Profile,
+    root: &Path,
+    provider: &str,
+    now: u64,
+    deadline: Instant,
+    required: Option<&[Vec<Option<crate::transit_scope::Coverage>>]>,
+    motis: Option<(&str, &mut bool)>,
     mut fetch: impl FnMut(Transport, &[Point], &[Point]) -> Result<Vec<Vec<Option<Leg>>>>,
 ) -> Result<()> {
     let n = points.len();
@@ -445,6 +473,21 @@ fn fill_road_profile(
     if old > n || profile.legs.iter().any(|row| row.len() != old) {
         return Err("Invalid existing road matrix dimensions".into());
     }
+    if required.is_some_and(|r| r.len() != n || r.iter().any(|row| row.len() != n)) {
+        return Err("Invalid required road coverage dimensions".into());
+    }
+    let mut covered = profile
+        .coverage
+        .take()
+        .unwrap_or_else(|| vec![vec![true; old]; old]);
+    if covered.len() != old || covered.iter().any(|row| row.len() != old) {
+        return Err("Invalid existing road coverage dimensions".into());
+    }
+    for row in &mut covered {
+        row.resize(n, false);
+    }
+    covered.resize_with(n, || vec![false; n]);
+    profile.coverage = Some(covered);
     let mut geometry_size: usize = profile
         .legs
         .iter()
@@ -460,7 +503,7 @@ fn fill_road_profile(
     for i in 0..n {
         for j in 0..n {
             // Frozen snapshot arcs, including unreachable and diagonal cells, never refresh.
-            if i < old && j < old {
+            if profile.coverage.as_ref().unwrap()[i][j] {
                 continue;
             }
             if point_key(points[i]) == point_key(points[j]) {
@@ -469,12 +512,17 @@ fn fill_road_profile(
                     minutes: 0,
                     shape: String::new(),
                 });
+                profile.coverage.as_mut().unwrap()[i][j] = true;
+                continue;
+            }
+            if required.is_some_and(|required| required[i][j].is_none()) {
                 continue;
             }
             let identity = leg_identity(provider, profile.transport, points[i], points[j])?;
             if let Some(leg) = read_leg(root, &identity, now, false)? {
                 geometry_size += leg.as_ref().map_or(0, |l| l.shape.len());
                 profile.legs[i][j] = leg;
+                profile.coverage.as_mut().unwrap()[i][j] = true;
             } else {
                 missing[i][j] = true;
             }
@@ -482,6 +530,44 @@ fn fill_road_profile(
                 return Err("Routing geometry exceeds 32 MB; reduce the planning area".into());
             }
         }
+    }
+    if let Some((base, ready)) = motis {
+        let pending: Vec<_> = missing
+            .iter()
+            .enumerate()
+            .flat_map(|(i, row)| {
+                row.iter()
+                    .enumerate()
+                    .filter_map(move |(j, missing)| missing.then_some((i, j)))
+            })
+            .collect();
+        if !pending.is_empty() && !*ready {
+            crate::street::check_provider(base, deadline)?;
+            *ready = true;
+        }
+        let transport = profile.transport;
+        // One queue for the entire profile: a slow leg never holds up the next
+        // rectangle. Persist each completed leg immediately, including on failure.
+        return crate::routing_work::run_bounded(
+            pending.len(),
+            crate::routing_work::configured_workers("DISPATCH_ROAD_WORKERS")?,
+            |index| {
+                let (i, j) = pending[index];
+                crate::street::leg(base, transport, points[i], points[j], deadline)
+            },
+            |index, leg| {
+                let (i, j) = pending[index];
+                validate_cached_leg(&leg, false)?;
+                geometry_size += leg.as_ref().map_or(0, |leg| leg.shape.len());
+                if geometry_size > MAX_GEOMETRY {
+                    return Err("Routing geometry exceeds 32 MB; reduce the planning area".into());
+                }
+                let identity = leg_identity(provider, transport, points[i], points[j])?;
+                profile.legs[i][j] = write_leg(root, identity, now, leg)?;
+                profile.coverage.as_mut().unwrap()[i][j] = true;
+                Ok(())
+            },
+        );
     }
     while let Some(first) = missing.iter().position(|row| row.iter().any(|&v| v)) {
         if Instant::now() >= deadline {
@@ -522,6 +608,7 @@ fn fill_road_profile(
                 let identity = leg_identity(provider, profile.transport, points[i], points[j])?;
                 profile.legs[i][j] = write_leg(root, identity, now, leg)?;
                 missing[i][j] = false;
+                profile.coverage.as_mut().unwrap()[i][j] = true;
             }
         }
     }
@@ -578,8 +665,8 @@ pub fn prepare(mut s: Scenario, confirm_coordinates: bool) -> Result<Scenario> {
         .duration_since(UNIX_EPOCH)
         .map_err(|e| e.to_string())?
         .as_secs();
-    // MOTIS returns geometry per directed path, not a batched matrix. Keep four
-    // workers but allow a complete cold city dataset to finish in one request.
+    // MOTIS returns geometry per directed path. Scope requests to feasible
+    // transitions and bound concurrency; allow large cold datasets to finish.
     let deadline = Instant::now()
         + Duration::from_secs(match &provider {
             RoadProvider::Motis(_) => 1200,
@@ -600,26 +687,26 @@ pub fn prepare(mut s: Scenario, confirm_coordinates: bool) -> Result<Scenario> {
                 transport,
                 legs: vec![],
                 lower: vec![],
+                coverage: None,
             });
             snapshot.profiles.len() - 1
         };
-        fill_road_profile(
+        let required = crate::transit_scope::required_for(&s, &snapshot.points, transport)?;
+        fill_road_profile_with(
             &snapshot.points,
             &mut snapshot.profiles[idx],
             &root,
             &identity,
             now,
             deadline,
+            Some(&required),
+            match &provider {
+                RoadProvider::Motis(url) => Some((url.as_str(), &mut motis_ready)),
+                _ => None,
+            },
             |transport, sources, targets| match &provider {
                 RoadProvider::Valhalla(url) => matrix(url, transport, sources, targets),
-                RoadProvider::Motis(url) => {
-                    // Cache hits and frozen snapshots remain usable with the router offline.
-                    if !motis_ready {
-                        crate::street::check_provider(url, deadline)?;
-                        motis_ready = true;
-                    }
-                    crate::street::matrix(url, transport, sources, targets, deadline)
-                }
+                RoadProvider::Motis(_) => unreachable!("MOTIS uses the directed work queue"),
             },
         )?;
         if geometry_bytes(&snapshot) > MAX_GEOMETRY {
@@ -803,6 +890,7 @@ mod tests {
                     vec![None, None, leg(0)],
                 ],
                 lower: vec![],
+                coverage: None,
             }],
         };
         lower_bounds(&mut s).unwrap();
@@ -835,6 +923,7 @@ mod tests {
             transport,
             legs: vec![],
             lower: vec![],
+            coverage: None,
         }
     }
     fn road_points(n: usize) -> Vec<Point> {
@@ -865,6 +954,7 @@ mod tests {
             "provider",
             10,
             deadline,
+            None,
             |_, from, to| {
                 Ok(from
                     .iter()
@@ -892,6 +982,7 @@ mod tests {
             "provider",
             11,
             deadline,
+            None,
             |_, _, _| {
                 panic!("Fresh reachable and unreachable arcs must survive point reordering");
             },
@@ -911,6 +1002,7 @@ mod tests {
             "provider",
             12,
             deadline,
+            None,
             |_, from, to| {
                 requests += 1;
                 assert!(from.len() <= 10 && to.len() <= 10);
@@ -930,6 +1022,261 @@ mod tests {
         assert_eq!(fetched.len(), 22);
         assert_eq!(requests, 4);
     }
+    #[test]
+    fn scoped_roads_preserve_plans_and_expand_without_refreshing_frozen_arcs() {
+        let cache = TestCache::new();
+        let mut scenario = crate::import::demo();
+        scenario.engineers.truncate(1);
+        scenario.jobs.truncate(3);
+        for (i, job) in scenario.jobs.iter_mut().enumerate() {
+            job.transport = None;
+            job.skill = Skill::Local;
+            job.duration = 30;
+            job.window_start = 600 + i as u32 * 60;
+            job.window_end = job.window_start;
+        }
+        let points: Vec<_> = scenario
+            .jobs
+            .iter()
+            .map(|job| job.point)
+            .chain(scenario.engineers.iter().map(|engineer| engineer.start))
+            .collect();
+        let required =
+            crate::transit_scope::required_for(&scenario, &points, Transport::Car).unwrap();
+        let n = points.len();
+        let deadline = Instant::now() + Duration::from_secs(30);
+        let mut full = empty_profile(Transport::Car);
+        fill_road_profile(
+            &points,
+            &mut full,
+            &cache.0,
+            "full",
+            10,
+            deadline,
+            None,
+            |_, from, to| Ok(vec![vec![test_leg(); to.len()]; from.len()]),
+        )
+        .unwrap();
+        let mut sparse = empty_profile(Transport::Car);
+        let mut requested = 0;
+        fill_road_profile(
+            &points,
+            &mut sparse,
+            &cache.0,
+            "sparse",
+            10,
+            deadline,
+            Some(&required),
+            |_, from, to| {
+                for a in from {
+                    for b in to {
+                        let i = point_index(&points, *a).unwrap();
+                        let j = point_index(&points, *b).unwrap();
+                        assert!(i == j || required[i][j].is_some());
+                        if i != j {
+                            requested += 1;
+                        }
+                    }
+                }
+                Ok(vec![vec![test_leg(); to.len()]; from.len()])
+            },
+        )
+        .unwrap();
+        assert_eq!(requested, 6); // Three base legs and three forward job transitions, not twelve.
+        for profile in [&full, &sparse] {
+            scenario.routing = Some(register(Snapshot {
+                points: points.clone(),
+                profiles: vec![profile.clone()],
+                transit: None,
+            }));
+            let plan = crate::app::run(crate::app::Request {
+                scenario: scenario.clone(),
+                seconds: 1.0,
+                mode: crate::app::SearchMode::Exact,
+                previous: None,
+                event: None,
+                last_event_time: 0,
+            })
+            .unwrap()
+            .plan;
+            assert_eq!(plan.metrics.unassigned, 0);
+            assert_eq!(
+                plan.routes[0]
+                    .stops
+                    .iter()
+                    .map(|stop| &stop.job_id)
+                    .collect::<Vec<_>>(),
+                scenario.jobs.iter().map(|job| &job.id).collect::<Vec<_>>()
+            );
+            assert_eq!(plan.metrics.distance_m, 3 * test_leg().unwrap().metres);
+        }
+        // Window changes introduce old-point arcs; reject incomplete coverage before solving.
+        scenario.jobs[0].window_end = 1000;
+        assert!(Travel::new(&scenario)
+            .err()
+            .unwrap()
+            .contains("Road coverage is incomplete"));
+        let old = serde_json::to_value(&sparse.legs).unwrap();
+        let covered = sparse.coverage.clone().unwrap();
+        let expanded =
+            crate::transit_scope::required_for(&scenario, &points, Transport::Car).unwrap();
+        let mut added = 0;
+        fill_road_profile(
+            &points,
+            &mut sparse,
+            &cache.0,
+            "sparse",
+            LEG_CACHE_TTL * 2,
+            deadline,
+            Some(&expanded),
+            |_, from, to| {
+                for a in from {
+                    for b in to {
+                        let i = point_index(&points, *a).unwrap();
+                        let j = point_index(&points, *b).unwrap();
+                        assert!(!covered[i][j]);
+                        added += 1;
+                    }
+                }
+                Ok(vec![vec![test_leg(); to.len()]; from.len()])
+            },
+        )
+        .unwrap();
+        assert_eq!(added, 2);
+        for (i, row) in covered.iter().enumerate() {
+            for (j, known) in row.iter().enumerate() {
+                if *known {
+                    assert_eq!(serde_json::to_value(&sparse.legs[i][j]).unwrap(), old[i][j]);
+                }
+            }
+        }
+        scenario.routing = Some(register(Snapshot {
+            points,
+            profiles: vec![sparse],
+            transit: None,
+        }));
+        assert!(Travel::new(&scenario).is_ok());
+        assert_eq!(n, 4);
+    }
+
+    #[test]
+    fn sparse_road_scope_keeps_every_feasible_order_across_skills_and_windows() {
+        fn orders(prefix: Vec<usize>, count: usize, output: &mut Vec<Vec<usize>>) {
+            output.push(prefix.clone());
+            for job in 0..count {
+                if !prefix.contains(&job) {
+                    let mut next = prefix.clone();
+                    next.push(job);
+                    orders(next, count, output);
+                }
+            }
+        }
+        let mut permutations = vec![];
+        orders(vec![], 4, &mut permutations);
+        for seed in 0..24 {
+            let mut scenario = crate::import::demo();
+            scenario
+                .engineers
+                .retain(|engineer| engineer.transport != Transport::Public);
+            scenario.jobs.truncate(4);
+            for (index, job) in scenario.jobs.iter_mut().enumerate() {
+                job.duration = 15 + ((seed + index * 7) % 4) as u32 * 15;
+                job.window_start = 540 + ((seed * 3 + index * 5) % 8) as u32 * 30;
+                job.window_end = job.window_start + ((seed + index) % 3) as u32 * 60;
+                job.transport = if seed % 3 == 0 { None } else { job.transport };
+            }
+            let mut points = vec![];
+            for point in scenario
+                .jobs
+                .iter()
+                .map(|job| job.point)
+                .chain(scenario.engineers.iter().map(|engineer| engineer.start))
+            {
+                if point_index(&points, point).is_err() {
+                    points.push(point);
+                }
+            }
+            let mut full = Snapshot {
+                points: points.clone(),
+                profiles: vec![],
+                transit: None,
+            };
+            let mut sparse = full.clone();
+            for transport in [Transport::Car, Transport::Walk, Transport::Bicycle] {
+                let required =
+                    crate::transit_scope::required_for(&scenario, &points, transport).unwrap();
+                let legs: Vec<Vec<Option<Leg>>> = (0..points.len())
+                    .map(|i| {
+                        (0..points.len())
+                            .map(|j| {
+                                Some(Leg {
+                                    minutes: if i == j {
+                                        0
+                                    } else {
+                                        1 + ((i * 7 + j * 3 + seed) % 30) as u32
+                                    },
+                                    metres: if i == j {
+                                        0
+                                    } else {
+                                        100 + (i * 13 + j * 7) as u32
+                                    },
+                                    shape: String::new(),
+                                })
+                            })
+                            .collect()
+                    })
+                    .collect();
+                full.profiles.push(Profile {
+                    transport,
+                    legs: legs.clone(),
+                    lower: vec![],
+                    coverage: None,
+                });
+                let coverage: Vec<Vec<bool>> = required
+                    .iter()
+                    .enumerate()
+                    .map(|(i, row)| {
+                        row.iter()
+                            .enumerate()
+                            .map(|(j, need)| i == j || need.is_some())
+                            .collect()
+                    })
+                    .collect();
+                let partial = legs
+                    .into_iter()
+                    .enumerate()
+                    .map(|(i, row)| {
+                        row.into_iter()
+                            .enumerate()
+                            .map(|(j, leg)| if coverage[i][j] { leg } else { None })
+                            .collect()
+                    })
+                    .collect();
+                sparse.profiles.push(Profile {
+                    transport,
+                    legs: partial,
+                    lower: vec![],
+                    coverage: Some(coverage),
+                });
+            }
+            scenario.routing = Some(register(full));
+            let full = Travel::new(&scenario).unwrap();
+            scenario.routing = Some(register(sparse));
+            let sparse = Travel::new(&scenario).unwrap();
+            for e in 0..scenario.engineers.len() {
+                for order in &permutations {
+                    let expected = schedule(&scenario, &full, e, order);
+                    let actual = schedule(&scenario, &sparse, e, order);
+                    assert_eq!(
+                        serde_json::to_value(actual).unwrap(),
+                        serde_json::to_value(expected).unwrap(),
+                        "seed {seed}, engineer {e}, order {order:?}"
+                    );
+                }
+            }
+        }
+    }
+
     #[test]
     fn directed_cache_separates_provider_profile_direction_and_expires() {
         let cache = TestCache::new();
@@ -963,6 +1310,7 @@ mod tests {
             "one",
             20 + LEG_CACHE_TTL,
             Instant::now() + Duration::from_secs(30),
+            None,
             |_, from, to| Ok(vec![vec![test_leg(); to.len()]; from.len()]),
         )
         .unwrap();
@@ -976,6 +1324,7 @@ mod tests {
             transport: Transport::Car,
             legs: vec![vec![None, test_leg()], vec![None, None]],
             lower: vec![],
+            coverage: None,
         };
         let old = serde_json::to_value(&profile.legs).unwrap();
         let new = point_key(points[2]);
@@ -986,6 +1335,7 @@ mod tests {
             "changed-provider",
             LEG_CACHE_TTL * 2,
             Instant::now() + Duration::from_secs(30),
+            None,
             |_, from, to| {
                 for p in from {
                     for q in to {

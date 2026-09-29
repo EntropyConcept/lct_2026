@@ -5,7 +5,8 @@ explanations, baseline comparison, **cancellation and urgent-job replanning**,
 configurable Excel service norms, real street routing for car/walk/bicycle, and
 departure-aware public transport through a configured MOTIS/GTFS router.
 Uses the real **CaDiCaL CDCL SAT solver**, compiled and linked into the executable.
-No external solver process, Python backend, database, Node build, or API key.
+No external solver process, Python backend, database, or API key.
+The web interface in `front/` uses Preact, TypeScript, Vite and MapLibre; Node is needed to build it.
 City preparation uses external OSM services; SAT itself remains local/offline.
 Public transport requires a service date and a MOTIS instance with suitable GTFS
 and OSM coverage. It is never substituted with a speed estimate or walking-only route.
@@ -19,11 +20,11 @@ The report gives the full fast/exact mathematics and comparisons with greedy,
 OR-Tools Routing GLS and CP-SAT at 1/5/30/120 seconds on all three synthetic CSVs.
 All methods share frozen **real OSRM car/bike/foot road costs**, not straight-line
 estimates; coordinates and workforce remain explicitly synthetic. Python and
-OR-Tools are benchmark-only dependencies; the application remains Rust-only.
+OR-Tools are benchmark-only dependencies; the solver/backend remains Rust-only.
 
 ## Run
 
-Install current stable Rust and a C++ compiler (CaDiCaL is C++ internally):
+Install Node.js 22.18+ (or a newer supported release), stable Rust and a C++ compiler (CaDiCaL is C++ internally):
 
 - macOS: Xcode Command Line Tools (`xcode-select --install`).
 - Debian/Ubuntu: `sudo apt install build-essential`.
@@ -31,10 +32,70 @@ Install current stable Rust and a C++ compiler (CaDiCaL is C++ internally):
 From this directory:
 
 ```sh
+npm --prefix front ci
+npm --prefix front run build
 cargo build --release --locked
 ./target/release/dispatch-sat serve
 # Open http://127.0.0.1:8080
 ```
+
+The Rust server serves `front/dist` at `/` and the existing API at `/api/*`.
+Rebuild the frontend after UI changes. `DISPATCH_FRONT_DIR=/absolute/path/to/dist`
+selects a different build directory (useful when moving the binary).
+Missing frontend assets return a build instruction; CLI commands and the API
+still work without a frontend build.
+
+For frontend development, keep the Rust server running and start Vite:
+
+```sh
+npm --prefix front run dev
+# Open the localhost URL printed by Vite (normally http://127.0.0.1:5173).
+# For a backend on another port:
+DISPATCH_API_URL=http://127.0.0.1:8082 npm --prefix front run dev
+```
+
+Vite proxies `/api` to the Rust server. Production needs only the Rust process
+and the built files; there is no separate Node server.
+
+The interface starts with an empty **today**, using **Полный SAT** with a **5-second** budget.
+The gear button in the header opens a modal containing the dataset name/notes,
+solver parameters, roads, transport date and service norms. Loading a dataset or
+importing a file automatically prepares roads for every loaded day. If routing
+fails, the data stays loaded; retry from settings or explicitly select the offline
+scheme before solving. Use **Загрузить данные…**, the import
+button, or the job/engineer editors. The calendar in the header switches between
+independent day buckets. Select an engineer in the table to inspect its route. Clicking a map marker
+or route opens a floating details window, with editing inside that window. **Live** provides play/pause, playback speed, a time scrubber and a zoomable day
+schedule. Engineer names stay pinned while scrolling; narrow events hide labels
+and expose their full time/details on hover or focus. Selecting an event opens
+its map popup without leaving Live. Playback pauses during editing and replanning.
+The map uses the light CARTO basemap (with OSM fallback), route outlines and transport markers that move along the mapped geometry during
+Live playback. Travelled paths are colored, remaining paths are dashed gray,
+and marker badges show the percentage of mapped travel distance completed.
+Decorative looping dots are absent; motion follows a continuous playback clock,
+pausing freezes the exact displayed position, and manual seeking moves immediately,
+and reduced-motion preferences disable it. Engineer positions
+are simulated from the plan, not live GPS. Add a **Срочная заявка** in
+this mode to replan while preserving dispatched visits.
+
+**Экспорт данных** saves all day buckets. **План JSON** saves the selected day's
+solver result. Import accepts the existing scenario JSON/CSV, exported result
+JSON, a dated `{ "date": "2026-09-29", "scenario": { ... } }`, or multiple days:
+
+```json
+{
+  "version": 1,
+  "days": [
+    { "date": "2026-09-29", "scenario": { "name": "Tuesday", "jobs": [], "engineers": [] } },
+    { "date": "2026-09-30", "scenario": { "name": "Wednesday", "jobs": [], "engineers": [] } }
+  ]
+}
+```
+
+All imported days are validated before any bucket changes; the first imported
+date opens immediately. Undated CSV/JSON uses the selected date (or the JSON's
+`transit_date` when supplied). Importing a saved result opens its scenario for a
+fresh calculation. Buckets live in browser memory; export before reloading.
 
 Use **release**, not debug, for timing. Rust provides safe input handling and a
 small native application; CaDiCaL does the intensive search in optimized C++.
@@ -206,7 +267,8 @@ python3 scripts/container-smoke.py http://localhost:8080
 ./target/release/dispatch-sat serve 8081
 ```
 
-Default mode: **fast**. Default maximum budget: **5 seconds**; supported range:
+CLI/API default mode: **fast**; the web interface explicitly defaults to **exact**
+(**Полный SAT**). Default maximum budget: **5 seconds**; supported range:
 0.01–300. Fast mode uses a candidate-route SAT model and can use the configured
 budget for stronger route generation and proof attempts; there is no fixed
 500-conflict cutoff. Choose **Полный SAT** / CLI `exact` when exhaustive search
@@ -221,18 +283,21 @@ still be entirely heuristic when SAT has not completed an improvement query.
 
 ## City routes and service norms
 
-Select **Город / авто · пешком · велосипед** for `city-example.json`, or import
-complete real input. Open **Настройки**:
+Select **Городской пример** for `city-example.json`, or import
+complete real input. Roads prepare automatically using the supplied coordinates.
+Dataset examples use the selected day (today by default); explicitly dated imports
+keep their dates. Open the header gear → **Параметры расчёта и дороги** to review
+or change inputs and prepare again:
 
 1. For a CSV, optionally run **Найти координаты адресов**. Nominatim returns its
    best match, displayed per job; failed lookups retain the old point and are
    explicitly marked. A match may be only a street/area: **review every point**.
-2. Enter actual engineer bases (individually or with the common-base fields),
+2. Enter actual engineer bases in the engineer editor,
    transport and service durations. CSV engineers/skills/shifts remain synthetic;
    use your own JSON for real workforce data. Check the coordinate confirmation.
 3. For public-transport engineers, select the service date (Moscow, UTC+03:00)
-   and configure MOTIS as described below; alternatively explicitly exclude them.
-   Prepare **реальные дороги**. Transport/resources are never silently changed.
+   and configure MOTIS as described below; alternatively remove them in the editor.
+   Click **Подготовить реальные дороги**. Transport/resources are never silently changed.
 4. Run SAT. Lines now follow the cached street geometry, including one-way/profile
    differences. Editing inputs invalidates the snapshot; the UI blocks a silent
    switch back to straight-line travel. The demo fallback requires an explicit click.
@@ -250,7 +315,7 @@ CLI equivalent (verify the points before `--confirmed`):
 
 Street preparation uses the explicitly selected **MOTIS or Valhalla** backend.
 The installed local launcher uses MOTIS's OSM street graph for car, walking and
-bicycle routes, with four bounded concurrent requests. Each directed leg's time,
+bicycle routes, with up to eight bounded concurrent requests by default. Each directed leg's time,
 distance and polyline6 geometry come from the **same routed response**. MOTIS
 street queries disable transit and search up to six hours with a 250-metre street
 matching radius; its street graph must be enabled and support that time limit.
@@ -265,6 +330,28 @@ to select its shape-capable CostMatrix; dummy rows/columns are discarded. Only
 explicit null matrix entries mean unreachable. Unsupported geometry, upstream
 failures and missing snapshots are errors, never straight-line fallbacks or an
 automatic switch to another provider.
+
+Preparation queries only base-to-job and job-to-job transitions that can occur
+for at least one compatible engineer within service windows and shifts. It does
+not query routes back to bases, incompatible jobs or time-reversed visits.
+An explicit coverage matrix distinguishes unqueried pairs from unreachable ones;
+input changes that require new pairs are rejected at solve time until preparation
+fills them. Legacy complete snapshots remain compatible. All published arcs stay
+frozen, including unreachable results.
+
+MOTIS street requests use one work queue per profile: slow paths no longer block
+the next batch. Each completed arc is persisted immediately. The UI retains the
+snapshot across input edits and fills missing coverage on preparation; name and
+address-label edits require no graph rebuild. Changing the transit date starts
+a new snapshot.
+
+Local measurement (2026-09-29): `demo.json` with public-transport engineers
+removed, 13 distinct points, the same Moscow MOTIS instance with four server
+threads, and a separate empty disk cache for each version. Road preparation
+fell from 527.837 s / 468 directed requests to 336.209 s / 88 requests (36% less
+wall time). A repeat with the populated cache took 0.016 s. These figures exclude
+the solver and timetable preparation; individual expensive street searches still
+dominate the cold run, so fewer requests do not imply a proportional time reduction.
 
 Preparation is a separate network phase and may take minutes for a whole CSV;
 it is **outside the SAT budget**. MOTIS preparations allow up to twenty minutes
@@ -304,10 +391,12 @@ Server configuration:
 - `DISPATCH_MOTIS_URL`: no public default. Base URL of your MOTIS 2.11.x server
   for transit and, when selected, street routing; e.g. `http://127.0.0.1:8081`
   (not the `/api/v6/plan` URL). Car/walking/bicycle routes do not require a GTFS date.
-- `DISPATCH_TRANSIT_WORKERS`: concurrent MOTIS pair requests, `1`–`8`; default
-  up to `4`, capped by available CPU parallelism. Requests and completed results
-  are bounded by this setting. Lower it for a shared or resource-constrained
-  MOTIS server. Valhalla requests remain sequential; MOTIS street requests use four workers.
+- `DISPATCH_ROAD_WORKERS`: concurrent MOTIS street requests, `1`–`16`; default
+  `min(8, available CPU parallelism)`.
+- `DISPATCH_TRANSIT_WORKERS`: the same limit/default for timetable queries.
+  Requests and completed results are bounded by these settings. Match the local
+  MOTIS `server.n_threads` to the available cores, or lower concurrency for a
+  shared/resource-constrained router. Valhalla requests remain sequential.
 
 ### Installed local Moscow instance
 
@@ -373,7 +462,7 @@ The downloaded archive's coverage, freshness and licensing caveats below still a
 ### Public transport and Moscow data
 
 Set an engineer's `transport` to `"public"` and the scenario's `transit_date` to
-`"YYYY-MM-DD"`, or select the date in **Настройки**. All dispatch clock values use
+`"YYYY-MM-DD"`, or select the date in **Параметры расчёта и дороги**. All dispatch clock values use
 **Moscow UTC+03:00**, including responses returned by the router in UTC.
 
 Preparation requests MOTIS profiles only for compatible public-engineer base/job
@@ -471,15 +560,14 @@ scheduled travel always comes from the selected travel model.
 
 ## Demonstration
 
-1. Open the built-in 12-job/5-engineer scenario and click **Построить SAT-план**.
-2. Inspect a route or map marker: skills, transport, window, arrival, service
-   start/end, and a constraint-based explanation are shown.
-3. Toggle **Базовый план** to inspect the baseline's routes and individual
-   engineer distances. The comparison table always shows both plans.
-4. At **12:00**, select a still-pending job and click **Отменить и пересчитать**.
-   The application preserves dispatched visits and shows assignment/order/time
-   changes. Already-dispatched jobs are excluded from the cancellation selector.
-5. Download the full result using **↓ JSON**, or load a supplied CSV/your JSON.
+1. Choose **Демонстрационный набор** and click **Построить маршрут**.
+2. Select an engineer in the table or on the map to inspect its route, service
+   windows, distances and assignment explanations (hover a scheduled stop).
+3. Open **метрики** and toggle **Показать базовый план** to compare routes.
+4. Switch to **Live**, set the time slider to **12:00**, and add a **Срочная заявка**.
+   A selected job can also be cancelled if its departure has not begun.
+5. Export the full result with **План JSON**, or save all scenarios with
+   **Экспорт данных**. Reload a dataset to start a new plan after events.
 
 The demo intentionally lets the baseline assign its versatile engineer to J01,
 losing urgent J02. The optimized plan serves J02 and uses more staff to complete
@@ -492,7 +580,8 @@ one solve/preparation at a time to avoid CPU contention. Reload an input dataset
 ## Files / architecture
 
 ```text
-Browser: web/index.html (plain HTML/CSS/JS, Leaflet + OSM)
+Browser: front/ (Preact + TypeScript + MapLibre + OSM)
+front/dist         │ Vite production build served by src/web.rs
                    │ JSON / local HTTP
 src/main.rs        │ CLI, small HTTP server, bounded uploads
 src/import.rs      │ JSON validation / supplied semicolon-separated CSV adapter
@@ -506,19 +595,13 @@ src/fast.rs        │ prevalidated route pool → much smaller exact-cover SAT
 src/tests.rs       │ exhaustive oracle, input, timeout and replanning checks
 ```
 
-Leaflet 1.9.4 JS/CSS are **bundled locally** in `web/vendor/` (BSD-2-Clause license
-included), so CDN outages cannot hide the routes. OpenStreetMap supplies background
-tiles and receives the viewed tile area. **Only explicit geocoding/preparation**
+MapLibre and fonts are bundled in the frontend build. OpenStreetMap supplies
+background tiles and receives the viewed tile area. **Only explicit geocoding/preparation**
 sends addresses to Nominatim and coordinates to the selected road router and,
 for public transport, MOTIS. The local launcher routes against loopback MOTIS.
-No names/skills are sent.
-If tiles or Leaflet fail, cached street geometry is still drawn (SVG fallback).
-Straight connectors are used only in the explicitly labeled offline demo.
-
-The map's SVG sizing rule intentionally targets only `#map > svg` (the standalone
-fallback). Applying it to all nested SVGs collapses Leaflet's overlay against its
-zero-sized positioning pane. The browser regression test checks actual rendered
-SVG dimensions, not just whether route elements exist in the DOM.
+No names/skills are sent. Routes use the backend's polyline6 geometry; offline
+scenarios explicitly show straight connectors. A WebGL initialization failure
+falls back to an SVG route diagram without background tiles.
 
 ## Input and output
 
@@ -747,6 +830,8 @@ Engineer absence and a plan-stability objective for unfrozen work are not includ
 ## Verification and performance
 
 ```sh
+npm --prefix front test
+npm --prefix front run build
 cargo test --release --locked
 cargo clippy --all-targets -- -D warnings
 python3 scripts/routing-smoke.py  # offline mock HTTP: new-point expansion and history
@@ -754,7 +839,9 @@ python3 scripts/benchmark.py --seconds 1 --runs 3 --mode fast
 python3 scripts/benchmark.py --seconds 1 --runs 3 --mode exact
 
 # Optional real-browser regression test (Node 22+, running Rust server)
-CHROME_BIN=/path/to/chromium node scripts/ui-smoke.mjs
+# Stub only routing responses for a quick UI test; import and SAT use the real API.
+UI_MOCK_ROUTING=1 CHROME_BIN=/path/to/chromium node scripts/ui-smoke.mjs
+# Omit UI_MOCK_ROUTING to also exercise automatic preparation with configured providers.
 ```
 
 Tests cover all 4-bit adder/comparator inputs, weighted carry overflow, temporary
@@ -767,10 +854,11 @@ inputs, workbook parsing/overrides, directed nonmetric routes against enumeratio
 urgent addition/cancellation, omitted-geometry recovery, timeout fallback,
 mid-day history preservation, and the fast route pool
 on all three datasets (including zero-distance routes and honest proof scope).
-The browser test covers actual route rendering, editable norms, the urgent form,
-history locks, baseline toggle, dataset load, cancellation, mobile, and offline SVG.
-Optional `CITY_RESULT=/path/to/city-result.json` also verifies live street shapes
-and prevents silent fallback after city coordinates change.
+The browser test covers empty/loaded states, solving, engineer tables and details,
+route rendering, live schedules, urgent replanning/history locks, date selection,
+multi-day JSON import/export and CSV loading. Adapter tests cover minute/date
+conversion, solver results, geometry and simulated positions.
+
 
 Initial fast-mode comparison (before the subsequent full-mode optimization):
 **Apple M2, macOS arm64**, release build, three runs, **1-second maximum budget**.

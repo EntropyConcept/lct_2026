@@ -10,6 +10,21 @@ use std::{
     thread,
 };
 
+/// Bound router concurrency while using all cores on a local workstation.
+pub(crate) fn configured_workers(variable: &str) -> Result<usize> {
+    match std::env::var(variable) {
+        Ok(value) => value
+            .parse::<usize>()
+            .ok()
+            .filter(|n| (1..=16).contains(n))
+            .ok_or_else(|| format!("{variable} must be between 1 and 16")),
+        Err(std::env::VarError::NotPresent) => {
+            Ok(thread::available_parallelism().map_or(1, |n| n.get().min(8)))
+        }
+        Err(e) => Err(e.to_string()),
+    }
+}
+
 fn panic_error(stage: &str, payload: Box<dyn Any + Send>) -> String {
     let message = payload
         .downcast_ref::<String>()
