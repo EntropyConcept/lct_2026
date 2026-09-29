@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-29",
+  "motis_revision": "b228a4519d196d9dd01b5ce80be46e642abc953e",
+  "osr_revision": "a7b2ec2728544304ef1d8397b3042abc8d10f7e7",
+  "scenario": "demo.json (public engineers excluded)",
+  "input_sha256": "7b0211169f93705efaff4e5f955ce03c1d484e541ecc5c4f52b53f5d80e4116b",
+  "points": 13,
+  "directed_legs": 88,
+  "dispatcher_workers": 4,
+  "router_threads": 4,
+  "cold_before_seconds": 390.4739106670022,
+  "cold_after_seconds": 1.0593626250047237,
+  "warm_after_seconds": 0.006743749981978908,
+  "snapshots_identical": true,
+  "snapshot_sha256": "95d6ad5044544ea8ee68bd21d4178ac67e48958daf038df4a8a24e55f8094564",
+  "validation": {
+    "rust_tests_passed": 74,
+    "real_route_comparisons": 24,
+    "probe_tests": "directed cycles, distinct arrival states, target seeds, multiple seeds, bounded work"
+  },
+  "conditions": [
+    "Empty dispatcher cache for each cold run; existing loaded Moscow graph and OS page cache.",
+    "Baseline overlapped some compilation; timings are local observations, not a controlled latency SLA.",
+    "Excludes router startup/import, geocoding, transit timetable preparation and SAT."
+  ],
+  "larger_scenario": {
+    "dataset": "Югоцентр Синтетические данные.csv.new.csv",
+    "points": 56,
+    "directed_legs": 5399,
+    "cold_seconds": 93.85188179201214,
+    "warm_seconds": 0.4478832079912536,
+    "snapshot_sha256": "73646c8d9058179ab992d734160e7d7f8f5e20a450ff7eba1ff48fc104c24008",
+    "identical_to_car_bicycle_optimized_snapshot": true
+  },
+  "installed_binary_sha256": "88aae5d3de5723f7205f8aa3ab8af829a69536d41abb36d293074dfc7e1e1365"
+}

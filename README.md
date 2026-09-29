@@ -345,16 +345,54 @@ snapshot across input edits and fills missing coverage on preparation; name and
 address-label edits require no graph rebuild. Changing the transit date starts
 a new snapshot.
 
-Local measurement (2026-09-29): `demo.json` with public-transport engineers
-removed, 13 distinct points, the same Moscow MOTIS instance with four server
-threads, and a separate empty disk cache for each version. Road preparation
-fell from 527.837 s / 468 directed requests to 336.209 s / 88 requests (36% less
-wall time). A repeat with the populated cache took 0.016 s. These figures exclude
-the solver and timetable preparation; individual expensive street searches still
-dominate the cold run, so fewer requests do not imply a proportional time reduction.
+The local and Docker MOTIS builds also apply
+`scripts/motis-routing-performance.patch`. For static car, bicycle and walking paths it
+avoids searching the whole city from the opposite endpoint when a snapped start
+lies in a tiny directed road component. A probe visits at most 256 routing states;
+it skips a candidate only after exhausting the component without finding **any**
+matched destination node. Finding a target or reaching the cap keeps the original
+search. Arrival direction/turn state remains distinct, and blocked nodes and costs
+are ignored by the probe to conservatively overestimate reachability.
 
-Preparation is a separate network phase and may take minutes for a whole CSV;
-it is **outside the SAT budget**. MOTIS preparations allow up to twenty minutes
+After finding a path, the same profiles can stop when both search queues prove
+that no path cheaper than the incumbent remains. The bound accounts for the
+balanced A* potential and integer rounding; it avoids the upstream 30-minute
+search-radius floor on short trips. Matching distance, six-hour route limit,
+directed costs, geometry validation and frozen-cache behavior are unchanged.
+There is no map reimport or cache migration.
+
+Local measurement (2026-09-29): `demo.json` with public engineers removed,
+13 distinct points, 88 directed requests, four dispatcher workers and four Moscow
+MOTIS threads. With an empty dispatcher cache and an already running router,
+preparation measured **390.474 s before → 1.059 s after**; a warm preparation took
+**0.0067 s**. Every byte of the frozen snapshot was identical (see
+`reports/road-preparation-performance.json`). These are local
+observations, not an SLA: the baseline overlapped some compilation, and results
+depend on area, snapping and machine load. They exclude router startup/import,
+geocoding, timetable preparation and the dispatch solver.
+
+The larger imported South Centre road-only case (56 distinct points, 5,399
+directed legs) took **93.852 s cold / 0.448 s warm** on the same router. Its
+snapshot also matched the comparison build. Thousands of new paths are still
+substantial work; the near-instant result applies to small cold graphs and
+cached preparations, not every new full dataset.
+
+Reproduce cold/warm preparation with a fresh cache and compare the entire snapshot:
+
+```sh
+# Run once against the old router, then again after rebuilding/restarting MOTIS.
+python3 scripts/routing-performance.py --output /tmp/roads-before
+python3 scripts/routing-performance.py --output /tmp/roads-after \
+  --reference /tmp/roads-before/report.json
+sh scripts/test-motis-routing.sh
+```
+
+The benchmark accepts `--scenario FILE.json`, `--router URL` and `--workers N`,
+explicitly excludes public engineers, and fails if warm or reference snapshots
+differ in coverage, costs, distances or geometry. Each output directory must be new.
+
+Preparation is a separate network phase **outside the SAT budget**; large
+uncached areas and timetable queries can still take minutes. MOTIS preparations allow up to twenty minutes
 because they compute individual directed paths; Valhalla's batched preparation
 retains its four-minute limit. Both preserve completed cache entries on failure.
 MOTIS street requests, including capability checks and response bodies, use the
@@ -428,7 +466,8 @@ To rebuild the patched router on macOS, install Clang, CMake, Ninja and Git, the
 sh scripts/build-motis.sh
 ```
 
-The script checks pinned MOTIS/OSR revisions, applies the patch, and builds with
+The script checks pinned MOTIS/OSR revisions, applies both patches, runs the
+bounded-reachability regression test, and builds with
 two compiler jobs by default (`MOTIS_BUILD_JOBS` overrides that limit). The first
 build downloads upstream dependencies. The resulting executable is
 `.transit/motis-strict/motis`; the original distribution remains intact for UI

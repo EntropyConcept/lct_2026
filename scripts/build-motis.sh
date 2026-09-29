@@ -1,9 +1,8 @@
 #!/bin/sh
-# MOTIS 2.11.3 with OSR's synthetic sub-eight-metre WALK routes removed.
+# MOTIS 2.11.3: graph-only routes and bounded street-search optimizations.
 set -eu
 ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 SOURCE="$ROOT/.transit/motis-strict-source"
-PATCH="$ROOT/scripts/motis-strict-streets.patch"
 
 case "$(uname -s)-$(uname -m)" in
     Darwin-arm64) PRESET=macos-arm64 ;;
@@ -24,12 +23,15 @@ if [ "$(git -C deps/osr rev-parse HEAD)" != a7b2ec2728544304ef1d8397b3042abc8d10
     echo 'Unexpected OSR source revision; refusing to patch another version.' >&2
     exit 1
 fi
-if git -C deps/osr apply --reverse --check "$PATCH" 2>/dev/null; then
-    : # Already patched; an incremental build is safe.
-else
-    git -C deps/osr apply --check "$PATCH"
-    git -C deps/osr apply "$PATCH"
-fi
+for PATCH in "$ROOT/scripts/motis-strict-streets.patch" "$ROOT/scripts/motis-routing-performance.patch"; do
+    if git -C deps/osr apply --reverse --check "$PATCH" 2>/dev/null; then
+        : # Already patched; an incremental build is safe.
+    else
+        git -C deps/osr apply --check "$PATCH"
+        git -C deps/osr apply "$PATCH"
+    fi
+done
+MOTIS_SOURCE="$SOURCE" sh "$ROOT/scripts/test-motis-routing.sh"
 cmake --build "build/$PRESET-release" --target motis --parallel "${MOTIS_BUILD_JOBS:-2}"
 # Keep the vendor distribution (including UI assets) and old binary untouched.
 mkdir -p "$ROOT/.transit/motis-strict"

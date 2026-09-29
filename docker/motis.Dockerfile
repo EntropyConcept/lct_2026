@@ -11,11 +11,14 @@ RUN git clone --depth 1 --branch v2.11.3 https://github.com/motis-project/motis.
 RUN /opt/pkg -l \
     && test "$(git -C deps/osr rev-parse HEAD)" = a7b2ec2728544304ef1d8397b3042abc8d10f7e7
 COPY scripts/motis-strict-streets.patch /tmp/strict-streets.patch
+COPY scripts/motis-routing-performance.patch /tmp/routing-performance.patch
 ARG TARGETARCH
 RUN cmake --preset "linux-${TARGETARCH}-release" -B build/docker \
     && test "$(git -C deps/osr rev-parse HEAD)" = a7b2ec2728544304ef1d8397b3042abc8d10f7e7 \
     && git -C deps/osr apply --check /tmp/strict-streets.patch \
-    && git -C deps/osr apply /tmp/strict-streets.patch
+    && git -C deps/osr apply /tmp/strict-streets.patch \
+    && git -C deps/osr apply --check /tmp/routing-performance.patch \
+    && git -C deps/osr apply /tmp/routing-performance.patch
 ARG MOTIS_BUILD_JOBS=2
 RUN cmake --build build/docker --target motis --parallel "$MOTIS_BUILD_JOBS"
 

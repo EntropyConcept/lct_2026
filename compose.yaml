@@ -19,6 +19,7 @@ services:
       DISPATCH_VALHALLA_URL: ${DISPATCH_VALHALLA_URL:-https://valhalla1.openstreetmap.de}
       DISPATCH_NOMINATIM_URL: ${DISPATCH_NOMINATIM_URL:-https://nominatim.openstreetmap.org}
       DISPATCH_TRANSIT_WORKERS: ${DISPATCH_TRANSIT_WORKERS:-4}
+      DISPATCH_ROAD_WORKERS: ${DISPATCH_ROAD_WORKERS:-8}
     volumes:
       - routing-cache:/var/lib/dispatch/routing-cache
 

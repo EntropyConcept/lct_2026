@@ -11,12 +11,14 @@ export const TabSwitch = () => {
     const scenario = useStore(navigation.$scenario).value;
     const busy = useStore(navigation.$busy);
     const resultAsync = useStore(navigation.$result);
+    const baseline = useStore(navigation.$baseline);
+    const plan = baseline ? resultAsync.value?.baseline : resultAsync.value?.plan;
 
     return <div className={'grid grid-cols-3 gap-2 my-2'}>
         <Panel
             icon={<UsersRound size={16} />}
             count={scenario.engineers.length}
-            countUsed={resultAsync.value?.plan.metrics.engineers}
+            countUsed={plan?.metrics.engineers}
             title={'инженеров'}
             selected={tab === 'worker'}
             onClick={() => $tab.set('worker')}
@@ -25,7 +27,7 @@ export const TabSwitch = () => {
         <Panel
             icon={<ClipboardClock size={16} />}
             count={scenario.jobs.length}
-            countUsed={resultAsync.value ? scenario.jobs.length - resultAsync.value.plan.metrics.unassigned : undefined}
+            countUsed={plan ? scenario.jobs.length - plan.metrics.unassigned : undefined}
             title={'заявок'}
             selected={tab === 'job'}
             onClick={() => $tab.set('job')}

@@ -1,0 +1,200 @@
+--- a/src/route.cc
++++ b/src/route.cc
+@@ -4,6 +4,7 @@
+ 
+ #include <algorithm>
+ #include <optional>
++#include <type_traits>
+ 
+ #include "boost/thread/tss.hpp"
+ 
+@@ -17,6 +18,7 @@
+ #include "osr/lookup.h"
+ #include "osr/routing/astar.h"
+ #include "osr/routing/bidirectional.h"
++#include "osr/routing/component_probe.h"
+ #include "osr/routing/dijkstra.h"
+ #include "osr/routing/path_reconstruction.h"
+ #include "osr/routing/profiles/bike.h"
+@@ -61,6 +63,43 @@
+     s.reset(new astar<P>{});
+   }
+   return *s.get();
++}
++
++// Prove misses on tiny directed islands before searching the whole city from
++// the opposite endpoint. A work-limit hit or ANY destination node is inconclusive.
++template <Profile P, direction Dir>
++bool small_component_misses(typename P::parameters const& params,
++                            ways const& w,
++                            location const& from,
++                            way_idx_t const start_way,
++                            candidate_node const& left,
++                            candidate_node const& right,
++                            std::vector<node_idx_t> const& targets) {
++  return exhausted_component_misses<typename P::node>(
++      [&](auto const& add) {
++        for (auto const* nc : {&left, &right}) {
++          if (nc->valid()) {
++            P::resolve_start_node(*w.r_, start_way, nc->node_, from.lvl_, Dir,
++                                  add);
++          }
++        }
++      },
++      [&](typename P::node const current, auto const& add) {
++        // Ignoring costs, blocked nodes and the time limit only overestimates
++        // reachability. Only static road profiles without sharing use it.
++        P::template adjacent<Dir, false>(
++            params, *w.r_, w.timezones_, current, duration_t{0}, std::nullopt,
++            nullptr, nullptr, nullptr,
++            [&](typename P::node const next, std::uint32_t const cost,
++                auto&&...) {
++              if (cost != kInfeasible) {
++                add(next);
++              }
++            });
++      },
++      [&](typename P::node const node) {
++        return std::binary_search(begin(targets), end(targets), node.get_node());
++      });
+ }
+ 
+ duration_t sum_segment_durations(std::vector<path::segment> const& segments,
+@@ -427,6 +466,26 @@
+                                    b.distance_lon_degrees_) /
+       kMaxMatchingDistanceSquaredRatio;
+ 
++  constexpr auto kProbeSmallComponents =
++      std::is_same_v<P, car> ||
++      std::is_same_v<P, foot<false, elevator_tracking>> ||
++      std::is_same_v<P, bike<bike_costing::kSafe, kElevationNoCost>> ||
++      std::is_same_v<P, bike<bike_costing::kFast, kElevationNoCost>>;
++  b.local_cost_stop_ = kProbeSmallComponents;
++  auto target_nodes = std::vector<node_idx_t>{};
++  if constexpr (kProbeSmallComponents) {
++    for (auto j = std::size_t{0U}; j != to_match.size(); ++j) {
++      for (auto const& nc : {to_match.left(j), to_match.right(j)}) {
++        if (nc.valid()) {
++          target_nodes.push_back(nc.node_);
++        }
++      }
++    }
++    std::sort(begin(target_nodes), end(target_nodes));
++    target_nodes.erase(std::unique(begin(target_nodes), end(target_nodes)),
++                       end(target_nodes));
++  }
++
+   for (auto i = std::size_t{0U}; i != from_match.size(); ++i) {
+     if (b.max_reached_1_ && component_seen(w, from_match, i)) {
+       continue;
+@@ -434,6 +493,18 @@
+     auto const start_way = from_match.way_[i];
+     auto const start_left = from_match.left(i);
+     auto const start_right = from_match.right(i);
++    if constexpr (kProbeSmallComponents) {
++      if (sharing == nullptr &&
++          (dir == direction::kForward
++               ? small_component_misses<P, direction::kForward>(
++                     params, w, from, start_way, start_left, start_right,
++                     target_nodes)
++               : small_component_misses<P, direction::kBackward>(
++                     params, w, from, start_way, start_left, start_right,
++                     target_nodes))) {
++        continue;
++      }
++    }
+     for (auto const* nc : {&start_left, &start_right}) {
+       if (nc->valid() && nc->cost_ < max) {
+         auto const start_cost = P::way_cost(
+--- a/include/osr/routing/bidirectional.h
++++ b/include/osr/routing/bidirectional.h
+@@ -1,5 +1,6 @@
+ #pragma once
+ 
++#include <cmath>
+ #include <limits>
+ 
+ #include "utl/verify.h"
+@@ -66,6 +67,8 @@
+             : end_loc_.pos_);
+     auto const diameter = P::lower_bound_heuristic(
+         params, distapprox(start_loc_.pos_, end_loc_.pos_));
++    potential_bound_ = std::ceil(diameter * 0.5) + 1.0;
++    local_cost_stop_ = false;
+     search_bounds_valid_ =
+         diameter < max && max + std::max(diameter, kLongestNodeDistance * 2.0) <
+                               std::numeric_limits<cost_t>::max();
+@@ -353,6 +356,20 @@
+     handle_end_of_way_meetpoint();
+ 
+     if (best_cost_ != kInfeasible) {
++      // The balanced potential is bounded by half the endpoint diameter:
++      // distapprox is a norm and profile lower-bound heuristics are linear.
++      // Once BOTH queues have no label with true cost <= the incumbent, no
++      // cheaper nonnegative-cost path can remain. Include integer rounding.
++      // This avoids the 30-minute radius floor on short, already found trips.
++      auto const exhausted_below_best = [&](auto const& queue) {
++        return queue.empty() ||
++               queue.buckets_[queue.get_next_bucket()].back().cost() >
++                   static_cast<double>(best_cost_) + potential_bound_;
++      };
++      if (local_cost_stop_ && exhausted_below_best(pq1_) &&
++          exhausted_below_best(pq2_)) {
++        return false;
++      }
+       auto const top_f =
+           pq1_.empty() ? get_cost<direction::kForward>(meet_point_1_)
+                        : pq1_.buckets_[pq1_.get_next_bucket()].back().cost();
+@@ -436,6 +453,8 @@
+   ankerl::unordered_dense::map<key, entry, hash> cost2_;
+   entry_storage_arena arena_;
+   cost_t radius_;
++  double potential_bound_{};
++  bool local_cost_stop_{};
+   double distance_lon_degrees_;
+   bool search_bounds_valid_{};
+   bool max_reached_1_;
+--- /dev/null
++++ b/include/osr/routing/component_probe.h
+@@ -0,0 +1,41 @@
++#pragma once
++
++#include <algorithm>
++#include <cstddef>
++#include <vector>
++
++namespace osr {
++
++// A bounded negative proof, not an approximate router. Return false whenever a
++// target or the work limit is reached. Nodes must preserve ALL routing state.
++// Seed/expand enumerate a superset of possible transitions (no cost pruning).
++template <typename Node, typename Seed, typename Expand, typename IsTarget>
++bool exhausted_component_misses(Seed&& seed,
++                                 Expand&& expand,
++                                 IsTarget&& is_target,
++                                 std::size_t const limit = 256U) {
++  auto nodes = std::vector<Node>{};
++  nodes.reserve(limit);
++  auto inconclusive = false;
++  auto const add = [&](Node const node) {
++    if (inconclusive) {
++      return;
++    }
++    if (is_target(node) || nodes.size() == limit) {
++      inconclusive = true;
++      return;
++    }
++    if (std::find(begin(nodes), end(nodes), node) == end(nodes)) {
++      nodes.push_back(node);
++    }
++  };
++  seed(add);
++  for (auto i = std::size_t{0U}; i < nodes.size() && !inconclusive; ++i) {
++    // Copy the state: expansion can grow and reallocate the queue.
++    auto const current = nodes[i];
++    expand(current, add);
++  }
++  return !inconclusive;
++}
++
++}  // namespace osr
